@@ -157,6 +157,12 @@ def test_extract_timeline_events_reviewed_no_association():
     assert events[0]["author_association"] is None
 
 
+def test_extract_timeline_events_reviewed_pending_skipped():
+    timeline = [{"event": "reviewed", "user": {"login": "dave"}, "state": "pending"}]
+    events = extract_timeline_events(timeline)
+    assert events == []
+
+
 def test_extract_timeline_events_comment():
     timeline = [{"event": "commented", "created_at": "2024-01-11T11:00:00Z", "actor": {"login": "eve"}, "author_association": "CONTRIBUTOR"}]
     events = extract_timeline_events(timeline)

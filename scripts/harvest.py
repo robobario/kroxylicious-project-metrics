@@ -97,10 +97,13 @@ def extract_timeline_events(timeline):
         elif event_type == "review_requested":
             events.append({"type": "review_requested", "timestamp": item["created_at"], "actor": actor})
         elif event_type == "reviewed":
+            submitted_at = item.get("submitted_at")
+            if submitted_at is None:
+                continue
             user = (item.get("user") or {}).get("login")
             events.append({
                 "type": "reviewed",
-                "timestamp": item["submitted_at"],
+                "timestamp": submitted_at,
                 "actor": user,
                 "author_association": item.get("author_association"),
             })
