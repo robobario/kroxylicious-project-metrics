@@ -20,7 +20,6 @@ METADATA_REQUIRED = {
     "number": int,
     "title": str,
     "author": str,
-    "author_association": str,
     "labels": list,
     "target_branch": str,
     "created_at": str,
@@ -29,17 +28,6 @@ METADATA_REQUIRED = {
 }
 
 VALID_STATES = {"open", "closed"}
-
-VALID_AUTHOR_ASSOCIATIONS = frozenset({
-    "COLLABORATOR",
-    "CONTRIBUTOR",
-    "FIRST_TIMER",
-    "FIRST_TIME_CONTRIBUTOR",
-    "MANNEQUIN",
-    "MEMBER",
-    "NONE",
-    "OWNER",
-})
 
 
 def _parse_timestamp(ts):
@@ -73,8 +61,6 @@ def lint_metadata(path, data):
             )
     if data.get("state") not in VALID_STATES and "state" in data and isinstance(data["state"], str):
         violations.append(f"{path}: 'state' must be one of {sorted(VALID_STATES)}, got '{data['state']}'")
-    if isinstance(data.get("author_association"), str) and data["author_association"] not in VALID_AUTHOR_ASSOCIATIONS:
-        violations.append(f"{path}: 'author_association' has unrecognised value '{data['author_association']}'")
     if isinstance(data.get("created_at"), str) and _parse_timestamp(data["created_at"]) is None:
         violations.append(f"{path}: 'created_at' is not a valid ISO 8601 timestamp")
     if isinstance(data.get("labels"), list):

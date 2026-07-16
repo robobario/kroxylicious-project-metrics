@@ -57,7 +57,6 @@ def extract_metadata(pr):
         "number": pr["number"],
         "title": pr["title"],
         "author": pr["user"]["login"],
-        "author_association": pr.get("author_association", "NONE"),
         "labels": [label["name"] for label in pr.get("labels", [])],
         "target_branch": pr["base"]["ref"],
         "created_at": pr["created_at"],
