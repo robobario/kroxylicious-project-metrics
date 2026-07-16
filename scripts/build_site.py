@@ -231,16 +231,19 @@ def load_committers(path):
 
 
 def time_to_engagement_days(events, committers):
-    """Returns days from created to first committer comment or review, or None."""
+    """Returns days from created to first committer comment or review by someone other than the PR author, or None."""
     created = None
+    author = None
     for e in events:
         if e["type"] == "created" and created is None:
             created = _parse_ts(e["timestamp"])
+            author = e.get("actor")
             continue
         if (
             created is not None
             and e["type"] in ("reviewed", "comment")
             and e.get("actor") in committers
+            and e.get("actor") != author
         ):
             return (_parse_ts(e["timestamp"]) - created).total_seconds() / 86400
     return None

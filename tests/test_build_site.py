@@ -115,6 +115,29 @@ def test_time_to_engagement_non_committer_ignored():
     assert time_to_engagement_days(events, COMMITTERS) is None
 
 
+def test_time_to_engagement_author_self_comment_not_counted():
+    # PR author is a committer but their own comment should not count
+    committers_incl_author = COMMITTERS | {"alice"}
+    events = _engagement_events(
+        "2024-01-10T10:00:00Z",
+        comments=[("2024-01-11T10:00:00Z", "alice")],  # author commenting on own PR
+    )
+    assert time_to_engagement_days(events, committers_incl_author) is None
+
+
+def test_time_to_engagement_self_then_other_uses_other():
+    # Author comments first, then a different committer — only the second should count
+    committers_incl_author = COMMITTERS | {"alice"}
+    events = _engagement_events(
+        "2024-01-10T10:00:00Z",
+        comments=[
+            ("2024-01-11T10:00:00Z", "alice"),       # self — skip
+            ("2024-01-13T10:00:00Z", "maintainer"),  # other committer — counts
+        ],
+    )
+    assert time_to_engagement_days(events, committers_incl_author) == pytest.approx(3.0)
+
+
 def test_time_to_engagement_no_reviews():
     events = _events("2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z")
     assert time_to_engagement_days(events, COMMITTERS) is None
