@@ -9,6 +9,7 @@ VALID_METADATA = {
     "number": 42,
     "title": "Fix the thing",
     "author": "alice",
+    "author_association": "CONTRIBUTOR",
     "labels": ["bug"],
     "target_branch": "main",
     "created_at": "2024-01-10T10:00:00Z",
@@ -86,6 +87,25 @@ def test_lint_metadata_invalid_state(tmp_path):
     path = tmp_path / "metadata.json"
     violations = lint_metadata(path, {**VALID_METADATA, "state": "pending"})
     assert any("state" in v for v in violations)
+
+
+def test_lint_metadata_valid_author_associations(tmp_path):
+    path = tmp_path / "metadata.json"
+    for assoc in ("FIRST_TIME_CONTRIBUTOR", "FIRST_TIMER", "CONTRIBUTOR", "MEMBER", "COLLABORATOR", "OWNER", "MANNEQUIN", "NONE"):
+        assert lint_metadata(path, {**VALID_METADATA, "author_association": assoc}) == []
+
+
+def test_lint_metadata_invalid_author_association(tmp_path):
+    path = tmp_path / "metadata.json"
+    violations = lint_metadata(path, {**VALID_METADATA, "author_association": "ROBOT"})
+    assert any("author_association" in v for v in violations)
+
+
+def test_lint_metadata_missing_author_association(tmp_path):
+    path = tmp_path / "metadata.json"
+    data = {k: v for k, v in VALID_METADATA.items() if k != "author_association"}
+    violations = lint_metadata(path, data)
+    assert any("author_association" in v for v in violations)
 
 
 def test_lint_metadata_invalid_created_at(tmp_path):
