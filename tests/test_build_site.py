@@ -878,6 +878,21 @@ def test_open_prs_html_no_waiting_emoji_when_engaged():
     assert "👀" not in html[tbody_start:tbody_end]
 
 
+def test_open_prs_html_star_for_new_pr():
+    html = _open_prs_html([_make_pr(age_days=0.5)], None)
+    tbody_start = html.index("<tbody>")
+    tbody_end   = html.index("</tbody>")
+    assert "⭐" in html[tbody_start:tbody_end]
+    assert 'title="opened in the last 24 hours"' in html
+
+
+def test_open_prs_html_no_star_for_older_pr():
+    html = _open_prs_html([_make_pr(age_days=1.0)], None)
+    tbody_start = html.index("<tbody>")
+    tbody_end   = html.index("</tbody>")
+    assert "⭐" not in html[tbody_start:tbody_end]
+
+
 def test_open_prs_html_age_class():
     html = _open_prs_html([_make_pr(age_days=100.0)], None)
     assert "age-stale" in html
