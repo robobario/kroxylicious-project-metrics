@@ -3,10 +3,13 @@ name: Publish metrics site
 # Requires GitHub Pages configured to deploy from Actions:
 # Settings → Pages → Source → GitHub Actions
 #
-# Triggered by harvest.yml after new data is committed to _data.
-# Can also be dispatched manually to force a rebuild.
+# Triggered by harvest.yml after new data is committed to _data,
+# on every push to main (so code changes deploy immediately),
+# and manually to force a rebuild.
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
