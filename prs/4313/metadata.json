@@ -1,0 +1,13 @@
+{
+  "number": 4313,
+  "title": "fix(ci): use branch variable instead of hardcoded 'main' in stage script",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [
+    "release-process"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-07T11:22:04Z",
+  "state": "closed",
+  "merged": true
+}

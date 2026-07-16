@@ -1,0 +1,15 @@
+{
+  "number": 3861,
+  "title": "refactor: move test-support modules to io.kroxylicious.testing",
+  "author": "tombentley",
+  "author_association": "MEMBER",
+  "labels": [
+    "dev/maven",
+    "test",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-01T21:19:20Z",
+  "state": "closed",
+  "merged": true
+}

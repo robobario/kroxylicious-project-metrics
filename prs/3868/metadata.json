@@ -1,0 +1,13 @@
+{
+  "number": 3868,
+  "title": "feat(admission): default to fail-closed with configurable failure policy",
+  "author": "tombentley",
+  "author_association": "MEMBER",
+  "labels": [
+    "kube/webhook"
+  ],
+  "target_branch": "epic/admission-web-hook",
+  "created_at": "2026-05-04T04:35:58Z",
+  "state": "closed",
+  "merged": true
+}

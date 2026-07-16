@@ -1,0 +1,11 @@
+{
+  "number": 3803,
+  "title": "fix(operator): remove incorrect 'routes' resource from default API group ClusterRole (#3800)",
+  "author": "mvanhorn",
+  "author_association": "CONTRIBUTOR",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-25T11:53:36Z",
+  "state": "closed",
+  "merged": true
+}

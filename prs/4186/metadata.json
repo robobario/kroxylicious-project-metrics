@@ -1,0 +1,11 @@
+{
+  "number": 4186,
+  "title": "chore(ci): increase Dependabot open PR limit to 10",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-24T09:48:10Z",
+  "state": "closed",
+  "merged": true
+}

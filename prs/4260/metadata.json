@@ -1,0 +1,13 @@
+{
+  "number": 4260,
+  "title": "build(deps): bump JOSDK from 5.2.5 to 5.4.0",
+  "author": "SamBarker",
+  "author_association": "MEMBER",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-01T03:47:31Z",
+  "state": "closed",
+  "merged": true
+}

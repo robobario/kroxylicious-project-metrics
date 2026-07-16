@@ -1,0 +1,13 @@
+{
+  "number": 4054,
+  "title": "build(ci): added CI runners hardening",
+  "author": "franvila",
+  "author_association": "MEMBER",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-03T09:06:53Z",
+  "state": "closed",
+  "merged": true
+}

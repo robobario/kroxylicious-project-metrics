@@ -1,0 +1,11 @@
+{
+  "number": 4361,
+  "title": "fix(docs): remove redundant SKIP_SETCAP override from Vault helm install",
+  "author": "SamBarker",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-13T20:58:29Z",
+  "state": "closed",
+  "merged": true
+}

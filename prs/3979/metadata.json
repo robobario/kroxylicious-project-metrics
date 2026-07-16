@@ -1,0 +1,13 @@
+{
+  "number": 3979,
+  "title": "chore(deps): update ghcr.io/navikt/mock-oauth2-server docker tag to v4",
+  "author": "kroxylicious-robot",
+  "author_association": "MEMBER",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-19T11:52:56Z",
+  "state": "closed",
+  "merged": true
+}

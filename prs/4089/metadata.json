@@ -1,0 +1,11 @@
+{
+  "number": 4089,
+  "title": "docs(rules): add Given/When/Then test structure convention to Claude rules",
+  "author": "SamBarker",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-09T22:23:13Z",
+  "state": "closed",
+  "merged": true
+}

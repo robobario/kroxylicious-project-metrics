@@ -1,0 +1,11 @@
+{
+  "number": 4380,
+  "title": "test(routing): fix non-deterministic RoutingPassThroughIT test",
+  "author": "tombentley",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-15T04:30:01Z",
+  "state": "open",
+  "merged": false
+}

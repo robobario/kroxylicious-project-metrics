@@ -1,0 +1,14 @@
+{
+  "number": 4102,
+  "title": "build(deps): bump apicurio-registry.version from 3.2.4 to 3.3.0",
+  "author": "dependabot[bot]",
+  "author_association": "CONTRIBUTOR",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-11T03:33:43Z",
+  "state": "closed",
+  "merged": true
+}

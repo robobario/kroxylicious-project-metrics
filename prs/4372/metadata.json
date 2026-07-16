@@ -1,0 +1,13 @@
+{
+  "number": 4372,
+  "title": "fix(build): remove unnecessary parentheses warnings by removing redundant parentheses",
+  "author": "AdityaThakur1998",
+  "author_association": "CONTRIBUTOR",
+  "labels": [
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-14T13:45:31Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,14 @@
+{
+  "number": 3897,
+  "title": "build(deps): bump tspascoal/get-user-teams-membership from 3.0.0 to 4.0.1",
+  "author": "dependabot[bot]",
+  "author_association": "CONTRIBUTOR",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-07T03:33:38Z",
+  "state": "closed",
+  "merged": true
+}

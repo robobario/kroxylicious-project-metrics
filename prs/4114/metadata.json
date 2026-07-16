@@ -1,0 +1,13 @@
+{
+  "number": 4114,
+  "title": "chore(deps): update kubernetes packages to v1.36.2",
+  "author": "kroxylicious-robot",
+  "author_association": "MEMBER",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-12T12:10:21Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,11 @@
+{
+  "number": 4320,
+  "title": "[v0.20.x] fix(ci): use branch variable instead of hardcoded 'main' in stage script (backport #4313)",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "release/v0.20",
+  "created_at": "2026-07-08T11:33:18Z",
+  "state": "closed",
+  "merged": true
+}

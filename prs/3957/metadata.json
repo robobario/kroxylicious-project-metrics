@@ -1,0 +1,13 @@
+{
+  "number": 3957,
+  "title": "docs(benchmarks): add Performance and Sizing Guide for record encryption",
+  "author": "SamBarker",
+  "author_association": "MEMBER",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-15T04:56:06Z",
+  "state": "open",
+  "merged": false
+}

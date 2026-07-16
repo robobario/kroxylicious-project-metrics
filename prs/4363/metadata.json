@@ -1,0 +1,11 @@
+{
+  "number": 4363,
+  "title": "use min int for internal correlation id of out-of-band sendRequest",
+  "author": "robobario",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-13T23:38:14Z",
+  "state": "closed",
+  "merged": true
+}

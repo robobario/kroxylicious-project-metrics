@@ -1,0 +1,11 @@
+{
+  "number": 3932,
+  "title": "perf(ci): reduce build artifacts execution when a PR is merged",
+  "author": "franvila",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-12T10:34:15Z",
+  "state": "closed",
+  "merged": true
+}

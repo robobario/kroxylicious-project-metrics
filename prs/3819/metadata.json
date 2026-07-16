@@ -1,0 +1,15 @@
+{
+  "number": 3819,
+  "title": "fix: remove unknown apis in Authorization & EntityIsolation Filters",
+  "author": "robobario",
+  "author_association": "MEMBER",
+  "labels": [
+    "kind/bug",
+    "filter/authorization",
+    "filter/entity-isolation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-29T02:51:50Z",
+  "state": "closed",
+  "merged": true
+}

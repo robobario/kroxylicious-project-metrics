@@ -1,0 +1,13 @@
+{
+  "number": 3790,
+  "title": "Add sidecar injection webhook module (Phase 1)",
+  "author": "tombentley",
+  "author_association": "MEMBER",
+  "labels": [
+    "kube/webhook"
+  ],
+  "target_branch": "admission-web-hook",
+  "created_at": "2026-04-24T04:14:51Z",
+  "state": "closed",
+  "merged": true
+}

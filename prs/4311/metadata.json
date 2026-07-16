@@ -1,0 +1,13 @@
+{
+  "number": 4311,
+  "title": "[0.20.x] chore(jodsk): changelog entry for JOSDK bump.",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "release/v0.20",
+  "created_at": "2026-07-07T10:25:24Z",
+  "state": "closed",
+  "merged": true
+}

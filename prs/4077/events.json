@@ -1,0 +1,24 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-06-08T10:07:17Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-06-08T10:31:07Z",
+    "actor": "sonarqubecloud[bot]",
+    "author_association": "NONE"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-06-08T10:32:15Z",
+    "actor": "sonarqubecloud[bot]",
+    "author_association": "NONE"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-06-09T01:11:03Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "number": 4324,
+  "title": "fix(runtime): close outbound connection when isActive is false",
+  "author": "Uzziee",
+  "author_association": "CONTRIBUTOR",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-09T04:39:39Z",
+  "state": "closed",
+  "merged": true
+}

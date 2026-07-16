@@ -1,0 +1,14 @@
+{
+  "number": 3976,
+  "title": "Upgrade to Apache Kafka 4.3.1",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [
+    "dependencies",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-18T17:30:29Z",
+  "state": "open",
+  "merged": false
+}

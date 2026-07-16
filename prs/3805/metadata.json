@@ -1,0 +1,11 @@
+{
+  "number": 3805,
+  "title": "fix(ci): prevent Test Reporter from aggregating stale test results",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-27T09:37:24Z",
+  "state": "closed",
+  "merged": true
+}

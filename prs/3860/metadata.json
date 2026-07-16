@@ -1,0 +1,14 @@
+{
+  "number": 3860,
+  "title": "perf(operator): share Secret and ConfigMap informer caches across reconcilers",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-01T18:27:02Z",
+  "state": "closed",
+  "merged": true
+}

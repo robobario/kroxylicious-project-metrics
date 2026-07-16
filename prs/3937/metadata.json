@@ -1,0 +1,13 @@
+{
+  "number": 3937,
+  "title": "fix(integration-tests): retry on coordinator load errors in group AuthzIT tests",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-12T18:10:12Z",
+  "state": "closed",
+  "merged": true
+}

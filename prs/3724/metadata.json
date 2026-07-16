@@ -1,0 +1,14 @@
+{
+  "number": 3724,
+  "title": "perf(ci): share single build across all system test chunks",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [
+    "dev/github_actions",
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-15T17:37:45Z",
+  "state": "closed",
+  "merged": true
+}

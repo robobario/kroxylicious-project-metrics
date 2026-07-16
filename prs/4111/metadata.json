@@ -1,0 +1,14 @@
+{
+  "number": 4111,
+  "title": "fix: Backport upgrade to JOSDK 5.2.5 to v0.20 branch",
+  "author": "robobario",
+  "author_association": "MEMBER",
+  "labels": [
+    "kind/bug",
+    "dependencies"
+  ],
+  "target_branch": "release/v0.20",
+  "created_at": "2026-06-12T04:46:25Z",
+  "state": "closed",
+  "merged": true
+}

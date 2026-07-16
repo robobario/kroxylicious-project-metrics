@@ -1,0 +1,15 @@
+{
+  "number": 4159,
+  "title": "feat(routing): support static routing in the Router runtime (for single-node upstream clusters, no nodeId virtualization)",
+  "author": "robobario",
+  "author_association": "MEMBER",
+  "labels": [
+    "kind/enhancement",
+    "runtime",
+    "routing/runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-19T04:56:56Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,11 @@
+{
+  "number": 3909,
+  "title": "test(runtime): fix non-deterministic port binding in KafkaProxyShutdownOrderingTest",
+  "author": "SamBarker",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-07T22:08:26Z",
+  "state": "closed",
+  "merged": true
+}

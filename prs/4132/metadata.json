@@ -1,0 +1,11 @@
+{
+  "number": 4132,
+  "title": "ci: publish SNAPSHOT artifacts on push to main and release branches",
+  "author": "robobario",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-17T05:28:20Z",
+  "state": "closed",
+  "merged": true
+}

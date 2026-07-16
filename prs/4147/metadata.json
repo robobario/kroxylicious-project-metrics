@@ -1,0 +1,11 @@
+{
+  "number": 4147,
+  "title": "feat(runtime): separate configured port from bound port in gateway advertising path",
+  "author": "SamBarker",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-18T08:53:33Z",
+  "state": "open",
+  "merged": false
+}

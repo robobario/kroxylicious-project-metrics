@@ -1,0 +1,13 @@
+{
+  "number": 3864,
+  "title": "chore(deps): update dependency strimzi/test-clients to v0.14.0",
+  "author": "kroxylicious-robot",
+  "author_association": "MEMBER",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-04T01:30:23Z",
+  "state": "closed",
+  "merged": true
+}

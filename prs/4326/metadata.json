@@ -1,0 +1,11 @@
+{
+  "number": 4326,
+  "title": "fix(operator): use operator build metadata",
+  "author": "MClavo",
+  "author_association": "CONTRIBUTOR",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-09T09:07:23Z",
+  "state": "closed",
+  "merged": true
+}

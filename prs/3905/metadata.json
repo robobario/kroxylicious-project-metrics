@@ -1,0 +1,11 @@
+{
+  "number": 3905,
+  "title": "refactor(tls): move PEM parsing from TlsUtil to certificate-test-support",
+  "author": "tombentley",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-07T05:45:08Z",
+  "state": "closed",
+  "merged": true
+}

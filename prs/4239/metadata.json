@@ -1,0 +1,13 @@
+{
+  "number": 4239,
+  "title": "Refactor lifecycle state dispatch to exhaustive switches",
+  "author": "DragonFSKY",
+  "author_association": "CONTRIBUTOR",
+  "labels": [
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-28T20:14:12Z",
+  "state": "closed",
+  "merged": false
+}

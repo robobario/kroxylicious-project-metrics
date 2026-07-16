@@ -1,0 +1,13 @@
+{
+  "number": 4074,
+  "title": "chore(deps): update lowkey-vault packages to v7.3.0",
+  "author": "kroxylicious-robot",
+  "author_association": "MEMBER",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-08T02:29:00Z",
+  "state": "closed",
+  "merged": true
+}

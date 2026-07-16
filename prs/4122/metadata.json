@@ -1,0 +1,13 @@
+{
+  "number": 4122,
+  "title": "fix(build): skip archetype integration test when -DskipTests is set",
+  "author": "SamBarker",
+  "author_association": "MEMBER",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-16T04:48:52Z",
+  "state": "closed",
+  "merged": true
+}

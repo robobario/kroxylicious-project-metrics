@@ -1,0 +1,13 @@
+{
+  "number": 4304,
+  "title": "build(deps): update dependencies to fix CVE vulnerabilities for v0.20.1",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "release/v0.20",
+  "created_at": "2026-07-06T16:21:52Z",
+  "state": "closed",
+  "merged": true
+}

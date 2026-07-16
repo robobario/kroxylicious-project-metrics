@@ -1,0 +1,13 @@
+{
+  "number": 4175,
+  "title": "chore(deps): update quay.io/apicurio/apicurio-registry docker tag to v3.3.0",
+  "author": "kroxylicious-robot",
+  "author_association": "MEMBER",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-23T02:00:29Z",
+  "state": "closed",
+  "merged": true
+}

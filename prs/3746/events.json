@@ -1,0 +1,77 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-04-17T11:25:21Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-05-12T09:50:51Z",
+    "actor": "franvila",
+    "author_association": "MEMBER"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-05-12T09:54:00Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-05-13T00:25:37Z",
+    "actor": "SamBarker",
+    "author_association": "MEMBER"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-05-13T00:54:22Z",
+    "actor": "SamBarker",
+    "author_association": "MEMBER"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-13T12:31:14Z",
+    "actor": "sonarqubecloud[bot]",
+    "author_association": "NONE"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-13T12:33:19Z",
+    "actor": "sonarqubecloud[bot]",
+    "author_association": "NONE"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-05-21T05:31:27Z",
+    "actor": "henryZrncik",
+    "author_association": "MEMBER"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-05-25T01:24:35Z",
+    "actor": "robobario",
+    "author_association": "MEMBER"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-05-25T03:56:15Z",
+    "actor": "henryZrncik",
+    "author_association": "MEMBER"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-25T11:29:44Z",
+    "actor": "sonarqubecloud[bot]",
+    "author_association": "NONE"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-25T11:31:04Z",
+    "actor": "sonarqubecloud[bot]",
+    "author_association": "NONE"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-05-25T11:47:05Z",
+    "actor": null
+  }
+]

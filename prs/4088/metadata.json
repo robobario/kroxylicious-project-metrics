@@ -1,0 +1,13 @@
+{
+  "number": 4088,
+  "title": "(feat) Hot reload Implementation (8/N) - Add FilterChangeHotReloadIT",
+  "author": "Uzziee",
+  "author_association": "CONTRIBUTOR",
+  "labels": [
+    "hot-reload"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-09T11:12:53Z",
+  "state": "closed",
+  "merged": true
+}

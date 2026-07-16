@@ -1,0 +1,13 @@
+{
+  "number": 4073,
+  "title": "refactor(runtime): Moving FCF lifecycle into virtual cluster model",
+  "author": "Uzziee",
+  "author_association": "CONTRIBUTOR",
+  "labels": [
+    "runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-05T07:31:42Z",
+  "state": "closed",
+  "merged": true
+}

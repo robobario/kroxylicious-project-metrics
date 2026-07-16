@@ -1,0 +1,15 @@
+{
+  "number": 3810,
+  "title": "test(operator): fix race condition in KafkaServiceStrimziKafkaRefReconcilerIT",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [
+    "kind/bug",
+    "test",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-27T13:26:58Z",
+  "state": "closed",
+  "merged": true
+}

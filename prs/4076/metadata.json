@@ -1,0 +1,11 @@
+{
+  "number": 4076,
+  "title": "fix(operator): force reschedule to guard against missed generation updates",
+  "author": "robobario",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-08T04:33:11Z",
+  "state": "closed",
+  "merged": false
+}

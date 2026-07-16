@@ -1,0 +1,13 @@
+{
+  "number": 4112,
+  "title": "chore(ci): remove unused workflow parameters from artifact downloads",
+  "author": "k-wall",
+  "author_association": "MEMBER",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-12T09:32:09Z",
+  "state": "closed",
+  "merged": true
+}

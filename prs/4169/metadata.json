@@ -1,0 +1,11 @@
+{
+  "number": 4169,
+  "title": "Test version bumps",
+  "author": "robobario",
+  "author_association": "MEMBER",
+  "labels": [],
+  "target_branch": "release/v0.20",
+  "created_at": "2026-06-21T22:34:26Z",
+  "state": "closed",
+  "merged": false
+}
