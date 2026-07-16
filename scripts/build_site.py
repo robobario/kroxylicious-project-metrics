@@ -103,6 +103,8 @@ _HTML = """\
     .stat { display: flex; flex-direction: column; gap: 0.2rem; min-width: 52px; }
     .stat-name  { font-size: 0.7rem; color: var(--ink-m); }
     .stat-value { font-size: 1.5rem; font-weight: 700; line-height: 1; }
+    .stat-link  { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .stat-link:hover { opacity: 0.75; }
     .panel {
       background: var(--surface-1);
       border: 1px solid var(--grid);
@@ -244,7 +246,7 @@ def monthly_medians_by_group(resolved):
     """
     ftc_by = defaultdict(list)
     non_ftc_by = defaultdict(list)
-    for close_dt, days, is_ftc, _ in resolved:
+    for close_dt, days, is_ftc, *_ in resolved:
         key = close_dt.strftime("%Y-%m")
         (ftc_by if is_ftc else non_ftc_by)[key].append(days)
     keys = sorted(ftc_by.keys() | non_ftc_by.keys())
@@ -261,7 +263,7 @@ def weekly_medians_by_group(resolved):
     """
     ftc_by = defaultdict(list)
     non_ftc_by = defaultdict(list)
-    for close_dt, days, is_ftc, _ in resolved:
+    for close_dt, days, is_ftc, *_ in resolved:
         key = _week_monday(close_dt)
         (ftc_by if is_ftc else non_ftc_by)[key].append(days)
     weeks = sorted(ftc_by.keys() | non_ftc_by.keys())
@@ -284,27 +286,35 @@ def _percentile(sorted_vals, p):
     return round(sorted_vals[lo] + (idx - lo) * (sorted_vals[hi] - sorted_vals[lo]), 1)
 
 
-def _dist_stats(values):
+def _dist_stats(values, pr_numbers=None):
     if not values:
-        return {"median": None, "mean": None, "p95": None, "p99": None, "max": None}
+        return {"median": None, "mean": None, "p95": None, "p99": None, "max": None, "max_pr": None}
     sv = sorted(values)
+    max_val = max(values)
+    max_pr = pr_numbers[values.index(max_val)] if pr_numbers else None
     return {
         "median": round(statistics.median(values), 1),
         "mean":   round(sum(values) / len(values), 1),
         "p95":    _percentile(sv, 95),
         "p99":    _percentile(sv, 99),
-        "max":    round(max(values), 1),
+        "max":    round(max_val, 1),
+        "max_pr": max_pr,
     }
 
 
 def compute_stats(resolved, trend_fn=None):
     if trend_fn is None:
         trend_fn = monthly_medians_by_group
-    all_days = [days for _, days, _, _ in resolved]
-    ftc_count = sum(1 for _, _, is_ftc, _ in resolved if is_ftc)
-    engagement_times = [e for _, _, _, e in resolved if e is not None]
-    total = len(resolved)
 
+    all_days   = [days for _, days, *_ in resolved]
+    all_pr_nos = [pr   for *_, pr      in resolved]
+    ftc_count  = sum(1 for _, _, is_ftc, *_ in resolved if is_ftc)
+
+    eng_pairs      = [(e, pr) for _, _, _, e, pr in resolved if e is not None]
+    eng_values     = [e  for e, _  in eng_pairs]
+    eng_pr_numbers = [pr for _, pr in eng_pairs]
+
+    total = len(resolved)
     hist_labels, hist_counts = histogram(all_days)
     trend_labels, trend_ftc_medians, trend_non_ftc_medians = trend_fn(resolved)
 
@@ -312,8 +322,8 @@ def compute_stats(resolved, trend_fn=None):
         "total_resolved": total,
         "ftc_count": ftc_count,
         "ftc_pct": round(100 * ftc_count / total) if total else 0,
-        "resolution": _dist_stats(all_days),
-        "engagement": _dist_stats(engagement_times),
+        "resolution": _dist_stats(all_days, all_pr_nos),
+        "engagement": _dist_stats(eng_values, eng_pr_numbers),
         "hist_labels": hist_labels,
         "hist_counts": hist_counts,
         "trend_labels": trend_labels,
@@ -365,7 +375,7 @@ def load_resolved(data_dir, committers=frozenset()):
         except ValueError:
             continue
         engagement = time_to_engagement_days(events, committers)
-        resolved.append((*result, pr_number in ftc_pr_numbers, engagement))
+        resolved.append((*result, pr_number in ftc_pr_numbers, engagement, pr_number))
     return resolved
 
 
@@ -373,26 +383,28 @@ def _fmt(v):
     return "—" if v is None else f"{v}d"
 
 
-def _stat_group_html(label, dist, color_class):
-    stats_html = "".join(
-        f'<div class="stat"><span class="stat-name">{name}</span>'
-        f'<span class="stat-value">{_fmt(dist[key])}</span></div>'
-        for name, key in [
-            ("Median", "median"), ("Mean", "mean"),
-            ("p95", "p95"), ("p99", "p99"), ("Max", "max"),
-        ]
-    )
+def _stat_group_html(label, dist, color_class, pr_base_url=None):
+    parts = []
+    for name, key in [("Median", "median"), ("Mean", "mean"), ("p95", "p95"), ("p99", "p99"), ("Max", "max")]:
+        val = _fmt(dist[key])
+        if key == "max" and dist.get("max_pr") is not None and pr_base_url:
+            url = f"{pr_base_url}/pull/{dist['max_pr']}"
+            val = f'<a class="stat-link" href="{url}">{val}</a>'
+        parts.append(
+            f'<div class="stat"><span class="stat-name">{name}</span>'
+            f'<span class="stat-value">{val}</span></div>'
+        )
     return (
         f'<div class="stat-group stat-group--{color_class}">'
         f'<div class="stat-group-label">{label}</div>'
-        f'<div class="stat-row">{stats_html}</div>'
+        f'<div class="stat-row">{"".join(parts)}</div>'
         f'</div>'
     )
 
 
-def _kpi_row_html(stats):
+def _kpi_row_html(stats, pr_base_url=None):
     resolution_group = _stat_group_html(
-        "Time to resolution", stats["resolution"], "resolution"
+        "Time to resolution", stats["resolution"], "resolution", pr_base_url
     )
     ftc_tile = (
         f'<div class="kpi">'
@@ -402,7 +414,7 @@ def _kpi_row_html(stats):
         f'</div>'
     )
     engagement_group = _stat_group_html(
-        "Time to first Committer engagement", stats["engagement"], "engagement"
+        "Time to first Committer engagement", stats["engagement"], "engagement", pr_base_url
     )
     return f'<div class="kpi-row">{resolution_group}{ftc_tile}{engagement_group}</div>'
 
@@ -448,9 +460,9 @@ def _trend_js(canvas_id, stats):
     )
 
 
-def _tab_content_html(stats, hist_title, trend_title, hist_id, trend_id):
+def _tab_content_html(stats, hist_title, trend_title, hist_id, trend_id, pr_base_url=None):
     return (
-        f"{_kpi_row_html(stats)}"
+        f"{_kpi_row_html(stats, pr_base_url)}"
         f'<div class="panel"><h2>{hist_title}</h2>'
         f"{_chart_area_html(hist_id, stats['total_resolved'])}</div>"
         f'<div class="panel"><h2>{trend_title}</h2>'
@@ -458,7 +470,7 @@ def _tab_content_html(stats, hist_title, trend_title, hist_id, trend_id):
     )
 
 
-def render_html(all_stats, recent_stats, generated_at):
+def render_html(all_stats, recent_stats, generated_at, pr_base_url=None):
     recent_hist_id  = "hist-recent"
     recent_trend_id = "trend-recent"
     all_hist_id     = "hist-alltime"
@@ -468,13 +480,13 @@ def render_html(all_stats, recent_stats, generated_at):
         recent_stats,
         "Resolution time distribution",
         "Weekly median resolution time (days)",
-        recent_hist_id, recent_trend_id,
+        recent_hist_id, recent_trend_id, pr_base_url,
     )
     all_content = _tab_content_html(
         all_stats,
         "Resolution time distribution",
         "Monthly median resolution time (days)",
-        all_hist_id, all_trend_id,
+        all_hist_id, all_trend_id, pr_base_url,
     )
 
     recent_js = _hist_js(recent_hist_id, recent_stats) + _trend_js(recent_trend_id, recent_stats)
@@ -494,7 +506,7 @@ def render_html(all_stats, recent_stats, generated_at):
     )
 
 
-def build_site(data_dir, site_dir, generated_at, committers=frozenset()):
+def build_site(data_dir, site_dir, generated_at, committers=frozenset(), pr_base_url=None):
     resolved = load_resolved(data_dir, committers)
     recent_cutoff = datetime.now(UTC) - timedelta(days=RECENT_DAYS)
     recent_resolved = filter_resolved_since(resolved, recent_cutoff)
@@ -502,7 +514,7 @@ def build_site(data_dir, site_dir, generated_at, committers=frozenset()):
     all_stats    = compute_stats(resolved,        monthly_medians_by_group)
     recent_stats = compute_stats(recent_resolved, weekly_medians_by_group)
 
-    html = render_html(all_stats, recent_stats, generated_at)
+    html = render_html(all_stats, recent_stats, generated_at, pr_base_url)
     site_dir.mkdir(parents=True, exist_ok=True)
     (site_dir / "index.html").write_text(html)
     return {"all": all_stats, "recent": recent_stats}
@@ -512,9 +524,12 @@ def main():
     data_dir = Path(os.environ.get("DATA_DIR", "data"))
     site_dir = Path(os.environ.get("SITE_DIR", "site"))
     committers_file = Path(os.environ.get("COMMITTERS_FILE", "committers.txt"))
+    owner = os.environ.get("GITHUB_OWNER", "kroxylicious")
+    repo  = os.environ.get("GITHUB_REPO",  "kroxylicious")
+    pr_base_url = f"https://github.com/{owner}/{repo}"
     generated_at = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     committers = load_committers(committers_file)
-    stats = build_site(data_dir, site_dir, generated_at, committers)
+    stats = build_site(data_dir, site_dir, generated_at, committers, pr_base_url)
     a = stats["all"]
     r = stats["recent"]
     print(

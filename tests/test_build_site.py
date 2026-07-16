@@ -307,6 +307,13 @@ def test_dist_stats_values():
     assert d["max"]    == pytest.approx(10.0)
     assert d["p95"] is not None
     assert d["p99"] is not None
+    assert d["max_pr"] is None  # no pr_numbers provided
+
+
+def test_dist_stats_max_pr():
+    d = _dist_stats([5.0, 10.0, 3.0], pr_numbers=[42, 99, 7])
+    assert d["max"]    == pytest.approx(10.0)
+    assert d["max_pr"] == 99
 
 
 # --- compute_stats ---
@@ -325,25 +332,27 @@ def test_compute_stats_empty():
 
 def test_compute_stats_with_data():
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, 1.0),
-        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True,  None),
-        (datetime(2024, 2, 5,  tzinfo=UTC), 10.0, False, 2.0),
+        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, 1.0, 10),
+        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True,  None, 11),
+        (datetime(2024, 2, 5,  tzinfo=UTC), 10.0, False, 2.0, 12),
     ]
     stats = compute_stats(resolved)
     assert stats["total_resolved"] == 3
     assert stats["resolution"]["median"] == 5.0
+    assert stats["resolution"]["max"] == 10.0
+    assert stats["resolution"]["max_pr"] == 12
     assert stats["ftc_count"] == 1
     assert stats["ftc_pct"] == 33
     assert stats["engagement"]["median"] == 1.5
-    assert stats["resolution"]["max"] == 10.0
+    assert stats["engagement"]["max_pr"] == 12
     assert len(stats["hist_labels"]) == 7
     assert len(stats["trend_labels"]) == 2
 
 
 def test_compute_stats_uses_provided_trend_fn():
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None),
-        (datetime(2024, 1, 22, tzinfo=UTC), 3.0, False, None),
+        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1),
+        (datetime(2024, 1, 22, tzinfo=UTC), 3.0, False, None, 2),
     ]
     stats = compute_stats(resolved, trend_fn=weekly_medians_by_group)
     assert len(stats["trend_labels"]) == 2
@@ -351,12 +360,12 @@ def test_compute_stats_uses_provided_trend_fn():
 
 
 def test_compute_stats_no_engagement():
-    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None)]
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1)]
     assert compute_stats(resolved)["engagement"]["median"] is None
 
 
 def test_compute_stats_all_ftc():
-    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 4.0, True, 0.5)]
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 4.0, True, 0.5, 1)]
     stats = compute_stats(resolved)
     assert stats["ftc_count"] == 1
     assert stats["ftc_pct"] == 100
@@ -365,8 +374,8 @@ def test_compute_stats_all_ftc():
 # --- render_html ---
 
 
-def _dist(median=5.0, mean=6.0, p95=12.0, p99=20.0, max_=25.0):
-    return {"median": median, "mean": mean, "p95": p95, "p99": p99, "max": max_}
+def _dist(median=5.0, mean=6.0, p95=12.0, p99=20.0, max_=25.0, max_pr=None):
+    return {"median": median, "mean": mean, "p95": p95, "p99": p99, "max": max_, "max_pr": max_pr}
 
 
 def _stats(total=10, ftc_count=2, resolution=None, engagement=None,
@@ -450,6 +459,26 @@ def test_render_html_embeds_both_tabs_data():
     )
     assert '"2024-01"' in html
     assert '"Jan 13"' in html
+
+
+def test_render_html_max_links_to_pr():
+    stats = _stats(resolution=_dist(max_pr=42))
+    html = render_html(stats, stats, "2024-01-15T12:00:00Z",
+                       pr_base_url="https://github.com/org/repo")
+    assert "https://github.com/org/repo/pull/42" in html
+
+
+def test_render_html_max_no_link_without_pr_base_url():
+    stats = _stats(resolution=_dist(max_pr=42))
+    html = render_html(stats, stats, "2024-01-15T12:00:00Z")
+    assert "/pull/42" not in html
+
+
+def test_render_html_max_no_link_when_max_pr_none():
+    stats = _stats(resolution=_dist(max_pr=None))
+    html = render_html(stats, stats, "2024-01-15T12:00:00Z",
+                       pr_base_url="https://github.com/org/repo")
+    assert 'class="stat-link"' not in html
 
 
 # --- build_site (integration) ---
