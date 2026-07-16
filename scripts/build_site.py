@@ -542,17 +542,18 @@ def _open_prs_html(open_prs, pr_base_url):
     rows = []
     for pr in open_prs:
         badges = []
+        badge_spans = []
         if pr["is_bot"]:
-            badges.append("🤖")
+            badge_spans.append('<span title="bot">🤖</span>')
         else:
             if pr["is_ftc"]:
-                badges.append("🌱")
+                badge_spans.append('<span title="first-time contributor">🌱</span>')
             elif not pr["is_committer"]:
-                badges.append("👤")
+                badge_spans.append('<span title="non-committer">👤</span>')
         if pr["engagement_days"] is None:
-            badges.append("👀")
+            badge_spans.append('<span title="no engagement yet">👀</span>')
 
-        badge_str = (" " + " ".join(badges)) if badges else ""
+        badges_html = (" " + " ".join(badge_spans)) if badge_spans else ""
         title = html_lib.escape(pr["title"])
         url = f"{pr_base_url}/pull/{pr['number']}" if pr_base_url else "#"
         eng_str = _fmt(round(pr["engagement_days"], 1)) if pr["engagement_days"] is not None else "—"
@@ -560,7 +561,7 @@ def _open_prs_html(open_prs, pr_base_url):
 
         rows.append(
             f'<tr class="{_age_class(pr["age_days"])}"{draft_attr}>'
-            f'<td><a href="{url}">#{pr["number"]}{badge_str}</a> {title}</td>'
+            f'<td><a href="{url}">#{pr["number"]} {title}</a>{badges_html}</td>'
             f'<td class="num">{_fmt(pr["age_days"])}</td>'
             f'<td class="num">{eng_str}</td>'
             f'</tr>'
