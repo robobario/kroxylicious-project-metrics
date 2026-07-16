@@ -10,11 +10,11 @@ from build_site import (
     compute_stats,
     filter_resolved_since,
     histogram,
-    monthly_medians_by_group,
+    monthly_stats_trend,
     render_html,
     resolution_time_days,
     time_to_engagement_days,
-    weekly_medians_by_group,
+    weekly_stats_trend,
     build_site,
 )
 
@@ -179,78 +179,75 @@ def test_histogram_accumulates():
     assert counts[1] == 1
 
 
-# --- monthly_medians_by_group ---
+# --- monthly_stats_trend ---
 
 
-def test_monthly_medians_by_group_single_month_mixed():
+def test_monthly_stats_trend_single_month():
     resolved = [
-        (datetime(2024, 1, 10, tzinfo=UTC), 5.0, False, None),
-        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True,  1.0),
+        (datetime(2024, 1, 10, tzinfo=UTC), 3.0, False, None),
+        (datetime(2024, 1, 20, tzinfo=UTC), 5.0, False, None),
     ]
-    labels, ftc, non_ftc = monthly_medians_by_group(resolved)
+    labels, medians, means, p95s, p99s, maxes = monthly_stats_trend(resolved)
     assert labels == ["2024-01"]
-    assert ftc == [3.0]
-    assert non_ftc == [5.0]
+    assert medians == [4.0]
+    assert means == [4.0]
+    assert maxes == [5.0]
 
 
-def test_monthly_medians_by_group_ftc_absent_in_month():
+def test_monthly_stats_trend_multiple_months():
     resolved = [
         (datetime(2024, 1, 15, tzinfo=UTC), 4.0, False, None),
-        (datetime(2024, 2, 10, tzinfo=UTC), 6.0, False, 2.0),
-        (datetime(2024, 2, 20, tzinfo=UTC), 2.0, True,  0.5),
+        (datetime(2024, 2, 10, tzinfo=UTC), 6.0, False, None),
     ]
-    labels, ftc, non_ftc = monthly_medians_by_group(resolved)
+    labels, medians, *_ = monthly_stats_trend(resolved)
     assert labels == ["2024-01", "2024-02"]
-    assert ftc == [None, 2.0]
-    assert non_ftc == [4.0, 6.0]
+    assert medians == [4.0, 6.0]
 
 
-def test_monthly_medians_by_group_empty():
-    assert monthly_medians_by_group([]) == ([], [], [])
+def test_monthly_stats_trend_empty():
+    labels, medians, means, p95s, p99s, maxes = monthly_stats_trend([])
+    assert labels == []
+    assert list(medians) == []
 
 
-# --- weekly_medians_by_group ---
+# --- weekly_stats_trend ---
 
 
-def test_weekly_medians_by_group_single_week():
+def test_weekly_stats_trend_groups_by_monday():
     # Jan 15 (Mon) and Jan 17 (Wed) are in the same week
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None),
-        (datetime(2024, 1, 17, tzinfo=UTC), 3.0, True,  None),
+        (datetime(2024, 1, 15, tzinfo=UTC), 3.0, False, None),
+        (datetime(2024, 1, 17, tzinfo=UTC), 5.0, False, None),
     ]
-    labels, ftc, non_ftc = weekly_medians_by_group(resolved)
+    labels, medians, means, *_ = weekly_stats_trend(resolved)
     assert labels == ["Jan 15"]
-    assert ftc == [3.0]
-    assert non_ftc == [5.0]
+    assert medians == [4.0]
 
 
-def test_weekly_medians_by_group_multiple_weeks():
+def test_weekly_stats_trend_multiple_weeks():
     resolved = [
         (datetime(2024, 1, 8,  tzinfo=UTC), 4.0, False, None),  # Mon Jan 8
         (datetime(2024, 1, 15, tzinfo=UTC), 6.0, False, None),  # Mon Jan 15
-        (datetime(2024, 1, 17, tzinfo=UTC), 2.0, True,  None),  # Wed Jan 17 → week of Jan 15
+        (datetime(2024, 1, 17, tzinfo=UTC), 2.0, False, None),  # Wed Jan 17 → week of Jan 15
     ]
-    labels, ftc, non_ftc = weekly_medians_by_group(resolved)
+    labels, medians, *_ = weekly_stats_trend(resolved)
     assert labels == ["Jan 08", "Jan 15"]
-    assert ftc == [None, 2.0]
-    assert non_ftc == [4.0, 6.0]
+    assert medians[0] == 4.0
+    assert medians[1] == 4.0  # median of [6.0, 2.0]
 
 
-def test_weekly_medians_by_group_empty():
-    assert weekly_medians_by_group([]) == ([], [], [])
+def test_weekly_stats_trend_empty():
+    labels, medians, *_ = weekly_stats_trend([])
+    assert labels == []
 
 
-def test_weekly_medians_by_group_sunday_in_prior_week():
-    # Sunday Jan 14 belongs to the week starting Mon Jan 8
-    # Monday Jan 15 starts a new week
+def test_weekly_stats_trend_sunday_in_prior_week():
     resolved = [
         (datetime(2024, 1, 14, tzinfo=UTC), 1.0, False, None),  # Sun → week of Jan 8
         (datetime(2024, 1, 15, tzinfo=UTC), 2.0, False, None),  # Mon → week of Jan 15
     ]
-    labels, _, _ = weekly_medians_by_group(resolved)
-    assert len(labels) == 2
-    assert labels[0] == "Jan 08"
-    assert labels[1] == "Jan 15"
+    labels, *_ = weekly_stats_trend(resolved)
+    assert labels == ["Jan 08", "Jan 15"]
 
 
 # --- filter_resolved_since ---
@@ -359,9 +356,17 @@ def test_compute_stats_uses_provided_trend_fn():
         (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1),
         (datetime(2024, 1, 22, tzinfo=UTC), 3.0, False, None, 2),
     ]
-    stats = compute_stats(resolved, trend_fn=weekly_medians_by_group)
+    stats = compute_stats(resolved, trend_fn=weekly_stats_trend)
     assert len(stats["trend_labels"]) == 2
     assert "-" not in stats["trend_labels"][0]
+
+
+def test_compute_stats_trend_has_all_series():
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1)]
+    stats = compute_stats(resolved)
+    for key in ("trend_medians", "trend_means", "trend_p95s", "trend_p99s", "trend_maxes"):
+        assert key in stats
+        assert len(stats[key]) == 1
 
 
 def test_compute_stats_no_engagement():
@@ -384,8 +389,11 @@ def _dist(median=5.0, mean=6.0, p95=12.0, p99=20.0, max_=25.0, max_pr=None):
 
 
 def _stats(total=10, ftc_count=2, resolution=None, engagement=None,
-           hist_counts=None, trend_labels=None, trend_ftc=None, trend_non_ftc=None):
+           hist_counts=None, trend_labels=None,
+           trend_medians=None, trend_means=None,
+           trend_p95s=None, trend_p99s=None, trend_maxes=None):
     labels = ["<1d", "1-3d", "3-7d", "7-14d", "14-30d", "30-60d", "60d+"]
+    tl = trend_labels or ["2024-01", "2024-02"]
     return {
         "total_resolved": total,
         "ftc_count": ftc_count,
@@ -394,9 +402,12 @@ def _stats(total=10, ftc_count=2, resolution=None, engagement=None,
         "engagement": engagement or _dist(median=3.0, mean=4.0, p95=8.0, p99=15.0, max_=20.0),
         "hist_labels": labels,
         "hist_counts": hist_counts or [0, 2, 5, 2, 1, 0, 0],
-        "trend_labels": trend_labels or ["2024-01", "2024-02"],
-        "trend_ftc_medians": trend_ftc or [None, 4.0],
-        "trend_non_ftc_medians": trend_non_ftc or [4.0, 6.0],
+        "trend_labels":  tl,
+        "trend_medians": trend_medians or [4.0] * len(tl),
+        "trend_means":   trend_means   or [5.0] * len(tl),
+        "trend_p95s":    trend_p95s    or [10.0] * len(tl),
+        "trend_p99s":    trend_p99s    or [15.0] * len(tl),
+        "trend_maxes":   trend_maxes   or [20.0] * len(tl),
     }
 
 
@@ -439,7 +450,8 @@ def test_render_html_no_data_shows_placeholder():
     empty = _stats(total=0, ftc_count=0,
                    resolution=_dist(median=None, mean=None, p95=None, p99=None, max_=None),
                    engagement=_dist(median=None, mean=None, p95=None, p99=None, max_=None),
-                   hist_counts=[0]*7, trend_labels=[], trend_ftc=[], trend_non_ftc=[])
+                   hist_counts=[0]*7, trend_labels=[],
+                   trend_medians=[], trend_means=[], trend_p95s=[], trend_p99s=[], trend_maxes=[])
     html = render_html(empty, empty, "2024-01-15T12:00:00Z")
     assert "No data yet" in html
     assert "<canvas" not in html
@@ -454,6 +466,12 @@ def test_render_html_lazy_chart_init():
     html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z")
     assert "initTab" in html
     assert "initialized" in html
+
+
+def test_render_html_trend_has_five_series():
+    html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z")
+    for name in ("Median", "Mean", "p95", "p99", "Max"):
+        assert f'"label":"{name}"' in html or f"label:{json.dumps(name)}" in html
 
 
 def test_render_html_embeds_both_tabs_data():

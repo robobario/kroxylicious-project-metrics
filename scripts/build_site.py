@@ -40,6 +40,8 @@ _HTML = """\
       --s1:        #2a78d6;
       --s2:        #008300;
       --s3:        #eb6834;
+      --s4:        #4a3aa7;
+      --s5:        #e34948;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -52,6 +54,8 @@ _HTML = """\
         --s1:        #3987e5;
         --s2:        #008300;
         --s3:        #d95926;
+        --s4:        #9085e9;
+        --s5:        #e66767;
       }
     }
     *, *::before, *::after { box-sizing: border-box; }
@@ -139,6 +143,9 @@ _HTML = """\
     const C = {
       s1:   s.getPropertyValue('--s1').trim(),
       s2:   s.getPropertyValue('--s2').trim(),
+      s3:   s.getPropertyValue('--s3').trim(),
+      s4:   s.getPropertyValue('--s4').trim(),
+      s5:   s.getPropertyValue('--s5').trim(),
       grid: s.getPropertyValue('--grid').trim(),
       ink2: s.getPropertyValue('--ink-2').trim(),
       inkm: s.getPropertyValue('--ink-m').trim(),
@@ -229,39 +236,49 @@ def _week_monday(dt):
     return (dt - timedelta(days=dt.weekday())).date()
 
 
-def monthly_medians_by_group(resolved):
-    """
-    resolved: list of (close_datetime, days_float, is_ftc, engagement_days)
-    Returns (labels, ftc_medians, non_ftc_medians) grouped by month (YYYY-MM).
-    Months where a group has no data carry None.
-    """
-    ftc_by = defaultdict(list)
-    non_ftc_by = defaultdict(list)
-    for close_dt, days, is_ftc, *_ in resolved:
-        key = close_dt.strftime("%Y-%m")
-        (ftc_by if is_ftc else non_ftc_by)[key].append(days)
-    keys = sorted(ftc_by.keys() | non_ftc_by.keys())
-    ftc_medians = [round(statistics.median(ftc_by[k]), 1) if k in ftc_by else None for k in keys]
-    non_ftc_medians = [round(statistics.median(non_ftc_by[k]), 1) if k in non_ftc_by else None for k in keys]
-    return keys, ftc_medians, non_ftc_medians
+def _period_stats(days_list):
+    """Returns (median, mean, p95, p99, max) for a list of floats."""
+    sv = sorted(days_list)
+    return (
+        round(statistics.median(days_list), 1),
+        round(sum(days_list) / len(days_list), 1),
+        _percentile(sv, 95),
+        _percentile(sv, 99),
+        round(max(days_list), 1),
+    )
 
 
-def weekly_medians_by_group(resolved):
+def _unzip_stats(keys, rows):
+    if not rows:
+        return keys, [], [], [], [], []
+    medians, means, p95s, p99s, maxes = zip(*rows)
+    return keys, list(medians), list(means), list(p95s), list(p99s), list(maxes)
+
+
+def monthly_stats_trend(resolved):
     """
-    resolved: list of (close_datetime, days_float, is_ftc, engagement_days)
-    Returns (labels, ftc_medians, non_ftc_medians) grouped by ISO week.
-    Labels are 'Mon DD' (the Monday of each week). Weeks where a group has no data carry None.
+    resolved: list of (close_datetime, days_float, ...)
+    Returns (labels, medians, means, p95s, p99s, maxes) grouped by month (YYYY-MM).
     """
-    ftc_by = defaultdict(list)
-    non_ftc_by = defaultdict(list)
-    for close_dt, days, is_ftc, *_ in resolved:
-        key = _week_monday(close_dt)
-        (ftc_by if is_ftc else non_ftc_by)[key].append(days)
-    weeks = sorted(ftc_by.keys() | non_ftc_by.keys())
+    by_month = defaultdict(list)
+    for close_dt, days, *_ in resolved:
+        by_month[close_dt.strftime("%Y-%m")].append(days)
+    keys = sorted(by_month)
+    return _unzip_stats(keys, [_period_stats(by_month[k]) for k in keys])
+
+
+def weekly_stats_trend(resolved):
+    """
+    resolved: list of (close_datetime, days_float, ...)
+    Returns (labels, medians, means, p95s, p99s, maxes) grouped by ISO week.
+    Labels are 'Mon DD' (the Monday of each week).
+    """
+    by_week = defaultdict(list)
+    for close_dt, days, *_ in resolved:
+        by_week[_week_monday(close_dt)].append(days)
+    weeks = sorted(by_week)
     labels = [w.strftime("%b %d") for w in weeks]
-    ftc_medians = [round(statistics.median(ftc_by[w]), 1) if w in ftc_by else None for w in weeks]
-    non_ftc_medians = [round(statistics.median(non_ftc_by[w]), 1) if w in non_ftc_by else None for w in weeks]
-    return labels, ftc_medians, non_ftc_medians
+    return _unzip_stats(labels, [_period_stats(by_week[w]) for w in weeks])
 
 
 def filter_resolved_since(resolved, since_dt):
@@ -295,7 +312,7 @@ def _dist_stats(values, pr_numbers=None):
 
 def compute_stats(resolved, trend_fn=None):
     if trend_fn is None:
-        trend_fn = monthly_medians_by_group
+        trend_fn = monthly_stats_trend
 
     all_days   = [days for _, days, *_ in resolved]
     all_pr_nos = [pr   for *_, pr      in resolved]
@@ -307,7 +324,7 @@ def compute_stats(resolved, trend_fn=None):
 
     total = len(resolved)
     hist_labels, hist_counts = histogram(all_days)
-    trend_labels, trend_ftc_medians, trend_non_ftc_medians = trend_fn(resolved)
+    trend_labels, trend_medians, trend_means, trend_p95s, trend_p99s, trend_maxes = trend_fn(resolved)
 
     return {
         "total_resolved": total,
@@ -317,9 +334,12 @@ def compute_stats(resolved, trend_fn=None):
         "engagement": _dist_stats(eng_values, eng_pr_numbers),
         "hist_labels": hist_labels,
         "hist_counts": hist_counts,
-        "trend_labels": trend_labels,
-        "trend_ftc_medians": trend_ftc_medians,
-        "trend_non_ftc_medians": trend_non_ftc_medians,
+        "trend_labels":   list(trend_labels),
+        "trend_medians":  list(trend_medians),
+        "trend_means":    list(trend_means),
+        "trend_p95s":     list(trend_p95s),
+        "trend_p99s":     list(trend_p99s),
+        "trend_maxes":    list(trend_maxes),
     }
 
 
@@ -434,16 +454,25 @@ def _trend_js(canvas_id, stats):
     if not stats["total_resolved"] or not stats["trend_labels"]:
         return ""
     d = json.dumps
+    pt = "pointRadius:4,pointHoverRadius:7"
+
+    def ds(label, color, data, extra=""):
+        return (
+            f"{{label:{d(label)},data:{d(data)},"
+            f"borderColor:{color},borderWidth:2,pointBackgroundColor:{color},{pt},"
+            f"fill:false,tension:0.2,spanGaps:false{extra}}}"
+        )
+
+    datasets = ",".join([
+        ds("Median",    "C.s1", stats["trend_medians"]),
+        ds("Mean",      "C.s2", stats["trend_means"]),
+        ds("p95",       "C.s3", stats["trend_p95s"]),
+        ds("p99",       "C.s4", stats["trend_p99s"]),
+        ds("Max",       "C.s5", stats["trend_maxes"], ",borderDash:[4,3]"),
+    ])
     return (
         f"new Chart(document.getElementById({d(canvas_id)}), {{"
-        f"type:'line',data:{{labels:{d(stats['trend_labels'])},datasets:["
-        f"{{label:'Other contributors',data:{d(stats['trend_non_ftc_medians'])},"
-        f"borderColor:C.s1,borderWidth:2,pointBackgroundColor:C.s1,pointRadius:6,pointHoverRadius:8,"
-        f"fill:false,tension:0.2,spanGaps:false}},"
-        f"{{label:'First-time contributors',data:{d(stats['trend_ftc_medians'])},"
-        f"borderColor:C.s2,borderWidth:2,pointBackgroundColor:C.s2,pointRadius:6,pointHoverRadius:8,"
-        f"fill:false,tension:0.2,spanGaps:false}}"
-        f"]}},"
+        f"type:'line',data:{{labels:{d(stats['trend_labels'])},datasets:[{datasets}]}},"
         f"options:{{responsive:true,maintainAspectRatio:false,"
         f"plugins:{{legend:{{display:true,labels:{{color:C.ink2}}}},"
         f"tooltip:{{callbacks:{{label:ctx=>ctx.dataset.label+': '+ctx.parsed.y+' days'}}}}}},"
@@ -502,8 +531,8 @@ def build_site(data_dir, site_dir, generated_at, pr_base_url=None):
     recent_cutoff = datetime.now(UTC) - timedelta(days=RECENT_DAYS)
     recent_resolved = filter_resolved_since(resolved, recent_cutoff)
 
-    all_stats    = compute_stats(resolved,        monthly_medians_by_group)
-    recent_stats = compute_stats(recent_resolved, weekly_medians_by_group)
+    all_stats    = compute_stats(resolved,        monthly_stats_trend)
+    recent_stats = compute_stats(recent_resolved, weekly_stats_trend)
 
     html = render_html(all_stats, recent_stats, generated_at, pr_base_url)
     site_dir.mkdir(parents=True, exist_ok=True)
