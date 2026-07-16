@@ -26,6 +26,7 @@ OPEN_PR = {
     "user": {"login": "alice"},
     "base": {"ref": "main"},
     "labels": [{"name": "enhancement"}],
+    "author_association": "CONTRIBUTOR",
     "created_at": "2024-01-10T10:00:00Z",
     "updated_at": "2024-01-15T12:00:00Z",
     "closed_at": None,
@@ -78,6 +79,17 @@ def test_extract_metadata_merged_pr():
 def test_extract_metadata_no_labels():
     meta = extract_metadata(CLOSED_UNMERGED_PR)
     assert meta["labels"] == []
+
+
+def test_extract_metadata_author_association():
+    meta = extract_metadata({**OPEN_PR, "author_association": "FIRST_TIME_CONTRIBUTOR"})
+    assert meta["author_association"] == "FIRST_TIME_CONTRIBUTOR"
+
+
+def test_extract_metadata_author_association_missing_defaults_to_none():
+    pr = {k: v for k, v in OPEN_PR.items() if k != "author_association"}
+    meta = extract_metadata(pr)
+    assert meta["author_association"] == "NONE"
 
 
 # --- extract_pr_events ---
