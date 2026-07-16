@@ -281,6 +281,35 @@ def weekly_stats_trend(resolved):
     return _unzip_stats(labels, [_period_stats(by_week[w]) for w in weeks])
 
 
+def monthly_engagement_trend(resolved):
+    """
+    resolved: list of (close_datetime, days_float, is_ftc, engagement, pr_number)
+    Returns (labels, medians, means, p95s, p99s, maxes) for engagement times, grouped by month.
+    Periods with no engagement data are omitted.
+    """
+    by_month = defaultdict(list)
+    for close_dt, _, _, engagement, *_ in resolved:
+        if engagement is not None:
+            by_month[close_dt.strftime("%Y-%m")].append(engagement)
+    keys = sorted(by_month)
+    return _unzip_stats(keys, [_period_stats(by_month[k]) for k in keys])
+
+
+def weekly_engagement_trend(resolved):
+    """
+    resolved: list of (close_datetime, days_float, is_ftc, engagement, pr_number)
+    Returns (labels, medians, means, p95s, p99s, maxes) for engagement times, grouped by ISO week.
+    Periods with no engagement data are omitted.
+    """
+    by_week = defaultdict(list)
+    for close_dt, _, _, engagement, *_ in resolved:
+        if engagement is not None:
+            by_week[_week_monday(close_dt)].append(engagement)
+    weeks = sorted(by_week)
+    labels = [w.strftime("%b %d") for w in weeks]
+    return _unzip_stats(labels, [_period_stats(by_week[w]) for w in weeks])
+
+
 def filter_resolved_since(resolved, since_dt):
     """Returns only resolved PRs with close_dt >= since_dt."""
     return [item for item in resolved if item[0] >= since_dt]
@@ -310,9 +339,11 @@ def _dist_stats(values, pr_numbers=None):
     }
 
 
-def compute_stats(resolved, trend_fn=None):
+def compute_stats(resolved, trend_fn=None, eng_trend_fn=None):
     if trend_fn is None:
         trend_fn = monthly_stats_trend
+    if eng_trend_fn is None:
+        eng_trend_fn = monthly_engagement_trend
 
     all_days   = [days for _, days, *_ in resolved]
     all_pr_nos = [pr   for *_, pr      in resolved]
@@ -324,7 +355,8 @@ def compute_stats(resolved, trend_fn=None):
 
     total = len(resolved)
     hist_labels, hist_counts = histogram(all_days)
-    trend_labels, trend_medians, trend_means, trend_p95s, trend_p99s, trend_maxes = trend_fn(resolved)
+    trend_labels,  trend_medians,  trend_means,  trend_p95s,  trend_p99s,  trend_maxes  = trend_fn(resolved)
+    eng_labels,    eng_medians,    eng_means,    eng_p95s,    eng_p99s,    eng_maxes    = eng_trend_fn(resolved)
 
     return {
         "total_resolved": total,
@@ -340,6 +372,12 @@ def compute_stats(resolved, trend_fn=None):
         "trend_p95s":     list(trend_p95s),
         "trend_p99s":     list(trend_p99s),
         "trend_maxes":    list(trend_maxes),
+        "eng_trend_labels":   list(eng_labels),
+        "eng_trend_medians":  list(eng_medians),
+        "eng_trend_means":    list(eng_means),
+        "eng_trend_p95s":     list(eng_p95s),
+        "eng_trend_p99s":     list(eng_p99s),
+        "eng_trend_maxes":    list(eng_maxes),
     }
 
 
@@ -450,29 +488,29 @@ def _hist_js(canvas_id, stats):
     )
 
 
-def _trend_js(canvas_id, stats):
-    if not stats["total_resolved"] or not stats["trend_labels"]:
+def _trend_chart_js(canvas_id, labels, medians, means, p95s, p99s, maxes):
+    if not labels:
         return ""
     d = json.dumps
     pt = "pointRadius:4,pointHoverRadius:7"
 
     def ds(label, color, data, extra=""):
         return (
-            f"{{label:{d(label)},data:{d(data)},"
+            f"{{label:{d(label)},data:{d(list(data))},"
             f"borderColor:{color},borderWidth:2,pointBackgroundColor:{color},{pt},"
             f"fill:false,tension:0.2,spanGaps:false{extra}}}"
         )
 
     datasets = ",".join([
-        ds("Median",    "C.s1", stats["trend_medians"]),
-        ds("Mean",      "C.s2", stats["trend_means"]),
-        ds("p95",       "C.s3", stats["trend_p95s"]),
-        ds("p99",       "C.s4", stats["trend_p99s"]),
-        ds("Max",       "C.s5", stats["trend_maxes"], ",borderDash:[4,3]"),
+        ds("Median", "C.s1", medians),
+        ds("Mean",   "C.s2", means),
+        ds("p95",    "C.s3", p95s),
+        ds("p99",    "C.s4", p99s),
+        ds("Max",    "C.s5", maxes, ",borderDash:[4,3]"),
     ])
     return (
         f"new Chart(document.getElementById({d(canvas_id)}), {{"
-        f"type:'line',data:{{labels:{d(stats['trend_labels'])},datasets:[{datasets}]}},"
+        f"type:'line',data:{{labels:{d(list(labels))},datasets:[{datasets}]}},"
         f"options:{{responsive:true,maintainAspectRatio:false,"
         f"plugins:{{legend:{{display:true,labels:{{color:C.ink2}}}},"
         f"tooltip:{{callbacks:{{label:ctx=>ctx.dataset.label+': '+ctx.parsed.y+' days'}}}}}},"
@@ -480,37 +518,55 @@ def _trend_js(canvas_id, stats):
     )
 
 
-def _tab_content_html(stats, hist_title, trend_title, hist_id, trend_id, pr_base_url=None):
+def _tab_content_html(stats, hist_title, res_trend_title, eng_trend_title,
+                      hist_id, res_trend_id, eng_trend_id, pr_base_url=None):
+    has_res_trend = stats["total_resolved"] and bool(stats["trend_labels"])
+    has_eng_trend = stats["total_resolved"] and bool(stats["eng_trend_labels"])
     return (
         f"{_kpi_row_html(stats, pr_base_url)}"
         f'<div class="panel"><h2>{hist_title}</h2>'
         f"{_chart_area_html(hist_id, stats['total_resolved'])}</div>"
-        f'<div class="panel"><h2>{trend_title}</h2>'
-        f"{_chart_area_html(trend_id, stats['total_resolved'] and bool(stats['trend_labels']))}</div>"
+        f'<div class="panel"><h2>{res_trend_title}</h2>'
+        f"{_chart_area_html(res_trend_id, has_res_trend)}</div>"
+        f'<div class="panel"><h2>{eng_trend_title}</h2>'
+        f"{_chart_area_html(eng_trend_id, has_eng_trend)}</div>"
     )
 
 
 def render_html(all_stats, recent_stats, generated_at, pr_base_url=None):
-    recent_hist_id  = "hist-recent"
-    recent_trend_id = "trend-recent"
-    all_hist_id     = "hist-alltime"
-    all_trend_id    = "trend-alltime"
+    recent_hist_id      = "hist-recent"
+    recent_trend_id     = "trend-recent"
+    recent_eng_trend_id = "eng-trend-recent"
+    all_hist_id         = "hist-alltime"
+    all_trend_id        = "trend-alltime"
+    all_eng_trend_id    = "eng-trend-alltime"
 
     recent_content = _tab_content_html(
         recent_stats,
         "Resolution time distribution",
-        "Weekly median resolution time (days)",
-        recent_hist_id, recent_trend_id, pr_base_url,
+        "Weekly resolution time (days)",
+        "Weekly time to first engagement (days)",
+        recent_hist_id, recent_trend_id, recent_eng_trend_id, pr_base_url,
     )
     all_content = _tab_content_html(
         all_stats,
         "Resolution time distribution",
-        "Monthly median resolution time (days)",
-        all_hist_id, all_trend_id, pr_base_url,
+        "Monthly resolution time (days)",
+        "Monthly time to first engagement (days)",
+        all_hist_id, all_trend_id, all_eng_trend_id, pr_base_url,
     )
 
-    recent_js = _hist_js(recent_hist_id, recent_stats) + _trend_js(recent_trend_id, recent_stats)
-    all_js    = _hist_js(all_hist_id, all_stats) + _trend_js(all_trend_id, all_stats)
+    def _tab_js(s, hist_id, res_id, eng_id):
+        return (
+            _hist_js(hist_id, s)
+            + _trend_chart_js(res_id, s["trend_labels"], s["trend_medians"],
+                              s["trend_means"], s["trend_p95s"], s["trend_p99s"], s["trend_maxes"])
+            + _trend_chart_js(eng_id, s["eng_trend_labels"], s["eng_trend_medians"],
+                              s["eng_trend_means"], s["eng_trend_p95s"], s["eng_trend_p99s"], s["eng_trend_maxes"])
+        )
+
+    recent_js = _tab_js(recent_stats, recent_hist_id, recent_trend_id, recent_eng_trend_id)
+    all_js    = _tab_js(all_stats, all_hist_id, all_trend_id, all_eng_trend_id)
 
     chart_js = (
         f"if (name === 'recent') {{ {recent_js} }}"
@@ -531,8 +587,8 @@ def build_site(data_dir, site_dir, generated_at, pr_base_url=None):
     recent_cutoff = datetime.now(UTC) - timedelta(days=RECENT_DAYS)
     recent_resolved = filter_resolved_since(resolved, recent_cutoff)
 
-    all_stats    = compute_stats(resolved,        monthly_stats_trend)
-    recent_stats = compute_stats(recent_resolved, weekly_stats_trend)
+    all_stats    = compute_stats(resolved,        monthly_stats_trend, monthly_engagement_trend)
+    recent_stats = compute_stats(recent_resolved, weekly_stats_trend,   weekly_engagement_trend)
 
     html = render_html(all_stats, recent_stats, generated_at, pr_base_url)
     site_dir.mkdir(parents=True, exist_ok=True)

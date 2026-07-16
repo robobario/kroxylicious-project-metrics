@@ -10,10 +10,12 @@ from build_site import (
     compute_stats,
     filter_resolved_since,
     histogram,
+    monthly_engagement_trend,
     monthly_stats_trend,
     render_html,
     resolution_time_days,
     time_to_engagement_days,
+    weekly_engagement_trend,
     weekly_stats_trend,
     build_site,
 )
@@ -250,6 +252,39 @@ def test_weekly_stats_trend_sunday_in_prior_week():
     assert labels == ["Jan 08", "Jan 15"]
 
 
+# --- monthly/weekly_engagement_trend ---
+
+
+def test_monthly_engagement_trend_skips_none():
+    resolved = [
+        (datetime(2024, 1, 10, tzinfo=UTC), 5.0, False, None,  1),  # no engagement
+        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, False, 2.0,   2),
+        (datetime(2024, 1, 25, tzinfo=UTC), 4.0, False, 4.0,   3),
+    ]
+    labels, medians, means, *_ = monthly_engagement_trend(resolved)
+    assert labels == ["2024-01"]
+    assert medians == [3.0]   # median of [2.0, 4.0]
+    assert means   == [3.0]   # mean of [2.0, 4.0]
+
+
+def test_monthly_engagement_trend_empty_when_no_engagement():
+    resolved = [(datetime(2024, 1, 10, tzinfo=UTC), 5.0, False, None, 1)]
+    labels, *_ = monthly_engagement_trend(resolved)
+    assert labels == []
+
+
+def test_weekly_engagement_trend_groups_by_close_date():
+    resolved = [
+        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, 1.0, 1),  # Mon Jan 15
+        (datetime(2024, 1, 17, tzinfo=UTC), 3.0, False, 3.0, 2),  # Wed Jan 15 week
+        (datetime(2024, 1, 22, tzinfo=UTC), 4.0, False, 2.0, 3),  # Mon Jan 22
+    ]
+    labels, medians, *_ = weekly_engagement_trend(resolved)
+    assert labels == ["Jan 15", "Jan 22"]
+    assert medians[0] == 2.0   # median of [1.0, 3.0]
+    assert medians[1] == 2.0
+
+
 # --- filter_resolved_since ---
 
 
@@ -369,6 +404,24 @@ def test_compute_stats_trend_has_all_series():
         assert len(stats[key]) == 1
 
 
+def test_compute_stats_engagement_trend_populated():
+    resolved = [
+        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, 2.0, 1),
+        (datetime(2024, 2, 5,  tzinfo=UTC), 3.0, False, 1.0, 2),
+    ]
+    stats = compute_stats(resolved)
+    for key in ("eng_trend_labels", "eng_trend_medians", "eng_trend_means",
+                "eng_trend_p95s", "eng_trend_p99s", "eng_trend_maxes"):
+        assert key in stats
+    assert len(stats["eng_trend_labels"]) == 2
+
+
+def test_compute_stats_engagement_trend_empty_when_no_engagement():
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1)]
+    stats = compute_stats(resolved)
+    assert stats["eng_trend_labels"] == []
+
+
 def test_compute_stats_no_engagement():
     resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1)]
     assert compute_stats(resolved)["engagement"]["median"] is None
@@ -391,9 +444,11 @@ def _dist(median=5.0, mean=6.0, p95=12.0, p99=20.0, max_=25.0, max_pr=None):
 def _stats(total=10, ftc_count=2, resolution=None, engagement=None,
            hist_counts=None, trend_labels=None,
            trend_medians=None, trend_means=None,
-           trend_p95s=None, trend_p99s=None, trend_maxes=None):
+           trend_p95s=None, trend_p99s=None, trend_maxes=None,
+           eng_trend_labels=None):
     labels = ["<1d", "1-3d", "3-7d", "7-14d", "14-30d", "30-60d", "60d+"]
-    tl = trend_labels or ["2024-01", "2024-02"]
+    tl  = trend_labels     or ["2024-01", "2024-02"]
+    etl = eng_trend_labels or ["2024-01"]
     return {
         "total_resolved": total,
         "ftc_count": ftc_count,
@@ -408,6 +463,12 @@ def _stats(total=10, ftc_count=2, resolution=None, engagement=None,
         "trend_p95s":    trend_p95s    or [10.0] * len(tl),
         "trend_p99s":    trend_p99s    or [15.0] * len(tl),
         "trend_maxes":   trend_maxes   or [20.0] * len(tl),
+        "eng_trend_labels":   etl,
+        "eng_trend_medians":  [2.0] * len(etl),
+        "eng_trend_means":    [2.5] * len(etl),
+        "eng_trend_p95s":     [5.0] * len(etl),
+        "eng_trend_p99s":     [8.0] * len(etl),
+        "eng_trend_maxes":    [10.0] * len(etl),
     }
 
 
@@ -441,6 +502,13 @@ def test_render_html_shows_all_stat_names():
         assert name in html
 
 
+def test_render_html_has_engagement_trend_panel():
+    html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z")
+    assert "time to first engagement" in html.lower()
+    assert "eng-trend-recent" in html
+    assert "eng-trend-alltime" in html
+
+
 def test_render_html_shows_generated_at():
     html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z")
     assert "2024-01-15T12:00:00Z" in html
@@ -451,7 +519,8 @@ def test_render_html_no_data_shows_placeholder():
                    resolution=_dist(median=None, mean=None, p95=None, p99=None, max_=None),
                    engagement=_dist(median=None, mean=None, p95=None, p99=None, max_=None),
                    hist_counts=[0]*7, trend_labels=[],
-                   trend_medians=[], trend_means=[], trend_p95s=[], trend_p99s=[], trend_maxes=[])
+                   trend_medians=[], trend_means=[], trend_p95s=[], trend_p99s=[], trend_maxes=[],
+                   eng_trend_labels=[])
     html = render_html(empty, empty, "2024-01-15T12:00:00Z")
     assert "No data yet" in html
     assert "<canvas" not in html
