@@ -834,35 +834,45 @@ def test_open_prs_html_empty():
     assert "no-data" in html.lower() or "No open" in html
 
 
-def test_open_prs_html_has_pr_link():
+def test_open_prs_html_title_and_number_in_link():
     html = _open_prs_html([_make_pr(42, "My PR")], "https://github.com/o/r")
-    assert "https://github.com/o/r/pull/42" in html
-    assert "My PR" in html
+    # Both number and title must be inside the anchor tag
+    assert '<a href="https://github.com/o/r/pull/42">#42 My PR</a>' in html
 
 
-def test_open_prs_html_ftc_emoji():
+def test_open_prs_html_emojis_after_link():
     html = _open_prs_html([_make_pr(is_ftc=True, is_committer=False)], None)
+    # Emoji must appear after the closing </a>
+    close_a = html.index("</a>")
+    assert "🌱" in html[close_a:]
+
+
+def test_open_prs_html_ftc_emoji_with_tooltip():
+    html = _open_prs_html([_make_pr(is_ftc=True, is_committer=False)], None)
+    assert 'title="first-time contributor"' in html
     assert "🌱" in html
 
 
-def test_open_prs_html_non_committer_emoji():
+def test_open_prs_html_non_committer_emoji_with_tooltip():
     html = _open_prs_html([_make_pr(is_committer=False)], None)
+    assert 'title="non-committer"' in html
     assert "👤" in html
 
 
-def test_open_prs_html_bot_emoji():
+def test_open_prs_html_bot_emoji_with_tooltip():
     html = _open_prs_html([_make_pr(is_bot=True, author="bot[bot]")], None)
+    assert 'title="bot"' in html
     assert "🤖" in html
 
 
-def test_open_prs_html_no_engagement_emoji():
+def test_open_prs_html_no_engagement_emoji_with_tooltip():
     html = _open_prs_html([_make_pr(engagement_days=None)], None)
+    assert 'title="no engagement yet"' in html
     assert "👀" in html
 
 
 def test_open_prs_html_no_waiting_emoji_when_engaged():
     html = _open_prs_html([_make_pr(engagement_days=2.0)], None)
-    # 👀 appears in the legend; check only the table body rows
     tbody_start = html.index("<tbody>")
     tbody_end   = html.index("</tbody>")
     assert "👀" not in html[tbody_start:tbody_end]
