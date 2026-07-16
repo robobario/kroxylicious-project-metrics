@@ -4,6 +4,8 @@ from datetime import datetime, timedelta, timezone
 import pytest
 
 from build_site import (
+    _dist_stats,
+    _percentile,
     compute_ftc_pr_numbers,
     compute_stats,
     filter_resolved_since,
@@ -276,14 +278,45 @@ def test_filter_resolved_since_all_excluded():
     assert filter_resolved_since(resolved, cutoff) == []
 
 
+# --- _percentile and _dist_stats ---
+
+
+def test_percentile_midpoint():
+    assert _percentile([0.0, 10.0], 50) == pytest.approx(5.0)
+
+
+def test_percentile_p95_small_list():
+    vals = sorted(range(1, 21))  # 1..20; p95 idx=18.05 → 19 + 0.05*(20-19) = 19.05 → 19.1
+    result = _percentile(vals, 95)
+    assert result == pytest.approx(19.1, abs=0.05)
+
+
+def test_percentile_single_value():
+    assert _percentile([7.0], 99) == pytest.approx(7.0)
+
+
+def test_dist_stats_empty():
+    d = _dist_stats([])
+    assert all(v is None for v in d.values())
+
+
+def test_dist_stats_values():
+    d = _dist_stats([2.0, 4.0, 6.0, 8.0, 10.0])
+    assert d["median"] == pytest.approx(6.0)
+    assert d["mean"]   == pytest.approx(6.0)
+    assert d["max"]    == pytest.approx(10.0)
+    assert d["p95"] is not None
+    assert d["p99"] is not None
+
+
 # --- compute_stats ---
 
 
 def test_compute_stats_empty():
     stats = compute_stats([])
     assert stats["total_resolved"] == 0
-    assert stats["median_days"] is None
-    assert stats["median_engagement_days"] is None
+    assert stats["resolution"]["median"] is None
+    assert stats["engagement"]["median"] is None
     assert stats["ftc_count"] == 0
     assert stats["ftc_pct"] == 0
     assert all(c == 0 for c in stats["hist_counts"])
@@ -298,10 +331,11 @@ def test_compute_stats_with_data():
     ]
     stats = compute_stats(resolved)
     assert stats["total_resolved"] == 3
-    assert stats["median_days"] == 5.0
+    assert stats["resolution"]["median"] == 5.0
     assert stats["ftc_count"] == 1
     assert stats["ftc_pct"] == 33
-    assert stats["median_engagement_days"] == 1.5
+    assert stats["engagement"]["median"] == 1.5
+    assert stats["resolution"]["max"] == 10.0
     assert len(stats["hist_labels"]) == 7
     assert len(stats["trend_labels"]) == 2
 
@@ -313,12 +347,12 @@ def test_compute_stats_uses_provided_trend_fn():
     ]
     stats = compute_stats(resolved, trend_fn=weekly_medians_by_group)
     assert len(stats["trend_labels"]) == 2
-    assert "-" not in stats["trend_labels"][0]  # weekly labels use spaces not dashes
+    assert "-" not in stats["trend_labels"][0]
 
 
 def test_compute_stats_no_engagement():
     resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None)]
-    assert compute_stats(resolved)["median_engagement_days"] is None
+    assert compute_stats(resolved)["engagement"]["median"] is None
 
 
 def test_compute_stats_all_ftc():
@@ -331,15 +365,19 @@ def test_compute_stats_all_ftc():
 # --- render_html ---
 
 
-def _stats(median=5.0, total=10, ftc_count=2, engagement=3.0,
+def _dist(median=5.0, mean=6.0, p95=12.0, p99=20.0, max_=25.0):
+    return {"median": median, "mean": mean, "p95": p95, "p99": p99, "max": max_}
+
+
+def _stats(total=10, ftc_count=2, resolution=None, engagement=None,
            hist_counts=None, trend_labels=None, trend_ftc=None, trend_non_ftc=None):
     labels = ["<1d", "1-3d", "3-7d", "7-14d", "14-30d", "30-60d", "60d+"]
     return {
-        "median_days": median,
         "total_resolved": total,
         "ftc_count": ftc_count,
         "ftc_pct": round(100 * ftc_count / total) if total else 0,
-        "median_engagement_days": engagement,
+        "resolution": resolution or _dist(),
+        "engagement": engagement or _dist(median=3.0, mean=4.0, p95=8.0, p99=15.0, max_=20.0),
         "hist_labels": labels,
         "hist_counts": hist_counts or [0, 2, 5, 2, 1, 0, 0],
         "trend_labels": trend_labels or ["2024-01", "2024-02"],
@@ -354,16 +392,28 @@ def test_render_html_has_both_tabs():
     assert "All time" in html
 
 
-def test_render_html_shows_median_in_both_tabs():
-    html = render_html(_stats(median=7.5), _stats(median=3.0), "2024-01-15T12:00:00Z")
-    assert "7.5 days" in html
-    assert "3.0 days" in html
+def test_render_html_shows_resolution_stats():
+    html = render_html(_stats(resolution=_dist(median=7.5, p95=20.0)), _stats(), "2024-01-15T12:00:00Z")
+    assert "7.5d" in html
+    assert "20.0d" in html
 
 
-def test_render_html_shows_engagement_in_both_tabs():
-    html = render_html(_stats(engagement=2.5), _stats(engagement=1.5), "2024-01-15T12:00:00Z")
-    assert "2.5 days" in html
-    assert "1.5 days" in html
+def test_render_html_shows_engagement_stats():
+    html = render_html(_stats(engagement=_dist(median=2.5, max_=30.0)), _stats(), "2024-01-15T12:00:00Z")
+    assert "2.5d" in html
+    assert "30.0d" in html
+
+
+def test_render_html_shows_stat_group_labels():
+    html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z")
+    assert "Time to resolution" in html
+    assert "Time to first Committer engagement" in html
+
+
+def test_render_html_shows_all_stat_names():
+    html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z")
+    for name in ("Median", "Mean", "p95", "p99", "Max"):
+        assert name in html
 
 
 def test_render_html_shows_generated_at():
@@ -372,7 +422,9 @@ def test_render_html_shows_generated_at():
 
 
 def test_render_html_no_data_shows_placeholder():
-    empty = _stats(median=None, total=0, ftc_count=0, engagement=None,
+    empty = _stats(total=0, ftc_count=0,
+                   resolution=_dist(median=None, mean=None, p95=None, p99=None, max_=None),
+                   engagement=_dist(median=None, mean=None, p95=None, p99=None, max_=None),
                    hist_counts=[0]*7, trend_labels=[], trend_ftc=[], trend_non_ftc=[])
     html = render_html(empty, empty, "2024-01-15T12:00:00Z")
     assert "No data yet" in html
@@ -443,7 +495,7 @@ def test_build_site_engagement_computed(tmp_path):
     _write_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", "closed_merged",
               "2024-01-15T10:00:00Z", reviews=[("2024-01-12T10:00:00Z", "maintainer")])
     result = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z", COMMITTERS)
-    assert result["all"]["median_engagement_days"] == pytest.approx(2.0)
+    assert result["all"]["engagement"]["median"] == pytest.approx(2.0)
 
 
 def test_build_site_ftc_counted(tmp_path):
