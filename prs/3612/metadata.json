@@ -6,5 +6,6 @@
   "target_branch": "main",
   "created_at": "2026-04-06T06:53:49Z",
   "state": "open",
-  "merged": false
+  "merged": false,
+  "draft": true
 }
