@@ -2,12 +2,15 @@
 """Harvest PR events from GitHub and write raw data to the data directory."""
 
 import json
+import logging
 import os
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
+
+log = logging.getLogger(__name__)
 
 UTC = timezone.utc
 GITHUB_API = "https://api.github.com"
@@ -137,22 +140,33 @@ def process_pr(session, owner, repo, pr, data_dir):
     pr_dir = data_dir / "prs" / str(pr["number"])
     pr_dir.mkdir(parents=True, exist_ok=True)
 
+    title = pr["title"][:60] + ("…" if len(pr["title"]) > 60 else "")
+    log.info("  #%-5d  %-62s  [%s]", pr["number"], title, pr["state"])
+
     write_json(pr_dir / "metadata.json", extract_metadata(pr))
 
     new_events = extract_pr_events(pr)
     new_events.extend(extract_timeline_events(list(iter_timeline(session, owner, repo, pr["number"]))))
 
     existing = load_json(pr_dir / "events.json", [])
-    write_json(pr_dir / "events.json", merge_events(existing, new_events))
+    merged = merge_events(existing, new_events)
+    added = len(merged) - len(existing)
+    if added:
+        log.info("           +%d event(s)", added)
+    write_json(pr_dir / "events.json", merged)
 
 
 def harvest(session, owner, repo, data_dir, run_start):
     state = load_json(data_dir / "last_harvest.json", {"last_run": None})
     since = since_from_state(state.get("last_run"))
+    log.info("Harvesting %s/%s — PRs updated since %s", owner, repo, since.strftime("%Y-%m-%d %H:%M UTC"))
 
+    count = 0
     for pr in iter_prs(session, owner, repo, since):
         process_pr(session, owner, repo, pr, data_dir)
+        count += 1
 
+    log.info("Done — %d PR(s) processed.", count)
     write_json(data_dir / "last_harvest.json", {"last_run": run_start.isoformat()})
 
 
@@ -173,9 +187,10 @@ def main():
         "X-GitHub-Api-Version": "2022-11-28",
     })
 
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s  %(message)s", datefmt="%H:%M:%S")
+
     run_start = datetime.now(UTC)
     harvest(session, owner, repo, data_dir, run_start)
-    print(f"Harvest complete. Last run: {run_start.isoformat()}")
 
 
 if __name__ == "__main__":
