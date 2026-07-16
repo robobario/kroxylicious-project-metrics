@@ -4,12 +4,16 @@ from datetime import datetime, timedelta, timezone
 import pytest
 
 from build_site import (
+    _age_class,
     _dist_stats,
+    _open_prs_html,
     _percentile,
     compute_ftc_pr_numbers,
     compute_stats,
     filter_resolved_since,
     histogram,
+    load_committers,
+    load_open_prs,
     monthly_engagement_trend,
     monthly_stats_trend,
     render_html,
@@ -19,6 +23,8 @@ from build_site import (
     weekly_stats_trend,
     build_site,
 )
+
+COMMITTERS = frozenset({"k-wall", "robobario"})
 
 UTC = timezone.utc
 
@@ -664,5 +670,170 @@ def test_compute_ftc_pr_numbers_no_prs_dir(tmp_path):
 def test_compute_ftc_pr_numbers_no_metadata(tmp_path):
     (tmp_path / "prs" / "1").mkdir(parents=True)
     assert compute_ftc_pr_numbers(tmp_path) == frozenset()
+
+
+# --- _age_class ---
+
+
+def test_age_class_boundaries():
+    assert _age_class(0)    == "age-fresh"
+    assert _age_class(6.9)  == "age-fresh"
+    assert _age_class(7.0)  == "age-moderate"
+    assert _age_class(29.9) == "age-moderate"
+    assert _age_class(30.0) == "age-old"
+    assert _age_class(89.9) == "age-old"
+    assert _age_class(90.0) == "age-stale"
+    assert _age_class(200)  == "age-stale"
+
+
+# --- load_open_prs ---
+
+
+def _write_open_pr(pr_dir, created, author="alice", title="An open PR",
+                   review_actor=None, number=None):
+    pr_dir.mkdir(parents=True, exist_ok=True)
+    n = number or int(pr_dir.name)
+    events = [{"type": "created", "timestamp": created, "actor": author}]
+    if review_actor:
+        # add a review one day after creation (cheap engagement simulation)
+        from datetime import datetime as _dt, timezone as _tz, timedelta as _td
+        review_ts = (_dt.fromisoformat(created.replace("Z", "+00:00")) + _td(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        events.append({"type": "reviewed", "timestamp": review_ts, "actor": review_actor})
+    (pr_dir / "events.json").write_text(json.dumps(events))
+    (pr_dir / "metadata.json").write_text(json.dumps({
+        "number": n, "title": title, "author": author,
+        "labels": [], "target_branch": "main", "created_at": created,
+        "state": "open", "merged": False,
+    }))
+
+
+def test_load_open_prs_basic(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "5", "2024-01-10T10:00:00Z")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert len(result) == 1
+    assert result[0]["number"] == 5
+    assert result[0]["age_days"] == pytest.approx(10.0, abs=0.5)
+
+
+def test_load_open_prs_skips_closed(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z")
+    _write_pr(tmp_path / "prs" / "2", "2024-01-08T10:00:00Z", "closed_merged", "2024-01-12T10:00:00Z")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert len(result) == 1
+    assert result[0]["number"] == 1
+
+
+def test_load_open_prs_sorted_oldest_first(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "1", "2024-01-05T10:00:00Z")  # older
+    _write_open_pr(tmp_path / "prs" / "2", "2024-01-10T10:00:00Z")  # newer
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert result[0]["number"] == 1  # oldest first
+
+
+def test_load_open_prs_ftc_flag(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "7", "2024-01-10T10:00:00Z", author="newbie")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, {7}, frozenset(), now)
+    assert result[0]["is_ftc"] is True
+
+
+def test_load_open_prs_bot_flag(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "3", "2024-01-10T10:00:00Z", author="dependabot[bot]")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert result[0]["is_bot"] is True
+    assert result[0]["is_ftc"] is False
+
+
+def test_load_open_prs_committer_flag(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "4", "2024-01-10T10:00:00Z", author="k-wall")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), COMMITTERS, now)
+    assert result[0]["is_committer"] is True
+
+
+def test_load_open_prs_engagement_computed(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "6", "2024-01-10T10:00:00Z",
+                   author="alice", review_actor="bob")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert result[0]["engagement_days"] == pytest.approx(1.0)
+
+
+def test_load_open_prs_no_engagement(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "8", "2024-01-10T10:00:00Z")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert result[0]["engagement_days"] is None
+
+
+# --- _open_prs_html ---
+
+
+def _make_pr(number=1, title="Fix it", author="alice", age_days=5.0,
+             is_bot=False, is_ftc=False, is_committer=True, engagement_days=None):
+    return {"number": number, "title": title, "author": author, "age_days": age_days,
+            "is_bot": is_bot, "is_ftc": is_ftc, "is_committer": is_committer,
+            "engagement_days": engagement_days}
+
+
+def test_open_prs_html_empty():
+    html = _open_prs_html([], None)
+    assert "no-data" in html.lower() or "No open" in html
+
+
+def test_open_prs_html_has_pr_link():
+    html = _open_prs_html([_make_pr(42, "My PR")], "https://github.com/o/r")
+    assert "https://github.com/o/r/pull/42" in html
+    assert "My PR" in html
+
+
+def test_open_prs_html_ftc_emoji():
+    html = _open_prs_html([_make_pr(is_ftc=True, is_committer=False)], None)
+    assert "🌱" in html
+
+
+def test_open_prs_html_non_committer_emoji():
+    html = _open_prs_html([_make_pr(is_committer=False)], None)
+    assert "👤" in html
+
+
+def test_open_prs_html_bot_emoji():
+    html = _open_prs_html([_make_pr(is_bot=True, author="bot[bot]")], None)
+    assert "🤖" in html
+
+
+def test_open_prs_html_no_engagement_emoji():
+    html = _open_prs_html([_make_pr(engagement_days=None)], None)
+    assert "👀" in html
+
+
+def test_open_prs_html_no_waiting_emoji_when_engaged():
+    html = _open_prs_html([_make_pr(engagement_days=2.0)], None)
+    # 👀 appears in the legend; check only the table body rows
+    tbody_start = html.index("<tbody>")
+    tbody_end   = html.index("</tbody>")
+    assert "👀" not in html[tbody_start:tbody_end]
+
+
+def test_open_prs_html_age_class():
+    html = _open_prs_html([_make_pr(age_days=100.0)], None)
+    assert "age-stale" in html
+
+
+# --- load_committers ---
+
+
+def test_load_committers_parses_usernames(tmp_path):
+    f = tmp_path / "committers.txt"
+    f.write_text("# comment\nalice\nbob\n\ncarol\n")
+    assert load_committers(f) == frozenset({"alice", "bob", "carol"})
+
+
+def test_load_committers_missing_file(tmp_path):
+    assert load_committers(tmp_path / "missing.txt") == frozenset()
 
 
