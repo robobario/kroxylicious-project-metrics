@@ -61,6 +61,7 @@ def extract_metadata(pr):
         "created_at": pr["created_at"],
         "state": pr["state"],
         "merged": pr.get("merged_at") is not None,
+        "draft": pr.get("draft", False),
     }
 
 

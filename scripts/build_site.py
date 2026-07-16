@@ -132,6 +132,9 @@ _HTML = """\
     .age-stale    { background: rgba(227,73,72,0.12); }
     .legend { font-size: 0.75rem; color: var(--ink-m); margin-top: 1rem; display: flex; gap: 1.25rem; flex-wrap: wrap; }
     .legend-item { display: flex; align-items: center; gap: 0.3rem; }
+    .pr-controls { margin-bottom: 1rem; font-size: 0.875rem; color: var(--ink-2); display: flex; align-items: center; gap: 0.5rem; }
+    .pr-controls input[type="checkbox"] { cursor: pointer; }
+    #open-pr-table.hide-drafts tr[data-draft="true"] { display: none; }
   </style>
 </head>
 <body>
@@ -509,13 +512,14 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
         is_committer = (author in committers) and not is_bot
         engagement_days = time_to_engagement_days(events)
         open_prs.append({
-            "number":         pr_number,
-            "title":          meta.get("title", ""),
-            "author":         author,
-            "age_days":       round(age_days, 1),
-            "is_bot":         is_bot,
-            "is_ftc":         is_ftc,
-            "is_committer":   is_committer,
+            "number":          pr_number,
+            "title":           meta.get("title", ""),
+            "author":          author,
+            "age_days":        round(age_days, 1),
+            "is_bot":          is_bot,
+            "is_ftc":          is_ftc,
+            "is_committer":    is_committer,
+            "is_draft":        meta.get("draft", False),
             "engagement_days": engagement_days,
         })
     open_prs.sort(key=lambda p: p["age_days"], reverse=True)
@@ -543,15 +547,22 @@ def _open_prs_html(open_prs, pr_base_url):
         title = html_lib.escape(pr["title"])
         url = f"{pr_base_url}/pull/{pr['number']}" if pr_base_url else "#"
         eng_str = _fmt(round(pr["engagement_days"], 1)) if pr["engagement_days"] is not None else "—"
+        draft_attr = ' data-draft="true"' if pr.get("is_draft") else ""
 
         rows.append(
-            f'<tr class="{_age_class(pr["age_days"])}">'
+            f'<tr class="{_age_class(pr["age_days"])}"{draft_attr}>'
             f'<td><a href="{url}">#{pr["number"]}{badge_str}</a> {title}</td>'
             f'<td class="num">{_fmt(pr["age_days"])}</td>'
             f'<td class="num">{eng_str}</td>'
             f'</tr>'
         )
 
+    controls = (
+        '<div class="pr-controls">'
+        '<input type="checkbox" id="show-drafts">'
+        '<label for="show-drafts">Show draft PRs</label>'
+        '</div>'
+    )
     legend = (
         '<div class="legend">'
         '<span class="legend-item">🌱 first-time contributor</span>'
@@ -561,10 +572,11 @@ def _open_prs_html(open_prs, pr_base_url):
         '</div>'
     )
     return (
-        '<table class="pr-table">'
-        '<thead><tr><th>PR</th><th>Open for</th><th>First engagement</th></tr></thead>'
-        '<tbody>' + "".join(rows) + '</tbody>'
-        '</table>' + legend
+        controls
+        + '<table class="pr-table" id="open-pr-table">'
+        + '<thead><tr><th>PR</th><th>Open for</th><th>First engagement</th></tr></thead>'
+        + '<tbody>' + "".join(rows) + '</tbody>'
+        + '</table>' + legend
     )
 
 
@@ -704,9 +716,17 @@ def render_html(all_stats, recent_stats, generated_at, pr_base_url=None, open_pr
     recent_js = _tab_js(recent_stats, recent_hist_id, recent_trend_id, recent_eng_trend_id)
     all_js    = _tab_js(all_stats, all_hist_id, all_trend_id, all_eng_trend_id)
 
+    open_js = (
+        "const cb=document.getElementById('show-drafts'),"
+        "t=document.getElementById('open-pr-table');"
+        "if(cb&&t){"
+        "t.classList.add('hide-drafts');"
+        "cb.addEventListener('change',()=>t.classList.toggle('hide-drafts',!cb.checked));}"
+    )
     chart_js = (
         f"if (name === 'recent') {{ {recent_js} }}"
         f" else if (name === 'alltime') {{ {all_js} }}"
+        f" else if (name === 'open') {{ {open_js} }}"
     )
 
     open_prs_content = _open_prs_html(open_prs or [], pr_base_url)

@@ -770,14 +770,36 @@ def test_load_open_prs_no_engagement(tmp_path):
     assert result[0]["engagement_days"] is None
 
 
+def test_load_open_prs_draft_flag(tmp_path):
+    pr_dir = tmp_path / "prs" / "9"
+    pr_dir.mkdir(parents=True)
+    (pr_dir / "events.json").write_text("[]")
+    (pr_dir / "metadata.json").write_text(json.dumps({
+        "number": 9, "title": "WIP", "author": "alice",
+        "labels": [], "target_branch": "main", "created_at": "2024-01-10T10:00:00Z",
+        "state": "open", "merged": False, "draft": True,
+    }))
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert result[0]["is_draft"] is True
+
+
+def test_load_open_prs_draft_defaults_false(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "10", "2024-01-10T10:00:00Z")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert result[0]["is_draft"] is False
+
+
 # --- _open_prs_html ---
 
 
 def _make_pr(number=1, title="Fix it", author="alice", age_days=5.0,
-             is_bot=False, is_ftc=False, is_committer=True, engagement_days=None):
+             is_bot=False, is_ftc=False, is_committer=True, engagement_days=None,
+             is_draft=False):
     return {"number": number, "title": title, "author": author, "age_days": age_days,
             "is_bot": is_bot, "is_ftc": is_ftc, "is_committer": is_committer,
-            "engagement_days": engagement_days}
+            "engagement_days": engagement_days, "is_draft": is_draft}
 
 
 def test_open_prs_html_empty():
@@ -822,6 +844,28 @@ def test_open_prs_html_no_waiting_emoji_when_engaged():
 def test_open_prs_html_age_class():
     html = _open_prs_html([_make_pr(age_days=100.0)], None)
     assert "age-stale" in html
+
+
+def test_open_prs_html_draft_row_has_data_attr():
+    html = _open_prs_html([_make_pr(is_draft=True)], None)
+    assert 'data-draft="true"' in html
+
+
+def test_open_prs_html_non_draft_has_no_data_attr():
+    html = _open_prs_html([_make_pr(is_draft=False)], None)
+    assert 'data-draft="true"' not in html
+
+
+def test_open_prs_html_has_checkbox():
+    html = _open_prs_html([_make_pr()], None)
+    assert 'id="show-drafts"' in html
+    assert "Show draft PRs" in html
+
+
+def test_render_html_open_tab_has_draft_js():
+    html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z", open_prs=[_make_pr(is_draft=True)])
+    assert "show-drafts" in html
+    assert "hide-drafts" in html
 
 
 # --- load_committers ---
