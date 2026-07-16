@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '17 */4 * * *'
   workflow_dispatch:
+    inputs:
+      full_rescrape:
+        description: 'Delete all existing data and re-harvest from the project epoch'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -27,6 +32,24 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Reset data for full rescrape
+        if: inputs.full_rescrape
+        run: |
+          cd data
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -rf prs
+          mkdir prs
+          touch prs/.gitkeep
+          echo '{"last_run": null}' > last_harvest.json
+          git add .
+          if git diff --staged --quiet; then
+            echo "Data was already empty."
+          else
+            git commit -m "chore: wipe data for full rescrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
 
       - name: Harvest PR data
         env:
