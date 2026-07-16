@@ -8,5 +8,15 @@
     "type": "review_requested",
     "timestamp": "2026-07-16T10:12:02Z",
     "actor": "raymond-julie"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-07-16T20:52:34Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-16T20:52:34Z",
+    "actor": "SamBarker"
   }
 ]
