@@ -522,7 +522,14 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
             "is_draft":        meta.get("draft", False),
             "engagement_days": engagement_days,
         })
-    open_prs.sort(key=lambda p: p["age_days"], reverse=True)
+    def _tier(p):
+        if p["is_bot"]:
+            return 2
+        if not p["is_committer"]:
+            return 0  # non-committer humans (incl. FTC) surface first
+        return 1
+
+    open_prs.sort(key=lambda p: (_tier(p), -p["age_days"]))
     return open_prs
 
 

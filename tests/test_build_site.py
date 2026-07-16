@@ -725,12 +725,30 @@ def test_load_open_prs_skips_closed(tmp_path):
     assert result[0]["number"] == 1
 
 
-def test_load_open_prs_sorted_oldest_first(tmp_path):
+def test_load_open_prs_sorted_oldest_first_within_tier(tmp_path):
     _write_open_pr(tmp_path / "prs" / "1", "2024-01-05T10:00:00Z")  # older
     _write_open_pr(tmp_path / "prs" / "2", "2024-01-10T10:00:00Z")  # newer
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
-    assert result[0]["number"] == 1  # oldest first
+    assert result[0]["number"] == 1  # oldest non-committer first
+
+
+def test_load_open_prs_non_committer_before_committer(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", author="k-wall")    # committer, older
+    _write_open_pr(tmp_path / "prs" / "2", "2024-01-15T10:00:00Z", author="outsider")  # non-committer, newer
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), COMMITTERS, now)
+    assert result[0]["number"] == 2   # non-committer surfaces first despite being newer
+    assert result[1]["number"] == 1
+
+
+def test_load_open_prs_bot_after_humans(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "1", "2024-01-01T10:00:00Z", author="dependabot[bot]")  # bot, very old
+    _write_open_pr(tmp_path / "prs" / "2", "2024-01-18T10:00:00Z", author="outsider")         # human, very new
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert result[0]["number"] == 2   # human first
+    assert result[1]["number"] == 1   # bot last despite being much older
 
 
 def test_load_open_prs_ftc_flag(tmp_path):
