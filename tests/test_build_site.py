@@ -6,7 +6,7 @@ import pytest
 from build_site import (
     compute_stats,
     histogram,
-    monthly_medians,
+    monthly_medians_by_group,
     render_html,
     resolution_time_days,
     build_site,
@@ -20,6 +20,20 @@ def _events(created, closed_type=None, closed=None):
     if closed_type:
         evts.append({"type": closed_type, "timestamp": closed, "actor": "bob"})
     return evts
+
+
+def _meta(author_association="CONTRIBUTOR"):
+    return {
+        "number": 1,
+        "title": "PR",
+        "author": "alice",
+        "author_association": author_association,
+        "labels": [],
+        "target_branch": "main",
+        "created_at": "2024-01-10T10:00:00Z",
+        "state": "closed",
+        "merged": True,
+    }
 
 
 # --- resolution_time_days ---
@@ -98,42 +112,51 @@ def test_histogram_accumulates():
     assert counts[1] == 1
 
 
-# --- monthly_medians ---
+# --- monthly_medians_by_group ---
 
 
-def test_monthly_medians_single_month():
+def test_monthly_medians_by_group_single_month_mixed():
     resolved = [
-        (datetime(2024, 1, 10, tzinfo=UTC), 5.0),
-        (datetime(2024, 1, 20, tzinfo=UTC), 3.0),
+        (datetime(2024, 1, 10, tzinfo=UTC), 5.0, False),
+        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True),
     ]
-    months, medians = monthly_medians(resolved)
+    months, ftc, non_ftc = monthly_medians_by_group(resolved)
     assert months == ["2024-01"]
-    assert medians == [4.0]
+    assert ftc == [3.0]
+    assert non_ftc == [5.0]
 
 
-def test_monthly_medians_multiple_months():
+def test_monthly_medians_by_group_ftc_absent_in_month():
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 4.0),
-        (datetime(2024, 2, 10, tzinfo=UTC), 6.0),
-        (datetime(2024, 2, 20, tzinfo=UTC), 8.0),
+        (datetime(2024, 1, 15, tzinfo=UTC), 4.0, False),
+        (datetime(2024, 2, 10, tzinfo=UTC), 6.0, False),
+        (datetime(2024, 2, 20, tzinfo=UTC), 2.0, True),
     ]
-    months, medians = monthly_medians(resolved)
+    months, ftc, non_ftc = monthly_medians_by_group(resolved)
     assert months == ["2024-01", "2024-02"]
-    assert medians[0] == 4.0
-    assert medians[1] == 7.0
+    assert ftc == [None, 2.0]
+    assert non_ftc == [4.0, 6.0]
 
 
-def test_monthly_medians_sorted():
+def test_monthly_medians_by_group_sorted():
     resolved = [
-        (datetime(2024, 3, 1, tzinfo=UTC), 2.0),
-        (datetime(2024, 1, 1, tzinfo=UTC), 1.0),
+        (datetime(2024, 3, 1, tzinfo=UTC), 2.0, False),
+        (datetime(2024, 1, 1, tzinfo=UTC), 1.0, True),
     ]
-    months, _ = monthly_medians(resolved)
+    months, _, _ = monthly_medians_by_group(resolved)
     assert months == ["2024-01", "2024-03"]
 
 
-def test_monthly_medians_empty():
-    assert monthly_medians([]) == ([], [])
+def test_monthly_medians_by_group_empty():
+    assert monthly_medians_by_group([]) == ([], [], [])
+
+
+def test_monthly_medians_by_group_ftc_only():
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 7.0, True)]
+    months, ftc, non_ftc = monthly_medians_by_group(resolved)
+    assert months == ["2024-01"]
+    assert ftc == [7.0]
+    assert non_ftc == [None]
 
 
 # --- compute_stats ---
@@ -143,35 +166,50 @@ def test_compute_stats_empty():
     stats = compute_stats([])
     assert stats["total_resolved"] == 0
     assert stats["median_days"] is None
+    assert stats["ftc_count"] == 0
+    assert stats["ftc_pct"] == 0
     assert all(c == 0 for c in stats["hist_counts"])
     assert stats["trend_months"] == []
 
 
 def test_compute_stats_with_data():
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 5.0),
-        (datetime(2024, 1, 20, tzinfo=UTC), 3.0),
-        (datetime(2024, 2, 5, tzinfo=UTC), 10.0),
+        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False),
+        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True),
+        (datetime(2024, 2, 5, tzinfo=UTC), 10.0, False),
     ]
     stats = compute_stats(resolved)
     assert stats["total_resolved"] == 3
     assert stats["median_days"] == 5.0
+    assert stats["ftc_count"] == 1
+    assert stats["ftc_pct"] == 33
     assert len(stats["hist_labels"]) == 7
     assert len(stats["trend_months"]) == 2
+
+
+def test_compute_stats_all_ftc():
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 4.0, True)]
+    stats = compute_stats(resolved)
+    assert stats["ftc_count"] == 1
+    assert stats["ftc_pct"] == 100
 
 
 # --- render_html ---
 
 
-def _stats(median=5.0, total=10, hist_counts=None, trend_months=None, trend_medians=None):
+def _stats(median=5.0, total=10, ftc_count=2, hist_counts=None,
+           trend_months=None, trend_ftc=None, trend_non_ftc=None):
     labels = ["<1d", "1-3d", "3-7d", "7-14d", "14-30d", "30-60d", "60d+"]
     return {
         "median_days": median,
         "total_resolved": total,
+        "ftc_count": ftc_count,
+        "ftc_pct": round(100 * ftc_count / total) if total else 0,
         "hist_labels": labels,
         "hist_counts": hist_counts or [0, 2, 5, 2, 1, 0, 0],
         "trend_months": trend_months or ["2024-01", "2024-02"],
-        "trend_medians": trend_medians or [4.0, 6.0],
+        "trend_ftc_medians": trend_ftc or [None, 4.0],
+        "trend_non_ftc_medians": trend_non_ftc or [4.0, 6.0],
     }
 
 
@@ -181,8 +219,13 @@ def test_render_html_shows_median():
 
 
 def test_render_html_shows_resolved_count():
-    html = render_html(_stats(total=42), "2024-01-15T12:00:00Z")
+    html = render_html(_stats(total=42, ftc_count=5), "2024-01-15T12:00:00Z")
     assert "42" in html
+
+
+def test_render_html_shows_ftc_count():
+    html = render_html(_stats(ftc_count=3), "2024-01-15T12:00:00Z")
+    assert "3" in html
 
 
 def test_render_html_shows_generated_at():
@@ -191,7 +234,11 @@ def test_render_html_shows_generated_at():
 
 
 def test_render_html_no_data_shows_placeholder():
-    html = render_html(_stats(median=None, total=0, hist_counts=[0]*7, trend_months=[], trend_medians=[]), "2024-01-15T12:00:00Z")
+    html = render_html(
+        _stats(median=None, total=0, ftc_count=0, hist_counts=[0]*7,
+               trend_months=[], trend_ftc=[], trend_non_ftc=[]),
+        "2024-01-15T12:00:00Z",
+    )
     assert "No resolved PRs" in html
     assert "<canvas" not in html
 
@@ -201,10 +248,20 @@ def test_render_html_with_data_has_canvas():
     assert "<canvas" in html
 
 
-def test_render_html_embeds_chart_data():
-    html = render_html(_stats(trend_months=["2024-01"], trend_medians=[4.5]), "2024-01-15T12:00:00Z")
+def test_render_html_embeds_trend_data():
+    html = render_html(
+        _stats(trend_months=["2024-01"], trend_ftc=[4.5], trend_non_ftc=[6.0]),
+        "2024-01-15T12:00:00Z",
+    )
     assert '"2024-01"' in html
     assert "4.5" in html
+    assert "6.0" in html
+
+
+def test_render_html_trend_chart_has_two_datasets():
+    html = render_html(_stats(), "2024-01-15T12:00:00Z")
+    assert "First-time contributors" in html
+    assert "Other contributors" in html
 
 
 # --- build_site (integration) ---
@@ -218,14 +275,43 @@ def test_build_site_writes_index(tmp_path):
         {"type": "closed_merged", "timestamp": "2024-01-15T10:00:00Z", "actor": "bob"},
     ]
     (prs_dir / "events.json").write_text(json.dumps(events))
+    (prs_dir / "metadata.json").write_text(json.dumps(_meta("CONTRIBUTOR")))
 
     site_dir = tmp_path / "site"
     build_site(tmp_path, site_dir, "2024-01-16T00:00:00Z")
 
-    index = site_dir / "index.html"
-    assert index.exists()
-    content = index.read_text()
+    content = (site_dir / "index.html").read_text()
     assert "5.0 days" in content
+
+
+def test_build_site_ftc_counted(tmp_path):
+    for i, assoc in enumerate(["FIRST_TIME_CONTRIBUTOR", "CONTRIBUTOR", "MEMBER"]):
+        pr_dir = tmp_path / "prs" / str(i + 1)
+        pr_dir.mkdir(parents=True)
+        events = [
+            {"type": "created",       "timestamp": f"2024-01-{10 + i}T10:00:00Z", "actor": "x"},
+            {"type": "closed_merged", "timestamp": f"2024-01-{15 + i}T10:00:00Z", "actor": "y"},
+        ]
+        (pr_dir / "events.json").write_text(json.dumps(events))
+        (pr_dir / "metadata.json").write_text(json.dumps(_meta(assoc)))
+
+    site_dir = tmp_path / "site"
+    stats = build_site(tmp_path, site_dir, "2024-01-20T00:00:00Z")
+    assert stats["ftc_count"] == 1
+    assert stats["total_resolved"] == 3
+
+
+def test_build_site_no_metadata_treated_as_non_ftc(tmp_path):
+    pr_dir = tmp_path / "prs" / "1"
+    pr_dir.mkdir(parents=True)
+    events = [
+        {"type": "created",       "timestamp": "2024-01-10T10:00:00Z", "actor": "alice"},
+        {"type": "closed_merged", "timestamp": "2024-01-15T10:00:00Z", "actor": "bob"},
+    ]
+    (pr_dir / "events.json").write_text(json.dumps(events))
+
+    stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
+    assert stats["ftc_count"] == 0
 
 
 def test_build_site_no_data(tmp_path):

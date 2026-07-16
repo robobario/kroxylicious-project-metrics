@@ -37,6 +37,7 @@ _HTML = """\
       --ink-m:     #898781;
       --grid:      #e1e0d9;
       --s1:        #2a78d6;
+      --s2:        #008300;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -47,6 +48,7 @@ _HTML = """\
         --ink-m:     #898781;
         --grid:      #2c2c2a;
         --s1:        #3987e5;
+        --s2:        #008300;
       }
     }
     *, *::before, *::after { box-sizing: border-box; }
@@ -68,6 +70,7 @@ _HTML = """\
       min-width: 200px;
     }
     .kpi-value { font-size: 3rem; font-weight: 700; line-height: 1; color: var(--s1); margin-bottom: 0.5rem; }
+    .kpi-value.ftc { color: var(--s2); }
     .kpi-label { font-size: 0.9rem; font-weight: 600; color: var(--ink-2); }
     .kpi-sub   { font-size: 0.8rem; color: var(--ink-m); margin-top: 0.25rem; }
     .panel {
@@ -91,6 +94,11 @@ _HTML = """\
       <div class="kpi-label">Median time to resolution</div>
       <div class="kpi-sub">__TOTAL_RESOLVED__ resolved PRs</div>
     </div>
+    <div class="kpi">
+      <div class="kpi-value ftc">__FTC_COUNT__</div>
+      <div class="kpi-label">First-time contributor PRs</div>
+      <div class="kpi-sub">__FTC_PCT__% of resolved PRs</div>
+    </div>
   </div>
 
   <div class="panel">
@@ -108,7 +116,9 @@ _HTML = """\
     const s = getComputedStyle(document.documentElement);
     const C = {
       s1:   s.getPropertyValue('--s1').trim(),
+      s2:   s.getPropertyValue('--s2').trim(),
       grid: s.getPropertyValue('--grid').trim(),
+      ink2: s.getPropertyValue('--ink-2').trim(),
       inkm: s.getPropertyValue('--ink-m').trim(),
     };
     const baseScales = {
@@ -144,18 +154,28 @@ new Chart(document.getElementById('trend'), {
   type: 'line',
   data: {
     labels: __LABELS__,
-    datasets: [{
-      data: __VALUES__,
-      borderColor: C.s1, borderWidth: 2,
-      pointBackgroundColor: C.s1, pointRadius: 6, pointHoverRadius: 8,
-      fill: false, tension: 0.2,
-    }],
+    datasets: [
+      {
+        label: 'Other contributors',
+        data: __NON_FTC_VALUES__,
+        borderColor: C.s1, borderWidth: 2,
+        pointBackgroundColor: C.s1, pointRadius: 6, pointHoverRadius: 8,
+        fill: false, tension: 0.2, spanGaps: false,
+      },
+      {
+        label: 'First-time contributors',
+        data: __FTC_VALUES__,
+        borderColor: C.s2, borderWidth: 2,
+        pointBackgroundColor: C.s2, pointRadius: 6, pointHoverRadius: 8,
+        fill: false, tension: 0.2, spanGaps: false,
+      },
+    ],
   },
   options: {
     responsive: true, maintainAspectRatio: false,
     plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: ctx => ctx.parsed.y + ' days' } },
+      legend: { display: true, labels: { color: C.ink2 } },
+      tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + ctx.parsed.y + ' days' } },
     },
     scales: baseScales,
   },
@@ -193,31 +213,49 @@ def histogram(days_list):
     return labels, counts
 
 
-def monthly_medians(resolved):
+def monthly_medians_by_group(resolved):
     """
-    resolved: list of (close_datetime, days_float)
-    Returns (months, medians) in chronological order.
+    resolved: list of (close_datetime, days_float, is_ftc)
+    Returns (months, ftc_medians, non_ftc_medians) in chronological order.
+    Months where a group has no data carry None.
     """
-    by_month = defaultdict(list)
-    for close_dt, days in resolved:
-        by_month[close_dt.strftime("%Y-%m")].append(days)
-    months = sorted(by_month)
-    medians = [round(statistics.median(by_month[m]), 1) for m in months]
-    return months, medians
+    ftc_by_month = defaultdict(list)
+    non_ftc_by_month = defaultdict(list)
+    for close_dt, days, is_ftc in resolved:
+        key = close_dt.strftime("%Y-%m")
+        (ftc_by_month if is_ftc else non_ftc_by_month)[key].append(days)
+
+    months = sorted(ftc_by_month.keys() | non_ftc_by_month.keys())
+    ftc_medians = [
+        round(statistics.median(ftc_by_month[m]), 1) if m in ftc_by_month else None
+        for m in months
+    ]
+    non_ftc_medians = [
+        round(statistics.median(non_ftc_by_month[m]), 1) if m in non_ftc_by_month else None
+        for m in months
+    ]
+    return months, ftc_medians, non_ftc_medians
 
 
 def compute_stats(resolved):
-    all_days = [days for _, days in resolved]
+    all_days = [days for _, days, _ in resolved]
+    ftc_count = sum(1 for _, _, is_ftc in resolved if is_ftc)
+    total = len(resolved)
+
     median = round(statistics.median(all_days), 1) if all_days else None
     hist_labels, hist_counts = histogram(all_days)
-    trend_months, trend_medians = monthly_medians(resolved)
+    trend_months, trend_ftc_medians, trend_non_ftc_medians = monthly_medians_by_group(resolved)
+
     return {
-        "total_resolved": len(resolved),
+        "total_resolved": total,
+        "ftc_count": ftc_count,
+        "ftc_pct": round(100 * ftc_count / total) if total else 0,
         "median_days": median,
         "hist_labels": hist_labels,
         "hist_counts": hist_counts,
         "trend_months": trend_months,
-        "trend_medians": trend_medians,
+        "trend_ftc_medians": trend_ftc_medians,
+        "trend_non_ftc_medians": trend_non_ftc_medians,
     }
 
 
@@ -228,18 +266,26 @@ def load_resolved(data_dir):
         return resolved
     for pr_dir in sorted(prs_dir.iterdir()):
         events_path = pr_dir / "events.json"
+        metadata_path = pr_dir / "metadata.json"
         if not events_path.exists():
             continue
         events = json.loads(events_path.read_text())
         result = resolution_time_days(events)
-        if result is not None:
-            resolved.append(result)
+        if result is None:
+            continue
+        is_ftc = False
+        if metadata_path.exists():
+            metadata = json.loads(metadata_path.read_text())
+            is_ftc = metadata.get("author_association") == "FIRST_TIME_CONTRIBUTOR"
+        resolved.append((*result, is_ftc))
     return resolved
 
 
 def render_html(stats, generated_at):
     median = stats["median_days"]
     median_str = f"{median} days" if median is not None else "—"
+    ftc_count = stats["ftc_count"]
+    ftc_pct = stats["ftc_pct"]
 
     if stats["total_resolved"] == 0:
         hist_body = '<p class="no-data">No resolved PRs yet.</p>'
@@ -256,7 +302,8 @@ def render_html(stats, generated_at):
         trend_js = (
             _TREND_CHART
             .replace("__LABELS__", json.dumps(stats["trend_months"]))
-            .replace("__VALUES__", json.dumps(stats["trend_medians"]))
+            .replace("__FTC_VALUES__", json.dumps(stats["trend_ftc_medians"]))
+            .replace("__NON_FTC_VALUES__", json.dumps(stats["trend_non_ftc_medians"]))
         )
         chart_js = hist_js + "\n\n    " + trend_js
 
@@ -265,6 +312,8 @@ def render_html(stats, generated_at):
         .replace("__GENERATED_AT__", generated_at)
         .replace("__MEDIAN__", median_str)
         .replace("__TOTAL_RESOLVED__", str(stats["total_resolved"]))
+        .replace("__FTC_COUNT__", str(ftc_count))
+        .replace("__FTC_PCT__", str(ftc_pct))
         .replace("__HIST_BODY__", hist_body)
         .replace("__TREND_BODY__", trend_body)
         .replace("__CHART_JS__", chart_js)
@@ -285,7 +334,7 @@ def main():
     site_dir = Path(os.environ.get("SITE_DIR", "site"))
     generated_at = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     stats = build_site(data_dir, site_dir, generated_at)
-    print(f"Site built. {stats['total_resolved']} resolved PRs. Median: {stats['median_days']} days.")
+    print(f"Site built. {stats['total_resolved']} resolved PRs. Median: {stats['median_days']} days. FTC: {stats['ftc_count']} ({stats['ftc_pct']}%).")
 
 
 if __name__ == "__main__":
