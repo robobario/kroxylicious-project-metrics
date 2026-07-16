@@ -524,10 +524,12 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
         })
     def _tier(p):
         if p["is_bot"]:
-            return 2
+            return 3
+        if p["is_ftc"]:
+            return 0  # first-time contributors surface first
         if not p["is_committer"]:
-            return 0  # non-committer humans (incl. FTC) surface first
-        return 1
+            return 1  # other non-committer humans
+        return 2
 
     open_prs.sort(key=lambda p: (_tier(p), -p["age_days"]))
     return open_prs
