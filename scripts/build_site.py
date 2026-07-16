@@ -518,8 +518,8 @@ def main():
     a = stats["all"]
     r = stats["recent"]
     print(
-        f"Site built. All-time: {a['total_resolved']} PRs, median {a['median_days']} days, "
-        f"{a['ftc_count']} FTC. Last 3 months: {r['total_resolved']} PRs, median {r['median_days']} days."
+        f"Site built. All-time: {a['total_resolved']} PRs, median {a['resolution']['median']} days, "
+        f"{a['ftc_count']} FTC. Last 3 months: {r['total_resolved']} PRs, median {r['resolution']['median']} days."
     )
 
 
