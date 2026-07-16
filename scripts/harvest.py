@@ -5,7 +5,7 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -14,7 +14,6 @@ log = logging.getLogger(__name__)
 
 UTC = timezone.utc
 GITHUB_API = "https://api.github.com"
-DEFAULT_LOOKBACK_DAYS = 90
 
 
 def _parse_next_link(link_header):
@@ -123,10 +122,14 @@ def merge_events(existing, new_events):
     return sorted(combined, key=lambda e: e["timestamp"])
 
 
-def since_from_state(last_run, default_lookback_days=DEFAULT_LOOKBACK_DAYS):
+# Kroxylicious first commit; any PR predating this is beyond scope.
+PROJECT_EPOCH = datetime(2022, 1, 1, tzinfo=UTC)
+
+
+def since_from_state(last_run):
     if last_run:
         return datetime.fromisoformat(last_run)
-    return datetime.now(UTC) - timedelta(days=default_lookback_days)
+    return PROJECT_EPOCH
 
 
 def load_json(path, default):

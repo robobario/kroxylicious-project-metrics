@@ -255,10 +255,9 @@ def test_since_from_state_with_last_run():
     assert result == datetime(2024, 1, 1, tzinfo=UTC)
 
 
-def test_since_from_state_null_uses_lookback():
-    result = since_from_state(None, default_lookback_days=30)
-    delta = datetime.now(UTC) - result
-    assert 29 <= delta.days <= 31
+def test_since_from_state_null_uses_project_epoch():
+    from harvest import PROJECT_EPOCH
+    assert since_from_state(None) == PROJECT_EPOCH
 
 
 # --- iter_prs (HTTP mocked) ---
