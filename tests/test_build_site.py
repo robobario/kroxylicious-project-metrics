@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 import pytest
 
 from build_site import (
+    compute_ftc_pr_numbers,
     compute_stats,
     histogram,
     load_committers,
@@ -24,20 +25,6 @@ def _events(created, closed_type=None, closed=None):
     if closed_type:
         evts.append({"type": closed_type, "timestamp": closed, "actor": "bob"})
     return evts
-
-
-def _meta(author_association="CONTRIBUTOR"):
-    return {
-        "number": 1,
-        "title": "PR",
-        "author": "alice",
-        "author_association": author_association,
-        "labels": [],
-        "target_branch": "main",
-        "created_at": "2024-01-10T10:00:00Z",
-        "state": "closed",
-        "merged": True,
-    }
 
 
 # --- resolution_time_days ---
@@ -347,15 +334,25 @@ def test_render_html_trend_chart_has_two_datasets():
 # --- build_site (integration) ---
 
 
-def _write_pr(pr_dir, created, closed_type, closed, assoc="CONTRIBUTOR", reviews=()):
+def _write_pr(pr_dir, created, closed_type, closed, author="alice", reviews=()):
     pr_dir.mkdir(parents=True, exist_ok=True)
-    events = [{"type": "created", "timestamp": created, "actor": "alice"}]
+    number = int(pr_dir.name)
+    events = [{"type": "created", "timestamp": created, "actor": author}]
     for ts, actor in reviews:
         events.append({"type": "reviewed", "timestamp": ts, "actor": actor})
-    events.append({"type": closed_type, "timestamp": closed, "actor": "bob"})
+    events.append({"type": closed_type, "timestamp": closed, "actor": "merger"})
     events.sort(key=lambda e: e["timestamp"])
     (pr_dir / "events.json").write_text(json.dumps(events))
-    (pr_dir / "metadata.json").write_text(json.dumps(_meta(assoc)))
+    (pr_dir / "metadata.json").write_text(json.dumps({
+        "number": number,
+        "title": "PR",
+        "author": author,
+        "labels": [],
+        "target_branch": "main",
+        "created_at": created,
+        "state": "closed",
+        "merged": closed_type == "closed_merged",
+    }))
 
 
 def test_build_site_writes_index(tmp_path):
@@ -387,18 +384,17 @@ def test_build_site_engagement_requires_committers(tmp_path):
 
 
 def test_build_site_ftc_counted(tmp_path):
-    for i, assoc in enumerate(["FIRST_TIME_CONTRIBUTOR", "CONTRIBUTOR", "MEMBER"]):
-        _write_pr(
-            tmp_path / "prs" / str(i + 1),
-            f"2024-01-{10 + i}T10:00:00Z", "closed_merged", f"2024-01-{15 + i}T10:00:00Z",
-            assoc=assoc,
-        )
+    # alice opens two PRs — only her first (PR 1) is FTC
+    _write_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z", author="alice")
+    _write_pr(tmp_path / "prs" / "2", "2024-01-12T10:00:00Z", "closed_merged", "2024-01-17T10:00:00Z", author="alice")
+    # bob opens one PR — his first and only, so FTC
+    _write_pr(tmp_path / "prs" / "3", "2024-01-11T10:00:00Z", "closed_merged", "2024-01-16T10:00:00Z", author="bob")
     stats = build_site(tmp_path, tmp_path / "site", "2024-01-20T00:00:00Z")
-    assert stats["ftc_count"] == 1
+    assert stats["ftc_count"] == 2  # alice PR 1, bob PR 3
     assert stats["total_resolved"] == 3
 
 
-def test_build_site_no_metadata_treated_as_non_ftc(tmp_path):
+def test_build_site_no_metadata_is_not_ftc(tmp_path):
     pr_dir = tmp_path / "prs" / "1"
     pr_dir.mkdir(parents=True)
     events = [
@@ -415,6 +411,43 @@ def test_build_site_no_data(tmp_path):
     stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
     assert stats["total_resolved"] == 0
     assert "No resolved PRs" in (tmp_path / "site" / "index.html").read_text()
+
+
+# --- compute_ftc_pr_numbers ---
+
+
+def _write_meta(pr_dir, author, created_at, number=None):
+    pr_dir.mkdir(parents=True, exist_ok=True)
+    (pr_dir / "metadata.json").write_text(json.dumps({
+        "number": number or int(pr_dir.name),
+        "title": "PR",
+        "author": author,
+        "labels": [],
+        "target_branch": "main",
+        "created_at": created_at,
+        "state": "closed",
+        "merged": True,
+    }))
+
+
+def test_compute_ftc_pr_numbers_first_pr_per_author(tmp_path):
+    _write_meta(tmp_path / "prs" / "1", "alice", "2024-01-10T10:00:00Z")
+    _write_meta(tmp_path / "prs" / "2", "alice", "2024-01-12T10:00:00Z")
+    _write_meta(tmp_path / "prs" / "3", "bob",   "2024-01-11T10:00:00Z")
+    result = compute_ftc_pr_numbers(tmp_path)
+    assert 1 in result   # alice's first
+    assert 2 not in result  # alice's second
+    assert 3 in result   # bob's only PR
+
+
+def test_compute_ftc_pr_numbers_no_prs_dir(tmp_path):
+    assert compute_ftc_pr_numbers(tmp_path) == frozenset()
+
+
+def test_compute_ftc_pr_numbers_no_metadata(tmp_path):
+    pr_dir = tmp_path / "prs" / "1"
+    pr_dir.mkdir(parents=True)
+    assert compute_ftc_pr_numbers(tmp_path) == frozenset()
 
 
 # --- load_committers ---

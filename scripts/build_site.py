@@ -295,26 +295,50 @@ def compute_stats(resolved):
     }
 
 
+def compute_ftc_pr_numbers(data_dir):
+    """Returns the set of PR numbers that are each author's first PR in the dataset."""
+    prs_dir = data_dir / "prs"
+    if not prs_dir.exists():
+        return frozenset()
+    first_by_author = {}  # author -> (created_at_str, pr_number)
+    for pr_dir in prs_dir.iterdir():
+        metadata_path = pr_dir / "metadata.json"
+        if not metadata_path.exists():
+            continue
+        try:
+            meta = json.loads(metadata_path.read_text())
+            author = meta.get("author")
+            created_at = meta.get("created_at")
+            number = meta.get("number")
+            if not (author and created_at and number is not None):
+                continue
+            if author not in first_by_author or created_at < first_by_author[author][0]:
+                first_by_author[author] = (created_at, number)
+        except (json.JSONDecodeError, KeyError):
+            continue
+    return frozenset(number for _, number in first_by_author.values())
+
+
 def load_resolved(data_dir, committers=frozenset()):
+    ftc_pr_numbers = compute_ftc_pr_numbers(data_dir)
     resolved = []
     prs_dir = data_dir / "prs"
     if not prs_dir.exists():
         return resolved
     for pr_dir in sorted(prs_dir.iterdir()):
         events_path = pr_dir / "events.json"
-        metadata_path = pr_dir / "metadata.json"
         if not events_path.exists():
             continue
         events = json.loads(events_path.read_text())
         result = resolution_time_days(events)
         if result is None:
             continue
-        is_ftc = False
-        if metadata_path.exists():
-            metadata = json.loads(metadata_path.read_text())
-            is_ftc = metadata.get("author_association") == "FIRST_TIME_CONTRIBUTOR"
+        try:
+            pr_number = int(pr_dir.name)
+        except ValueError:
+            continue
         engagement = time_to_engagement_days(events, committers)
-        resolved.append((*result, is_ftc, engagement))
+        resolved.append((*result, pr_number in ftc_pr_numbers, engagement))
     return resolved
 
 

@@ -81,17 +81,6 @@ def test_extract_metadata_no_labels():
     assert meta["labels"] == []
 
 
-def test_extract_metadata_author_association():
-    meta = extract_metadata({**OPEN_PR, "author_association": "FIRST_TIME_CONTRIBUTOR"})
-    assert meta["author_association"] == "FIRST_TIME_CONTRIBUTOR"
-
-
-def test_extract_metadata_author_association_missing_defaults_to_none():
-    pr = {k: v for k, v in OPEN_PR.items() if k != "author_association"}
-    meta = extract_metadata(pr)
-    assert meta["author_association"] == "NONE"
-
-
 # --- extract_pr_events ---
 
 
