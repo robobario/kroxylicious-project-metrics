@@ -1,0 +1,13 @@
+{
+  "number": 4208,
+  "title": "build(deps): bump org.threeten:threeten-extra from 1.8.0 to 1.10.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-25T02:02:55Z",
+  "state": "closed",
+  "merged": true
+}

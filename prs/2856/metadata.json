@@ -1,0 +1,10 @@
+{
+  "number": 2856,
+  "title": "Log JVM details as part of operator startup.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-04T04:07:01Z",
+  "state": "closed",
+  "merged": true
+}

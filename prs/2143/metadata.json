@@ -1,0 +1,12 @@
+{
+  "number": 2143,
+  "title": "Use a single log4j version across the whole project.",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-07T18:43:17Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 51,
+  "title": "Remove KrpcFilterState and use the KrpcFilterContext for forwarding",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-06-16T09:10:34Z",
+  "state": "closed",
+  "merged": true
+}

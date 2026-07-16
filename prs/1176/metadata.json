@@ -1,0 +1,10 @@
+{
+  "number": 1176,
+  "title": "Adding rate rps and rate mips to the performance test producer results",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-04-29T09:19:47Z",
+  "state": "closed",
+  "merged": true
+}

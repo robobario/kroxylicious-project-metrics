@@ -1,0 +1,12 @@
+{
+  "number": 2786,
+  "title": "fix(docs): make it clear that PEM formatted keys must be PKCS#8 format",
+  "author": "k-wall",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-16T09:55:45Z",
+  "state": "closed",
+  "merged": true
+}

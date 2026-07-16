@@ -1,0 +1,10 @@
+{
+  "number": 2787,
+  "title": "feat: enable netty event loop and byte buffer allocator metrics",
+  "author": "The-East-Wind",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-16T18:58:13Z",
+  "state": "closed",
+  "merged": true
+}

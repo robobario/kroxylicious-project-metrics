@@ -1,0 +1,13 @@
+{
+  "number": 1985,
+  "title": "Wrap clock so we always get ZonedDateTime",
+  "author": "SamBarker",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-24T01:46:00Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2464,
+  "title": "Increase the log level for logNetwork and logFrames on the upstream side",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-21T14:41:52Z",
+  "state": "closed",
+  "merged": true
+}

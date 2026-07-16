@@ -1,0 +1,12 @@
+{
+  "number": 1456,
+  "title": "Skip japicmp checks if reference release isn't published",
+  "author": "k-wall",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-20T11:07:27Z",
+  "state": "closed",
+  "merged": true
+}

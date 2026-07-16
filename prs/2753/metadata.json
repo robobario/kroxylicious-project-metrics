@@ -1,0 +1,13 @@
+{
+  "number": 2753,
+  "title": "Pin external github actions by SHA",
+  "author": "robobario",
+  "labels": [
+    "dev/github_actions",
+    "security"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-09T03:21:29Z",
+  "state": "closed",
+  "merged": true
+}

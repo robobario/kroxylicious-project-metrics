@@ -1,0 +1,13 @@
+{
+  "number": 1860,
+  "title": "Split VirtualKafkaCluster out of KafkaCluster CRD",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-27T03:09:56Z",
+  "state": "closed",
+  "merged": true
+}

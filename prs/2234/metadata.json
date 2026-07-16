@@ -1,0 +1,13 @@
+{
+  "number": 2234,
+  "title": "FIX #2211: Include downstream TLS certificates in VKC Referent Checksum",
+  "author": "SamBarker",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-28T05:30:49Z",
+  "state": "closed",
+  "merged": true
+}

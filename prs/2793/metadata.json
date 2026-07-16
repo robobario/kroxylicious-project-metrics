@@ -1,0 +1,10 @@
+{
+  "number": 2793,
+  "title": "chore: avoid repetitious enum declarations in generated k8s api classes",
+  "author": "The-East-Wind",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-19T19:19:25Z",
+  "state": "closed",
+  "merged": true
+}

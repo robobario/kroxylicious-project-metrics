@@ -1,0 +1,10 @@
+{
+  "number": 4001,
+  "title": "feat(filter-archetype): demonstrate topicId lookups and MockFilterContext (#3349)",
+  "author": "devareddy05",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-21T15:31:32Z",
+  "state": "closed",
+  "merged": true
+}

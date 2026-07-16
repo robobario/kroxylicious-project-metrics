@@ -1,0 +1,12 @@
+{
+  "number": 2745,
+  "title": "fix(docs): fix mispelt doc filename",
+  "author": "k-wall",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-06T09:29:40Z",
+  "state": "closed",
+  "merged": true
+}

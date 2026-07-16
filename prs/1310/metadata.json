@@ -1,0 +1,10 @@
+{
+  "number": 1310,
+  "title": "add Netty sanity check tests",
+  "author": "sullis",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-06-14T17:28:36Z",
+  "state": "closed",
+  "merged": false
+}

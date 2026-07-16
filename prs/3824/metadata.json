@@ -1,0 +1,12 @@
+{
+  "number": 3824,
+  "title": "refactor(archetype): reuse record batch transform module",
+  "author": "piotrpdev",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-29T13:38:26Z",
+  "state": "closed",
+  "merged": true
+}

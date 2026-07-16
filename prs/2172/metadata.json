@@ -1,0 +1,10 @@
+{
+  "number": 2172,
+  "title": "Fixing out of date targetCluster config",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-05-12T15:45:43Z",
+  "state": "closed",
+  "merged": true
+}

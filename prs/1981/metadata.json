@@ -1,0 +1,13 @@
+{
+  "number": 1981,
+  "title": "Fix new issues flagged by SonarCloud (quality gate failure)",
+  "author": "k-wall",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-21T16:38:13Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2158,
+  "title": "Reproducible build",
+  "author": "SamBarker",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-09T03:55:55Z",
+  "state": "closed",
+  "merged": true
+}

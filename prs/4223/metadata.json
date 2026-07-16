@@ -1,0 +1,13 @@
+{
+  "number": 4223,
+  "title": "build(deps-dev): bump net.javacrumbs.json-unit:json-unit-assertj from 5.1.0 to 5.1.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-26T00:56:16Z",
+  "state": "closed",
+  "merged": true
+}

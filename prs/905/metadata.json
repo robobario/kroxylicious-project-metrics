@@ -1,0 +1,10 @@
+{
+  "number": 905,
+  "title": "Use the same filter chain factory for plain and TLS connections",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-01-18T22:38:58Z",
+  "state": "closed",
+  "merged": true
+}

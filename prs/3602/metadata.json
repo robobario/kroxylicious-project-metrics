@@ -1,0 +1,10 @@
+{
+  "number": 3602,
+  "title": "fix(operator): re-fetch resources before status patching in ITs",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-03T01:26:45Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1490,
+  "title": "Bump org.apache.maven.plugins:maven-failsafe-plugin from 3.3.1 to 3.5.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-09-02T03:42:47Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2477,
+  "title": "chore(deps): update hashicorp/vault docker tag to v1.20.1",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-25T00:51:50Z",
+  "state": "closed",
+  "merged": true
+}

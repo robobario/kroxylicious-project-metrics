@@ -1,0 +1,10 @@
+{
+  "number": 721,
+  "title": "[POC] Sample pure Java Wasm filter example",
+  "author": "andreaTP",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-11-15T16:32:49Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-06-21T13:34:15Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2022-06-21T13:34:15Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-06-21T13:35:11Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-06-21T14:21:42Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-06-21T14:47:02Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-06-22T15:22:59Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-06-23T09:37:42Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-06-23T09:51:58Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2022-06-23T09:52:19Z",
+    "actor": null
+  }
+]

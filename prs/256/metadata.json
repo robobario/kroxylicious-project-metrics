@@ -1,0 +1,12 @@
+{
+  "number": 256,
+  "title": "Bump picocli from 4.7.1 to 4.7.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-04-10T04:04:39Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,14 @@
+{
+  "number": 3540,
+  "title": "Add kroxylicious.io namespace to route label",
+  "author": "robobario",
+  "labels": [
+    "kind/refactoring",
+    "network",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-26T02:30:36Z",
+  "state": "closed",
+  "merged": true
+}

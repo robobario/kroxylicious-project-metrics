@@ -1,0 +1,10 @@
+{
+  "number": 4176,
+  "title": "fix(build): move Sonar JBang issue exclusions to root POM",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-23T02:24:24Z",
+  "state": "closed",
+  "merged": true
+}

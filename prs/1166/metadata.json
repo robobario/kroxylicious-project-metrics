@@ -1,0 +1,12 @@
+{
+  "number": 1166,
+  "title": "Document deprecation policy",
+  "author": "k-wall",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-04-24T10:37:16Z",
+  "state": "closed",
+  "merged": true
+}

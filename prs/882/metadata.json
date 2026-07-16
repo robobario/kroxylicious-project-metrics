@@ -1,0 +1,10 @@
+{
+  "number": 882,
+  "title": "Add utilities for dealing with RecordBatches and MemoryRecords",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-01-14T22:12:06Z",
+  "state": "closed",
+  "merged": true
+}

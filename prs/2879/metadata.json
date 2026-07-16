@@ -1,0 +1,13 @@
+{
+  "number": 2879,
+  "title": "build(deps): bump org.asciidoctor:asciidoctorj-pdf from 2.3.19 to 2.3.23",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-10T03:05:56Z",
+  "state": "closed",
+  "merged": true
+}

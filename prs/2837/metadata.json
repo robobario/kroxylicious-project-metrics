@@ -1,0 +1,15 @@
+{
+  "number": 2837,
+  "title": "fix(maven): stage release script failed due to filter archetype build",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "dev/maven",
+    "dev/release",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-28T22:42:41Z",
+  "state": "closed",
+  "merged": true
+}

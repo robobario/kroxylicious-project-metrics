@@ -1,0 +1,10 @@
+{
+  "number": 2328,
+  "title": "Prevent the replica count of KafkaProxy reloading existing pods",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-17T03:22:14Z",
+  "state": "closed",
+  "merged": true
+}

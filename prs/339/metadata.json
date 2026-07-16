@@ -1,0 +1,12 @@
+{
+  "number": 339,
+  "title": "[multi-tenant] - transactionalId tenant isolation",
+  "author": "racheljpg",
+  "labels": [
+    "filter/multitenancy"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-05-25T16:12:27Z",
+  "state": "closed",
+  "merged": true
+}

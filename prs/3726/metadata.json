@@ -1,0 +1,10 @@
+{
+  "number": 3726,
+  "title": "fix: add adoc mapping to license-maven-plugin configuration (#153)",
+  "author": "msalinas-se",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-16T03:23:54Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2057,
+  "title": "Fixed error in log message which caused confusion during debugging.",
+  "author": "tomas-irori",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-04-14T15:06:20Z",
+  "state": "closed",
+  "merged": true
+}

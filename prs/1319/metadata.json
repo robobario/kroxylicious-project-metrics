@@ -1,0 +1,10 @@
+{
+  "number": 1319,
+  "title": "adding collecting cluster-info when the test fails to easy finding the root cause",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-06-18T10:11:21Z",
+  "state": "closed",
+  "merged": true
+}

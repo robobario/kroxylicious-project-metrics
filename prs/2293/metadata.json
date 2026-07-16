@@ -1,0 +1,13 @@
+{
+  "number": 2293,
+  "title": "Fix KafkaProxyIngress loadBalancer description string",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-10T03:59:08Z",
+  "state": "closed",
+  "merged": true
+}

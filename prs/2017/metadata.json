@@ -1,0 +1,14 @@
+{
+  "number": 2017,
+  "title": "Network metrics",
+  "author": "SamBarker",
+  "labels": [
+    "kind/enhancement",
+    "runtime",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-02T03:45:28Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 754,
+  "title": "Fix #753: quick profile should exclude the building integration and system tests too",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-11-28T11:29:43Z",
+  "state": "closed",
+  "merged": true
+}

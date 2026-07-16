@@ -1,0 +1,10 @@
+{
+  "number": 3701,
+  "title": "refactor: Fix complie warning in kroxylicious-krpc-plugin module",
+  "author": "m1a2st",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-13T12:10:39Z",
+  "state": "closed",
+  "merged": true
+}

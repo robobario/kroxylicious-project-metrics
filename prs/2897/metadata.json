@@ -1,0 +1,12 @@
+{
+  "number": 2897,
+  "title": "chore(deps): update quay.io/kroxylicious/python-kafka-test-client docker tag to v2.12.1",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-14T10:48:36Z",
+  "state": "closed",
+  "merged": true
+}

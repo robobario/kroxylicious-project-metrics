@@ -1,0 +1,77 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-10-03T07:35:01Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-10-03T07:35:01Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-10-03T07:35:01Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-03T07:35:27Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-03T07:36:30Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-10-03T07:45:31Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-03T08:10:57Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-03T08:26:24Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-10-03T08:34:20Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-09T07:48:57Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-09T07:53:29Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-09T08:17:30Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-09T08:17:54Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-09T08:31:28Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-09T08:58:29Z",
+    "actor": "strimzi-ci"
+  }
+]

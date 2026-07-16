@@ -1,0 +1,10 @@
+{
+  "number": 709,
+  "title": "Add a KMS service API and an in-memory implementation",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-11-06T23:27:42Z",
+  "state": "closed",
+  "merged": true
+}

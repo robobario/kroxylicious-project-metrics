@@ -1,0 +1,10 @@
+{
+  "number": 281,
+  "title": "Fix #280: Use SLF4J 2.x compatible log4j-slf4j-impl",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-20T15:13:02Z",
+  "state": "closed",
+  "merged": true
+}

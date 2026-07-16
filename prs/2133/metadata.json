@@ -1,0 +1,13 @@
+{
+  "number": 2133,
+  "title": "Adding integration tests for built-in metrics",
+  "author": "ShubhamRwt",
+  "labels": [
+    "runtime",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-06T12:48:10Z",
+  "state": "closed",
+  "merged": true
+}

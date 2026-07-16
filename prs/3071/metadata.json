@@ -1,0 +1,10 @@
+{
+  "number": 3071,
+  "title": "feat: Move filters to frontend handler",
+  "author": "hrishabhg",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-12-16T12:42:41Z",
+  "state": "closed",
+  "merged": true
+}

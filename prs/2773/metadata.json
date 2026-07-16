@@ -1,0 +1,10 @@
+{
+  "number": 2773,
+  "title": "Use mock oauth2 server in Azure KMS integration tests",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-13T04:05:50Z",
+  "state": "closed",
+  "merged": true
+}

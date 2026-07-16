@@ -1,0 +1,10 @@
+{
+  "number": 1735,
+  "title": "include helm charts in the renovate config",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-01-16T12:54:01Z",
+  "state": "closed",
+  "merged": true
+}

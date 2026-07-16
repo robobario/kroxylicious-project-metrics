@@ -1,0 +1,13 @@
+{
+  "number": 4039,
+  "title": "Draft: Router Prototype 2 - install Router topology on client channel",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-28T23:30:42Z",
+  "state": "closed",
+  "merged": false
+}

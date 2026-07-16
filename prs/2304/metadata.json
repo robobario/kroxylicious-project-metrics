@@ -1,0 +1,12 @@
+{
+  "number": 2304,
+  "title": "Update registry.access.redhat.com/ubi9/openjdk-17 Docker tag to v1.22-1.1749462972",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-13T00:48:17Z",
+  "state": "closed",
+  "merged": true
+}

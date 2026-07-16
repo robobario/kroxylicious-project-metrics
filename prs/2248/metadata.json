@@ -1,0 +1,12 @@
+{
+  "number": 2248,
+  "title": "Update quay.io/apicurio/apicurio-registry-mem Docker tag to v2.6.9.Final",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-02T00:50:51Z",
+  "state": "closed",
+  "merged": true
+}

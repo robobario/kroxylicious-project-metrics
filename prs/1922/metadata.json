@@ -1,0 +1,13 @@
+{
+  "number": 1922,
+  "title": "Update JOSDK dependency to 4.9.x to 5.0.x and Fabric8 client to match",
+  "author": "tombentley",
+  "labels": [
+    "dependencies",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-12T02:18:19Z",
+  "state": "closed",
+  "merged": true
+}

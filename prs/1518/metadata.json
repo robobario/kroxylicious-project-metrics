@@ -1,0 +1,10 @@
+{
+  "number": 1518,
+  "title": "Fix hyperlinks in pull request templates",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-09-17T07:35:39Z",
+  "state": "closed",
+  "merged": true
+}

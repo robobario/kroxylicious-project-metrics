@@ -1,0 +1,13 @@
+{
+  "number": 2807,
+  "title": "Implement #2784: Azure KMS support for Managed Identity authentication",
+  "author": "gracegrimwood",
+  "labels": [
+    "kind/enhancement",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-21T05:26:11Z",
+  "state": "closed",
+  "merged": true
+}

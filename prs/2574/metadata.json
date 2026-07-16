@@ -1,0 +1,12 @@
+{
+  "number": 2574,
+  "title": "docs(olm): instructions for deploying operator using OLM",
+  "author": "PaulRMellor",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-12T16:07:48Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,14 @@
+{
+  "number": 2816,
+  "title": "build: set -DskipKTs and -DskipDTs based on -DskipTests",
+  "author": "piotrpdev",
+  "labels": [
+    "kind/bug",
+    "dev/maven",
+    "dev"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-23T15:27:52Z",
+  "state": "closed",
+  "merged": true
+}

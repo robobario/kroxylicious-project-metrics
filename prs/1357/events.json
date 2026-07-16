@@ -1,0 +1,122 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-07-14T23:51:32Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-14T23:51:57Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-14T23:52:56Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-07-14T23:57:57Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-15T00:10:56Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-15T00:15:08Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-15T00:19:52Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-07-15T02:36:06Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-15T05:19:17Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-15T23:36:19Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-07-15T23:42:28Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-15T23:46:19Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-15T23:49:46Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-16T00:38:12Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-16T01:13:58Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-16T02:10:17Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-16T02:14:36Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-16T02:42:31Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-07-16T05:23:36Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-21T23:36:45Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-21T23:37:37Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-22T00:01:46Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-22T00:04:22Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-07-22T00:49:15Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "number": 1135,
+  "title": "Improve handling of key material in KMS",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-04-04T02:08:51Z",
+  "state": "closed",
+  "merged": true
+}

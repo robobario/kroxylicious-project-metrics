@@ -1,0 +1,10 @@
+{
+  "number": 1477,
+  "title": "Make spotbugs-annotations provided and enforce non-runtime",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-08-28T00:50:42Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 2687,
+  "title": "build(deps-dev): bump bouncycastle.version from 1.81 to 1.82",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-09-22T03:04:50Z",
+  "state": "closed",
+  "merged": true
+}

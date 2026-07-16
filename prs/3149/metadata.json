@@ -1,0 +1,10 @@
+{
+  "number": 3149,
+  "title": "Repackage simple transformation filters using `@DeprecatedPluginName`",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-01-13T22:49:48Z",
+  "state": "closed",
+  "merged": true
+}

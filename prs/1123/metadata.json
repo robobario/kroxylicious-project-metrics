@@ -1,0 +1,13 @@
+{
+  "number": 1123,
+  "title": "Bump io.fabric8:kubernetes-client-bom from 6.10.0 to 6.11.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-04-01T03:09:29Z",
+  "state": "closed",
+  "merged": true
+}

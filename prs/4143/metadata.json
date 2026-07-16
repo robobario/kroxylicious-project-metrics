@@ -1,0 +1,13 @@
+{
+  "number": 4143,
+  "title": "build(deps): bump tools.profiler:async-profiler from 4.3 to 4.4",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-18T03:33:51Z",
+  "state": "open",
+  "merged": false
+}

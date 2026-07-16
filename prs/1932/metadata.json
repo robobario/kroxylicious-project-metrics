@@ -1,0 +1,14 @@
+{
+  "number": 1932,
+  "title": "Fix #1900: Enforce business rule that a proxy must have at least one virtual cluster",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "config/api",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-13T17:53:41Z",
+  "state": "closed",
+  "merged": true
+}

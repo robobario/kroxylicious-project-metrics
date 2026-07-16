@@ -1,0 +1,10 @@
+{
+  "number": 354,
+  "title": "Remove ClusterEndpointConfigProvider from the Contributor instance methods",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-31T09:49:20Z",
+  "state": "closed",
+  "merged": true
+}

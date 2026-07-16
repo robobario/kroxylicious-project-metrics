@@ -1,0 +1,10 @@
+{
+  "number": 3927,
+  "title": "perf(microbenchmarks): JMH correctness fixes and new benchmarks",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-12T02:02:38Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1405,
+  "title": "Add ability to access metrics from KroxyliciousTester",
+  "author": "k-wall",
+  "labels": [
+    "test",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-07T15:37:28Z",
+  "state": "closed",
+  "merged": true
+}

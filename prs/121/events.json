@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-01-26T13:56:02Z",
+    "actor": "devguyio"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-01-26T19:34:44Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-01-30T02:44:16Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-02-05T12:36:06Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-02-05T12:36:06Z",
+    "actor": "devguyio"
+  }
+]

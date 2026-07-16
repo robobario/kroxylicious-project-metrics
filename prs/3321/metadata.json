@@ -1,0 +1,13 @@
+{
+  "number": 3321,
+  "title": "More `ProxyChannelStateMachine` refactoring",
+  "author": "tombentley",
+  "labels": [
+    "runtime",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-19T03:26:04Z",
+  "state": "closed",
+  "merged": false
+}

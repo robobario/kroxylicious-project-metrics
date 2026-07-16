@@ -1,0 +1,10 @@
+{
+  "number": 2059,
+  "title": "Both GHA and Bash use `'` escape it in the action to pass them to bash.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-04-15T03:14:07Z",
+  "state": "closed",
+  "merged": true
+}

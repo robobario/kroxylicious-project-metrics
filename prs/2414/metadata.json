@@ -1,0 +1,14 @@
+{
+  "number": 2414,
+  "title": "Remove deprecated gateway code - part 1",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "kind/refactoring",
+    "lifecycle/deprecation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-08T05:23:31Z",
+  "state": "closed",
+  "merged": true
+}

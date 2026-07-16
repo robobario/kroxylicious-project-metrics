@@ -1,0 +1,12 @@
+{
+  "number": 3317,
+  "title": "chore(deps): update dependency strimzi/strimzi-kafka-operator to v0.50.1",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-19T01:06:38Z",
+  "state": "closed",
+  "merged": true
+}

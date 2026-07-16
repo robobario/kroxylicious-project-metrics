@@ -1,0 +1,12 @@
+{
+  "number": 1727,
+  "title": "chore(deps): update hashicorp/vault docker tag to v1.18 - autoclosed",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-16T10:05:03Z",
+  "state": "closed",
+  "merged": false
+}

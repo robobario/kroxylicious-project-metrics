@@ -1,0 +1,10 @@
+{
+  "number": 2179,
+  "title": "Revert \"Operator packaging\"",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-05-13T06:52:35Z",
+  "state": "closed",
+  "merged": true
+}

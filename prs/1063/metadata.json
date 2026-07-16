@@ -1,0 +1,13 @@
+{
+  "number": 1063,
+  "title": "Bump docker/build-push-action from 4 to 5",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-03-05T08:28:45Z",
+  "state": "closed",
+  "merged": true
+}

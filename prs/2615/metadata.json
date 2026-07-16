@@ -1,0 +1,13 @@
+{
+  "number": 2615,
+  "title": "Refactor dockerfiles to pull tini from #2614 ",
+  "author": "k-wall",
+  "labels": [
+    "kind/refactoring",
+    "container"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-25T17:11:25Z",
+  "state": "closed",
+  "merged": false
+}

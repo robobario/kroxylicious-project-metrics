@@ -1,0 +1,10 @@
+{
+  "number": 84,
+  "title": "Integration test based on native kafka (Experiment)",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-10-07T21:13:21Z",
+  "state": "closed",
+  "merged": false
+}

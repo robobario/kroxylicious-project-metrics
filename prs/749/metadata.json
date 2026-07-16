@@ -1,0 +1,13 @@
+{
+  "number": 749,
+  "title": "Hashicorp Vault KMS implementation and kubernetes-example",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-11-27T17:52:09Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2501,
+  "title": "docs(fix): line break fix for breaking build",
+  "author": "PaulRMellor",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-29T15:02:48Z",
+  "state": "closed",
+  "merged": true
+}

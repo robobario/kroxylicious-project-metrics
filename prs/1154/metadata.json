@@ -1,0 +1,13 @@
+{
+  "number": 1154,
+  "title": "Apicurio schema validation json schema",
+  "author": "carlesarnal",
+  "labels": [
+    "kind/enhancement",
+    "filter/record-validation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-04-17T10:09:22Z",
+  "state": "closed",
+  "merged": true
+}

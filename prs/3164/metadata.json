@@ -1,0 +1,13 @@
+{
+  "number": 3164,
+  "title": "Require describe txn find coordinators",
+  "author": "tombentley",
+  "labels": [
+    "kind/enhancement",
+    "filter/authorization"
+  ],
+  "target_branch": "transactionalId-authz",
+  "created_at": "2026-01-18T22:26:23Z",
+  "state": "closed",
+  "merged": true
+}

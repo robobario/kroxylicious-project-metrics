@@ -1,0 +1,13 @@
+{
+  "number": 2441,
+  "title": "Build and deploy development website to GitHub pages",
+  "author": "robobario",
+  "labels": [
+    "documentation",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-15T04:53:44Z",
+  "state": "closed",
+  "merged": true
+}

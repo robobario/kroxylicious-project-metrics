@@ -1,0 +1,12 @@
+{
+  "number": 2487,
+  "title": "Split proxy integration tests into their own workflow",
+  "author": "robobario",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-28T01:32:02Z",
+  "state": "closed",
+  "merged": true
+}

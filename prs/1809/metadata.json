@@ -1,0 +1,10 @@
+{
+  "number": 1809,
+  "title": "Add sonar update to renovate",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-02-11T11:41:49Z",
+  "state": "closed",
+  "merged": true
+}

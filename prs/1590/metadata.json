@@ -1,0 +1,12 @@
+{
+  "number": 1590,
+  "title": "Dockerfile for operator + Kube manifests",
+  "author": "tombentley",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-11-07T03:36:49Z",
+  "state": "closed",
+  "merged": true
+}

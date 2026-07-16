@@ -1,0 +1,10 @@
+{
+  "number": 3611,
+  "title": "Fix error prone missing `@Override`",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-06T03:54:58Z",
+  "state": "closed",
+  "merged": true
+}

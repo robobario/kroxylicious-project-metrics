@@ -1,0 +1,14 @@
+{
+  "number": 2062,
+  "title": "Refactor the system tests to use the bootstrapServer from the VKC",
+  "author": "k-wall",
+  "labels": [
+    "test",
+    "test/system-test",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-15T14:09:56Z",
+  "state": "closed",
+  "merged": true
+}

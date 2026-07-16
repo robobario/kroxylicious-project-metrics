@@ -1,0 +1,10 @@
+{
+  "number": 3674,
+  "title": "ci: limit Slack notifications to push failures only",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-10T04:18:53Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2161,
+  "title": "Fix #1681: emit asciidoc bundle as release artefact",
+  "author": "k-wall",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-09T15:21:13Z",
+  "state": "closed",
+  "merged": false
+}

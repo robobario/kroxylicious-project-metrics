@@ -1,0 +1,10 @@
+{
+  "number": 589,
+  "title": "Fail the ci build if kroxylicious tests aren't formatted correctly",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-08-30T05:17:46Z",
+  "state": "closed",
+  "merged": true
+}

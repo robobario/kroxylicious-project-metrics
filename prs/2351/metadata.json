@@ -1,0 +1,12 @@
+{
+  "number": 2351,
+  "title": "Initialise the meter registry before registering a metric. Fixes: #2345",
+  "author": "SamBarker",
+  "labels": [
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-19T00:20:24Z",
+  "state": "closed",
+  "merged": true
+}

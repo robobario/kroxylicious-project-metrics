@@ -1,0 +1,10 @@
+{
+  "number": 899,
+  "title": "Add RecordEncryptor and RecordDecryptor",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-01-17T21:37:41Z",
+  "state": "closed",
+  "merged": true
+}

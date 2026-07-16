@@ -1,0 +1,10 @@
+{
+  "number": 311,
+  "title": "bugfix: kroxylicious main method exited immediately",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-09T23:44:03Z",
+  "state": "closed",
+  "merged": true
+}

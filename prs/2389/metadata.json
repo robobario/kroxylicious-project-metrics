@@ -1,0 +1,10 @@
+{
+  "number": 2389,
+  "title": "Refactor in-cluster deploying into a sub-section of deploying",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-25T21:41:42Z",
+  "state": "closed",
+  "merged": false
+}

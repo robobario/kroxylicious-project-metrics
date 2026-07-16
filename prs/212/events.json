@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-03-21T14:49:45Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-03-21T18:04:19Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-03-21T18:04:23Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-03-21T18:20:09Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-03-21T20:38:29Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-03-22T11:55:55Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "number": 3328,
+  "title": "chore(deps): update dependency kubernetes/minikube to v1.38.1 - abandoned",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-19T09:40:35Z",
+  "state": "closed",
+  "merged": false
+}

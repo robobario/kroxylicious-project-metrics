@@ -1,0 +1,10 @@
+{
+  "number": 2990,
+  "title": "Sonar is flagging a security alert on the test code.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-12-03T03:58:22Z",
+  "state": "closed",
+  "merged": true
+}

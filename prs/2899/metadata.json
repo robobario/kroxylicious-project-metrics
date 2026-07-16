@@ -1,0 +1,12 @@
+{
+  "number": 2899,
+  "title": "kroxylicious-authorizer: Add the Authorizer API",
+  "author": "tombentley",
+  "labels": [
+    "triaged"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-17T03:14:10Z",
+  "state": "closed",
+  "merged": true
+}

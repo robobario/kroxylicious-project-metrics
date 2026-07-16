@@ -1,0 +1,13 @@
+{
+  "number": 1312,
+  "title": "Bump org.apache.maven.plugins:maven-dependency-plugin from 3.6.1 to 3.7.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-06-17T03:53:26Z",
+  "state": "closed",
+  "merged": true
+}

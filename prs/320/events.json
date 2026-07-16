@@ -1,0 +1,72 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-05-16T02:48:52Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-16T05:26:34Z",
+    "actor": "franz1981"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T08:20:59Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T08:26:13Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T08:28:30Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T08:36:31Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T08:45:10Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-16T09:20:14Z",
+    "actor": "franz1981"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-16T12:36:11Z",
+    "actor": "franz1981"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-17T01:19:41Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-17T05:57:54Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-17T10:19:16Z",
+    "actor": "franz1981"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-17T22:56:03Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-05-17T22:56:08Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "number": 485,
+  "title": "Do not expose unknown APIs to the client",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-25T02:42:53Z",
+  "state": "closed",
+  "merged": true
+}

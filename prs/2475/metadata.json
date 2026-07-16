@@ -1,0 +1,12 @@
+{
+  "number": 2475,
+  "title": "Release - fix transition-staging-repository-state.sh script args on failure path.",
+  "author": "k-wall",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-24T13:51:04Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1267,
+  "title": "Add FilterFactory.close, fixing #1208",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-05-21T00:52:58Z",
+  "state": "closed",
+  "merged": true
+}

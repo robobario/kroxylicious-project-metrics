@@ -1,0 +1,14 @@
+{
+  "number": 2118,
+  "title": "Update strimzi example url installed by run-operator.sh",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "kube/operator",
+    "dev"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-04T23:07:13Z",
+  "state": "closed",
+  "merged": true
+}

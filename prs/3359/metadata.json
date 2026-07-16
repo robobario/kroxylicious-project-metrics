@@ -1,0 +1,13 @@
+{
+  "number": 3359,
+  "title": "[System Tests] system tests cleanup of unused methods and variables",
+  "author": "franvila",
+  "labels": [
+    "kind/refactoring",
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-25T09:34:20Z",
+  "state": "closed",
+  "merged": true
+}

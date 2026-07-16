@@ -1,0 +1,12 @@
+{
+  "number": 2746,
+  "title": "fix(ci): operator workflow shouldn't run the proxy unit tests",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-06T11:09:38Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,10 @@
+{
+  "number": 3686,
+  "title": "fix(tests): remove superfluous throws declarations in integration tests (S1130)",
+  "author": "DORI2001",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-11T18:38:56Z",
+  "state": "closed",
+  "merged": false
+}

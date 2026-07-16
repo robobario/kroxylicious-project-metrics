@@ -1,0 +1,10 @@
+{
+  "number": 1091,
+  "title": "cleaner logs in pipelines and update default kroxy image version",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-14T11:49:28Z",
+  "state": "closed",
+  "merged": true
+}

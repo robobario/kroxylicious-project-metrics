@@ -1,0 +1,13 @@
+{
+  "number": 2004,
+  "title": "Update localstack/localstack Docker tag to v4.3.0",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-27T18:12:52Z",
+  "state": "closed",
+  "merged": false
+}

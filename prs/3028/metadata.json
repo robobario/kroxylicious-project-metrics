@@ -1,0 +1,10 @@
+{
+  "number": 3028,
+  "title": "Bump JDK versions so JBang doesn't have to install it.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-12-09T03:17:36Z",
+  "state": "closed",
+  "merged": true
+}

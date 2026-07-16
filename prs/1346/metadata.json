@@ -1,0 +1,13 @@
+{
+  "number": 1346,
+  "title": "Bump net.revelc.code:impsort-maven-plugin from 1.10.0 to 1.11.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-07-08T03:25:13Z",
+  "state": "closed",
+  "merged": true
+}

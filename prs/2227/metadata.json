@@ -1,0 +1,10 @@
+{
+  "number": 2227,
+  "title": "[System Tests] fix kafka ready for System tests",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-05-27T06:45:24Z",
+  "state": "closed",
+  "merged": true
+}

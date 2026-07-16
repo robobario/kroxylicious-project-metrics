@@ -1,0 +1,10 @@
+{
+  "number": 2262,
+  "title": "Stop making calls to the API server when we don't need to.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-04T01:41:20Z",
+  "state": "closed",
+  "merged": true
+}

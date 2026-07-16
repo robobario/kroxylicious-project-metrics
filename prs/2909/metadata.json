@@ -1,0 +1,13 @@
+{
+  "number": 2909,
+  "title": "kroxylicious-authorization: A Filter authorizing metadata only",
+  "author": "tombentley",
+  "labels": [
+    "kind/enhancement",
+    "filter/authorization"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-20T21:57:50Z",
+  "state": "closed",
+  "merged": true
+}

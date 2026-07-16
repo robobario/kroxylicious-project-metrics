@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-02-07T13:39:47Z",
+    "actor": "alanrobinson-dwp"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-02-07T14:28:46Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-02-07T14:51:30Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-02-07T14:51:31Z",
+    "actor": null
+  }
+]

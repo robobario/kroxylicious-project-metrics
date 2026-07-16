@@ -1,0 +1,10 @@
+{
+  "number": 1098,
+  "title": "Remove superfluous junit dependency managements",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-14T15:18:54Z",
+  "state": "closed",
+  "merged": true
+}

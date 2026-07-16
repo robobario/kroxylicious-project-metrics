@@ -1,0 +1,10 @@
+{
+  "number": 938,
+  "title": "System tests can load a dockerconfigjson secret into the working namespace",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-01T07:14:32Z",
+  "state": "closed",
+  "merged": true
+}

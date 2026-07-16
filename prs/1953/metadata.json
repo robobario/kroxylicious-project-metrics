@@ -1,0 +1,12 @@
+{
+  "number": 1953,
+  "title": "Operator ITs - log pod status if operand image preload fails",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-17T14:18:30Z",
+  "state": "closed",
+  "merged": true
+}

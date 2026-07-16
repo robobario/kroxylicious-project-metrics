@@ -1,0 +1,12 @@
+{
+  "number": 930,
+  "title": "Enable section titles/anchors in the rendered documentation",
+  "author": "k-wall",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-01-30T13:26:20Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 2880,
+  "title": "build(deps): bump io.prometheus:prometheus-metrics-bom from 1.4.1 to 1.4.3",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-10T03:06:19Z",
+  "state": "closed",
+  "merged": true
+}

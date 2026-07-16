@@ -1,0 +1,10 @@
+{
+  "number": 278,
+  "title": "Enable filters to intercept/mutate SASL requests when proxy is not ha\u2026",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-18T04:31:42Z",
+  "state": "closed",
+  "merged": true
+}

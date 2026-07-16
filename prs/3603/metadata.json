@@ -1,0 +1,10 @@
+{
+  "number": 3603,
+  "title": "Integrate Google Error Prone static analysis",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-03T02:29:22Z",
+  "state": "closed",
+  "merged": true
+}

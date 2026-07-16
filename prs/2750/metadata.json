@@ -1,0 +1,15 @@
+{
+  "number": 2750,
+  "title": "Add IT checking untrusted client certs are rejected",
+  "author": "robobario",
+  "labels": [
+    "test",
+    "runtime",
+    "security",
+    "network"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-07T21:00:27Z",
+  "state": "closed",
+  "merged": true
+}

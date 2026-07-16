@@ -1,0 +1,10 @@
+{
+  "number": 296,
+  "title": "Add header to forwardRequest and forwardResponse of KrpcFilterContext",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-30T23:03:57Z",
+  "state": "closed",
+  "merged": true
+}

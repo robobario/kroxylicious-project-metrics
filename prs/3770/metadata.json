@@ -1,0 +1,13 @@
+{
+  "number": 3770,
+  "title": "chore(deps): update curlimages/curl:8.19.0 docker digest to c03110c",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies",
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-23T01:23:16Z",
+  "state": "closed",
+  "merged": true
+}

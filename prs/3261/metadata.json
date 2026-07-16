@@ -1,0 +1,12 @@
+{
+  "number": 3261,
+  "title": "Enforce authorization of describe transactions",
+  "author": "robobario",
+  "labels": [
+    "filter/authorization"
+  ],
+  "target_branch": "transactionalId-authz",
+  "created_at": "2026-02-09T22:31:05Z",
+  "state": "closed",
+  "merged": true
+}

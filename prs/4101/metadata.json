@@ -1,0 +1,13 @@
+{
+  "number": 4101,
+  "title": "build(deps): bump actions/cache from 5.0.3 to 5.0.5",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-11T03:33:35Z",
+  "state": "closed",
+  "merged": true
+}

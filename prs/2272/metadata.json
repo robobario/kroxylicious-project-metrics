@@ -1,0 +1,13 @@
+{
+  "number": 2272,
+  "title": "Add LoadBalancer ingress status to VirtualKafkaCluster status",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-05T05:27:25Z",
+  "state": "closed",
+  "merged": true
+}

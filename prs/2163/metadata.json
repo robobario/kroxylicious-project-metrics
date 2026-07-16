@@ -1,0 +1,13 @@
+{
+  "number": 2163,
+  "title": "Fix #1871: Remove deprecated configuration property bootstrap_servers",
+  "author": "k-wall",
+  "labels": [
+    "config/api",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-09T16:23:27Z",
+  "state": "closed",
+  "merged": true
+}

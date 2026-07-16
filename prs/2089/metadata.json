@@ -1,0 +1,10 @@
+{
+  "number": 2089,
+  "title": "Add additionalPrinterColumns and categories to CRDs",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-04-22T03:10:27Z",
+  "state": "closed",
+  "merged": true
+}

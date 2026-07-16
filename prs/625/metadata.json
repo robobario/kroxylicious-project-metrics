@@ -1,0 +1,10 @@
+{
+  "number": 625,
+  "title": "FilterHandlerTest refactor (preparation for #518)",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-09-22T16:24:07Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2424,
+  "title": "Add test demonstrating the proxy can passthrough SCRAMSHA",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-11T03:53:48Z",
+  "state": "closed",
+  "merged": false
+}

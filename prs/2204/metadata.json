@@ -1,0 +1,10 @@
+{
+  "number": 2204,
+  "title": "[System Tests] removed the kroxylicious operand dependency for system tests",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-05-19T13:12:34Z",
+  "state": "closed",
+  "merged": true
+}

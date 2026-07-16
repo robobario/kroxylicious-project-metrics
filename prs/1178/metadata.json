@@ -1,0 +1,10 @@
+{
+  "number": 1178,
+  "title": "[System tests] Adding if-exists option to delete topics",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-04-30T07:58:58Z",
+  "state": "closed",
+  "merged": true
+}

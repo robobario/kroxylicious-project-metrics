@@ -1,0 +1,10 @@
+{
+  "number": 972,
+  "title": "envelope encryption: filter selects topics to encrypt",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-08T22:08:50Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,13 @@
+{
+  "number": 3229,
+  "title": "build(deps): bump com.azure:azure-security-keyvault-keys from 4.10.4 to 4.10.5",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-02T03:33:54Z",
+  "state": "closed",
+  "merged": true
+}

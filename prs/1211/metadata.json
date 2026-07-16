@@ -1,0 +1,10 @@
+{
+  "number": 1211,
+  "title": "upgraded strimzi to 0.41.0 and improved strimzi installation to be able to select the version for system tests",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-05-16T08:59:43Z",
+  "state": "closed",
+  "merged": true
+}

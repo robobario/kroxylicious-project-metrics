@@ -1,0 +1,14 @@
+{
+  "number": 2334,
+  "title": "Docs for the record encryption metrics",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "filter/record-encryption",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-17T16:52:55Z",
+  "state": "closed",
+  "merged": true
+}

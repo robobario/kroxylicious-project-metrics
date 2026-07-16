@@ -1,0 +1,13 @@
+{
+  "number": 2622,
+  "title": "Add an Azure Key Vault KMS implementation",
+  "author": "robobario",
+  "labels": [
+    "kind/enhancement",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-29T04:53:35Z",
+  "state": "closed",
+  "merged": true
+}

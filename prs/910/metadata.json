@@ -1,0 +1,12 @@
+{
+  "number": 910,
+  "title": "Envelope encryption preserve batches within MemoryRecords",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-01-22T01:51:54Z",
+  "state": "closed",
+  "merged": true
+}

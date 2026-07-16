@@ -1,0 +1,13 @@
+{
+  "number": 2325,
+  "title": "Add default resource requirements to operand proxy container",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-16T22:30:45Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1429,
+  "title": "Fix #1415: Improve record validation docs",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "filter/record-validation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-13T21:27:23Z",
+  "state": "closed",
+  "merged": true
+}

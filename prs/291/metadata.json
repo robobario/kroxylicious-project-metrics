@@ -1,0 +1,10 @@
+{
+  "number": 291,
+  "title": "WIP - Add Produce Filter that can validate and reject incoming records",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-28T05:16:23Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,12 @@
+{
+  "number": 898,
+  "title": "Fix #896: In TLS config, use passwordFile as property to accept password material from a file rather than filePath.",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-01-17T14:52:47Z",
+  "state": "closed",
+  "merged": true
+}

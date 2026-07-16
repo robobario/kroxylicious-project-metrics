@@ -1,0 +1,13 @@
+{
+  "number": 3928,
+  "title": "build(admission-dist): include admission guide in distribution",
+  "author": "robobario",
+  "labels": [
+    "documentation",
+    "kube/webhook"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-12T03:28:33Z",
+  "state": "closed",
+  "merged": true
+}

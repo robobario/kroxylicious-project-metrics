@@ -1,0 +1,13 @@
+{
+  "number": 2613,
+  "title": "build(deps): bump com.github.docker-java:docker-java-api from 3.5.3 to 3.6.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-25T06:07:40Z",
+  "state": "closed",
+  "merged": true
+}

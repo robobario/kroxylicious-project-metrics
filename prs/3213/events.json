@@ -1,0 +1,47 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-01-27T21:49:43Z",
+    "actor": "tibisabau"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-01-27T21:49:44Z",
+    "actor": "tibisabau"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-01-27T21:58:54Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-01-28T05:37:22Z",
+    "actor": "tibisabau"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-01-28T05:38:36Z",
+    "actor": "tibisabau"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-01-28T06:41:39Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-01-28T07:04:05Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-01-28T07:05:25Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-01-28T07:06:48Z",
+    "actor": null
+  }
+]

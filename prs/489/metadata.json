@@ -1,0 +1,10 @@
+{
+  "number": 489,
+  "title": "Add a script to repeatedly run the same integration test pattern.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-26T03:05:54Z",
+  "state": "closed",
+  "merged": true
+}

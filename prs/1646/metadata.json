@@ -1,0 +1,13 @@
+{
+  "number": 1646,
+  "title": "Fix #1379: Remove Deprecated EnvelopeEncryption",
+  "author": "k-wall",
+  "labels": [
+    "filter/record-encryption",
+    "lifecycle/deprecation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-05T17:01:11Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 818,
+  "title": "Experiment: try moving sonar.coverage.exclusions to top-level pom",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-12-12T09:01:47Z",
+  "state": "closed",
+  "merged": true
+}

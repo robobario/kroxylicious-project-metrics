@@ -1,0 +1,37 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-03-17T14:18:30Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-03-17T14:18:31Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-03-17T21:27:26Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-03-17T21:44:03Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-03-17T21:45:55Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-03-17T22:33:35Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-03-17T22:33:35Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

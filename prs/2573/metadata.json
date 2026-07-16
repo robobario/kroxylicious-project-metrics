@@ -1,0 +1,10 @@
+{
+  "number": 2573,
+  "title": "Improve release instructions around the sonatype release token",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-08-12T15:00:18Z",
+  "state": "closed",
+  "merged": true
+}

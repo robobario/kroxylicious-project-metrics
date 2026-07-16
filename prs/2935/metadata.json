@@ -1,0 +1,13 @@
+{
+  "number": 2935,
+  "title": "Ensure inflight state empty at end of test",
+  "author": "robobario",
+  "labels": [
+    "test",
+    "filter/authorization"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-25T01:38:25Z",
+  "state": "closed",
+  "merged": true
+}

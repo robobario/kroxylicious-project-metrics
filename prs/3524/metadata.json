@@ -1,0 +1,12 @@
+{
+  "number": 3524,
+  "title": "fix(doctests): Give minikube used for quickstart tests more resources to try and avoid occasionally timeouts",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-23T11:16:55Z",
+  "state": "closed",
+  "merged": false
+}

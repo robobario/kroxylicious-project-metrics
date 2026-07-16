@@ -1,0 +1,12 @@
+{
+  "number": 2875,
+  "title": "Fix typo in release documentation",
+  "author": "robobario",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-09T19:57:03Z",
+  "state": "closed",
+  "merged": true
+}

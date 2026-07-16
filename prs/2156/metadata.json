@@ -1,0 +1,12 @@
+{
+  "number": 2156,
+  "title": "Fix promote release to account for the fact we now have several check-runs",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-08T16:53:47Z",
+  "state": "closed",
+  "merged": true
+}

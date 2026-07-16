@@ -1,0 +1,10 @@
+{
+  "number": 2355,
+  "title": "[System Tests] added retry when consumer fails to connect",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-19T11:31:08Z",
+  "state": "closed",
+  "merged": true
+}

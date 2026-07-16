@@ -1,0 +1,42 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-02-10T09:38:33Z",
+    "actor": "aaditya9899"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-02-13T01:31:39Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-02-13T21:18:23Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-02-17T15:22:05Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-02-22T06:48:57Z",
+    "actor": "aaditya9899"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-02-22T09:05:29Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-02-25T07:59:18Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-02-25T08:38:11Z",
+    "actor": null
+  }
+]

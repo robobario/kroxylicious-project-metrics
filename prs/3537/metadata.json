@@ -1,0 +1,13 @@
+{
+  "number": 3537,
+  "title": "[System Tests] Added first entity isolation filter system test",
+  "author": "franvila",
+  "labels": [
+    "test/system-test",
+    "filter/entity-isolation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-25T11:44:20Z",
+  "state": "closed",
+  "merged": true
+}

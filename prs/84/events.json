@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-10-07T21:13:21Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-10-14T12:45:11Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2022-10-28T11:21:11Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-11-28T10:37:32Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-11-28T10:42:50Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-12-02T13:28:44Z",
+    "actor": "grdryn"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-12-29T01:16:41Z",
+    "actor": "shivarm"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-05T07:00:38Z",
+    "actor": "prakrit55"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-09T16:30:32Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-01-09T20:26:26Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-01-09T20:26:42Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-09T20:27:34Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-10T00:55:35Z",
+    "actor": "prakrit55"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-10T00:58:42Z",
+    "actor": "prakrit55"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "number": 3315,
+  "title": "fix(operator): decouple CRD validation tests from K8s error message format",
+  "author": "SamBarker",
+  "labels": [
+    "kind/bug",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-18T23:09:36Z",
+  "state": "closed",
+  "merged": true
+}

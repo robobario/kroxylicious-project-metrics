@@ -1,0 +1,13 @@
+{
+  "number": 4384,
+  "title": "build(deps): bump io.kiota:kiota-http-jdk from 0.0.36 to 0.0.37",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-15T07:14:51Z",
+  "state": "closed",
+  "merged": true
+}

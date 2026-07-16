@@ -1,0 +1,10 @@
+{
+  "number": 499,
+  "title": "Add kroxylicious-app module with opinionated logging config",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-31T02:24:33Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 367,
+  "title": "Make release.sh executable",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-06-07T01:54:27Z",
+  "state": "closed",
+  "merged": true
+}

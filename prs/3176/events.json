@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-01-19T10:49:02Z",
+    "actor": "Uzziee"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-01-19T10:49:03Z",
+    "actor": "Uzziee"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-01-28T09:28:37Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-27T08:41:10Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-05-27T09:17:11Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-27T09:17:11Z",
+    "actor": "Uzziee"
+  }
+]

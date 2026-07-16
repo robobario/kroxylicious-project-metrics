@@ -1,0 +1,16 @@
+{
+  "number": 3596,
+  "title": "build(deps): bump io.javaoperatorsdk:operator-framework-bom from 5.2.3 to 5.3.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java",
+    "DO-NOT-MERGE",
+    "kube/operator",
+    "blocked/external-dependency"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-02T07:59:47Z",
+  "state": "closed",
+  "merged": false
+}

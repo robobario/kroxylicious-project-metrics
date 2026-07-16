@@ -1,0 +1,14 @@
+{
+  "number": 2308,
+  "title": "Added new metrics for record encyption",
+  "author": "ShubhamRwt",
+  "labels": [
+    "filter/record-encryption",
+    "prio/essential",
+    "observability"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-13T11:25:13Z",
+  "state": "closed",
+  "merged": true
+}

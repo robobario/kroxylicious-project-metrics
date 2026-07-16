@@ -1,0 +1,12 @@
+{
+  "number": 2278,
+  "title": "Reduce max length of KafkaProxy metadata.name to 50",
+  "author": "robobario",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-05T21:45:36Z",
+  "state": "closed",
+  "merged": true
+}

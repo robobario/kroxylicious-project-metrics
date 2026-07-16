@@ -1,0 +1,10 @@
+{
+  "number": 292,
+  "title": "Remove duplicated kroxy.extension.version setting in parent pom",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-28T09:54:00Z",
+  "state": "closed",
+  "merged": true
+}

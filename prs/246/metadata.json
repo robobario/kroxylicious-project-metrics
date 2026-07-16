@@ -1,0 +1,10 @@
+{
+  "number": 246,
+  "title": "checkstyle: include test sources",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-02T21:26:28Z",
+  "state": "closed",
+  "merged": true
+}

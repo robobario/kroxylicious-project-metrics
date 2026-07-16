@@ -1,0 +1,12 @@
+{
+  "number": 2964,
+  "title": "docs: docs for new sasl inspection config option added by #2951",
+  "author": "k-wall",
+  "labels": [
+    "filters/sasl-inspection"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-28T09:45:26Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1164,
+  "title": "Refactor VaultKmsIT as a common KmsIT test suite suitable for testing any implementation.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-04-22T21:49:49Z",
+  "state": "closed",
+  "merged": true
+}

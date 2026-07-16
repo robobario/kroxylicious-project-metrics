@@ -1,0 +1,10 @@
+{
+  "number": 865,
+  "title": "update the version being released in CHANGELOG.md",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-01-11T01:12:47Z",
+  "state": "closed",
+  "merged": true
+}

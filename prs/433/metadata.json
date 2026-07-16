@@ -1,0 +1,12 @@
+{
+  "number": 433,
+  "title": "Bump guava from 32.0.1-jre to 32.1.1-jre",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-07-03T03:22:07Z",
+  "state": "closed",
+  "merged": true
+}

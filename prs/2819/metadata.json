@@ -1,0 +1,12 @@
+{
+  "number": 2819,
+  "title": "Netty 4.2 iouring perf tests",
+  "author": "SamBarker",
+  "labels": [
+    "triaged"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-24T03:58:00Z",
+  "state": "closed",
+  "merged": false
+}

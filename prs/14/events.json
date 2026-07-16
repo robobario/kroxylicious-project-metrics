@@ -1,0 +1,12 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-05-11T13:05:43Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2022-07-04T09:48:57Z",
+    "actor": null
+  }
+]

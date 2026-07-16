@@ -1,0 +1,87 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-02-21T16:34:38Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-02-21T16:34:38Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-02-21T16:34:38Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-02-21T22:49:53Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-02-21T22:54:37Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-02-24T10:04:48Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-02-24T10:13:08Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-03-06T21:10:34Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-03-06T21:13:21Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-03-08T07:22:52Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-03-08T07:27:58Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-03-09T06:27:58Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-03-09T09:28:53Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-03-09T21:32:39Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-03-13T22:18:43Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-03-14T18:32:46Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-03-14T20:01:27Z",
+    "actor": "robobario"
+  }
+]

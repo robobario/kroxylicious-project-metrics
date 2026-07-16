@@ -1,0 +1,10 @@
+{
+  "number": 2655,
+  "title": "Upgrade asciidoctor-maven-plugin to 3.2.0",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-09-11T22:58:19Z",
+  "state": "closed",
+  "merged": true
+}

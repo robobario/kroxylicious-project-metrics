@@ -1,0 +1,14 @@
+{
+  "number": 1660,
+  "title": "Support Configuration for Cipher Suits and Protocols used by Upstream and Downstream",
+  "author": "alanrobinson-dwp",
+  "labels": [
+    "kind/enhancement",
+    "security",
+    "network"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-11T11:57:27Z",
+  "state": "closed",
+  "merged": true
+}

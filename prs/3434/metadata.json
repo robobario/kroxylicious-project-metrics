@@ -1,0 +1,13 @@
+{
+  "number": 3434,
+  "title": "Provoke failure in ProduceAuthzAuthzIT",
+  "author": "robobario",
+  "labels": [
+    "test",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-10T04:15:30Z",
+  "state": "closed",
+  "merged": false
+}

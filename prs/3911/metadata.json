@@ -1,0 +1,10 @@
+{
+  "number": 3911,
+  "title": "refactor(kms-tls-support): move to `io.kroxylicious.testing.kms.tls` ",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-08T02:35:58Z",
+  "state": "closed",
+  "merged": true
+}

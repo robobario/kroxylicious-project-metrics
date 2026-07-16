@@ -1,0 +1,12 @@
+{
+  "number": 808,
+  "title": "Release instruction should use rebase/merge strategy.",
+  "author": "k-wall",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-12-11T10:15:39Z",
+  "state": "closed",
+  "merged": true
+}

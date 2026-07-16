@@ -1,0 +1,12 @@
+{
+  "number": 2160,
+  "title": "Make the BOM use reproducible-builds too",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-09T09:12:41Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 201,
+  "title": "Added new integration test to commit offset manually and an small refactor",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-03-17T10:31:16Z",
+  "state": "closed",
+  "merged": false
+}

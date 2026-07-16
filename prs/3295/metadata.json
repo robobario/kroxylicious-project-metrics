@@ -1,0 +1,13 @@
+{
+  "number": 3295,
+  "title": "build(deps): bump docker/build-push-action from 6.18.0 to 6.19.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-16T03:37:42Z",
+  "state": "closed",
+  "merged": true
+}

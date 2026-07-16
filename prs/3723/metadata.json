@@ -1,0 +1,12 @@
+{
+  "number": 3723,
+  "title": "perf(tests): share KafkaCluster across more integration tests (MetricsIT and TlsIT)",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-15T17:04:41Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1851,
+  "title": "Rename KafkaProxy to Proxy and use proxy.kroxylicious.io group",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-25T03:58:50Z",
+  "state": "closed",
+  "merged": false
+}

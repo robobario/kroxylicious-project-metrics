@@ -1,0 +1,10 @@
+{
+  "number": 2928,
+  "title": "Freeze kafka version for system tests by now",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-24T20:02:06Z",
+  "state": "closed",
+  "merged": true
+}

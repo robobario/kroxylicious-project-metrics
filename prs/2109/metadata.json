@@ -1,0 +1,13 @@
+{
+  "number": 2109,
+  "title": "Fix #1831 - adding support for downstream trust",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-30T14:44:52Z",
+  "state": "closed",
+  "merged": true
+}

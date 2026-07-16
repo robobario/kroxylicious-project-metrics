@@ -1,0 +1,10 @@
+{
+  "number": 1181,
+  "title": "Generate flamegraphs using async-profiler while running performance test",
+  "author": "lucamolteni",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-05-03T15:03:27Z",
+  "state": "closed",
+  "merged": true
+}

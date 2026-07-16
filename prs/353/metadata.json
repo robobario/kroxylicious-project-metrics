@@ -1,0 +1,10 @@
+{
+  "number": 353,
+  "title": "Apply Intellij's `Pattern variable can be used` inspection.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-30T23:17:20Z",
+  "state": "closed",
+  "merged": true
+}

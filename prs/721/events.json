@@ -1,0 +1,72 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-11-15T16:32:49Z",
+    "actor": "andreaTP"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-11-15T16:36:53Z",
+    "actor": "andreaTP"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-11-16T07:43:24Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-11-20T15:28:01Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-11-20T15:40:15Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-11-20T16:20:55Z",
+    "actor": "andreaTP"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-11-20T21:51:46Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-24T09:39:10Z",
+    "actor": "showuon"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-24T09:51:55Z",
+    "actor": "andreaTP"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-24T11:17:15Z",
+    "actor": "andreaTP"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-01-24T11:17:21Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-25T02:44:26Z",
+    "actor": "showuon"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-25T05:09:15Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-25T10:16:04Z",
+    "actor": "andreaTP"
+  }
+]

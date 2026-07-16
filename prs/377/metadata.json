@@ -1,0 +1,10 @@
+{
+  "number": 377,
+  "title": "Add github action to build and deploy container images to quay.io",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-06-09T04:31:26Z",
+  "state": "closed",
+  "merged": true
+}

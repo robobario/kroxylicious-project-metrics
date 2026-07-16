@@ -1,0 +1,10 @@
+{
+  "number": 1107,
+  "title": "Replace deprecated FilePasswordFilePath class with @JsonAlias.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-19T09:32:11Z",
+  "state": "closed",
+  "merged": true
+}

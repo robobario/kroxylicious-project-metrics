@@ -1,0 +1,13 @@
+{
+  "number": 2853,
+  "title": "[System Tests] Azure kms support",
+  "author": "franvila",
+  "labels": [
+    "kms/api",
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-03T15:51:32Z",
+  "state": "closed",
+  "merged": true
+}

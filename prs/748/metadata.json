@@ -1,0 +1,10 @@
+{
+  "number": 748,
+  "title": "Add note to pom warning that care should be taken to align versions when upgrading strimzi/fabric8/sundr",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-11-27T14:53:25Z",
+  "state": "closed",
+  "merged": false
+}

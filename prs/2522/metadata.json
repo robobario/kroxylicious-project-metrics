@@ -1,0 +1,13 @@
+{
+  "number": 2522,
+  "title": "bugfix: asset signatures not attached to release",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-01T03:36:30Z",
+  "state": "closed",
+  "merged": true
+}

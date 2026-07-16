@@ -1,0 +1,10 @@
+{
+  "number": 866,
+  "title": "default MVN_DEPLOY_DRYRUN to empty string",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-01-11T08:25:04Z",
+  "state": "closed",
+  "merged": true
+}

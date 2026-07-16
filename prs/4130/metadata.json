@@ -1,0 +1,12 @@
+{
+  "number": 4130,
+  "title": "chore(deps): update registry.access.redhat.com/ubi9/openjdk-21-runtime docker tag to v1.24-2.1781533371",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-16T20:34:44Z",
+  "state": "closed",
+  "merged": true
+}

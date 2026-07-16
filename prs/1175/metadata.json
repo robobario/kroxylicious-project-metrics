@@ -1,0 +1,10 @@
+{
+  "number": 1175,
+  "title": "Send an ApiVersionsRequest with the client software name and version (authentication offload use-case)",
+  "author": "luozhenyu",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-04-29T07:04:17Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2869,
+  "title": "Support promoting patch releases which do not merge to main",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-07T02:42:23Z",
+  "state": "closed",
+  "merged": true
+}

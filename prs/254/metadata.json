@@ -1,0 +1,13 @@
+{
+  "number": 254,
+  "title": "Expose multiple clusters / multiple brokers (via static configuration)",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement",
+    "filter/multitenancy"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-04-04T16:54:48Z",
+  "state": "closed",
+  "merged": true
+}

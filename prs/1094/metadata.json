@@ -1,0 +1,12 @@
+{
+  "number": 1094,
+  "title": "Fix #1093 - Make version replacement in docker-compose.yaml too",
+  "author": "k-wall",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-03-14T12:12:03Z",
+  "state": "closed",
+  "merged": false
+}

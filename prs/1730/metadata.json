@@ -1,0 +1,10 @@
+{
+  "number": 1730,
+  "title": "Renovate - bug fix to the git author",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-01-16T10:53:18Z",
+  "state": "closed",
+  "merged": true
+}

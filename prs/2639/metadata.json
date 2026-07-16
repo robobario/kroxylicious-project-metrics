@@ -1,0 +1,13 @@
+{
+  "number": 2639,
+  "title": "Upgrade to netty 4.1.126.Final",
+  "author": "robobario",
+  "labels": [
+    "dependencies",
+    "runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-09-04T21:54:26Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 776,
+  "title": "Create GitHub release as part of release script and attatch binary distribution",
+  "author": "gracegrimwood",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-12-05T02:24:43Z",
+  "state": "closed",
+  "merged": true
+}

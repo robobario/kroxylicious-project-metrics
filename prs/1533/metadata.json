@@ -1,0 +1,12 @@
+{
+  "number": 1533,
+  "title": "docs(attributes): changes product version attribute name",
+  "author": "PaulRMellor",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-09-27T14:48:22Z",
+  "state": "closed",
+  "merged": true
+}

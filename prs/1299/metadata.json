@@ -1,0 +1,10 @@
+{
+  "number": 1299,
+  "title": "Add missing fireChannelReadComplete in FilterHandler",
+  "author": "luozhenyu",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-06-06T15:26:14Z",
+  "state": "closed",
+  "merged": false
+}

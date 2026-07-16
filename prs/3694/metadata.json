@@ -1,0 +1,12 @@
+{
+  "number": 3694,
+  "title": "perf(ci): skip ITs for unrelated changes",
+  "author": "robobario",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-13T04:59:20Z",
+  "state": "closed",
+  "merged": true
+}

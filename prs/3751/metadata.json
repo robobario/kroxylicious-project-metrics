@@ -1,0 +1,10 @@
+{
+  "number": 3751,
+  "title": "fix(benchmarks): add cluster auth preflight check",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-20T08:10:36Z",
+  "state": "closed",
+  "merged": true
+}

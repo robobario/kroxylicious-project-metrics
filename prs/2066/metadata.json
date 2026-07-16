@@ -1,0 +1,13 @@
+{
+  "number": 2066,
+  "title": "Move Configuration construction to KafkaProxyReconciler",
+  "author": "tombentley",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-16T01:31:38Z",
+  "state": "closed",
+  "merged": true
+}

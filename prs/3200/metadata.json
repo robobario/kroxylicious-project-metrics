@@ -1,0 +1,13 @@
+{
+  "number": 3200,
+  "title": "build(deps-dev): bump org.codehaus.mojo:exec-maven-plugin from 3.6.2 to 3.6.3",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-26T03:34:14Z",
+  "state": "closed",
+  "merged": true
+}

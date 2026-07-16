@@ -1,0 +1,10 @@
+{
+  "number": 94,
+  "title": "BOM's need to be included with `import` scope.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-12-08T22:32:13Z",
+  "state": "closed",
+  "merged": true
+}

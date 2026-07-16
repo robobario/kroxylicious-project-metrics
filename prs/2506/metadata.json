@@ -1,0 +1,10 @@
+{
+  "number": 2506,
+  "title": "fix: experiment - recredit the Encryptor if the encrypted bytes won't be used owing to overflow.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-30T16:13:07Z",
+  "state": "closed",
+  "merged": false
+}

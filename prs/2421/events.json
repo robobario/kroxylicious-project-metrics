@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-07-10T15:58:48Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-07-10T15:58:48Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-07-10T16:00:27Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-07-10T16:26:01Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-07-10T16:32:07Z",
+    "actor": null
+  }
+]

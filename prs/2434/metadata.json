@@ -1,0 +1,12 @@
+{
+  "number": 2434,
+  "title": "Build docker images on pull request",
+  "author": "robobario",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-14T04:46:52Z",
+  "state": "closed",
+  "merged": true
+}

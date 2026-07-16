@@ -1,0 +1,10 @@
+{
+  "number": 136,
+  "title": "Generate javadoc jars as part of build",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-16T21:37:01Z",
+  "state": "closed",
+  "merged": true
+}

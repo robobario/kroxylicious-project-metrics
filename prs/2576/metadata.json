@@ -1,0 +1,10 @@
+{
+  "number": 2576,
+  "title": "feat: update how the bootstrapserver is used to initialize connection",
+  "author": "opan",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-08-13T10:03:22Z",
+  "state": "closed",
+  "merged": false
+}

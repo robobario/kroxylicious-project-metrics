@@ -1,0 +1,13 @@
+{
+  "number": 2511,
+  "title": "add experimental configuration options to control encryption buffer",
+  "author": "robobario",
+  "labels": [
+    "kind/enhancement",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-31T04:56:27Z",
+  "state": "closed",
+  "merged": true
+}

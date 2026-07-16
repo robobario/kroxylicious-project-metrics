@@ -1,0 +1,10 @@
+{
+  "number": 3322,
+  "title": "fix: Handle HAProxy protocol messages correctly in the Kafka proxy",
+  "author": "hrishabhg",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-02-19T06:43:09Z",
+  "state": "closed",
+  "merged": false
+}

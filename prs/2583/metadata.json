@@ -1,0 +1,13 @@
+{
+  "number": 2583,
+  "title": "Prototype: Add Topic Name lookup facility",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "filter/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-15T05:00:47Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2154,
+  "title": "Operator CI build needs to skip japicmp if the reference release is not published.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-05-08T14:43:04Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-12-01T21:24:24Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-12-01T21:24:25Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-12-01T21:55:30Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-12-01T22:03:45Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-12-01T22:11:50Z",
+    "actor": null
+  }
+]

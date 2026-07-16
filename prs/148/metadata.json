@@ -1,0 +1,10 @@
+{
+  "number": 148,
+  "title": "Add kroxylicious CNAME to docs",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-20T22:06:07Z",
+  "state": "closed",
+  "merged": true
+}

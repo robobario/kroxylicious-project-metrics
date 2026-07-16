@@ -1,0 +1,13 @@
+{
+  "number": 2592,
+  "title": "build(deps): bump actions/checkout from 4 to 5",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-18T05:31:58Z",
+  "state": "closed",
+  "merged": true
+}

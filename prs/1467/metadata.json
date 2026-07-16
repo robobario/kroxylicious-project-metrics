@@ -1,0 +1,16 @@
+{
+  "number": 1467,
+  "title": "Migrate to Netty 4.2",
+  "author": "SamBarker",
+  "labels": [
+    "dependencies",
+    "runtime",
+    "performance",
+    "network",
+    "kind/investigation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-25T23:32:34Z",
+  "state": "closed",
+  "merged": true
+}

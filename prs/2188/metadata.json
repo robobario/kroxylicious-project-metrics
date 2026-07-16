@@ -1,0 +1,13 @@
+{
+  "number": 2188,
+  "title": "Delete deprecated bootstrapAddressPattern SNI gateway property",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "lifecycle/deprecation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-15T04:54:16Z",
+  "state": "closed",
+  "merged": true
+}

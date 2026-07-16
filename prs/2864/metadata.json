@@ -1,0 +1,10 @@
+{
+  "number": 2864,
+  "title": "Destroy test KafkaClient immediately on close",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-06T00:56:50Z",
+  "state": "closed",
+  "merged": true
+}

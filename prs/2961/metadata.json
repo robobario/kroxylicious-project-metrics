@@ -1,0 +1,10 @@
+{
+  "number": 2961,
+  "title": "SaslInspection: Make some assertions on the logging",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-28T01:41:59Z",
+  "state": "closed",
+  "merged": true
+}

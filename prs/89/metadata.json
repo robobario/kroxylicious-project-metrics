@@ -1,0 +1,10 @@
+{
+  "number": 89,
+  "title": "Add NetFilter abstraction for pluggable connection logic ",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-11-10T14:16:50Z",
+  "state": "closed",
+  "merged": true
+}

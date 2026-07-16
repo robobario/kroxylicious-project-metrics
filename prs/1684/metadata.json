@@ -1,0 +1,12 @@
+{
+  "number": 1684,
+  "title": "Remove leading newline in the doc index template that breaks the asciidoc rendering",
+  "author": "k-wall",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-17T14:21:25Z",
+  "state": "closed",
+  "merged": true
+}

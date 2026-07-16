@@ -1,0 +1,13 @@
+{
+  "number": 3288,
+  "title": "build(deps): bump org.junit:junit-bom from 5.14.2 to 5.14.3",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-16T03:33:03Z",
+  "state": "closed",
+  "merged": true
+}

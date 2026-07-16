@@ -1,0 +1,10 @@
+{
+  "number": 1569,
+  "title": "Remove site plugin declaration and version enforcement",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-11-04T03:39:43Z",
+  "state": "closed",
+  "merged": true
+}

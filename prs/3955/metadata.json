@@ -1,0 +1,10 @@
+{
+  "number": 3955,
+  "title": "build(release): attach admission webhook artifacts to GitHub releases",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-15T01:22:06Z",
+  "state": "closed",
+  "merged": true
+}

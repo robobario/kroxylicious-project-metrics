@@ -1,0 +1,13 @@
+{
+  "number": 3004,
+  "title": "fix(authz-filter): prevent NPE when OFFSET_FETCH is used to  fetch all the topics for a consumer group.",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "filter/authorization"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-12-04T18:40:38Z",
+  "state": "closed",
+  "merged": false
+}

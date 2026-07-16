@@ -1,0 +1,62 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-06-16T22:30:45Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-06-16T22:30:46Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-06-16T22:31:18Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-06-16T22:35:08Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-06-16T22:39:37Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-06-16T22:39:53Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-06-16T22:43:30Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-06-16T23:02:48Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-06-16T23:04:53Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-06-16T23:27:56Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-06-16T23:30:47Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-06-16T23:30:47Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

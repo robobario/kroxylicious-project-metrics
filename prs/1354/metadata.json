@@ -1,0 +1,10 @@
+{
+  "number": 1354,
+  "title": "Make EDEK cache refresh and expiry durations configurable",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-07-12T03:50:53Z",
+  "state": "closed",
+  "merged": true
+}

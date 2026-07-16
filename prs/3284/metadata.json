@@ -1,0 +1,13 @@
+{
+  "number": 3284,
+  "title": "refactor: repackage reconcilers",
+  "author": "robobario",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-15T22:13:32Z",
+  "state": "closed",
+  "merged": true
+}

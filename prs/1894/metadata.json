@@ -1,0 +1,12 @@
+{
+  "number": 1894,
+  "title": "Update hashicorp/vault Docker tag to v1.19.0",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-05T18:12:44Z",
+  "state": "closed",
+  "merged": true
+}

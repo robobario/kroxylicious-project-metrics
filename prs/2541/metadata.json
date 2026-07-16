@@ -1,0 +1,13 @@
+{
+  "number": 2541,
+  "title": "Add timers for how long the proxy is applying back pressure",
+  "author": "SamBarker",
+  "labels": [
+    "kind/enhancement",
+    "observability"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-05T19:41:42Z",
+  "state": "closed",
+  "merged": true
+}

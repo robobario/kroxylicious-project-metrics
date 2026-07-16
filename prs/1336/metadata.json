@@ -1,0 +1,10 @@
+{
+  "number": 1336,
+  "title": "Added support for AWS kms in system tests local and AWS cloud",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-06-27T16:19:23Z",
+  "state": "closed",
+  "merged": true
+}

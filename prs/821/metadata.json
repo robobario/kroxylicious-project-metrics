@@ -1,0 +1,10 @@
+{
+  "number": 821,
+  "title": "added SKIP_TEARDOWN env variable",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-12-12T11:50:53Z",
+  "state": "closed",
+  "merged": true
+}

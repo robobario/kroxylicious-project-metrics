@@ -1,0 +1,10 @@
+{
+  "number": 3432,
+  "title": "fix(operator): fix flaky AllReconcilersIT.singleVirtualCluster[3] assertion",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-03-09T23:40:37Z",
+  "state": "closed",
+  "merged": true
+}

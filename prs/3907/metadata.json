@@ -1,0 +1,12 @@
+{
+  "number": 3907,
+  "title": "chore(deps): update quay.io/kroxylicious/proxy docker tag to v0.21.0",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-07T10:59:05Z",
+  "state": "closed",
+  "merged": true
+}

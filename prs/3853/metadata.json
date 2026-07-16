@@ -1,0 +1,13 @@
+{
+  "number": 3853,
+  "title": "build: remove duplicate kiota-http-jdk dependency declaration",
+  "author": "k-wall",
+  "labels": [
+    "dependencies",
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-01T09:02:58Z",
+  "state": "closed",
+  "merged": true
+}

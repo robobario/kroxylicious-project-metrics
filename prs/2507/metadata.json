@@ -1,0 +1,10 @@
+{
+  "number": 2507,
+  "title": "Use @NonNull by default in the runtime; turn on spotbugs to check it",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-30T22:04:10Z",
+  "state": "closed",
+  "merged": true
+}

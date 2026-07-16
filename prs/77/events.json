@@ -1,0 +1,67 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-09-15T01:38:32Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-09-22T14:31:10Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-09-22T16:48:19Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-09-22T16:48:48Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-09-22T17:01:20Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-09-22T18:19:03Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-09-22T18:39:41Z",
+    "actor": "franz1981"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-09-23T09:11:34Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-09-28T12:02:54Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-10-06T01:35:08Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-10-06T03:13:40Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-01-08T22:17:24Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-08T22:17:24Z",
+    "actor": "SamBarker"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "number": 100,
+  "title": "Typo fix in README.md",
+  "author": "shivarm",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-12-30T17:20:03Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,10 @@
+{
+  "number": 484,
+  "title": "Only check that the failed topic creation topic has not been created",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-25T02:25:55Z",
+  "state": "closed",
+  "merged": true
+}

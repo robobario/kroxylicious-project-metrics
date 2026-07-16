@@ -1,0 +1,87 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-04-28T05:16:23Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-02T04:10:49Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-02T04:10:50Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-02T10:32:34Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-03T07:56:43Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-03T08:03:18Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-03T08:11:55Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-03T08:26:11Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-04T05:01:00Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-04T05:06:42Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-04T05:06:44Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-05T00:22:49Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-05T01:17:26Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-05T01:23:16Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-07T22:34:09Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-05-08T23:26:28Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-08T23:26:28Z",
+    "actor": "robobario"
+  }
+]

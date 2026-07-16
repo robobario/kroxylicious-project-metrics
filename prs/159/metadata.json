@@ -1,0 +1,10 @@
+{
+  "number": 159,
+  "title": "Extract kroxylicious-api and kroxylicious-filter-api modules",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-27T23:01:49Z",
+  "state": "closed",
+  "merged": true
+}

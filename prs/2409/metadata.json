@@ -1,0 +1,10 @@
+{
+  "number": 2409,
+  "title": "feat: enable Micrometer pause detection (#151)",
+  "author": "The-East-Wind",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-05T18:52:04Z",
+  "state": "closed",
+  "merged": true
+}

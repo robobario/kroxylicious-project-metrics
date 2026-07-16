@@ -1,0 +1,13 @@
+{
+  "number": 1668,
+  "title": "Bump apicurio-registry.version from 2.6.5.Final to 2.6.6.Final",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-16T03:40:23Z",
+  "state": "closed",
+  "merged": true
+}

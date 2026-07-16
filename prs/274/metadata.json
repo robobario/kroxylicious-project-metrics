@@ -1,0 +1,12 @@
+{
+  "number": 274,
+  "title": "Bump mockito-bom from 5.2.0 to 5.3.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-04-17T04:04:40Z",
+  "state": "closed",
+  "merged": true
+}

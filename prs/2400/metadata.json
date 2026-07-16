@@ -1,0 +1,13 @@
+{
+  "number": 2400,
+  "title": "refactor: #2397 replace rendered asciiart based diagrams in the docs with those drawn with Excalidraw",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-01T17:02:05Z",
+  "state": "closed",
+  "merged": true
+}

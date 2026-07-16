@@ -1,0 +1,13 @@
+{
+  "number": 3350,
+  "title": "fix(authz): Use ConfigResource.Type enum in config enforcements",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "filter/authorization"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-23T22:35:17Z",
+  "state": "closed",
+  "merged": true
+}

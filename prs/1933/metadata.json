@@ -1,0 +1,12 @@
+{
+  "number": 1933,
+  "title": "Initial support for `KafkaService`'s `spec.tls`",
+  "author": "tombentley",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-13T23:31:36Z",
+  "state": "closed",
+  "merged": false
+}

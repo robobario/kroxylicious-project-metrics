@@ -1,0 +1,13 @@
+{
+  "number": 2306,
+  "title": "User influence proxy pod resources and dependent labels",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-13T04:55:43Z",
+  "state": "closed",
+  "merged": false
+}

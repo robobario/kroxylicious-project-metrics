@@ -1,0 +1,13 @@
+{
+  "number": 3714,
+  "title": "refactor: Fix ErrorProne FutureReturnValueIgnored warnings",
+  "author": "m1a2st",
+  "labels": [
+    "kind/refactoring",
+    "network"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-14T15:04:51Z",
+  "state": "open",
+  "merged": false
+}

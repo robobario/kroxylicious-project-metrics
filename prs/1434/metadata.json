@@ -1,0 +1,12 @@
+{
+  "number": 1434,
+  "title": "Fix #1414: Address Record Validation Filter name inconsistency",
+  "author": "k-wall",
+  "labels": [
+    "filter/record-validation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-15T11:48:07Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 4307,
+  "title": "feat(routing): implement dynamic routing runtime (issue #4154)",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-07T04:28:31Z",
+  "state": "closed",
+  "merged": true
+}

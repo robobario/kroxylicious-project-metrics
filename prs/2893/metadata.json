@@ -1,0 +1,12 @@
+{
+  "number": 2893,
+  "title": "kroxylicious-api+runtime: Add Subject, replace clientSaslAuthenticationSuccess()",
+  "author": "tombentley",
+  "labels": [
+    "filter/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-13T00:39:10Z",
+  "state": "closed",
+  "merged": true
+}

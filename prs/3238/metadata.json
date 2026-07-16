@@ -1,0 +1,12 @@
+{
+  "number": 3238,
+  "title": "chore(deps): update dependency cert-manager/cert-manager to v1.19.3",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-02T18:28:06Z",
+  "state": "closed",
+  "merged": true
+}

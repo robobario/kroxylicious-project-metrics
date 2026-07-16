@@ -1,0 +1,10 @@
+{
+  "number": 935,
+  "title": "Enable user to configure alternative source of keys for vault KMS client",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-01-31T03:16:41Z",
+  "state": "closed",
+  "merged": true
+}

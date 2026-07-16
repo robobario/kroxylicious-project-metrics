@@ -1,0 +1,12 @@
+{
+  "number": 1915,
+  "title": "fix: avoid spurious deprecation warning 'ClusterNetworkAddressConfigProvider is deprecated' during startup with new config",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-10T17:27:13Z",
+  "state": "closed",
+  "merged": true
+}

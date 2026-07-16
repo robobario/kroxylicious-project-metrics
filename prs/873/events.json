@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-01-12T00:59:07Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-01-12T01:09:58Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-12T01:23:37Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

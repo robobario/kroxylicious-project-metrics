@@ -1,0 +1,10 @@
+{
+  "number": 262,
+  "title": "Fix performance action",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-11T05:42:56Z",
+  "state": "closed",
+  "merged": true
+}

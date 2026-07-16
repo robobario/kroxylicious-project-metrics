@@ -1,0 +1,10 @@
+{
+  "number": 4023,
+  "title": "feat(benchmarks): add coefficient sweep scripts and operational fixes",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-28T02:11:41Z",
+  "state": "closed",
+  "merged": true
+}

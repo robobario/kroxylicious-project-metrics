@@ -1,0 +1,12 @@
+{
+  "number": 2546,
+  "title": "chore: remove superfluous dependencyManagement declaration (enforcer-\u2026",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-06T15:37:05Z",
+  "state": "closed",
+  "merged": true
+}

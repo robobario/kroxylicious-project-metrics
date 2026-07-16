@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-10-29T03:23:59Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-11-06T21:40:53Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-11-07T02:57:04Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-11-07T02:57:06Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-11-07T02:57:08Z",
+    "actor": "dependabot[bot]"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "number": 2195,
+  "title": "chore(deps): update registry.access.redhat.com/ubi9/ubi-minimal docker tag to v9.6-1747218906",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-16T00:46:58Z",
+  "state": "closed",
+  "merged": true
+}

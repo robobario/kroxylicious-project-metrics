@@ -1,0 +1,12 @@
+{
+  "number": 467,
+  "title": "Ensure Metric Registry is clean before/after each MetricIT test",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-07-20T11:26:17Z",
+  "state": "closed",
+  "merged": true
+}

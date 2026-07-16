@@ -1,0 +1,12 @@
+{
+  "number": 2942,
+  "title": "build: skip the creation of the filter-archetype test repo when -Dquick is specified",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-26T14:32:32Z",
+  "state": "closed",
+  "merged": true
+}

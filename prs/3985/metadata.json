@@ -1,0 +1,10 @@
+{
+  "number": 3985,
+  "title": "refactor(operator): extract `removeOutdatedDeprecations()` method",
+  "author": "piotrpdev",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-20T08:53:30Z",
+  "state": "closed",
+  "merged": true
+}

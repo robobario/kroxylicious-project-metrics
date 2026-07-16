@@ -1,0 +1,13 @@
+{
+  "number": 2849,
+  "title": "build(deps): bump io.fabric8:docker-maven-plugin from 0.46.0 to 0.47.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-03T03:08:05Z",
+  "state": "closed",
+  "merged": true
+}

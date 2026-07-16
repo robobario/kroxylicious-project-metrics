@@ -1,0 +1,13 @@
+{
+  "number": 3595,
+  "title": "build(deps): bump maven.core.version from 3.9.13 to 3.9.14",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-02T07:55:53Z",
+  "state": "closed",
+  "merged": true
+}

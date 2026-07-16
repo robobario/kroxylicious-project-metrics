@@ -1,0 +1,13 @@
+{
+  "number": 1416,
+  "title": "Schema validation should not rely on the syntax validation",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "filter/record-validation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-11T14:19:48Z",
+  "state": "closed",
+  "merged": true
+}

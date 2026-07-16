@@ -1,0 +1,13 @@
+{
+  "number": 1716,
+  "title": "Docs for per cluster filters",
+  "author": "tombentley",
+  "labels": [
+    "documentation",
+    "config/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-14T04:25:16Z",
+  "state": "closed",
+  "merged": true
+}

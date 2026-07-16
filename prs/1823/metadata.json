@@ -1,0 +1,13 @@
+{
+  "number": 1823,
+  "title": "Allow VirtualClusters to express more than one listener",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement",
+    "config/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-19T13:25:41Z",
+  "state": "closed",
+  "merged": true
+}

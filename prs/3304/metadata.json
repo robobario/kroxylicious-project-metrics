@@ -1,0 +1,10 @@
+{
+  "number": 3304,
+  "title": "refactoring(operator): extract VirtualKafkaCluster mappers to top-level classes",
+  "author": "ShubhamRwt",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-02-17T12:46:35Z",
+  "state": "closed",
+  "merged": true
+}

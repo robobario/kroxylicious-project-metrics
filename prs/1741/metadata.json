@@ -1,0 +1,10 @@
+{
+  "number": 1741,
+  "title": "Update PR checklist to note that PRs need to be raised from branch on a fork",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-01-17T11:09:55Z",
+  "state": "closed",
+  "merged": true
+}

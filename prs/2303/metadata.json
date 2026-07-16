@@ -1,0 +1,10 @@
+{
+  "number": 2303,
+  "title": "Allow the Kafka proxy resource to be scaled.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-12T23:20:28Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1447,
+  "title": "Bump org.apache.maven.plugins:maven-site-plugin from 3.12.1 to 3.20.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-19T03:25:20Z",
+  "state": "closed",
+  "merged": true
+}

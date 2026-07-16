@@ -1,0 +1,13 @@
+{
+  "number": 4259,
+  "title": "refactor(runtime): replace nullable routing fields with RoutingModel sealed hierarchy",
+  "author": "robobario",
+  "labels": [
+    "kind/refactoring",
+    "routing/runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-01T02:54:28Z",
+  "state": "closed",
+  "merged": true
+}

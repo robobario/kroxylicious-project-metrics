@@ -1,0 +1,12 @@
+{
+  "number": 1532,
+  "title": "docs(review): fixes a typo in the docs",
+  "author": "PaulRMellor",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-09-27T13:02:33Z",
+  "state": "closed",
+  "merged": true
+}

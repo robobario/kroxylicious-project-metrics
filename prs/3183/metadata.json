@@ -1,0 +1,10 @@
+{
+  "number": 3183,
+  "title": "Fix: shouldFailToStartIfIouUringConfiguredAndUnavailable",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-01-20T20:07:53Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1935,
+  "title": "Abstract the java types used for references between CRs",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-03-14T04:34:25Z",
+  "state": "closed",
+  "merged": true
+}

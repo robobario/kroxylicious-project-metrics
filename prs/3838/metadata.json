@@ -1,0 +1,13 @@
+{
+  "number": 3838,
+  "title": "(fix) Call LogManager.shutdown() in kroxylicious-app",
+  "author": "Uzziee",
+  "labels": [
+    "kind/bug",
+    "observability"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-30T06:40:21Z",
+  "state": "closed",
+  "merged": true
+}

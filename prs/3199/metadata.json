@@ -1,0 +1,13 @@
+{
+  "number": 3199,
+  "title": "build(deps-dev): bump org.antlr:antlr4-maven-plugin from 4.13.1 to 4.13.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-26T03:34:11Z",
+  "state": "closed",
+  "merged": true
+}

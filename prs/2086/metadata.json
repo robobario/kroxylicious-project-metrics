@@ -1,0 +1,13 @@
+{
+  "number": 2086,
+  "title": "Bump commons-io:commons-io from 2.18.0 to 2.19.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-21T03:38:20Z",
+  "state": "closed",
+  "merged": true
+}

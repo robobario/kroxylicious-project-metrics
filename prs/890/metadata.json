@@ -1,0 +1,12 @@
+{
+  "number": 890,
+  "title": "Add integration test testing upstream TLS client-auth",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-01-15T11:38:18Z",
+  "state": "closed",
+  "merged": true
+}

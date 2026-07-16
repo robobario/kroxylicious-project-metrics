@@ -1,0 +1,10 @@
+{
+  "number": 2065,
+  "title": "Use more specific type arguments; rename methods",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-04-15T23:23:27Z",
+  "state": "closed",
+  "merged": true
+}

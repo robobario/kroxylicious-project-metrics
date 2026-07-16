@@ -1,0 +1,14 @@
+{
+  "number": 4148,
+  "title": "fix(runtime): Convert micrometer definition configs to record to prevent StaticDiff error during HotReload",
+  "author": "Uzziee",
+  "labels": [
+    "kind/bug",
+    "observability",
+    "hot-reload"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-18T09:10:03Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 2145,
+  "title": "Operator docs covering ingress TLS options",
+  "author": "tombentley",
+  "labels": [
+    "documentation",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-07T22:38:38Z",
+  "state": "closed",
+  "merged": true
+}

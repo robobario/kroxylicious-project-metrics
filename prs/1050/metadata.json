@@ -1,0 +1,12 @@
+{
+  "number": 1050,
+  "title": "Change AES GCM cipher to require a 256bit key",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-02-29T23:38:10Z",
+  "state": "closed",
+  "merged": true
+}

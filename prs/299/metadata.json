@@ -1,0 +1,12 @@
+{
+  "number": 299,
+  "title": "Bump netty.version from 4.1.91.Final to 4.1.92.Final",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-05-01T04:06:22Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 1685,
+  "title": "Use strimzi 0.45.0 and kafka 3.9.0 in system tests",
+  "author": "robobario",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-17T23:23:36Z",
+  "state": "closed",
+  "merged": true
+}

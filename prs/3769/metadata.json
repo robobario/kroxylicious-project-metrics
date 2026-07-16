@@ -1,0 +1,10 @@
+{
+  "number": 3769,
+  "title": "fix: messages enter Filter chain before Transport Subject built",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-22T23:38:08Z",
+  "state": "closed",
+  "merged": true
+}

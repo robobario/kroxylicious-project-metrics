@@ -1,0 +1,13 @@
+{
+  "number": 2207,
+  "title": "[Fix #2146] operator: only consider fresh referent ResolvedRefs conditions",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-20T04:51:02Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2722,
+  "title": "fix(ci): doc test workflow should skip japicmp too",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-01T13:28:38Z",
+  "state": "closed",
+  "merged": true
+}

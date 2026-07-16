@@ -1,0 +1,12 @@
+{
+  "number": 3370,
+  "title": "fix(test): trying to understand LocalStack issue during RecordEncryption  STs",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-27T16:53:07Z",
+  "state": "closed",
+  "merged": true
+}

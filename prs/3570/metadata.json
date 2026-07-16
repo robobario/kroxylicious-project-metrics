@@ -1,0 +1,14 @@
+{
+  "number": 3570,
+  "title": "build(deps): bump netty.version from 4.2.10.Final to 4.2.12.Final",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java",
+    "network"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-30T11:10:34Z",
+  "state": "closed",
+  "merged": true
+}

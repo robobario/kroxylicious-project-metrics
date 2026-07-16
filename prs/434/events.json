@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-07-04T02:31:54Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-07-10T17:49:32Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-07-10T17:50:08Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-07-18T08:10:39Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-07-18T08:10:39Z",
+    "actor": "k-wall"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "number": 4195,
+  "title": "build(deps): bump errorprone.version from 2.49.0 to 2.50.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-24T10:36:14Z",
+  "state": "closed",
+  "merged": true
+}

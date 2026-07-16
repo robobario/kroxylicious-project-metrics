@@ -1,0 +1,10 @@
+{
+  "number": 1950,
+  "title": "Add minikube to the release workflow",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-03-17T10:08:03Z",
+  "state": "closed",
+  "merged": true
+}

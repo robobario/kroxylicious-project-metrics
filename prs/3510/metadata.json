@@ -1,0 +1,13 @@
+{
+  "number": 3510,
+  "title": "docs(authorization): document group and transactionalId authorization",
+  "author": "robobario",
+  "labels": [
+    "documentation",
+    "filter/authorization"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-19T23:19:46Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1051,
+  "title": "declare metrics port in kubernetes-examples",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-01T14:17:17Z",
+  "state": "closed",
+  "merged": true
+}

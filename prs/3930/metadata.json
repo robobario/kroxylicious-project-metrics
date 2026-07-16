@@ -1,0 +1,13 @@
+{
+  "number": 3930,
+  "title": "Document admission procedures for configuring Filters, Secrets and Resource requests/limits",
+  "author": "robobario",
+  "labels": [
+    "documentation",
+    "kube/webhook"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-12T04:50:48Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 907,
+  "title": "disable integration tests during sonar run for faster feedback",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-01-19T02:45:27Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2699,
+  "title": "remove echo branch configuration",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-09-25T13:17:32Z",
+  "state": "closed",
+  "merged": true
+}

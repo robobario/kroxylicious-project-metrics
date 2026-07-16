@@ -1,0 +1,10 @@
+{
+  "number": 3599,
+  "title": "refactor: reduce cognitive complexity in AclAuthorizer#authorizeInternal",
+  "author": "tmchow",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-02T12:36:56Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 250,
+  "title": "Bump maven-failsafe-plugin from 3.0.0-M9 to 3.0.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-04-03T04:08:12Z",
+  "state": "closed",
+  "merged": true
+}

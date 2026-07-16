@@ -1,0 +1,12 @@
+{
+  "number": 944,
+  "title": "Logging improvements",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-02-05T01:18:52Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 3264,
+  "title": "Add documentation for `trustAnchorRef` stating that it supports Secrets too",
+  "author": "ShubhamRwt",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-10T07:16:32Z",
+  "state": "closed",
+  "merged": true
+}

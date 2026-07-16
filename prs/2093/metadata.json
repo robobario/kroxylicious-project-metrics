@@ -1,0 +1,13 @@
+{
+  "number": 2093,
+  "title": "Fixing KafkaService configmap/secret reconcilation NPEs",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-23T11:08:11Z",
+  "state": "closed",
+  "merged": true
+}

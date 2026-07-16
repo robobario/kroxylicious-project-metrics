@@ -1,0 +1,10 @@
+{
+  "number": 837,
+  "title": "refactor: take advantage of the topic injection in several integration tests",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-12-20T16:31:52Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2839,
+  "title": "chore(deps): update nagyesta/lowkey-vault docker tag to v5",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-29T00:47:36Z",
+  "state": "closed",
+  "merged": true
+}

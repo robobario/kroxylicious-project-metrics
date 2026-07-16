@@ -1,0 +1,10 @@
+{
+  "number": 2759,
+  "title": "Replace kroxylicious-sample with kroxylicious-filter-archetype",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-09T22:24:13Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 965,
+  "title": "Enable Filters to check if they are currently in dispatch thread",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-08T01:21:40Z",
+  "state": "closed",
+  "merged": false
+}

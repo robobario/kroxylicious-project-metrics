@@ -1,0 +1,14 @@
+{
+  "number": 2495,
+  "title": "Refactor/fix documentation links that reference the main branch",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "documentation",
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-29T04:53:26Z",
+  "state": "closed",
+  "merged": true
+}

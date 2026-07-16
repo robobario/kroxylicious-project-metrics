@@ -1,0 +1,14 @@
+{
+  "number": 2470,
+  "title": "fix(proxy): Forward ApiVersions v0 response on UNSUPPORTED_VERSION v0 response from upstream",
+  "author": "SamBarker",
+  "labels": [
+    "kind/bug",
+    "kafka-protocol",
+    "runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-22T15:49:08Z",
+  "state": "closed",
+  "merged": true
+}

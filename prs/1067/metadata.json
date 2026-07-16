@@ -1,0 +1,10 @@
+{
+  "number": 1067,
+  "title": "Bugfix: pages builds triggered by dependabot merge fail to push changes back to github",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-05T21:13:05Z",
+  "state": "closed",
+  "merged": false
+}

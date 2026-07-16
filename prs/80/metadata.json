@@ -1,0 +1,10 @@
+{
+  "number": 80,
+  "title": "Integration test framework  allowing kafka to be run in-VM and within containers.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-09-21T14:59:52Z",
+  "state": "closed",
+  "merged": true
+}

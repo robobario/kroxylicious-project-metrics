@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-05-08T01:49:22Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-05-08T01:49:23Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-05-08T04:07:19Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-05-08T04:11:45Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-08T04:19:18Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-08T04:20:32Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "number": 1197,
+  "title": "use netty-leak-detector-junit-extension",
+  "author": "sullis",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-05-11T02:57:40Z",
+  "state": "closed",
+  "merged": true
+}

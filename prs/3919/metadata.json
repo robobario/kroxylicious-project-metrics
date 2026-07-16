@@ -1,0 +1,12 @@
+{
+  "number": 3919,
+  "title": "chore(deps): update quay.io/kroxylicious/proxy:0.21.0-snapshot docker digest to 3e9449d",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-11T11:55:29Z",
+  "state": "closed",
+  "merged": true
+}

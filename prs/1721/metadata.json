@@ -1,0 +1,10 @@
+{
+  "number": 1721,
+  "title": "[Perf Tests] fix docker hub issue for performance tests",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-01-15T06:56:13Z",
+  "state": "closed",
+  "merged": true
+}

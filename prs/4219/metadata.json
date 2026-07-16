@@ -1,0 +1,10 @@
+{
+  "number": 4219,
+  "title": "ci(sonar): opt out of actions/checkout fork PR protection",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-26T00:08:10Z",
+  "state": "closed",
+  "merged": true
+}

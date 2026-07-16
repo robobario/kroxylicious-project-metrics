@@ -1,0 +1,12 @@
+{
+  "number": 2727,
+  "title": "chore(deps): update dependency hashicorp/vault-helm to v0.31.0",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-02T18:14:10Z",
+  "state": "closed",
+  "merged": true
+}

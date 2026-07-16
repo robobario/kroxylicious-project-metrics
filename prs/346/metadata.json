@@ -1,0 +1,10 @@
+{
+  "number": 346,
+  "title": "Remove dead lombok dependency configuration",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-29T21:18:17Z",
+  "state": "closed",
+  "merged": true
+}

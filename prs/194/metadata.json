@@ -1,0 +1,10 @@
+{
+  "number": 194,
+  "title": "Update pom's to meet the requirements for uploading to maven central",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-03-14T01:45:29Z",
+  "state": "closed",
+  "merged": true
+}

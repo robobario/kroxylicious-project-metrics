@@ -1,0 +1,13 @@
+{
+  "number": 2019,
+  "title": "refactor: use jackson java8 date module",
+  "author": "robobario",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-03T00:49:34Z",
+  "state": "closed",
+  "merged": true
+}

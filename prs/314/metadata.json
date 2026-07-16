@@ -1,0 +1,10 @@
+{
+  "number": 314,
+  "title": "Remove redundant mvn var (debezium)",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-11T16:44:09Z",
+  "state": "closed",
+  "merged": true
+}

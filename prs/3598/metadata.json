@@ -1,0 +1,13 @@
+{
+  "number": 3598,
+  "title": "deps(docker-java): bump docker-java from 3.7.0 -> 3.7.1 to fix NoClassDefFoundError for ImageHistoryCmd when running with Podman",
+  "author": "k-wall",
+  "labels": [
+    "dependencies",
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-02T11:35:27Z",
+  "state": "closed",
+  "merged": true
+}

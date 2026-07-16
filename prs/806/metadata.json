@@ -1,0 +1,10 @@
+{
+  "number": 806,
+  "title": "Skip system tests by default",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-12-11T10:02:48Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2271,
+  "title": "Operator: Change TLS ClusterIP to use SNI  node identification mechanism instead of port-identifies-node",
+  "author": "robobario",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-04T22:50:59Z",
+  "state": "closed",
+  "merged": true
+}

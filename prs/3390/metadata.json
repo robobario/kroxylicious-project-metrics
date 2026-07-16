@@ -1,0 +1,13 @@
+{
+  "number": 3390,
+  "title": "Update dev guide",
+  "author": "franvila",
+  "labels": [
+    "documentation",
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-03T07:18:06Z",
+  "state": "closed",
+  "merged": true
+}

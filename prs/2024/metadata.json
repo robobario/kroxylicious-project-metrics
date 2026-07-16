@@ -1,0 +1,12 @@
+{
+  "number": 2024,
+  "title": "Update the localstack/localstack docker tag to v4.3.0 adapting to new LocalStack limited key rotation capabilities.",
+  "author": "ShubhamRwt",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-03T13:01:03Z",
+  "state": "closed",
+  "merged": true
+}

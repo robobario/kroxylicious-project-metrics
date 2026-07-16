@@ -1,0 +1,13 @@
+{
+  "number": 3657,
+  "title": "build(deps): bump dawidd6/action-download-artifact from 19 to 20",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-09T03:38:07Z",
+  "state": "closed",
+  "merged": true
+}

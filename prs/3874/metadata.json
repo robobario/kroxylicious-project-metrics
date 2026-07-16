@@ -1,0 +1,14 @@
+{
+  "number": 3874,
+  "title": "chore: remove obsolete performance-test code",
+  "author": "robobario",
+  "labels": [
+    "performance",
+    "lifecycle/deprecation",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-04T21:04:31Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1635,
+  "title": "Handle ApiVersions unsupported version downgrade",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-11-29T02:51:32Z",
+  "state": "closed",
+  "merged": true
+}

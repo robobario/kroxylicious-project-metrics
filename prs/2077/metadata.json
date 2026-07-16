@@ -1,0 +1,12 @@
+{
+  "number": 2077,
+  "title": "Apply the 'Restricted' pod security profile to the operator and proxy",
+  "author": "tombentley",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-17T05:51:31Z",
+  "state": "closed",
+  "merged": true
+}

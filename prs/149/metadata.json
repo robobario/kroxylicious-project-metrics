@@ -1,0 +1,10 @@
+{
+  "number": 149,
+  "title": "Remove CNAME",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-20T23:41:52Z",
+  "state": "closed",
+  "merged": true
+}

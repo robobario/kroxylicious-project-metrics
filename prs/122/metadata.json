@@ -1,0 +1,10 @@
+{
+  "number": 122,
+  "title": "Enable configuration of micrometer global registry",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-01-27T01:56:12Z",
+  "state": "closed",
+  "merged": true
+}

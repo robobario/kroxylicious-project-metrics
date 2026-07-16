@@ -1,0 +1,12 @@
+{
+  "number": 2117,
+  "title": "Enable Dockerfile renovation with renovate bot.",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-03T16:06:54Z",
+  "state": "closed",
+  "merged": true
+}

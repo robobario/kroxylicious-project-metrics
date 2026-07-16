@@ -1,0 +1,10 @@
+{
+  "number": 1402,
+  "title": "Move FilterInvoker classes to kroxylicious-runtime",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-08-06T04:10:45Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 4306,
+  "title": "Increase default JOSDK logging level",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-06T21:40:11Z",
+  "state": "closed",
+  "merged": true
+}

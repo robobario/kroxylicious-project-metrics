@@ -1,0 +1,12 @@
+{
+  "number": 791,
+  "title": "Making EnvelopeEncryptionFilterIT a template test so it can test HashiCorp Vault too",
+  "author": "k-wall",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-12-06T16:06:19Z",
+  "state": "closed",
+  "merged": true
+}

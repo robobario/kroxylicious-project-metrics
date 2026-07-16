@@ -1,0 +1,12 @@
+{
+  "number": 3266,
+  "title": "Enforce produce transactionalId authorization",
+  "author": "robobario",
+  "labels": [
+    "filter/authorization"
+  ],
+  "target_branch": "transactionalId-authz",
+  "created_at": "2026-02-10T23:02:26Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 1648,
+  "title": "Add opt-in test-only configuration to Proxy",
+  "author": "robobario",
+  "labels": [
+    "runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-06T02:33:52Z",
+  "state": "closed",
+  "merged": true
+}

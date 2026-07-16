@@ -1,0 +1,13 @@
+{
+  "number": 1722,
+  "title": "[docs] TLS protocol and cipher suite controls.",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "security"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-15T16:22:35Z",
+  "state": "closed",
+  "merged": true
+}

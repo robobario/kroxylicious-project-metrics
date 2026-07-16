@@ -1,0 +1,10 @@
+{
+  "number": 1513,
+  "title": "docs: add missing steps to kubernetes example prerequisites",
+  "author": "Cali0707",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-09-14T16:51:54Z",
+  "state": "closed",
+  "merged": true
+}

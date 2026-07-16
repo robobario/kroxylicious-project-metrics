@@ -1,0 +1,10 @@
+{
+  "number": 33,
+  "title": "Combine request and response filters, use a single FilterHandler",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-06-08T09:03:22Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 3167,
+  "title": "chore: fix sonar warnings",
+  "author": "robobario",
+  "labels": [
+    "kind/tech-debt",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-19T03:30:22Z",
+  "state": "closed",
+  "merged": true
+}

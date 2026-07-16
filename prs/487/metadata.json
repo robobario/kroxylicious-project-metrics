@@ -1,0 +1,10 @@
+{
+  "number": 487,
+  "title": "Remove logger from InetAddressResolverProvider",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-25T21:50:52Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1753,
+  "title": "Refactor AWS unit tests to use wiremock rather than hand-rolled HTTP server",
+  "author": "k-wall",
+  "labels": [
+    "test",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-20T17:34:13Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 3695,
+  "title": "fixed log4j2 pattern to include MDC values for better log correlation\u2026",
+  "author": "hrishabhg",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-13T05:26:22Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1394,
+  "title": "Make ClusterNetworkAddressConfigProvider and co internal",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-08-02T04:48:13Z",
+  "state": "closed",
+  "merged": true
+}

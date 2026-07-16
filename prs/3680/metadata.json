@@ -1,0 +1,10 @@
+{
+  "number": 3680,
+  "title": "refactor: Improve Test Assertions with AssertJ Chains in filter-test-support (S5853) ",
+  "author": "m1a2st",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-10T12:20:59Z",
+  "state": "closed",
+  "merged": true
+}

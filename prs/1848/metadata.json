@@ -1,0 +1,13 @@
+{
+  "number": 1848,
+  "title": "Fix #1840: Introduce a nicer model for configuring network presentation.",
+  "author": "k-wall",
+  "labels": [
+    "config/api",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-24T17:26:56Z",
+  "state": "closed",
+  "merged": true
+}

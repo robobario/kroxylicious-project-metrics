@@ -1,0 +1,13 @@
+{
+  "number": 2107,
+  "title": "More operator docs",
+  "author": "tombentley",
+  "labels": [
+    "documentation",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-29T21:36:03Z",
+  "state": "closed",
+  "merged": true
+}

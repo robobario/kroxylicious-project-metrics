@@ -1,0 +1,13 @@
+{
+  "number": 3068,
+  "title": "InternalCompletableFuture dispatch all work to EventLoop",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-12-15T22:02:54Z",
+  "state": "closed",
+  "merged": true
+}

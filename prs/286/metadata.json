@@ -1,0 +1,12 @@
+{
+  "number": 286,
+  "title": "Bump netty-incubator-transport-native-io_uring from 0.0.14.Final to 0.0.20.Final",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-04-24T04:07:31Z",
+  "state": "closed",
+  "merged": true
+}

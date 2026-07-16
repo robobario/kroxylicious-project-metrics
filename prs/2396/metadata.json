@@ -1,0 +1,13 @@
+{
+  "number": 2396,
+  "title": "Document how to run system tests with locally built images when using Minikube.",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "dev"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-30T17:00:31Z",
+  "state": "closed",
+  "merged": true
+}

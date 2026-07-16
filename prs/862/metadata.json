@@ -1,0 +1,12 @@
+{
+  "number": 862,
+  "title": "Do not retry on unknown entity exception",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-01-09T19:43:54Z",
+  "state": "closed",
+  "merged": true
+}

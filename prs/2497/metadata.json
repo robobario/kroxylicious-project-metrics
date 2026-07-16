@@ -1,0 +1,13 @@
+{
+  "number": 2497,
+  "title": "build(deps): bump org.apache.maven.plugins:maven-gpg-plugin from 3.2.7 to 3.2.8",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-29T09:04:51Z",
+  "state": "closed",
+  "merged": true
+}

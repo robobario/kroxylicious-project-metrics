@@ -1,0 +1,10 @@
+{
+  "number": 449,
+  "title": "Enable Response filters to intercept out-of-band responses",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-12T02:28:25Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 1661,
+  "title": "Ssl timeouts",
+  "author": "SamBarker",
+  "labels": [
+    "kind/bug"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-11T20:37:50Z",
+  "state": "closed",
+  "merged": true
+}

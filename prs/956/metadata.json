@@ -1,0 +1,10 @@
+{
+  "number": 956,
+  "title": "Use `DekManager` in the `RecordEncryptor`",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-07T02:53:08Z",
+  "state": "closed",
+  "merged": true
+}

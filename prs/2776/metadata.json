@@ -1,0 +1,10 @@
+{
+  "number": 2776,
+  "title": "SASL plain termination changes",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-14T01:29:49Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 847,
+  "title": "Bump com.fasterxml.jackson:jackson-bom from 2.16.0 to 2.16.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-12-25T03:49:47Z",
+  "state": "closed",
+  "merged": true
+}

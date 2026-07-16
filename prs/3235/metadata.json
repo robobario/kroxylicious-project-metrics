@@ -1,0 +1,12 @@
+{
+  "number": 3235,
+  "title": "docs(record validation): review edits to setup procedure",
+  "author": "PaulRMellor",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-02T11:36:08Z",
+  "state": "closed",
+  "merged": true
+}

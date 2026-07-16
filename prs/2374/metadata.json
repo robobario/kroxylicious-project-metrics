@@ -1,0 +1,12 @@
+{
+  "number": 2374,
+  "title": "Prevent NPEs occuring during unit test",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-23T10:58:32Z",
+  "state": "closed",
+  "merged": true
+}

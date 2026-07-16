@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-05-16T13:00:08Z",
+    "actor": "franz1981"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2022-05-16T13:00:08Z",
+    "actor": "franz1981"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2022-05-16T13:00:18Z",
+    "actor": "franz1981"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-05-16T13:59:01Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2022-05-16T13:59:07Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-05-16T13:59:15Z",
+    "actor": "gunnarmorling"
+  }
+]

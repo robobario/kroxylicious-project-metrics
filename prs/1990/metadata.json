@@ -1,0 +1,13 @@
+{
+  "number": 1990,
+  "title": "Bump com.google.guava:guava from 33.4.0-jre to 33.4.5-jre",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-24T03:27:41Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 2299,
+  "title": "[System Tests] added ST to test two proxy resources in different namespaces",
+  "author": "franvila",
+  "labels": [
+    "test/system-test",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-12T05:53:07Z",
+  "state": "closed",
+  "merged": true
+}

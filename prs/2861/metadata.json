@@ -1,0 +1,12 @@
+{
+  "number": 2861,
+  "title": "feat: JWS Signature validator",
+  "author": "piotrpdev",
+  "labels": [
+    "triaged"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-05T17:10:08Z",
+  "state": "closed",
+  "merged": true
+}

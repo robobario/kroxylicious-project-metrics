@@ -1,0 +1,12 @@
+{
+  "number": 3974,
+  "title": "fix(test): complete queued requests on channel close in KafkaClientHandler",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-18T10:34:22Z",
+  "state": "closed",
+  "merged": true
+}

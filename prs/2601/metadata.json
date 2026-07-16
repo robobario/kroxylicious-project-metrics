@@ -1,0 +1,13 @@
+{
+  "number": 2601,
+  "title": "Move kms providers into a kroxylicious-kms-providers aggregator",
+  "author": "robobario",
+  "labels": [
+    "dev/maven",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-19T23:06:44Z",
+  "state": "closed",
+  "merged": true
+}

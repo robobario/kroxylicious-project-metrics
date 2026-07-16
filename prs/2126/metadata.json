@@ -1,0 +1,10 @@
+{
+  "number": 2126,
+  "title": "upgrade kubernetes client version",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-05-05T13:49:35Z",
+  "state": "closed",
+  "merged": true
+}

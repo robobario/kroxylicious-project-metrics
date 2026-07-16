@@ -1,0 +1,12 @@
+{
+  "number": 1752,
+  "title": "Ensure that Vault integration, performance and system test upgrade vault container in lock-step.",
+  "author": "k-wall",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-20T15:42:05Z",
+  "state": "closed",
+  "merged": true
+}

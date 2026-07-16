@@ -1,0 +1,10 @@
+{
+  "number": 2018,
+  "title": "Fix the broken link in the `README.md` file for record encryption example.",
+  "author": "ShubhamRwt",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-04-02T11:02:40Z",
+  "state": "closed",
+  "merged": true
+}

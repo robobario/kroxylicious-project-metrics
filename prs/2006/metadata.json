@@ -1,0 +1,10 @@
+{
+  "number": 2006,
+  "title": "Share the underlying KafkaCluster",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-03-27T22:11:14Z",
+  "state": "closed",
+  "merged": true
+}

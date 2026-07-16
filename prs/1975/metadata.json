@@ -1,0 +1,13 @@
+{
+  "number": 1975,
+  "title": "Remove `SharedKafkaProxyContext`",
+  "author": "tombentley",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-21T03:04:24Z",
+  "state": "closed",
+  "merged": false
+}

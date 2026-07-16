@@ -1,0 +1,12 @@
+{
+  "number": 2525,
+  "title": "[System Tests] Add release tests changes to upstream",
+  "author": "franvila",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-01T09:06:04Z",
+  "state": "closed",
+  "merged": true
+}

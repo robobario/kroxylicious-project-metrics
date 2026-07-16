@@ -1,0 +1,10 @@
+{
+  "number": 4075,
+  "title": "fix: downgrade JOSDK to 5.2.4",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-08T03:21:01Z",
+  "state": "closed",
+  "merged": false
+}

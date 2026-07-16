@@ -1,0 +1,12 @@
+{
+  "number": 4314,
+  "title": "[v0.20.x] build(deps): upgrade Jackson to 2.21.5 to fix CVE-2026-54515",
+  "author": "k-wall",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "release/v0.20",
+  "created_at": "2026-07-07T14:08:12Z",
+  "state": "closed",
+  "merged": true
+}

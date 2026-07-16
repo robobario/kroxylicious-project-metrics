@@ -1,0 +1,10 @@
+{
+  "number": 75,
+  "title": "#74: Implement handler for SASL Authentication offload",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-09-06T13:02:58Z",
+  "state": "closed",
+  "merged": false
+}

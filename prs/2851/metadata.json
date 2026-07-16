@@ -1,0 +1,10 @@
+{
+  "number": 2851,
+  "title": "bugfix: ensure older LibRDKafka clients can negotiate compressesion",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-03T07:18:53Z",
+  "state": "closed",
+  "merged": true
+}

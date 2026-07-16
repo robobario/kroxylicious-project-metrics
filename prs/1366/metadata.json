@@ -1,0 +1,12 @@
+{
+  "number": 1366,
+  "title": "docs(refactor): refactor and refresh of filter content",
+  "author": "PaulRMellor",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-07-17T14:03:19Z",
+  "state": "closed",
+  "merged": true
+}

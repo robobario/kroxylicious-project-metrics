@@ -1,0 +1,12 @@
+{
+  "number": 389,
+  "title": "Bump kafka-clients from 3.4.0 to 3.5.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-06-14T04:19:17Z",
+  "state": "closed",
+  "merged": true
+}

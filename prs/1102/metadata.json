@@ -1,0 +1,13 @@
+{
+  "number": 1102,
+  "title": "Bump org.awaitility:awaitility from 4.2.0 to 4.2.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-03-18T03:08:47Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 2588,
+  "title": "build(deps): bump org.mockito:mockito-bom from 5.18.0 to 5.19.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-18T05:06:17Z",
+  "state": "closed",
+  "merged": true
+}

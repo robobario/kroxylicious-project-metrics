@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-03-24T02:27:02Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-03-24T03:36:48Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-03-24T03:36:48Z",
+    "actor": "SamBarker"
+  }
+]

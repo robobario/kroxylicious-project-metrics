@@ -1,0 +1,10 @@
+{
+  "number": 483,
+  "title": "Support configuring multiple responses in MockServer",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-25T02:10:49Z",
+  "state": "closed",
+  "merged": true
+}

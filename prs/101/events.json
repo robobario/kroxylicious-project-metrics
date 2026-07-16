@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-01-04T14:35:11Z",
+    "actor": "ghost"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-08T22:37:38Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-09T06:01:34Z",
+    "actor": "ghost"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-01-18T00:18:30Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-01-18T02:13:23Z",
+    "actor": null
+  }
+]

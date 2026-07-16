@@ -1,0 +1,10 @@
+{
+  "number": 3368,
+  "title": "feat(omb): collect proxy metrics and enrich run metadata",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-02-27T04:00:10Z",
+  "state": "closed",
+  "merged": true
+}

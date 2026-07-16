@@ -1,0 +1,10 @@
+{
+  "number": 1104,
+  "title": "created admin client template to make deployments for topics",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-18T09:19:03Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 4012,
+  "title": "refactor: decouple client state machine from backend connection active",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-26T00:07:48Z",
+  "state": "closed",
+  "merged": true
+}

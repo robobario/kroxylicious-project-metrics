@@ -1,0 +1,13 @@
+{
+  "number": 3489,
+  "title": "docs(record-validation): documentation for the apicurio registry trust configuration.",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "filter/record-validation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-16T14:42:04Z",
+  "state": "closed",
+  "merged": true
+}

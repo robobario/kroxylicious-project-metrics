@@ -1,0 +1,10 @@
+{
+  "number": 3719,
+  "title": "Add formatter, impsort, and enforcer  to the list of maven plugins disabled by the quick profile.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-15T10:09:12Z",
+  "state": "closed",
+  "merged": true
+}

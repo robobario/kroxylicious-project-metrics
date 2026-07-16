@@ -1,0 +1,12 @@
+{
+  "number": 539,
+  "title": "Fix sporadically failing tenantTopicIsolation test;",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-08-09T14:18:09Z",
+  "state": "closed",
+  "merged": true
+}

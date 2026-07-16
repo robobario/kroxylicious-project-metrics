@@ -1,0 +1,10 @@
+{
+  "number": 4245,
+  "title": "Revert to JOSDK 5.2.5.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-29T08:39:24Z",
+  "state": "closed",
+  "merged": true
+}

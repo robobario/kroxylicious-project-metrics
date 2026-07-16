@@ -1,0 +1,10 @@
+{
+  "number": 2852,
+  "title": "Override UBI defaults for url, vendor and maintainer",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-03T08:21:16Z",
+  "state": "closed",
+  "merged": true
+}

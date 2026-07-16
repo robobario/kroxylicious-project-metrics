@@ -1,0 +1,10 @@
+{
+  "number": 756,
+  "title": "Code generate assertJ Conditions for Kafka API keys",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-11-28T23:59:27Z",
+  "state": "closed",
+  "merged": true
+}

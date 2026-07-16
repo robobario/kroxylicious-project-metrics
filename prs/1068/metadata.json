@@ -1,0 +1,10 @@
+{
+  "number": 1068,
+  "title": "Bugfix: pages build action fails on dependabot PR merge",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-05T22:59:05Z",
+  "state": "closed",
+  "merged": true
+}

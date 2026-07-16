@@ -1,0 +1,10 @@
+{
+  "number": 1145,
+  "title": "Refactor pakages in encryption filter",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-04-09T23:54:56Z",
+  "state": "closed",
+  "merged": true
+}

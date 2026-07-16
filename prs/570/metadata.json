@@ -1,0 +1,10 @@
+{
+  "number": 570,
+  "title": "Fix sonar bugs",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-08-20T23:54:59Z",
+  "state": "closed",
+  "merged": true
+}

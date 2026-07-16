@@ -1,0 +1,10 @@
+{
+  "number": 3615,
+  "title": "Fix error prone `MutablePublicArray` warnings",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-06T21:53:33Z",
+  "state": "closed",
+  "merged": true
+}

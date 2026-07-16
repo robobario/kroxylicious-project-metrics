@@ -1,0 +1,13 @@
+{
+  "number": 2256,
+  "title": "[Docs] Monitoring of Kroxylicious on Kubernetes",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-02T18:41:19Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 990,
+  "title": "Test that Vault HttpClient and HttpRequest timeouts are configured",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-14T03:07:25Z",
+  "state": "closed",
+  "merged": true
+}

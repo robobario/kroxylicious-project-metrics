@@ -1,0 +1,13 @@
+{
+  "number": 2969,
+  "title": "fix(filter-api): give ResponseFilter#onResponse access to the api-version",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "filter/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-28T17:00:17Z",
+  "state": "closed",
+  "merged": true
+}

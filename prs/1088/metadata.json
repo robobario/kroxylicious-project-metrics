@@ -1,0 +1,10 @@
+{
+  "number": 1088,
+  "title": "Adapt performance tests script for Strimzi-ci",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-13T08:57:57Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1141,
+  "title": "Added system tests for non-JVM clients",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-04-08T13:27:59Z",
+  "state": "closed",
+  "merged": true
+}

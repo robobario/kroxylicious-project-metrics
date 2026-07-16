@@ -1,0 +1,10 @@
+{
+  "number": 3213,
+  "title": "Enable github CI jobs for release branches",
+  "author": "tibisabau",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-01-27T21:49:43Z",
+  "state": "closed",
+  "merged": true
+}

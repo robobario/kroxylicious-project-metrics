@@ -1,0 +1,13 @@
+{
+  "number": 2269,
+  "title": "Refactor to allow unit test #2266 (SNI hostname mismatch errors don't close connections)",
+  "author": "k-wall",
+  "labels": [
+    "kind/refactoring",
+    "network"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-04T14:36:59Z",
+  "state": "closed",
+  "merged": true
+}

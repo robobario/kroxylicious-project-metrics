@@ -1,0 +1,13 @@
+{
+  "number": 2032,
+  "title": "Require last transition time",
+  "author": "SamBarker",
+  "labels": [
+    "kind/enhancement",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-07T05:25:26Z",
+  "state": "closed",
+  "merged": true
+}

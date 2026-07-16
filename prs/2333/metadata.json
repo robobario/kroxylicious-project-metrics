@@ -1,0 +1,13 @@
+{
+  "number": 2333,
+  "title": "Fix #2302: Add metric to the Operator that reports the version build info",
+  "author": "k-wall",
+  "labels": [
+    "kube/operator",
+    "observability"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-17T15:53:04Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 3693,
+  "title": "Fix UnnecessaryMethodReference warnings #3646",
+  "author": "Liberty-Swine",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-13T04:54:02Z",
+  "state": "closed",
+  "merged": true
+}

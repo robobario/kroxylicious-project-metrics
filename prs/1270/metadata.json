@@ -1,0 +1,13 @@
+{
+  "number": 1270,
+  "title": "Fix #1216: Basic AWS KMS documentation",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-05-21T11:58:04Z",
+  "state": "closed",
+  "merged": true
+}

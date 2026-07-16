@@ -1,0 +1,10 @@
+{
+  "number": 147,
+  "title": "refactor to introduce a generic Contributor interface",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-20T21:06:41Z",
+  "state": "closed",
+  "merged": true
+}

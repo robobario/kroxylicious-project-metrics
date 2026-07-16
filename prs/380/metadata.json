@@ -1,0 +1,10 @@
+{
+  "number": 380,
+  "title": "Support key material in PKCS-8 format and add upstream TLS support",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-06-09T13:55:45Z",
+  "state": "closed",
+  "merged": true
+}

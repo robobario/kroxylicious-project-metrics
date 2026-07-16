@@ -1,0 +1,12 @@
+{
+  "number": 1754,
+  "title": "chore(deps): update dependency localstack/helm-charts to v0.6.20",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-20T18:11:15Z",
+  "state": "closed",
+  "merged": false
+}

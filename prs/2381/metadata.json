@@ -1,0 +1,10 @@
+{
+  "number": 2381,
+  "title": "Disable waiting for namespace deletion",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-25T01:25:29Z",
+  "state": "closed",
+  "merged": true
+}

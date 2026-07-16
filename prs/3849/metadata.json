@@ -1,0 +1,12 @@
+{
+  "number": 3849,
+  "title": "Webhook Phase 5: End-to-end OCI image volume plugin loading integrati\u2026",
+  "author": "tombentley",
+  "labels": [
+    "kube/webhook"
+  ],
+  "target_branch": "epic/admission-web-hook",
+  "created_at": "2026-05-01T02:18:31Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2830,
+  "title": "Implement #2810: Refactor Azure KMS configuration class names and optional fields",
+  "author": "gracegrimwood",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-28T01:52:47Z",
+  "state": "closed",
+  "merged": true
+}

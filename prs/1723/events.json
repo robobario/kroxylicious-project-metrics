@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-01-15T17:01:10Z",
+    "actor": "PaulRMellor"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-01-15T17:01:10Z",
+    "actor": "PaulRMellor"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-01-15T21:52:33Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-01-16T09:02:08Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-01-16T09:47:05Z",
+    "actor": null
+  }
+]

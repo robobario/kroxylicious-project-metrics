@@ -1,0 +1,12 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-03-13T04:13:40Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-03-13T11:13:15Z",
+    "actor": null
+  }
+]

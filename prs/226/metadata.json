@@ -1,0 +1,10 @@
+{
+  "number": 226,
+  "title": "Export GPG_KEY var so its accessible in the subshell",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-03-26T21:17:23Z",
+  "state": "closed",
+  "merged": true
+}

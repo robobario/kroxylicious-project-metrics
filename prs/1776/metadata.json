@@ -1,0 +1,12 @@
+{
+  "number": 1776,
+  "title": "Jacoco PR coverage recording fix",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-29T11:31:42Z",
+  "state": "closed",
+  "merged": true
+}

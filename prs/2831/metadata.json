@@ -1,0 +1,12 @@
+{
+  "number": 2831,
+  "title": "fix(maven): Add name metadata element to filter archetype",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-28T10:38:18Z",
+  "state": "closed",
+  "merged": true
+}

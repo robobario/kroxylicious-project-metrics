@@ -1,0 +1,13 @@
+{
+  "number": 4056,
+  "title": "(feat) Hot reload Implementation (7/N) - Add ReplaceCluster operation to support modified cluster reload",
+  "author": "Uzziee",
+  "labels": [
+    "runtime",
+    "hot-reload"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-03T13:57:28Z",
+  "state": "closed",
+  "merged": true
+}

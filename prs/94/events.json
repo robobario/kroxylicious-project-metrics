@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-12-08T22:32:13Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-12-08T22:35:42Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2022-12-09T01:22:22Z",
+    "actor": null
+  }
+]

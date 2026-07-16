@@ -1,0 +1,13 @@
+{
+  "number": 3309,
+  "title": "refactoring(operator): extract KafkaServiceReconciler mappers to top-level classes",
+  "author": "ShubhamRwt",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-18T06:25:24Z",
+  "state": "closed",
+  "merged": true
+}

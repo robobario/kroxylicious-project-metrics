@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-10-07T03:56:19Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-10-08T21:02:13Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-10-08T21:24:36Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-10-08T21:24:36Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

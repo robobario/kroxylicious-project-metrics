@@ -1,0 +1,10 @@
+{
+  "number": 496,
+  "title": "Add onFilterRemoved to KrpcFilter to tear down resources",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-26T23:47:19Z",
+  "state": "closed",
+  "merged": false
+}

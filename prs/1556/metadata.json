@@ -1,0 +1,13 @@
+{
+  "number": 1556,
+  "title": "Bump org.mockito:mockito-bom from 5.13.0 to 5.14.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-10-21T03:50:26Z",
+  "state": "closed",
+  "merged": true
+}

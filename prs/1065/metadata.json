@@ -1,0 +1,13 @@
+{
+  "number": 1065,
+  "title": "Bump actions/upload-artifact from 3 to 4",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-03-05T08:29:03Z",
+  "state": "closed",
+  "merged": true
+}

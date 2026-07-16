@@ -1,0 +1,13 @@
+{
+  "number": 1923,
+  "title": "draft refactor: operator reconciler components reduce co-ordination",
+  "author": "robobario",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-12T02:28:24Z",
+  "state": "closed",
+  "merged": false
+}

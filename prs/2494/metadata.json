@@ -1,0 +1,10 @@
+{
+  "number": 2494,
+  "title": "Use custom labels for dependabot github-actions PRs",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-28T23:35:19Z",
+  "state": "closed",
+  "merged": true
+}

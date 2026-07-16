@@ -1,0 +1,12 @@
+{
+  "number": 2292,
+  "title": "Fix #2276: Tidy up the Kubernetes Labels applied by the Operator",
+  "author": "k-wall",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-09T18:39:32Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 3354,
+  "title": "fix(operator): add readiness probe to proxy operand deployment",
+  "author": "SamBarker",
+  "labels": [
+    "kind/bug",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-24T22:45:43Z",
+  "state": "closed",
+  "merged": true
+}

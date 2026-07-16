@@ -1,0 +1,12 @@
+{
+  "number": 921,
+  "title": "Vault: Support HTTPs instances and alternative sources of client trust/keys",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-01-25T03:59:04Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1963,
+  "title": "refactor: replace targetCluster with targetKafkaServiceRef",
+  "author": "robobario",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-18T03:53:48Z",
+  "state": "closed",
+  "merged": true
+}

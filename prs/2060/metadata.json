@@ -1,0 +1,10 @@
+{
+  "number": 2060,
+  "title": "More nullness annotations, and fix some more compiler warnings",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-04-15T03:38:22Z",
+  "state": "closed",
+  "merged": true
+}

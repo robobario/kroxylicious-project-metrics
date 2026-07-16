@@ -1,0 +1,10 @@
+{
+  "number": 145,
+  "title": "Refactor KrpcFilterContext to offer MemoryRecordsBuilder not netty By\u2026",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-19T22:45:46Z",
+  "state": "closed",
+  "merged": false
+}

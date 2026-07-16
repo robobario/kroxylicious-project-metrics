@@ -1,0 +1,13 @@
+{
+  "number": 2047,
+  "title": "Operator: Proxy reconciler require VirtualKafkaCluster to be reconciled",
+  "author": "robobario",
+  "labels": [
+    "kind/enhancement",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-14T00:25:32Z",
+  "state": "closed",
+  "merged": true
+}

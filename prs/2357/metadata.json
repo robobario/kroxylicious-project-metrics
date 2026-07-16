@@ -1,0 +1,10 @@
+{
+  "number": 2357,
+  "title": "[System Tests] wait for kroxylicious operator to be ready and clean up deploymentUtils",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-19T13:56:49Z",
+  "state": "closed",
+  "merged": true
+}

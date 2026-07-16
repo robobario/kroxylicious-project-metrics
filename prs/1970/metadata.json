@@ -1,0 +1,12 @@
+{
+  "number": 1970,
+  "title": "Stub `KafkaServiceReconciler`",
+  "author": "SamBarker",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-20T04:01:42Z",
+  "state": "closed",
+  "merged": true
+}

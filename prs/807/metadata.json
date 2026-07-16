@@ -1,0 +1,13 @@
+{
+  "number": 807,
+  "title": "[GitHub] [Actions] Update actions/cache from v2 to v3, actions/checkout from v3 to v4 and actions/setup-java from v3 to v4.",
+  "author": "k-wall",
+  "labels": [
+    "dependencies",
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-12-11T10:13:41Z",
+  "state": "closed",
+  "merged": true
+}

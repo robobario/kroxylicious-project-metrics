@@ -1,0 +1,10 @@
+{
+  "number": 3648,
+  "title": "refactor: Reduce cognitive complexity of StructSpec constructor ",
+  "author": "m1a2st",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-09T00:48:23Z",
+  "state": "closed",
+  "merged": true
+}

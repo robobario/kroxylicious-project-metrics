@@ -1,0 +1,10 @@
+{
+  "number": 2175,
+  "title": "Default QUAY_ORG to kroxylicious",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-05-13T00:14:28Z",
+  "state": "closed",
+  "merged": true
+}

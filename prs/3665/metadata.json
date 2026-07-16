@@ -1,0 +1,13 @@
+{
+  "number": 3665,
+  "title": "chore(deps): update dependency kubernetes/kubernetes to v1.36.1",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-09T10:18:18Z",
+  "state": "closed",
+  "merged": false
+}

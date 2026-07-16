@@ -1,0 +1,12 @@
+{
+  "number": 3953,
+  "title": "docs(monitoring): splits concept and procedure",
+  "author": "PaulRMellor",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-14T14:04:35Z",
+  "state": "closed",
+  "merged": true
+}

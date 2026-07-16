@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-12-17T14:21:25Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-12-17T14:22:27Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-12-17T14:43:10Z",
+    "actor": "github-actions[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-12-17T14:51:16Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-12-17T22:03:42Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-12-18T07:28:00Z",
+    "actor": null
+  }
+]

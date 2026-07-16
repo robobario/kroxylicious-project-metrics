@@ -1,0 +1,10 @@
+{
+  "number": 984,
+  "title": "Update to Vault TLS documentation after 08ac78",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-12T13:04:03Z",
+  "state": "closed",
+  "merged": true
+}

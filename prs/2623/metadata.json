@@ -1,0 +1,12 @@
+{
+  "number": 2623,
+  "title": "chore(deps): update dependency org.sonarsource.scanner.maven:sonar-maven-plugin to v5.2.0.4988",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-29T18:13:22Z",
+  "state": "closed",
+  "merged": true
+}

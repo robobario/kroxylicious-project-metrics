@@ -1,0 +1,13 @@
+{
+  "number": 2268,
+  "title": "Ensure connection is closed if proxy cannot match SNI hostname against a virtual cluster",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "network"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-04T10:24:07Z",
+  "state": "closed",
+  "merged": true
+}

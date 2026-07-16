@@ -1,0 +1,12 @@
+{
+  "number": 2757,
+  "title": "fix(archetype): fix hierarchy of the test tree to match main's",
+  "author": "k-wall",
+  "labels": [
+    "dev"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-09T15:06:57Z",
+  "state": "closed",
+  "merged": true
+}

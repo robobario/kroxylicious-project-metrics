@@ -1,0 +1,10 @@
+{
+  "number": 3303,
+  "title": "refactoring(github actions): extract common dependencies from all workflows",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-02-17T12:46:04Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1406,
+  "title": "[record encryption] Exploration - Make AES 256 GCM transformation and provider configurable",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-08-08T02:45:45Z",
+  "state": "closed",
+  "merged": false
+}

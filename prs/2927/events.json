@@ -1,0 +1,37 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-11-24T19:40:47Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-11-24T19:40:48Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-11-24T19:41:10Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-11-24T19:44:04Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2025-11-24T19:58:12Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-11-24T19:58:12Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-11-24T20:00:18Z",
+    "actor": "kroxylicious-robot"
+  }
+]

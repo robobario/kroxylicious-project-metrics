@@ -1,0 +1,10 @@
+{
+  "number": 4045,
+  "title": "refactor ITs to delete KeytoolCertificateGenerator deprecated dependency",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-01T11:40:47Z",
+  "state": "open",
+  "merged": false
+}

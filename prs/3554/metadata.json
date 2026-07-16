@@ -1,0 +1,10 @@
+{
+  "number": 3554,
+  "title": "fix(docs): ensure doc.yaml is processed after HTML files during webify",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-03-27T04:19:16Z",
+  "state": "closed",
+  "merged": true
+}

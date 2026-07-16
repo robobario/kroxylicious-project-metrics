@@ -1,0 +1,14 @@
+{
+  "number": 2529,
+  "title": "Add release manifest, download page to webified documentation. Update latestVersion in release PR.",
+  "author": "robobario",
+  "labels": [
+    "documentation",
+    "dev/release",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-04T02:33:55Z",
+  "state": "closed",
+  "merged": true
+}

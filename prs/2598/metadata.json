@@ -1,0 +1,14 @@
+{
+  "number": 2598,
+  "title": "Enhancement: Active Connections Gauge",
+  "author": "hrishabhg",
+  "labels": [
+    "kind/enhancement",
+    "runtime",
+    "observability"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-19T07:07:26Z",
+  "state": "closed",
+  "merged": true
+}

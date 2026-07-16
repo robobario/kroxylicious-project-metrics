@@ -1,0 +1,13 @@
+{
+  "number": 2015,
+  "title": "Add integration test for apiserver CR validation",
+  "author": "robobario",
+  "labels": [
+    "test",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-02T02:37:15Z",
+  "state": "closed",
+  "merged": true
+}

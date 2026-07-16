@@ -1,0 +1,13 @@
+{
+  "number": 3467,
+  "title": "EntityIsolationFilter (groupId and transactionalId only)",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement",
+    "filter/ideas"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-12T16:23:14Z",
+  "state": "closed",
+  "merged": true
+}

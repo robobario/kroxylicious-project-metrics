@@ -1,0 +1,10 @@
+{
+  "number": 1712,
+  "title": "Fix transposition error in envvar names in e7047c26 (fortanix / github ci integration)",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-01-13T10:37:01Z",
+  "state": "closed",
+  "merged": true
+}

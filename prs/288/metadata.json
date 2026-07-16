@@ -1,0 +1,10 @@
+{
+  "number": 288,
+  "title": "Introduce a FilterInvoker, RequestFilter and ResponseFilter",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-26T22:59:06Z",
+  "state": "closed",
+  "merged": true
+}

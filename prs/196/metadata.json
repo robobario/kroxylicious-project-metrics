@@ -1,0 +1,10 @@
+{
+  "number": 196,
+  "title": "Use more BOM's where available.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-03-15T01:40:04Z",
+  "state": "closed",
+  "merged": true
+}

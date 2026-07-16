@@ -1,0 +1,13 @@
+{
+  "number": 3681,
+  "title": "Refactor RecordEncryptionIT to use shared KMS instance for all tests (rather than once per test).",
+  "author": "k-wall",
+  "labels": [
+    "test",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-10T13:46:45Z",
+  "state": "closed",
+  "merged": true
+}

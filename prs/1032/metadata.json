@@ -1,0 +1,12 @@
+{
+  "number": 1032,
+  "title": "Cache unknown alias resolutions for 30 seconds",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-02-25T22:21:11Z",
+  "state": "closed",
+  "merged": true
+}

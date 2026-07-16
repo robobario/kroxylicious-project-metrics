@@ -1,0 +1,13 @@
+{
+  "number": 1861,
+  "title": "Secret interpolation for KafkaProtocolFilter",
+  "author": "tombentley",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-27T04:34:13Z",
+  "state": "closed",
+  "merged": true
+}

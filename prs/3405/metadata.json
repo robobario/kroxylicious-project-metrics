@@ -1,0 +1,12 @@
+{
+  "number": 3405,
+  "title": "feat(test): have kroxyliciousTester support sharegroups",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-04T23:15:18Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,15 @@
+{
+  "number": 4203,
+  "title": "build: switch compilation target to Java 21",
+  "author": "SamBarker",
+  "labels": [
+    "documentation",
+    "kind/enhancement",
+    "dev/maven",
+    "lifecycle/deprecation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-24T21:26:18Z",
+  "state": "closed",
+  "merged": true
+}

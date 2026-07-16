@@ -1,0 +1,14 @@
+{
+  "number": 2908,
+  "title": "chore: bump central-publishing-maven-plugin 0.8.0 -> 0.9.0",
+  "author": "k-wall",
+  "labels": [
+    "dependencies",
+    "dev/maven",
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-20T09:57:40Z",
+  "state": "closed",
+  "merged": true
+}

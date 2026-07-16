@@ -1,0 +1,12 @@
+{
+  "number": 716,
+  "title": "Bump com.github.spotbugs:spotbugs-annotations from 4.8.0 to 4.8.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-11-13T03:46:52Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2870,
+  "title": "specify origin when querying the head ref",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-07T03:14:04Z",
+  "state": "closed",
+  "merged": true
+}

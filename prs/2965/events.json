@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-11-28T11:09:04Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-11-28T11:09:05Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2025-11-28T11:25:28Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-11-28T11:27:00Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

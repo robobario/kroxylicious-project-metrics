@@ -1,0 +1,13 @@
+{
+  "number": 2605,
+  "title": "refactor: use java to build the operand image for the operator test Github workflow",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-21T14:30:33Z",
+  "state": "closed",
+  "merged": true
+}

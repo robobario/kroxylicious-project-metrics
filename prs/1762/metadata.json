@@ -1,0 +1,13 @@
+{
+  "number": 1762,
+  "title": "feat: KekSelector that is capable of deriving a KEK from a topic name prefix",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-23T18:47:53Z",
+  "state": "closed",
+  "merged": false
+}

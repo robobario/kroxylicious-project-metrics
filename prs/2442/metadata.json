@@ -1,0 +1,13 @@
+{
+  "number": 2442,
+  "title": "fix: avoid possibility of duplicate topic names in the KroxyliciousTester test harness",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-15T11:07:15Z",
+  "state": "closed",
+  "merged": true
+}

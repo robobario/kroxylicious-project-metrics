@@ -1,0 +1,13 @@
+{
+  "number": 1791,
+  "title": "Bump io.javaoperatorsdk:operator-framework-bom from 5.0.3 to 5.0.4",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-03T03:09:55Z",
+  "state": "closed",
+  "merged": true
+}

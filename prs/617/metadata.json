@@ -1,0 +1,10 @@
+{
+  "number": 617,
+  "title": "Fix #537: Ensure actions chained to the #sendRequest run on netty loop executor",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-09-18T18:03:56Z",
+  "state": "closed",
+  "merged": true
+}

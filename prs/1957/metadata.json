@@ -1,0 +1,13 @@
+{
+  "number": 1957,
+  "title": "Refactor \"not found\" cluster conditions",
+  "author": "tombentley",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-18T00:08:41Z",
+  "state": "closed",
+  "merged": true
+}

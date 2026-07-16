@@ -1,0 +1,77 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-04-02T12:36:56Z",
+    "actor": "tmchow"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-04-02T12:36:57Z",
+    "actor": "tmchow"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-02T19:36:28Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-02T19:38:50Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-02T19:47:43Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-02T22:58:33Z",
+    "actor": "tmchow"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-03T00:06:12Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-03T00:13:05Z",
+    "actor": "tmchow"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-04-03T23:11:52Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-04T04:47:16Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-04T04:49:34Z",
+    "actor": "tmchow"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-04T05:25:42Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-04-04T05:27:18Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-04T05:27:18Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-04-04T07:28:23Z",
+    "actor": "tmchow"
+  }
+]

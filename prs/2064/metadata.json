@@ -1,0 +1,13 @@
+{
+  "number": 2064,
+  "title": "Operator example using a TLS connection to the upstream",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-15T18:25:51Z",
+  "state": "closed",
+  "merged": true
+}

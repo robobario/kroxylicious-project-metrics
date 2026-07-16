@@ -1,0 +1,10 @@
+{
+  "number": 497,
+  "title": "Fix the remaining Sonarcloud bug warnings",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-27T04:49:47Z",
+  "state": "closed",
+  "merged": true
+}

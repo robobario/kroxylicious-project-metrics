@@ -1,0 +1,10 @@
+{
+  "number": 620,
+  "title": "Remove integrationtests topic helper methods entirely (re: #609)",
+  "author": "gracegrimwood",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-09-19T03:53:24Z",
+  "state": "closed",
+  "merged": false
+}

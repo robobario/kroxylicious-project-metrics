@@ -1,0 +1,13 @@
+{
+  "number": 1960,
+  "title": "Add common Condition",
+  "author": "tombentley",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-18T01:32:53Z",
+  "state": "closed",
+  "merged": true
+}

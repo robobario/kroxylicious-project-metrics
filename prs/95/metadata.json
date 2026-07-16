@@ -1,0 +1,10 @@
+{
+  "number": 95,
+  "title": "Add micrometer metrics and optional scrape endpoint",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-12-08T23:38:55Z",
+  "state": "closed",
+  "merged": true
+}

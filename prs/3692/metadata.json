@@ -1,0 +1,10 @@
+{
+  "number": 3692,
+  "title": "perf(ci): eliminate redundant builds in integration test workflow",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-13T04:14:52Z",
+  "state": "closed",
+  "merged": true
+}

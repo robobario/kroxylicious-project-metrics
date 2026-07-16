@@ -1,0 +1,12 @@
+{
+  "number": 4330,
+  "title": "fix(config): remove deprecated shutdownQuietPeriodSeconds field from NettySettings",
+  "author": "lukman48",
+  "labels": [
+    "lifecycle/removal"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-10T00:35:55Z",
+  "state": "open",
+  "merged": false
+}

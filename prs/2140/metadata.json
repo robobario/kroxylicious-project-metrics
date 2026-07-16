@@ -1,0 +1,12 @@
+{
+  "number": 2140,
+  "title": "Bump jackson from 2.18.1 to 2.18.3",
+  "author": "k-wall",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-07T09:24:02Z",
+  "state": "closed",
+  "merged": true
+}

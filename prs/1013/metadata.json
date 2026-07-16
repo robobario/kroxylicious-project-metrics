@@ -1,0 +1,10 @@
+{
+  "number": 1013,
+  "title": "Use platform default provider when creating the SSLContext for HashiCorp Vault HTTP client.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-19T09:45:47Z",
+  "state": "closed",
+  "merged": false
+}

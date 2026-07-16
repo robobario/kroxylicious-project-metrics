@@ -1,0 +1,12 @@
+{
+  "number": 3072,
+  "title": "docs(review): edits of guide name attributes",
+  "author": "PaulRMellor",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-12-16T14:32:14Z",
+  "state": "closed",
+  "merged": true
+}

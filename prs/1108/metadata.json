@@ -1,0 +1,10 @@
+{
+  "number": 1108,
+  "title": "bugfix: .github readme took precedence over root",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-19T22:38:52Z",
+  "state": "closed",
+  "merged": true
+}

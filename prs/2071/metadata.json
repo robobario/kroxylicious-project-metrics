@@ -1,0 +1,12 @@
+{
+  "number": 2071,
+  "title": "Generate a checksum based on the resolved proxy.",
+  "author": "SamBarker",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-16T05:30:52Z",
+  "state": "closed",
+  "merged": true
+}

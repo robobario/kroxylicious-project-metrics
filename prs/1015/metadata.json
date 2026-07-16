@@ -1,0 +1,10 @@
+{
+  "number": 1015,
+  "title": "Add ability to get simple performance numbers for record encryption",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-19T13:05:11Z",
+  "state": "closed",
+  "merged": true
+}

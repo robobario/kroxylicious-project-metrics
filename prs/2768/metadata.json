@@ -1,0 +1,13 @@
+{
+  "number": 2768,
+  "title": "build(deps): bump org.jacoco:jacoco-maven-plugin from 0.8.13 to 0.8.14",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-13T03:05:44Z",
+  "state": "closed",
+  "merged": true
+}

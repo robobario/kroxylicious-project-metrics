@@ -1,0 +1,12 @@
+{
+  "number": 2732,
+  "title": "update strimzi version 0.48.0 and update kafka version 4.1.0 for STs",
+  "author": "franvila",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-03T05:41:13Z",
+  "state": "closed",
+  "merged": true
+}

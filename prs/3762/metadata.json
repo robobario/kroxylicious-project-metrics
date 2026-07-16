@@ -1,0 +1,12 @@
+{
+  "number": 3762,
+  "title": "fix(test): flaky requiredModeShouldProxyKafkaRequestsAfterProxyHeader\u2026",
+  "author": "hrishabhg",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-22T04:24:22Z",
+  "state": "closed",
+  "merged": false
+}

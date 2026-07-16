@@ -1,0 +1,52 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-07-13T00:43:15Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-07-13T00:43:16Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-07-13T01:12:58Z",
+    "actor": "github-advanced-security[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-13T02:03:21Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-13T02:04:58Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-07-13T02:04:59Z",
+    "actor": "github-advanced-security[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-13T02:53:51Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-07-13T08:14:39Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-13T08:18:44Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-07-13T10:53:18Z",
+    "actor": null
+  }
+]

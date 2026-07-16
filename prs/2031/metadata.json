@@ -1,0 +1,13 @@
+{
+  "number": 2031,
+  "title": "Bump org.asciidoctor:asciidoctorj-diagram from 2.3.1 to 2.3.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-07T03:31:32Z",
+  "state": "closed",
+  "merged": true
+}

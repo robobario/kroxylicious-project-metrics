@@ -1,0 +1,13 @@
+{
+  "number": 2645,
+  "title": "build(deps): bump actions/setup-node from 4.4.0 to 5.0.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-09-08T03:16:27Z",
+  "state": "closed",
+  "merged": true
+}

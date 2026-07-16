@@ -1,0 +1,13 @@
+{
+  "number": 1064,
+  "title": "Bump actions/cache from 3 to 4",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-03-05T08:28:54Z",
+  "state": "closed",
+  "merged": true
+}

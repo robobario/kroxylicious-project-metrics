@@ -1,0 +1,12 @@
+{
+  "number": 3532,
+  "title": "chore(deps): update busybox:1.37.0 docker digest to 1487d0a",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-25T01:06:56Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1868,
+  "title": "Support use of $() in KEK selector templates, deprecating ${}",
+  "author": "tombentley",
+  "labels": [
+    "filter/record-encryption",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-28T00:09:24Z",
+  "state": "closed",
+  "merged": true
+}

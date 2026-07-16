@@ -1,0 +1,12 @@
+{
+  "number": 3383,
+  "title": "fix(operator): enable SSA for all dependent resources",
+  "author": "SamBarker",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-02T04:09:02Z",
+  "state": "closed",
+  "merged": true
+}

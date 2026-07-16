@@ -1,0 +1,10 @@
+{
+  "number": 2743,
+  "title": "(Draft) Added invalid cert test for TLS",
+  "author": "hrishabhg",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-06T06:58:36Z",
+  "state": "closed",
+  "merged": false
+}

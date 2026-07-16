@@ -1,0 +1,13 @@
+{
+  "number": 4028,
+  "title": "build(deps): bump docker/login-action from 4.1.0 to 4.2.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-28T03:33:56Z",
+  "state": "closed",
+  "merged": true
+}

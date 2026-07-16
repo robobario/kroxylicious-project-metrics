@@ -1,0 +1,12 @@
+{
+  "number": 1768,
+  "title": "Record Encryption: enable user to specify policy when we cannot resolve a Key for a topic",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-28T04:13:38Z",
+  "state": "closed",
+  "merged": true
+}

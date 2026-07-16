@@ -1,0 +1,13 @@
+{
+  "number": 2135,
+  "title": "Require client certificates by default if user supplies downstream trust",
+  "author": "robobario",
+  "labels": [
+    "documentation",
+    "runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-06T21:11:16Z",
+  "state": "closed",
+  "merged": true
+}

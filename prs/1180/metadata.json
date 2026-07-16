@@ -1,0 +1,10 @@
+{
+  "number": 1180,
+  "title": "Add an optional message key when producing messages in system tests",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-05-01T10:18:03Z",
+  "state": "closed",
+  "merged": true
+}

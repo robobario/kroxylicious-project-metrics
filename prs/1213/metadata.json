@@ -1,0 +1,10 @@
+{
+  "number": 1213,
+  "title": "update run-example script to use helm to install strimzi",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-05-16T13:41:10Z",
+  "state": "closed",
+  "merged": true
+}

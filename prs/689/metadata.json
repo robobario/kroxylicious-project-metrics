@@ -1,0 +1,12 @@
+{
+  "number": 689,
+  "title": "Bump org.apache.maven.plugins:maven-plugin-plugin from 3.9.0 to 3.10.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-10-23T03:51:51Z",
+  "state": "closed",
+  "merged": true
+}

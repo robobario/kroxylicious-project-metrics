@@ -1,0 +1,10 @@
+{
+  "number": 364,
+  "title": "Dockerise Kroxylicious and add scripts to build/push to quay.io and run the image against a strimzi cluster",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-06-06T23:22:44Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 3411,
+  "title": "Revert \"chore(deps): update dependency kubernetes/kubernetes to v1.35.2",
+  "author": "robobario",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-05T21:16:26Z",
+  "state": "closed",
+  "merged": true
+}

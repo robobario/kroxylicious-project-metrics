@@ -1,0 +1,10 @@
+{
+  "number": 596,
+  "title": "Use consistent variable style in shell examples",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-09-04T23:16:12Z",
+  "state": "closed",
+  "merged": true
+}

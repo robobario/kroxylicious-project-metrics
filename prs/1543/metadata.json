@@ -1,0 +1,10 @@
+{
+  "number": 1543,
+  "title": "fix dependencies for Vault",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-10-03T11:52:09Z",
+  "state": "closed",
+  "merged": true
+}

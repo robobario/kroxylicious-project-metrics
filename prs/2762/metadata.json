@@ -1,0 +1,14 @@
+{
+  "number": 2762,
+  "title": "Extend SASL Inspection to support OAUTHBEARER",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement",
+    "security",
+    "filters/sasl-inspection"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-10T14:08:28Z",
+  "state": "closed",
+  "merged": true
+}

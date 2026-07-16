@@ -1,0 +1,12 @@
+{
+  "number": 744,
+  "title": "Bump net.bytebuddy:byte-buddy from 1.14.9 to 1.14.10",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-11-27T03:52:30Z",
+  "state": "closed",
+  "merged": true
+}

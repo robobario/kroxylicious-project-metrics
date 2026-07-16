@@ -1,0 +1,10 @@
+{
+  "number": 2821,
+  "title": "fix: don't copy auth bytes from oauth filter request to failed response",
+  "author": "piotrpdev",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-24T14:01:51Z",
+  "state": "closed",
+  "merged": true
+}

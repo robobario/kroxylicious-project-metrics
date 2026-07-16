@@ -1,0 +1,10 @@
+{
+  "number": 3186,
+  "title": "Require authz txn add partitions to txn",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "transactionalId-authz",
+  "created_at": "2026-01-22T04:53:32Z",
+  "state": "closed",
+  "merged": true
+}

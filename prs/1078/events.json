@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-03-11T01:46:41Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-03-11T02:00:49Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-03-12T22:38:42Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-03-12T23:05:22Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-03-12T23:05:22Z",
+    "actor": "SamBarker"
+  }
+]

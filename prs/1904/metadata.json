@@ -1,0 +1,13 @@
+{
+  "number": 1904,
+  "title": "Operator Refactor: add utils for accessing common metadata",
+  "author": "robobario",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-09T21:23:35Z",
+  "state": "closed",
+  "merged": true
+}

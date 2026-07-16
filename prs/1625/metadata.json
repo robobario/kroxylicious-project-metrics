@@ -1,0 +1,13 @@
+{
+  "number": 1625,
+  "title": "Bump kroxy.extension.version from 0.9.1 to 0.10.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-11-22T14:27:34Z",
+  "state": "closed",
+  "merged": true
+}

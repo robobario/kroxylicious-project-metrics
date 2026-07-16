@@ -1,0 +1,13 @@
+{
+  "number": 1327,
+  "title": "Bump org.freemarker:freemarker from 2.3.32 to 2.3.33",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-06-24T03:54:39Z",
+  "state": "closed",
+  "merged": true
+}

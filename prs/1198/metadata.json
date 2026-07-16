@@ -1,0 +1,13 @@
+{
+  "number": 1198,
+  "title": "Bump info.picocli:picocli from 4.7.5 to 4.7.6",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-05-13T03:44:34Z",
+  "state": "closed",
+  "merged": true
+}

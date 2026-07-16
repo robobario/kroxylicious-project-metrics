@@ -1,0 +1,12 @@
+{
+  "number": 3641,
+  "title": "docs(formatting): fix for bullet list format",
+  "author": "PaulRMellor",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-08T16:01:51Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 3180,
+  "title": "Bug/dependabot sonar",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-01-19T22:13:18Z",
+  "state": "closed",
+  "merged": true
+}

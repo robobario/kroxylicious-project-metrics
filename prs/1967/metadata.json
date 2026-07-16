@@ -1,0 +1,12 @@
+{
+  "number": 1967,
+  "title": "run-operator.sh tags operator with git commit sha",
+  "author": "robobario",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-19T00:54:22Z",
+  "state": "closed",
+  "merged": true
+}

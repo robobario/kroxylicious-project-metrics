@@ -1,0 +1,10 @@
+{
+  "number": 146,
+  "title": "Add github action to generate github pages docs to gh-pages branch",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-20T02:57:03Z",
+  "state": "closed",
+  "merged": true
+}

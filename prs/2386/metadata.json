@@ -1,0 +1,14 @@
+{
+  "number": 2386,
+  "title": "fix: correct incorrect PodMonitor selector on the proxy PM resource",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "documentation",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-25T14:02:48Z",
+  "state": "closed",
+  "merged": true
+}

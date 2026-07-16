@@ -1,0 +1,13 @@
+{
+  "number": 1893,
+  "title": "Add KafkaProxyIngress",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-05T04:13:50Z",
+  "state": "closed",
+  "merged": true
+}

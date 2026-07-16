@@ -1,0 +1,10 @@
+{
+  "number": 2500,
+  "title": "Better API for `createEndpoint` method in Endpoint class",
+  "author": "ShubhamRwt",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-29T10:58:09Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2510,
+  "title": "@NonNull-by-default in kroxylicious-multitenant; Fix API for unknown \u2026",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-31T02:21:08Z",
+  "state": "closed",
+  "merged": true
+}

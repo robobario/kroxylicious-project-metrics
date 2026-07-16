@@ -1,0 +1,10 @@
+{
+  "number": 1468,
+  "title": "Using assertThat(future) provides cleaner error handling and better us\u2026",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-08-26T01:51:16Z",
+  "state": "closed",
+  "merged": true
+}

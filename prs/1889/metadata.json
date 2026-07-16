@@ -1,0 +1,13 @@
+{
+  "number": 1889,
+  "title": "Implementing basic KafkaClusterRef",
+  "author": "k-wall",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-03T18:37:03Z",
+  "state": "closed",
+  "merged": true
+}

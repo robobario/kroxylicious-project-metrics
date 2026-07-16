@@ -1,0 +1,10 @@
+{
+  "number": 1357,
+  "title": "systemtests: pull snapshot images once per process",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-07-14T23:51:32Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1072,
+  "title": "Break glass: enable decryption of v1 data",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-06T21:36:49Z",
+  "state": "closed",
+  "merged": false
+}

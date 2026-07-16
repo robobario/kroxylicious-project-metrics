@@ -1,0 +1,12 @@
+{
+  "number": 3499,
+  "title": "[SystemTests] added preload images to avoid issues when running the tests",
+  "author": "franvila",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-18T10:30:16Z",
+  "state": "closed",
+  "merged": true
+}

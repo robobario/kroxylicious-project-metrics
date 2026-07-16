@@ -1,0 +1,10 @@
+{
+  "number": 4116,
+  "title": "Implement static/passthrough routing",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "epic/routing-prototype",
+  "created_at": "2026-06-15T03:46:02Z",
+  "state": "closed",
+  "merged": false
+}

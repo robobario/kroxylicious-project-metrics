@@ -1,0 +1,12 @@
+{
+  "number": 3624,
+  "title": "feat(operator): set userAgent on Kubernetes client",
+  "author": "SamBarker",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-07T12:29:51Z",
+  "state": "closed",
+  "merged": true
+}

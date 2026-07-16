@@ -1,0 +1,10 @@
+{
+  "number": 428,
+  "title": "Fix #412: remove $(portNumber) replacement pattern in the PortPerBroker scheme.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-06-30T13:32:36Z",
+  "state": "closed",
+  "merged": true
+}

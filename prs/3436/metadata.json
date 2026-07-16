@@ -1,0 +1,12 @@
+{
+  "number": 3436,
+  "title": "[SystemTests] Add test reporter to the pipelines",
+  "author": "franvila",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-10T11:35:28Z",
+  "state": "closed",
+  "merged": true
+}

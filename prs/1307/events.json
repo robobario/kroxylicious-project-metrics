@@ -1,0 +1,137 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-06-10T15:38:31Z",
+    "actor": "lucamolteni"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-10T15:39:14Z",
+    "actor": "lucamolteni"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-10T15:44:00Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-10T15:57:32Z",
+    "actor": "lucamolteni"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-10T16:03:00Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-10T17:12:32Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-10T17:16:50Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-06-10T17:21:26Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-10T17:23:26Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-10T18:07:17Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-27T08:18:12Z",
+    "actor": "lucamolteni"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-17T22:41:10Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-01T13:08:45Z",
+    "actor": "lucamolteni"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-01T18:18:51Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-05T12:37:26Z",
+    "actor": "lucamolteni"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-05T14:20:33Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-05T14:28:51Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-05T15:16:12Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-05T15:30:27Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-05T17:17:41Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-06T05:24:55Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-06T05:27:31Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-06T05:29:26Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-06T06:22:16Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-08-06T08:19:37Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-06T08:19:38Z",
+    "actor": "lucamolteni"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-06T08:35:49Z",
+    "actor": "SamBarker"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "number": 1591,
+  "title": "operator: add recommended informational labels to operator managed resources",
+  "author": "robobario",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-11-08T02:40:10Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 2780,
+  "title": "feat(docs): SASL inspection filter guide.",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "filters/sasl-inspection"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-15T15:31:01Z",
+  "state": "closed",
+  "merged": true
+}

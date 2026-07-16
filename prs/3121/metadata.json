@@ -1,0 +1,13 @@
+{
+  "number": 3121,
+  "title": "Only run a single sonar build on main push",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-12T00:25:55Z",
+  "state": "closed",
+  "merged": true
+}

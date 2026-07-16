@@ -1,0 +1,10 @@
+{
+  "number": 2005,
+  "title": "Use maven arch detection.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-03-27T20:30:13Z",
+  "state": "closed",
+  "merged": true
+}

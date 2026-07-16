@@ -1,0 +1,13 @@
+{
+  "number": 3420,
+  "title": "build(deps): bump io.sundr:builder-annotations from 0.220.1 to 0.230.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-09T03:33:36Z",
+  "state": "closed",
+  "merged": true
+}

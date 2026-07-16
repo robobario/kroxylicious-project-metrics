@@ -1,0 +1,10 @@
+{
+  "number": 3544,
+  "title": "feat(omb): Mann-Whitney U significance test in compare-results output",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-03-26T04:30:18Z",
+  "state": "closed",
+  "merged": false
+}

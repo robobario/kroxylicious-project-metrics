@@ -1,0 +1,10 @@
+{
+  "number": 1994,
+  "title": "Include namespace in ResolveRefs message",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-03-25T02:12:01Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 2872,
+  "title": "Add 0.17.1 to the changelog on main",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-07T03:41:50Z",
+  "state": "closed",
+  "merged": true
+}

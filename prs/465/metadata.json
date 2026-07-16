@@ -1,0 +1,10 @@
+{
+  "number": 465,
+  "title": "Fix #463 - deregister micrometer hooks, meters and the registry on shutdown",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-18T14:43:07Z",
+  "state": "closed",
+  "merged": true
+}

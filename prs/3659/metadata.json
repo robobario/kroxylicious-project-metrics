@@ -1,0 +1,10 @@
+{
+  "number": 3659,
+  "title": "Fix ByteBufferBackingArray findings and enforce check as ERROR",
+  "author": "ZhangDT-sky",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-09T04:00:18Z",
+  "state": "closed",
+  "merged": true
+}

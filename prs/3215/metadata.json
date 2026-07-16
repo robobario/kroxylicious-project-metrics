@@ -1,0 +1,12 @@
+{
+  "number": 3215,
+  "title": "fix(tests): stablise sporadically failing OperatorChangeDetectionST",
+  "author": "k-wall",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-28T10:22:25Z",
+  "state": "closed",
+  "merged": true
+}

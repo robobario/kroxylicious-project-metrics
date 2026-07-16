@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-04-28T09:54:00Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-04-28T09:54:00Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-28T09:58:32Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-28T10:02:42Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-04-28T10:03:04Z",
+    "actor": null
+  }
+]

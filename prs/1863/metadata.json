@@ -1,0 +1,12 @@
+{
+  "number": 1863,
+  "title": "Fix ciphersuite/protocol example muddle in the docs",
+  "author": "k-wall",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-27T15:22:11Z",
+  "state": "closed",
+  "merged": true
+}

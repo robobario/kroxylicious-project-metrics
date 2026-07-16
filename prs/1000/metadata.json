@@ -1,0 +1,10 @@
+{
+  "number": 1000,
+  "title": "System tests: Added support to select Vault version",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-15T14:34:49Z",
+  "state": "closed",
+  "merged": true
+}

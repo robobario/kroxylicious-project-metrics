@@ -1,0 +1,13 @@
+{
+  "number": 4025,
+  "title": "build(deps): bump io.github.hakky54:logcaptor from 2.12.5 to 2.12.6",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-28T03:33:27Z",
+  "state": "closed",
+  "merged": true
+}

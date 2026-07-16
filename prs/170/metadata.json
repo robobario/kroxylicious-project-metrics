@@ -1,0 +1,10 @@
+{
+  "number": 170,
+  "title": "Refactor micrometer configuration to use the Contributor mechanism",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-03-03T03:21:12Z",
+  "state": "closed",
+  "merged": true
+}

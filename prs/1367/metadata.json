@@ -1,0 +1,10 @@
+{
+  "number": 1367,
+  "title": "Refactor KmsFacades for System tests to use REST API instead of CLI",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-07-17T14:09:41Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1499,
+  "title": "Fix #819: Release process should automate the 'release' stage of the release process down to a single manual step",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-09-08T18:32:44Z",
+  "state": "closed",
+  "merged": true
+}

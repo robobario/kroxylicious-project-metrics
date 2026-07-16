@@ -1,0 +1,10 @@
+{
+  "number": 1308,
+  "title": "Forward the initial HAProxyMessage in KafkaAuthnHandler and release HAProxyMessage when closing the channel",
+  "author": "luozhenyu",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-06-13T06:35:42Z",
+  "state": "closed",
+  "merged": false
+}

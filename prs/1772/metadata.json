@@ -1,0 +1,10 @@
+{
+  "number": 1772,
+  "title": "Record Encryption: Enable user to specify a default topic encryption policy requiring encryption",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-01-29T02:28:27Z",
+  "state": "closed",
+  "merged": false
+}

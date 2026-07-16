@@ -1,0 +1,12 @@
+{
+  "number": 1597,
+  "title": "Filters-as-CRs",
+  "author": "tombentley",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-11-11T04:34:14Z",
+  "state": "closed",
+  "merged": true
+}

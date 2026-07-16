@@ -1,0 +1,13 @@
+{
+  "number": 1986,
+  "title": "Bump com.mycila:license-maven-plugin from 4.6 to 5.0.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-24T03:27:04Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-08-08T02:45:45Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-08-08T05:59:37Z",
+    "actor": null
+  }
+]

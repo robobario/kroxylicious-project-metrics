@@ -1,0 +1,10 @@
+{
+  "number": 633,
+  "title": "FetchResponseTransformationFilter improvements",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-09-27T13:44:10Z",
+  "state": "closed",
+  "merged": true
+}

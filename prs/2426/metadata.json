@@ -1,0 +1,12 @@
+{
+  "number": 2426,
+  "title": "Fix gateway documentation port range",
+  "author": "robobario",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-13T22:15:40Z",
+  "state": "closed",
+  "merged": true
+}

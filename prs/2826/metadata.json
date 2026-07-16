@@ -1,0 +1,13 @@
+{
+  "number": 2826,
+  "title": "build(deps): bump org.apache.maven.plugin-tools:maven-plugin-annotations from 3.15.1 to 3.15.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-27T03:13:11Z",
+  "state": "closed",
+  "merged": true
+}

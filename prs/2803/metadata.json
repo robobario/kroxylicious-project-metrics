@@ -1,0 +1,10 @@
+{
+  "number": 2803,
+  "title": "chore(sample): remove the metric instrumentation from sample filter",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-20T18:28:19Z",
+  "state": "closed",
+  "merged": true
+}

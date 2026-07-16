@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-07-26T04:32:40Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-07-26T04:32:42Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-07-26T04:47:32Z",
+    "actor": null
+  }
+]

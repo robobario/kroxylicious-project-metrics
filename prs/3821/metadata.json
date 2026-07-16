@@ -1,0 +1,13 @@
+{
+  "number": 3821,
+  "title": "fix(cicd): include new parent module in operator main build",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-29T04:42:24Z",
+  "state": "closed",
+  "merged": true
+}

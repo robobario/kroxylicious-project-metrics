@@ -1,0 +1,10 @@
+{
+  "number": 391,
+  "title": "Support forwarding new instances of headers and body",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-06-16T04:37:45Z",
+  "state": "closed",
+  "merged": false
+}

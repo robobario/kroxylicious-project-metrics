@@ -1,0 +1,13 @@
+{
+  "number": 2124,
+  "title": "Bump manusa/actions-setup-minikube from 2.13.1 to 2.14.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-05T03:27:12Z",
+  "state": "closed",
+  "merged": true
+}

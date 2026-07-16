@@ -1,0 +1,13 @@
+{
+  "number": 2452,
+  "title": "refactor: make multi-tenancy filter content into standalone guide",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "filter/multitenancy"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-17T14:55:55Z",
+  "state": "closed",
+  "merged": true
+}

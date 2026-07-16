@@ -1,0 +1,13 @@
+{
+  "number": 1441,
+  "title": "Fix ##1440 : Address sporadically failing CacheKmsTests",
+  "author": "k-wall",
+  "labels": [
+    "test",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-17T16:12:07Z",
+  "state": "closed",
+  "merged": true
+}

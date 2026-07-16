@@ -1,0 +1,12 @@
+{
+  "number": 2657,
+  "title": "chore(deps): update curlimages/curl docker tag to v8.16.0",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-09-12T09:09:57Z",
+  "state": "closed",
+  "merged": true
+}

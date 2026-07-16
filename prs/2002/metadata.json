@@ -1,0 +1,10 @@
+{
+  "number": 2002,
+  "title": "fix arch detection so we get the right classifier.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-03-26T01:39:49Z",
+  "state": "closed",
+  "merged": true
+}

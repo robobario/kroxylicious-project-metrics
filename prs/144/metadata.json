@@ -1,0 +1,10 @@
+{
+  "number": 144,
+  "title": "Change kroxylicious Future to jdk CompletionStage in KrpcFilterContext",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-19T22:13:13Z",
+  "state": "closed",
+  "merged": true
+}

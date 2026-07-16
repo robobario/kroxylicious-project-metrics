@@ -1,0 +1,10 @@
+{
+  "number": 155,
+  "title": "Add `ci` profile which only validates formatting.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-27T08:34:54Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1057,
+  "title": "Check all CipherSpecs are supported by platform at configuration time",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-04T22:14:44Z",
+  "state": "closed",
+  "merged": true
+}

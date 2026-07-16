@@ -1,0 +1,12 @@
+{
+  "number": 1656,
+  "title": "Fix #1612: KIP-932 Rewrite broker address information carried by ShareFetchResponse and ShareAckResponse [Kafka Unstable]",
+  "author": "k-wall",
+  "labels": [
+    "kafka-protocol"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-09T15:23:56Z",
+  "state": "closed",
+  "merged": true
+}

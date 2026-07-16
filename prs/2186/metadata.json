@@ -1,0 +1,13 @@
+{
+  "number": 2186,
+  "title": "Delete deprecated FilterFactory implementations",
+  "author": "robobario",
+  "labels": [
+    "filter/multitenancy",
+    "lifecycle/deprecation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-15T03:23:32Z",
+  "state": "closed",
+  "merged": true
+}

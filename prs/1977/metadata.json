@@ -1,0 +1,12 @@
+{
+  "number": 1977,
+  "title": "[System Tests] Plain use cases with CRs",
+  "author": "franvila",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-21T08:15:42Z",
+  "state": "closed",
+  "merged": true
+}

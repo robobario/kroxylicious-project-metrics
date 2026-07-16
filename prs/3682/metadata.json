@@ -1,0 +1,10 @@
+{
+  "number": 3682,
+  "title": "fix: combine AssertJ assertions into chains in JwsTestUtilsTest (S5853)",
+  "author": "msalinas-se",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-10T18:23:05Z",
+  "state": "closed",
+  "merged": true
+}

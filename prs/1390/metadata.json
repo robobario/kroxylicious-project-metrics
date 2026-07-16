@@ -1,0 +1,10 @@
+{
+  "number": 1390,
+  "title": "fix kafka version until Strimzi is released",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-07-30T13:35:18Z",
+  "state": "closed",
+  "merged": true
+}

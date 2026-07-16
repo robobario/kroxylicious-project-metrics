@@ -1,0 +1,12 @@
+{
+  "number": 1662,
+  "title": "End to end test verifying a two stage api-versions downgrade actually works for real.",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-12T08:51:26Z",
+  "state": "closed",
+  "merged": true
+}

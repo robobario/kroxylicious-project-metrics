@@ -1,0 +1,13 @@
+{
+  "number": 4197,
+  "title": "build(deps-dev): bump com.google.protobuf:protobuf-java from 4.35.0 to 4.35.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-24T10:37:26Z",
+  "state": "closed",
+  "merged": true
+}

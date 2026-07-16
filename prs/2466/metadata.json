@@ -1,0 +1,12 @@
+{
+  "number": 2466,
+  "title": "chore(deps): update registry.access.redhat.com/ubi9/openjdk-17 docker tag to v1.22-1.1752621170",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-22T00:51:59Z",
+  "state": "closed",
+  "merged": true
+}

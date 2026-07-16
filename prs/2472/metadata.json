@@ -1,0 +1,10 @@
+{
+  "number": 2472,
+  "title": "kroxylicious-runtime: Remove a limitation from FilterInvokers",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-23T21:55:26Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2614,
+  "title": "refactor: Pull out common Dockerfile for tini",
+  "author": "k-wall",
+  "labels": [
+    "container"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-25T16:32:01Z",
+  "state": "closed",
+  "merged": false
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1858,
+  "title": "Rename Filter to KafkaProtocolFilter",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-26T03:41:01Z",
+  "state": "closed",
+  "merged": true
+}

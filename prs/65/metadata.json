@@ -1,0 +1,10 @@
+{
+  "number": 65,
+  "title": "Rename ProxyTest \u2192 KrpcFilterIntegrationTest",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-06-30T09:50:50Z",
+  "state": "closed",
+  "merged": true
+}

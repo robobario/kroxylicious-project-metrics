@@ -1,0 +1,13 @@
+{
+  "number": 2273,
+  "title": "[System Tests] OLM installation",
+  "author": "franvila",
+  "labels": [
+    "dev/release",
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-05T06:01:47Z",
+  "state": "closed",
+  "merged": true
+}

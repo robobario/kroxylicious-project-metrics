@@ -1,0 +1,12 @@
+{
+  "number": 680,
+  "title": "Bump info.schnatterer.moby-names-generator:moby-names-generator from 20.10.0-r0 to 20.10.1-r0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-10-16T03:51:51Z",
+  "state": "closed",
+  "merged": true
+}

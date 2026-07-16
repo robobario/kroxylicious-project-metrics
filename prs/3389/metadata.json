@@ -1,0 +1,13 @@
+{
+  "number": 3389,
+  "title": "[System Tests] Fix system tests log collector",
+  "author": "franvila",
+  "labels": [
+    "kind/bug",
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-03T06:38:06Z",
+  "state": "closed",
+  "merged": true
+}

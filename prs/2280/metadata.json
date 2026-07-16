@@ -1,0 +1,12 @@
+{
+  "number": 2280,
+  "title": "Update ghcr.io/navikt/mock-oauth2-server Docker tag to v2.2.1",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-06T00:46:32Z",
+  "state": "closed",
+  "merged": true
+}

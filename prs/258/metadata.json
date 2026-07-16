@@ -1,0 +1,10 @@
+{
+  "number": 258,
+  "title": "Fix github performance action to not fail when kroxy version is changed",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-10T05:57:40Z",
+  "state": "closed",
+  "merged": true
+}

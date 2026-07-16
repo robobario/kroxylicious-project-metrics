@@ -1,0 +1,10 @@
+{
+  "number": 2467,
+  "title": "fix: Kroxylicious does not forward KIP-511 ApiVersions v0 response from upstream correctly",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-22T04:25:21Z",
+  "state": "closed",
+  "merged": false
+}

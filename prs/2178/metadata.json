@@ -1,0 +1,14 @@
+{
+  "number": 2178,
+  "title": "bugfix: operator do not emit empty downstream trust object",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-13T02:48:09Z",
+  "state": "closed",
+  "merged": true
+}

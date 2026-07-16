@@ -1,0 +1,13 @@
+{
+  "number": 1854,
+  "title": "refactoring - rename method requiresTls -> requiresServerNameIndication",
+  "author": "k-wall",
+  "labels": [
+    "runtime",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-25T13:20:12Z",
+  "state": "closed",
+  "merged": true
+}

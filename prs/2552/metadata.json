@@ -1,0 +1,12 @@
+{
+  "number": 2552,
+  "title": "Increase sonatype max wait time for validation to 1 hour",
+  "author": "robobario",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-08T00:29:28Z",
+  "state": "closed",
+  "merged": true
+}

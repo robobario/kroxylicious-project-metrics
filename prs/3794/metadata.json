@@ -1,0 +1,12 @@
+{
+  "number": 3794,
+  "title": "docs: add design proposals repository reference to help ensure Claude appreciates when a design proposal is required ",
+  "author": "k-wall",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-24T10:17:35Z",
+  "state": "closed",
+  "merged": true
+}

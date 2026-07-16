@@ -1,0 +1,12 @@
+{
+  "number": 836,
+  "title": "Cache decrypted EDEK and resolved aliases",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-12-20T01:54:00Z",
+  "state": "closed",
+  "merged": true
+}

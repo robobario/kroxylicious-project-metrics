@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-06-15T10:22:27Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2022-06-15T10:22:27Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2022-06-15T10:27:37Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-06-15T10:27:46Z",
+    "actor": "gunnarmorling"
+  }
+]

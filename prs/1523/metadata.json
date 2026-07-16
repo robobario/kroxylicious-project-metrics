@@ -1,0 +1,13 @@
+{
+  "number": 1523,
+  "title": "Bump org.apache.maven.plugins:maven-javadoc-plugin from 3.8.0 to 3.10.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-09-23T03:45:52Z",
+  "state": "closed",
+  "merged": true
+}

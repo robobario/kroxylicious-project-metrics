@@ -1,0 +1,12 @@
+{
+  "number": 3586,
+  "title": "chore(deps): Remove the vertx deps from record-validation now we are on apicurio registry client 3.2",
+  "author": "k-wall",
+  "labels": [
+    "filter/record-validation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-01T14:48:25Z",
+  "state": "closed",
+  "merged": true
+}

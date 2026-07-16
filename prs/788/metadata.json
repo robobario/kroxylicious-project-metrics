@@ -1,0 +1,12 @@
+{
+  "number": 788,
+  "title": "Encryption Filter: Retry DEK creation. Ensure encryptions after a failed future can succeed",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-12-06T03:58:52Z",
+  "state": "closed",
+  "merged": true
+}

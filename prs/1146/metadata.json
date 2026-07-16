@@ -1,0 +1,12 @@
+{
+  "number": 1146,
+  "title": "Enable record validation filter to check that Apicurio global id header is present for keys and values",
+  "author": "robobario",
+  "labels": [
+    "filter/record-validation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-04-11T00:06:04Z",
+  "state": "closed",
+  "merged": false
+}

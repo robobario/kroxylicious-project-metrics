@@ -1,0 +1,10 @@
+{
+  "number": 986,
+  "title": "Log connection failures at a level visible by default",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-12T21:42:34Z",
+  "state": "closed",
+  "merged": true
+}

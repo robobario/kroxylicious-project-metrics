@@ -1,0 +1,13 @@
+{
+  "number": 3208,
+  "title": "Send slack notifications when non-PR builds fail",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-27T00:38:30Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1808,
+  "title": "Fix misspelt Fortanix env vars and secrets causing failures on CI's main pipeline",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-02-11T08:01:55Z",
+  "state": "closed",
+  "merged": true
+}

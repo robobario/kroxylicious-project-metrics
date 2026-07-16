@@ -1,0 +1,13 @@
+{
+  "number": 2635,
+  "title": "build(deps-dev): bump org.yaml:snakeyaml from 2.3 to 2.5",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-09-04T21:47:17Z",
+  "state": "closed",
+  "merged": true
+}

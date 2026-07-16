@@ -1,0 +1,10 @@
+{
+  "number": 2228,
+  "title": "Revert \"Bump io.javaoperatorsdk:operator-framework-bom from 5.0.4 to 5.1.0\"",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-05-27T08:49:53Z",
+  "state": "closed",
+  "merged": true
+}

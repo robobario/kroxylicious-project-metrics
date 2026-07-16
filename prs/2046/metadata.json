@@ -1,0 +1,12 @@
+{
+  "number": 2046,
+  "title": "Fix #1829: Report downstream bootstrap address via the VirtualKafkaCluster status section.",
+  "author": "k-wall",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-13T20:48:00Z",
+  "state": "closed",
+  "merged": true
+}

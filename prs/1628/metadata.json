@@ -1,0 +1,13 @@
+{
+  "number": 1628,
+  "title": "Bump io.netty:netty-bom from 4.1.114.Final to 4.1.115.Final",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-11-25T03:52:05Z",
+  "state": "closed",
+  "merged": true
+}

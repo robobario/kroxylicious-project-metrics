@@ -1,0 +1,10 @@
+{
+  "number": 423,
+  "title": "Enable batch mode in Dockerised maven build",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-06-28T13:21:47Z",
+  "state": "closed",
+  "merged": true
+}

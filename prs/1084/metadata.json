@@ -1,0 +1,10 @@
+{
+  "number": 1084,
+  "title": "Fix multi-tenant example image reference.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-12T22:57:55Z",
+  "state": "closed",
+  "merged": true
+}

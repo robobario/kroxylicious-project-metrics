@@ -1,0 +1,13 @@
+{
+  "number": 3124,
+  "title": "chore: fix sonar warnings about redundant/dead throws declarations",
+  "author": "robobario",
+  "labels": [
+    "kind/tech-debt",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-12T01:54:03Z",
+  "state": "closed",
+  "merged": true
+}

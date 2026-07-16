@@ -1,0 +1,13 @@
+{
+  "number": 1474,
+  "title": "Upstream Kafka TLS hostname verification",
+  "author": "SamBarker",
+  "labels": [
+    "kind/bug",
+    "security"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-26T04:21:56Z",
+  "state": "closed",
+  "merged": true
+}

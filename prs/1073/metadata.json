@@ -1,0 +1,12 @@
+{
+  "number": 1073,
+  "title": "Remove trap in decryption logic for variable length cipher parameters",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-03-06T22:04:51Z",
+  "state": "closed",
+  "merged": true
+}

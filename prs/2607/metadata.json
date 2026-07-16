@@ -1,0 +1,13 @@
+{
+  "number": 2607,
+  "title": "build(deps): bump actions/upload-pages-artifact from 3 to 4",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-25T05:46:30Z",
+  "state": "closed",
+  "merged": true
+}

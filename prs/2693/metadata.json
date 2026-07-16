@@ -1,0 +1,14 @@
+{
+  "number": 2693,
+  "title": "Automatic discovery of upstream Kafka bootstrap address",
+  "author": "ShubhamRwt",
+  "labels": [
+    "kind/enhancement",
+    "kube/operator",
+    "kube/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-09-23T09:01:45Z",
+  "state": "closed",
+  "merged": true
+}

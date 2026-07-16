@@ -1,0 +1,10 @@
+{
+  "number": 2846,
+  "title": "Add integration test to demonstrate the proxy can support compressed records.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-01T01:16:52Z",
+  "state": "closed",
+  "merged": true
+}

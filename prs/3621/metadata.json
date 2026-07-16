@@ -1,0 +1,10 @@
+{
+  "number": 3621,
+  "title": "Add instructions for installing automatic signoff git hook",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-07T01:05:48Z",
+  "state": "closed",
+  "merged": false
+}

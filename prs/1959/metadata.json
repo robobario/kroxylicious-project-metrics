@@ -1,0 +1,13 @@
+{
+  "number": 1959,
+  "title": "Operator: refactor map of cluster results to a set",
+  "author": "robobario",
+  "labels": [
+    "kind/refactoring",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-18T01:26:32Z",
+  "state": "closed",
+  "merged": true
+}

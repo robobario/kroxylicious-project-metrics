@@ -1,0 +1,12 @@
+{
+  "number": 3623,
+  "title": "Delete Deprecated clientSaslAuthenticationSuccess from FilterContext",
+  "author": "m1a2st",
+  "labels": [
+    "lifecycle/removal"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-07T10:11:45Z",
+  "state": "closed",
+  "merged": true
+}

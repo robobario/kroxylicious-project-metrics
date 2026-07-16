@@ -1,0 +1,13 @@
+{
+  "number": 2515,
+  "title": "fix(javadocs): fix API documentation on FilterResultBuilder#drop",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "filter/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-31T13:57:08Z",
+  "state": "closed",
+  "merged": true
+}

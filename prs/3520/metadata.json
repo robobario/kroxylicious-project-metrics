@@ -1,0 +1,13 @@
+{
+  "number": 3520,
+  "title": "bugfix(test): stabilise non-deterministic produce authz tests",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-23T03:35:11Z",
+  "state": "closed",
+  "merged": true
+}

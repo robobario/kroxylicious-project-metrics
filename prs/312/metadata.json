@@ -1,0 +1,10 @@
+{
+  "number": 312,
+  "title": "Refactor main method to block on a composed CompletableFuture",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-10T01:38:54Z",
+  "state": "closed",
+  "merged": true
+}

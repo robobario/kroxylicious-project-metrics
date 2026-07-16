@@ -1,0 +1,12 @@
+{
+  "number": 3269,
+  "title": "[System Tests] set fixed version of test clients to avoid issues on main branch",
+  "author": "franvila",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-11T11:40:43Z",
+  "state": "closed",
+  "merged": true
+}

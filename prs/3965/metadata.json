@@ -1,0 +1,10 @@
+{
+  "number": 3965,
+  "title": "fix(runtime): log virtual cluster stop at INFO for clean shutdown, WARN for failure",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-15T09:00:16Z",
+  "state": "closed",
+  "merged": true
+}

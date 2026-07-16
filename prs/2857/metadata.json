@@ -1,0 +1,10 @@
+{
+  "number": 2857,
+  "title": "build(deps): upgrade netty to 4.2.7",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-04T20:53:54Z",
+  "state": "closed",
+  "merged": true
+}

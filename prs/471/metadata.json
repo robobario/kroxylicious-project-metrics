@@ -1,0 +1,10 @@
+{
+  "number": 471,
+  "title": "Fix #470: Ensure that the EagerMetadataLearner passes on a client's metadata request with fidelity",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-21T14:14:18Z",
+  "state": "closed",
+  "merged": true
+}

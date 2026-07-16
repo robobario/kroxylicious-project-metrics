@@ -1,0 +1,13 @@
+{
+  "number": 3052,
+  "title": "fix(tests): tolerate possibility that vault might not be ready when we first try to enable transit engine.",
+  "author": "k-wall",
+  "labels": [
+    "filter/record-encryption",
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-12-14T18:59:21Z",
+  "state": "closed",
+  "merged": true
+}

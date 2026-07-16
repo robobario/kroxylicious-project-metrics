@@ -1,0 +1,15 @@
+{
+  "number": 2384,
+  "title": "Build improvements for documentation",
+  "author": "tombentley",
+  "labels": [
+    "documentation",
+    "dev/maven",
+    "kind/tech-debt",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-25T05:20:27Z",
+  "state": "closed",
+  "merged": true
+}

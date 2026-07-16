@@ -1,0 +1,13 @@
+{
+  "number": 4227,
+  "title": "feat(routing): node ID virtualization and per-broker connections for static routing",
+  "author": "robobario",
+  "labels": [
+    "kind/enhancement",
+    "routing/runtime"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-26T04:48:53Z",
+  "state": "closed",
+  "merged": true
+}

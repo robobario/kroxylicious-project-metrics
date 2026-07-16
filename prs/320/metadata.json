@@ -1,0 +1,10 @@
+{
+  "number": 320,
+  "title": "Refactor FilterInvoker implementation for speed",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-16T02:48:52Z",
+  "state": "closed",
+  "merged": true
+}

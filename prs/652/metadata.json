@@ -1,0 +1,10 @@
+{
+  "number": 652,
+  "title": "Improve the test coverage of the Default Kroxylicious tester",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-10-02T03:57:57Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 3182,
+  "title": "chore: address sonar issues",
+  "author": "robobario",
+  "labels": [
+    "kind/tech-debt",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-20T04:00:48Z",
+  "state": "closed",
+  "merged": true
+}

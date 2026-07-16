@@ -1,0 +1,12 @@
+{
+  "number": 2595,
+  "title": "Test framework to subject codeblocks (yaml, shell) embedded in Asciidoc files to validations specified in Junit",
+  "author": "k-wall",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-18T17:37:52Z",
+  "state": "closed",
+  "merged": true
+}

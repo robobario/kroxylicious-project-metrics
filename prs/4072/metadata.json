@@ -1,0 +1,13 @@
+{
+  "number": 4072,
+  "title": "fix(operator): KafkaProxy secondary\u2192primary mappers read from primary cache",
+  "author": "SamBarker",
+  "labels": [
+    "kind/bug",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-05T03:07:51Z",
+  "state": "closed",
+  "merged": true
+}

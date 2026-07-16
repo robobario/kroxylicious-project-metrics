@@ -1,0 +1,10 @@
+{
+  "number": 2044,
+  "title": "Sonar job needs to be triggered by a workflow name, not a job name",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-04-11T07:58:06Z",
+  "state": "closed",
+  "merged": true
+}

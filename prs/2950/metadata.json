@@ -1,0 +1,10 @@
+{
+  "number": 2950,
+  "title": "Metadata request for empty topics are also idempotent",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-27T03:07:59Z",
+  "state": "closed",
+  "merged": true
+}

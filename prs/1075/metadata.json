@@ -1,0 +1,10 @@
+{
+  "number": 1075,
+  "title": "Fix topic creation for system tests",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-08T12:46:57Z",
+  "state": "closed",
+  "merged": true
+}

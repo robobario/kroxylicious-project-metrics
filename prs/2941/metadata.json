@@ -1,0 +1,12 @@
+{
+  "number": 2941,
+  "title": "[System Tests] Authorization Filter ST",
+  "author": "franvila",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-26T12:01:50Z",
+  "state": "closed",
+  "merged": true
+}

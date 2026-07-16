@@ -1,0 +1,12 @@
+{
+  "number": 442,
+  "title": "Bump builder-annotations from 0.100.0 to 0.100.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-07-10T03:21:38Z",
+  "state": "closed",
+  "merged": true
+}

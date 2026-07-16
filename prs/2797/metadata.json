@@ -1,0 +1,13 @@
+{
+  "number": 2797,
+  "title": "build(deps): bump org.assertj:assertj-core from 3.27.5 to 3.27.6",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-20T03:05:55Z",
+  "state": "closed",
+  "merged": true
+}

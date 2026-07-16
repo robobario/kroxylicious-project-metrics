@@ -1,0 +1,12 @@
+{
+  "number": 1980,
+  "title": "A kroxylicious-operator example that configures record-transformation",
+  "author": "k-wall",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-21T14:29:56Z",
+  "state": "closed",
+  "merged": true
+}

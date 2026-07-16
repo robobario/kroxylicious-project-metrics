@@ -1,0 +1,10 @@
+{
+  "number": 3468,
+  "title": "feat(krpc-plugin): krpc plugin enhancements to support entity isolation filter",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-03-12T17:04:18Z",
+  "state": "closed",
+  "merged": true
+}

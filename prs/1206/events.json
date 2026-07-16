@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-05-13T21:11:55Z",
+    "actor": "callaertanthony"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-05-17T03:57:48Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-03T09:18:31Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-03T10:31:59Z",
+    "actor": "callaertanthony"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-07-03T10:32:59Z",
+    "actor": null
+  }
+]

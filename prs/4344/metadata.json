@@ -1,0 +1,10 @@
+{
+  "number": 4344,
+  "title": "fix(docs): cache Strimzi manifest to avoid GitHub API rate limits in doc tests",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-13T00:43:15Z",
+  "state": "closed",
+  "merged": true
+}

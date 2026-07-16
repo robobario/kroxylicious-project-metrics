@@ -1,0 +1,12 @@
+{
+  "number": 3430,
+  "title": "refactor: use cache path exclusion to prevent kroxylicious artefacts ending up in the GH caches.",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-09T12:23:50Z",
+  "state": "closed",
+  "merged": true
+}

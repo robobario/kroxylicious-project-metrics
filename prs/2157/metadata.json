@@ -1,0 +1,13 @@
+{
+  "number": 2157,
+  "title": "Consume checksum from filters",
+  "author": "SamBarker",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-08T21:23:58Z",
+  "state": "closed",
+  "merged": true
+}

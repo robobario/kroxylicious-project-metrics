@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-01-05T04:03:48Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-01-05T04:09:34Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-01-12T20:41:47Z",
+    "actor": null
+  }
+]

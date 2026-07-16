@@ -1,0 +1,10 @@
+{
+  "number": 1616,
+  "title": "Fix throwable cause in RecordEncryptionFilter WARN-level logging when log level is set to DEBUG",
+  "author": "gracegrimwood",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-11-21T04:22:36Z",
+  "state": "closed",
+  "merged": false
+}

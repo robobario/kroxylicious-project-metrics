@@ -1,0 +1,13 @@
+{
+  "number": 2553,
+  "title": "Update sonatype docs",
+  "author": "robobario",
+  "labels": [
+    "documentation",
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-08T02:10:03Z",
+  "state": "closed",
+  "merged": false
+}

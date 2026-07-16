@@ -1,0 +1,12 @@
+{
+  "number": 3589,
+  "title": "Update dependabot to scan re-used actions",
+  "author": "robobario",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-02T03:38:23Z",
+  "state": "closed",
+  "merged": true
+}

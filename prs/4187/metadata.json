@@ -1,0 +1,13 @@
+{
+  "number": 4187,
+  "title": "build(deps): bump actions/cache from 5.0.5 to 6.0.0 in /.github/actions/common/cache-maven-packages",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-24T10:35:00Z",
+  "state": "closed",
+  "merged": true
+}

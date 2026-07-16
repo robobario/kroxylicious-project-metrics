@@ -1,0 +1,13 @@
+{
+  "number": 1587,
+  "title": "Bump org.asciidoctor:asciidoctor-maven-plugin from 3.0.0 to 3.1.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-11-06T21:41:22Z",
+  "state": "closed",
+  "merged": true
+}

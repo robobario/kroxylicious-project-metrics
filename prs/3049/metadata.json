@@ -1,0 +1,10 @@
+{
+  "number": 3049,
+  "title": "Topic name retriever return internal future on empty result",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-12-12T01:35:36Z",
+  "state": "closed",
+  "merged": false
+}

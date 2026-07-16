@@ -1,0 +1,10 @@
+{
+  "number": 3707,
+  "title": "fix: reduce cognitive complexity of ServiceBasedPluginFactoryRegistry#loadProviders (S3776)",
+  "author": "msalinas-se",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-13T17:24:32Z",
+  "state": "closed",
+  "merged": true
+}

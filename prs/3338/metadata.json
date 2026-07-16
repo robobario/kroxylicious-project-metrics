@@ -1,0 +1,13 @@
+{
+  "number": 3338,
+  "title": "build(deps): bump org.wiremock:wiremock from 3.13.1 to 3.13.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-23T03:34:24Z",
+  "state": "closed",
+  "merged": true
+}

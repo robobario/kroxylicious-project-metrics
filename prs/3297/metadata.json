@@ -1,0 +1,13 @@
+{
+  "number": 3297,
+  "title": "chore(deps): update docker.io/apache/kafka docker tag to v4.2.0",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-16T18:27:33Z",
+  "state": "closed",
+  "merged": false
+}

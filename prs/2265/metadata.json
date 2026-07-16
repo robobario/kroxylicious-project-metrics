@@ -1,0 +1,10 @@
+{
+  "number": 2265,
+  "title": "Restore operator docker build",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-04T04:44:26Z",
+  "state": "closed",
+  "merged": true
+}

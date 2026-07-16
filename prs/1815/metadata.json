@@ -1,0 +1,10 @@
+{
+  "number": 1815,
+  "title": "Fix robot command dispatcher so it can't talk to itself.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-02-13T14:34:21Z",
+  "state": "closed",
+  "merged": true
+}

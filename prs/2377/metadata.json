@@ -1,0 +1,10 @@
+{
+  "number": 2377,
+  "title": "Add a kroxylicious-operator-dist module. Fixes #2366",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-24T05:37:17Z",
+  "state": "closed",
+  "merged": true
+}

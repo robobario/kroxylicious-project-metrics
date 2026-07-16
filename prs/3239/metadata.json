@@ -1,0 +1,12 @@
+{
+  "number": 3239,
+  "title": "chore(deps): update localstack/localstack docker tag to v4.13.1",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-02T18:28:10Z",
+  "state": "closed",
+  "merged": true
+}

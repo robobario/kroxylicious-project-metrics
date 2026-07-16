@@ -1,0 +1,13 @@
+{
+  "number": 2164,
+  "title": "Fix #1873: Remove deprecated top-level configuration property filters",
+  "author": "k-wall",
+  "labels": [
+    "config/api",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-09T18:00:56Z",
+  "state": "closed",
+  "merged": true
+}

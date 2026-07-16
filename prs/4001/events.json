@@ -1,0 +1,62 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-05-21T15:31:32Z",
+    "actor": "devareddy05"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-05-21T15:31:33Z",
+    "actor": "devareddy05"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-05-22T15:49:51Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-22T15:51:02Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-22T15:51:30Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-22T17:33:28Z",
+    "actor": "devareddy05"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-05-22T17:33:40Z",
+    "actor": "devareddy05"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-26T16:33:27Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-26T16:54:26Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-05-26T16:55:35Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-05-26T20:42:27Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-05-26T20:42:29Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "number": 1504,
+  "title": "Bump org.apache.logging.log4j:log4j-bom from 2.23.1 to 2.24.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-09-09T03:48:57Z",
+  "state": "closed",
+  "merged": true
+}

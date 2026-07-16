@@ -1,0 +1,12 @@
+{
+  "number": 3246,
+  "title": "deps(kafka): upgrade to Kafka 4.2.0",
+  "author": "k-wall",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-03T14:40:19Z",
+  "state": "closed",
+  "merged": true
+}

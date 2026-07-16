@@ -1,0 +1,10 @@
+{
+  "number": 3645,
+  "title": "Fix ErrorProne `EffectivelyPrivate` warnings",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-09T00:23:40Z",
+  "state": "closed",
+  "merged": true
+}

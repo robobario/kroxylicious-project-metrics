@@ -1,0 +1,13 @@
+{
+  "number": 3165,
+  "title": "feat: add suffix-based Duration jackson serializer/deserializer",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "config/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-18T22:42:06Z",
+  "state": "closed",
+  "merged": true
+}

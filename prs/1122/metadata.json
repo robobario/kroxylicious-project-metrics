@@ -1,0 +1,10 @@
+{
+  "number": 1122,
+  "title": "Fix some typos in documentation",
+  "author": "luozhenyu",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-29T07:08:28Z",
+  "state": "closed",
+  "merged": true
+}

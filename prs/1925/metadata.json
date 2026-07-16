@@ -1,0 +1,13 @@
+{
+  "number": 1925,
+  "title": "Make minikube detection fail more quickly if minikube (etc) isn't available",
+  "author": "k-wall",
+  "labels": [
+    "test",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-12T12:44:45Z",
+  "state": "closed",
+  "merged": true
+}

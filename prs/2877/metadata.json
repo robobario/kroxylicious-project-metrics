@@ -1,0 +1,13 @@
+{
+  "number": 2877,
+  "title": "build(deps): bump asciidoctorj.version from 3.0.0 to 3.0.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-10T03:05:17Z",
+  "state": "closed",
+  "merged": true
+}

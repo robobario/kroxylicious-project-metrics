@@ -1,0 +1,12 @@
+{
+  "number": 835,
+  "title": "Fix: #827: Release process should update version number references in container image refs too",
+  "author": "k-wall",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-12-19T16:06:38Z",
+  "state": "closed",
+  "merged": true
+}

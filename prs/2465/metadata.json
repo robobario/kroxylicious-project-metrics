@@ -1,0 +1,10 @@
+{
+  "number": 2465,
+  "title": "fix: fix BrokerEndpointBinding comment error",
+  "author": "majialoong",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-21T17:22:47Z",
+  "state": "closed",
+  "merged": true
+}

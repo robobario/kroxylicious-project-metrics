@@ -1,0 +1,13 @@
+{
+  "number": 3242,
+  "title": "chore: remove deprecated template kek selector brace style",
+  "author": "robobario",
+  "labels": [
+    "filter/record-encryption",
+    "lifecycle/removal"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-03T00:01:03Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 696,
+  "title": "Initial work on an Envelope Encryption filter",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-10-25T02:14:43Z",
+  "state": "closed",
+  "merged": true
+}

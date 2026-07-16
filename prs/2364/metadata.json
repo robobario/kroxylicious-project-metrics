@@ -1,0 +1,10 @@
+{
+  "number": 2364,
+  "title": "Shuffle phase bindings so that artefacts are signed.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-23T03:23:11Z",
+  "state": "closed",
+  "merged": true
+}

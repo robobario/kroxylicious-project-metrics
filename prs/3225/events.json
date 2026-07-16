@@ -1,0 +1,77 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-01-30T14:30:29Z",
+    "actor": "henryZrncik"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-01-30T14:30:30Z",
+    "actor": "henryZrncik"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-01-30T15:00:56Z",
+    "actor": "henryZrncik"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-01-30T15:01:51Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-01-30T16:20:14Z",
+    "actor": "henryZrncik"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-01-30T16:26:29Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-01-30T19:11:59Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-01-30T19:25:19Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-01-30T19:31:30Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-01-30T23:30:35Z",
+    "actor": "henryZrncik"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-02-02T14:01:14Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-02-02T14:02:32Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-02-02T14:25:48Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-02-02T14:27:23Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-02-02T15:15:43Z",
+    "actor": null
+  }
+]

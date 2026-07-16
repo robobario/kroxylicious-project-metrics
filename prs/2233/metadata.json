@@ -1,0 +1,13 @@
+{
+  "number": 2233,
+  "title": "Prototype: Stable port allocation",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/highly-desirable"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-28T04:08:50Z",
+  "state": "closed",
+  "merged": false
+}

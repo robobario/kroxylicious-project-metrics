@@ -1,0 +1,10 @@
+{
+  "number": 2808,
+  "title": "fix(test): Skip IOUringIT if MemlockLimit isn't sufficient",
+  "author": "piotrpdev",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-21T22:36:39Z",
+  "state": "closed",
+  "merged": false
+}

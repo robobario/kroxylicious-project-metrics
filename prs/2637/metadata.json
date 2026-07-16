@@ -1,0 +1,13 @@
+{
+  "number": 2637,
+  "title": "build(deps): bump com.github.spotbugs:spotbugs-maven-plugin from 4.9.3.2 to 4.9.4.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-09-04T21:47:38Z",
+  "state": "closed",
+  "merged": true
+}

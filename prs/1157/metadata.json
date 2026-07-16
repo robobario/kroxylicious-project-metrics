@@ -1,0 +1,13 @@
+{
+  "number": 1157,
+  "title": "Bump bouncycastle.version from 1.78 to 1.78.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-04-22T03:39:32Z",
+  "state": "closed",
+  "merged": true
+}

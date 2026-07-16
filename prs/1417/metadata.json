@@ -1,0 +1,13 @@
+{
+  "number": 1417,
+  "title": "Extend JsonSchemaValidator to validate the schema id used by the producer matches the schema id configured at the proxy.",
+  "author": "k-wall",
+  "labels": [
+    "test",
+    "filter/record-validation"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-11T16:13:04Z",
+  "state": "closed",
+  "merged": true
+}

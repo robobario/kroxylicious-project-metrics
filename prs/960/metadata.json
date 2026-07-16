@@ -1,0 +1,10 @@
+{
+  "number": 960,
+  "title": "Update DEV_GUIDE and create Strimzi Namespace variable for downstream pipelines",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-02-07T11:38:51Z",
+  "state": "closed",
+  "merged": true
+}

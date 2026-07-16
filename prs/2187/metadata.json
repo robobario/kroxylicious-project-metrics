@@ -1,0 +1,13 @@
+{
+  "number": 2187,
+  "title": "Delete deprecated Tls constructor",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "lifecycle/deprecation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-15T04:25:12Z",
+  "state": "closed",
+  "merged": true
+}

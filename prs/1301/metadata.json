@@ -1,0 +1,13 @@
+{
+  "number": 1301,
+  "title": "Bump dawidd6/action-download-artifact from 3 to 5",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-06-10T03:21:13Z",
+  "state": "closed",
+  "merged": true
+}

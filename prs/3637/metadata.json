@@ -1,0 +1,10 @@
+{
+  "number": 3637,
+  "title": "fix: resolve MathAbsoluteNegative ErrorProne warnings",
+  "author": "reverb256",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-08T07:55:02Z",
+  "state": "closed",
+  "merged": false
+}

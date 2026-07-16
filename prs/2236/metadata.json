@@ -1,0 +1,13 @@
+{
+  "number": 2236,
+  "title": "Fix #2235: Avoid potential for NPE if virtual cluster defines TLS without trust anchor",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-28T13:41:11Z",
+  "state": "closed",
+  "merged": true
+}

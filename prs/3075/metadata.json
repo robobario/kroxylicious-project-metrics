@@ -1,0 +1,13 @@
+{
+  "number": 3075,
+  "title": "Docs: factor out key creation as a top-level section in the record encryption guide.",
+  "author": "k-wall",
+  "labels": [
+    "documentation",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-12-17T11:27:33Z",
+  "state": "closed",
+  "merged": true
+}

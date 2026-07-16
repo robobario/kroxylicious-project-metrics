@@ -1,0 +1,13 @@
+{
+  "number": 2841,
+  "title": "refactor: enable spotbugs everywhere",
+  "author": "piotrpdev",
+  "labels": [
+    "triaged",
+    "dev"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-29T12:56:07Z",
+  "state": "closed",
+  "merged": true
+}

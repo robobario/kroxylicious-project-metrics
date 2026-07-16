@@ -1,0 +1,10 @@
+{
+  "number": 2132,
+  "title": "Fix #2115 : ensure request path chains deferred opaque requests correctly",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-05-06T11:37:27Z",
+  "state": "closed",
+  "merged": true
+}

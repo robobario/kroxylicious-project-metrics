@@ -1,0 +1,12 @@
+{
+  "number": 175,
+  "title": "Bump freemarker from 2.3.31 to 2.3.32",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-03-06T04:15:30Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 1596,
+  "title": "operator: enable users to supply labels to Kroxylicious podTemplate",
+  "author": "robobario",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-11-11T03:53:43Z",
+  "state": "closed",
+  "merged": true
+}

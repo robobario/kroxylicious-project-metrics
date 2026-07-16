@@ -1,0 +1,16 @@
+{
+  "number": 3112,
+  "title": "Cache topic name lookups per Virtual Cluster (alternative)",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "config/api",
+    "prio/essential",
+    "observability",
+    "size/L"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-08T03:24:18Z",
+  "state": "closed",
+  "merged": true
+}

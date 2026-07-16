@@ -1,0 +1,13 @@
+{
+  "number": 3811,
+  "title": "docs(benchmarks): improve quickstart for upstream users",
+  "author": "SamBarker",
+  "labels": [
+    "documentation",
+    "performance"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-27T21:35:26Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 1326,
+  "title": "Bump org.apache.maven:maven-plugin-api from 3.9.7 to 3.9.8",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-06-24T03:54:35Z",
+  "state": "closed",
+  "merged": true
+}

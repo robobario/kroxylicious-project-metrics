@@ -1,0 +1,12 @@
+{
+  "number": 2733,
+  "title": "refactor(metrics): remove deprecated metrics",
+  "author": "k-wall",
+  "labels": [
+    "lifecycle/removal"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-10-03T12:16:15Z",
+  "state": "closed",
+  "merged": true
+}

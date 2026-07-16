@@ -1,0 +1,10 @@
+{
+  "number": 4230,
+  "title": "refactor(collections): use SequencedCollection accessors",
+  "author": "Decluttered",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-06-26T06:56:33Z",
+  "state": "closed",
+  "merged": false
+}

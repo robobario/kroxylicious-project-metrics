@@ -1,0 +1,10 @@
+{
+  "number": 3219,
+  "title": "docs(filters): illustrate and describe the filterRef array in the VKC resource",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-01-28T19:23:43Z",
+  "state": "closed",
+  "merged": true
+}

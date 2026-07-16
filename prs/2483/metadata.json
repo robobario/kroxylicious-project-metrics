@@ -1,0 +1,12 @@
+{
+  "number": 2483,
+  "title": "release: release workflow - only require release PR to be approved if actually promoting the release",
+  "author": "k-wall",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-25T09:07:06Z",
+  "state": "closed",
+  "merged": true
+}

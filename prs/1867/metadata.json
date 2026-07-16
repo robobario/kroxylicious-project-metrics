@@ -1,0 +1,13 @@
+{
+  "number": 1867,
+  "title": "Operator metrics",
+  "author": "SamBarker",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-27T23:22:25Z",
+  "state": "closed",
+  "merged": true
+}

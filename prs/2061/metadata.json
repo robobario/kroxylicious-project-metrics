@@ -1,0 +1,13 @@
+{
+  "number": 2061,
+  "title": "Put :kroxylicious-parent into Maven reactor to avoid CI error on pushes to main",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-15T12:27:49Z",
+  "state": "closed",
+  "merged": true
+}

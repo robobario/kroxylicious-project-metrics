@@ -1,0 +1,13 @@
+{
+  "number": 3926,
+  "title": "docs(admission): add wait step for KroxyliciousSidecarConfig Ready status",
+  "author": "robobario",
+  "labels": [
+    "documentation",
+    "kube/webhook"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-12T01:51:13Z",
+  "state": "closed",
+  "merged": true
+}

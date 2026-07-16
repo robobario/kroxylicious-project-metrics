@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-06-24T12:52:02Z",
+    "actor": "callaertanthony"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-24T13:30:24Z",
+    "actor": "callaertanthony"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-24T14:30:18Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-25T23:13:53Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-06-26T09:22:54Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-06-27T12:54:18Z",
+    "actor": null
+  }
+]

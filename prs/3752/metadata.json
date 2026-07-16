@@ -1,0 +1,10 @@
+{
+  "number": 3752,
+  "title": "chore: fix ProxyChannelStateMachine logging policy compliance",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-20T10:18:54Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-05-08T14:15:43Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-05-08T14:15:44Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-05-08T14:20:17Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2025-05-08T14:20:55Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-05-08T14:20:55Z",
+    "actor": "kroxylicious-robot"
+  }
+]

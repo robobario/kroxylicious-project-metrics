@@ -1,0 +1,10 @@
+{
+  "number": 1498,
+  "title": "Give KmsService lifecycle methods (initialize and close) (Take 2)",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-09-07T18:02:02Z",
+  "state": "closed",
+  "merged": true
+}

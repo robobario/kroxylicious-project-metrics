@@ -1,0 +1,10 @@
+{
+  "number": 366,
+  "title": "use `${kroxyliciousApi.version}` instead of the version.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-06-07T00:31:30Z",
+  "state": "closed",
+  "merged": true
+}

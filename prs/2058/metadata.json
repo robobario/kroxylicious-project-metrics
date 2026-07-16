@@ -1,0 +1,10 @@
+{
+  "number": 2058,
+  "title": "Add API for `KafkaService`'s `spec.tls`",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-04-15T02:13:07Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2914,
+  "title": "docs: document that HCP Vault Secrets free-tier is not supported",
+  "author": "k-wall",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-21T08:39:27Z",
+  "state": "closed",
+  "merged": true
+}

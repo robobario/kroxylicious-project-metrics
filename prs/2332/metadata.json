@@ -1,0 +1,13 @@
+{
+  "number": 2332,
+  "title": "Fix #2246 - Give Operator slightly more memory and raise the heap percentage.",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-17T14:24:46Z",
+  "state": "closed",
+  "merged": true
+}

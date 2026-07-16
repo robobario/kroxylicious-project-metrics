@@ -1,0 +1,13 @@
+{
+  "number": 1314,
+  "title": "Bump io.micrometer:micrometer-bom from 1.13.0 to 1.13.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-06-17T03:53:34Z",
+  "state": "closed",
+  "merged": true
+}

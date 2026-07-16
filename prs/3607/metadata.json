@@ -1,0 +1,10 @@
+{
+  "number": 3607,
+  "title": "fix (integration-test-support): SimpleMetric should parse scientific \u2026",
+  "author": "dvulpe",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-04T10:09:50Z",
+  "state": "closed",
+  "merged": true
+}

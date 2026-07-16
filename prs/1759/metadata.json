@@ -1,0 +1,13 @@
+{
+  "number": 1759,
+  "title": "Fix #1691: Remove hardcoded project version references from the Operator",
+  "author": "k-wall",
+  "labels": [
+    "dev/release",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-21T18:28:02Z",
+  "state": "closed",
+  "merged": true
+}

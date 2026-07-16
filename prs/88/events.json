@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-11-08T12:30:05Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-11-08T12:30:44Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-11-09T03:36:11Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-11-09T18:02:38Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-11-09T22:29:03Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2022-11-10T13:28:38Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "number": 1761,
+  "title": "SNI exposition: user can control advertised broker port",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "network",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-23T01:26:56Z",
+  "state": "closed",
+  "merged": true
+}

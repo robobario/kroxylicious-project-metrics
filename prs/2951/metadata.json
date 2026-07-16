@@ -1,0 +1,10 @@
+{
+  "number": 2951,
+  "title": "Allow SaslInspection to function as a barrier",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-27T03:22:26Z",
+  "state": "closed",
+  "merged": true
+}

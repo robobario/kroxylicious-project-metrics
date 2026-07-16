@@ -1,0 +1,13 @@
+{
+  "number": 2463,
+  "title": "build: Adopt Central Publishing Portal",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement",
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-07-21T09:26:26Z",
+  "state": "closed",
+  "merged": true
+}

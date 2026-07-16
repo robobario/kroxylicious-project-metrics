@@ -1,0 +1,10 @@
+{
+  "number": 1632,
+  "title": "Draft: Handle client apiversions ahead of proxy",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-11-27T02:22:28Z",
+  "state": "closed",
+  "merged": false
+}

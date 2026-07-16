@@ -1,0 +1,10 @@
+{
+  "number": 715,
+  "title": "Fix typo in DEV_GUIDE.md",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-11-12T19:34:43Z",
+  "state": "closed",
+  "merged": true
+}

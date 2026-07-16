@@ -1,0 +1,10 @@
+{
+  "number": 401,
+  "title": "Fix netty buffer leak on short-circuit response",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-06-22T01:46:46Z",
+  "state": "closed",
+  "merged": true
+}

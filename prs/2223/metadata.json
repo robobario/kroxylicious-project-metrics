@@ -1,0 +1,12 @@
+{
+  "number": 2223,
+  "title": "[System Tests] added test clients image env variable",
+  "author": "franvila",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-26T09:18:30Z",
+  "state": "closed",
+  "merged": true
+}

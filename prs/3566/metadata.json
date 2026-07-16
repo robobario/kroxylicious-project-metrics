@@ -1,0 +1,13 @@
+{
+  "number": 3566,
+  "title": "build(deps): bump actions/deploy-pages from 4.0.5 to 5.0.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-30T03:37:16Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 88,
+  "title": "Initial implementation of #74: SASL Authentication offload",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-11-08T12:30:05Z",
+  "state": "closed",
+  "merged": true
+}

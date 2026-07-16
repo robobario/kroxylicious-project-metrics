@@ -1,0 +1,13 @@
+{
+  "number": 2960,
+  "title": "Clean in flight state in authorization filter if request results in exception, or response fails to pop",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "filter/authorization"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-28T01:23:31Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 2063,
+  "title": "docs: Fix link to the kroxylicious-api module in developer's guide",
+  "author": "ArtturiSipila",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-15T16:07:44Z",
+  "state": "closed",
+  "merged": true
+}

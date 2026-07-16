@@ -1,0 +1,10 @@
+{
+  "number": 1125,
+  "title": "Cancel the timeout future when request is sent",
+  "author": "luozhenyu",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-04-01T08:02:06Z",
+  "state": "closed",
+  "merged": false
+}

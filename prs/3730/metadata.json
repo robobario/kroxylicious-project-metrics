@@ -1,0 +1,13 @@
+{
+  "number": 3730,
+  "title": "build(deps): bump actions/upload-artifact from 4.4.0 to 7.0.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-16T03:33:38Z",
+  "state": "closed",
+  "merged": true
+}

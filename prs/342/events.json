@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-05-29T04:03:08Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-29T21:10:46Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-05-29T21:35:13Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-29T21:35:13Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-29T21:35:16Z",
+    "actor": "dependabot[bot]"
+  }
+]

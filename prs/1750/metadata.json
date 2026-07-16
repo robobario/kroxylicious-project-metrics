@@ -1,0 +1,13 @@
+{
+  "number": 1750,
+  "title": "Bump renovatebot/github-action from 41.0.7 to 41.0.10",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-20T04:00:51Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 1699,
+  "title": "Operator docker documentation and scripting fixes",
+  "author": "robobario",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-06T02:00:11Z",
+  "state": "closed",
+  "merged": true
+}

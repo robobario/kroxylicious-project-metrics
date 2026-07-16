@@ -1,0 +1,10 @@
+{
+  "number": 1193,
+  "title": "re-use the secureRandom between invocations of Aes.paramSupplier.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-05-08T22:53:29Z",
+  "state": "closed",
+  "merged": true
+}

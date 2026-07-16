@@ -1,0 +1,10 @@
+{
+  "number": 253,
+  "title": "Use sundr builder annotation to build the config for the integration tests.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-04T14:57:24Z",
+  "state": "closed",
+  "merged": true
+}

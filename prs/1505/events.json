@@ -1,0 +1,97 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-09-10T09:09:21Z",
+    "actor": "showuon"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:13:39Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:26:02Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:34:18Z",
+    "actor": "showuon"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:36:13Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:37:45Z",
+    "actor": "showuon"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:38:05Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:50:48Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:51:12Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:51:51Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T09:53:31Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T10:29:29Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T10:49:03Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T21:08:39Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T21:09:42Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-10T21:43:14Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-09-10T22:08:53Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-09-10T22:09:07Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-11T08:01:21Z",
+    "actor": "k-wall"
+  }
+]

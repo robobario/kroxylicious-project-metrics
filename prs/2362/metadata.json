@@ -1,0 +1,10 @@
+{
+  "number": 2362,
+  "title": "disable docs rendering as part of release workflow",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-06-23T00:49:51Z",
+  "state": "closed",
+  "merged": true
+}

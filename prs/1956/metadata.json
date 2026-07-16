@@ -1,0 +1,12 @@
+{
+  "number": 1956,
+  "title": "Upgrade to Kafka 4.0.0",
+  "author": "k-wall",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-17T18:21:38Z",
+  "state": "closed",
+  "merged": true
+}

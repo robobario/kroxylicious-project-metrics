@@ -1,0 +1,14 @@
+{
+  "number": 1686,
+  "title": "Build and push SNAPSHOT operator images",
+  "author": "robobario",
+  "labels": [
+    "dev/maven",
+    "dev/github_actions",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-12-18T02:30:19Z",
+  "state": "closed",
+  "merged": true
+}

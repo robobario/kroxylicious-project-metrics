@@ -1,0 +1,13 @@
+{
+  "number": 4070,
+  "title": "fix(operator): KafkaService secondary\u2192primary mappers read from primary cache",
+  "author": "SamBarker",
+  "labels": [
+    "kind/bug",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-05T01:32:14Z",
+  "state": "closed",
+  "merged": true
+}

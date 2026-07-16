@@ -1,0 +1,10 @@
+{
+  "number": 3212,
+  "title": "Improve logging on auth fail conditions in Hashicorp Vault KMS provider",
+  "author": "tibisabau",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-01-27T21:32:28Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1783,
+  "title": "move strimzi-ci to tealc-ci",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-01-30T11:16:50Z",
+  "state": "closed",
+  "merged": true
+}

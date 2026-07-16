@@ -1,0 +1,10 @@
+{
+  "number": 1540,
+  "title": "Fix #1539: Rename TestKekManager#unwrapRuntimeException to better name and tighten parameters",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-10-01T13:42:22Z",
+  "state": "closed",
+  "merged": true
+}

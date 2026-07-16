@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-12-18T10:52:48Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-12-18T10:52:48Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-12-18T10:53:07Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-12-18T10:54:23Z",
+    "actor": "strimzi-ci"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-12-18T11:02:22Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-12-18T11:28:56Z",
+    "actor": "strimzi-ci"
+  }
+]

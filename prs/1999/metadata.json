@@ -1,0 +1,13 @@
+{
+  "number": 1999,
+  "title": "[Operator Reconciliation ITs] Run Operator under RBAC restrictions.",
+  "author": "k-wall",
+  "labels": [
+    "test",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-25T13:18:45Z",
+  "state": "closed",
+  "merged": true
+}

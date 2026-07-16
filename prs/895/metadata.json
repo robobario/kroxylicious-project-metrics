@@ -1,0 +1,10 @@
+{
+  "number": 895,
+  "title": "Ensure we execute deferred Filter methods on the eventloop",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-01-16T22:54:50Z",
+  "state": "closed",
+  "merged": true
+}

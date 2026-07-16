@@ -1,0 +1,10 @@
+{
+  "number": 3622,
+  "title": "Fix Sonar warnings: single method call in assertThatThrownBy lambdas (#3619)",
+  "author": "ZhangDT-sky",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-07T09:03:07Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1619,
+  "title": "Draft: POC support clients initiating with an ApiVersions request version higher than the proxy is aware of",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-11-21T22:16:34Z",
+  "state": "closed",
+  "merged": false
+}

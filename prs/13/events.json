@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-05-11T06:20:37Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2022-05-18T15:15:33Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2022-05-19T07:48:03Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-03-11T03:45:43Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

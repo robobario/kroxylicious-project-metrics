@@ -1,0 +1,10 @@
+{
+  "number": 730,
+  "title": "Exclude the upcoming systemtests module from coverage",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-11-22T00:45:24Z",
+  "state": "closed",
+  "merged": true
+}

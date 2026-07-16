@@ -1,0 +1,10 @@
+{
+  "number": 2926,
+  "title": "Fail fast if a client sends bytes for an unsupported apiVersion",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-11-24T04:15:53Z",
+  "state": "closed",
+  "merged": true
+}

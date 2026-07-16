@@ -1,0 +1,14 @@
+{
+  "number": 2673,
+  "title": "Upgrade to kafka 4.1.0",
+  "author": "robobario",
+  "labels": [
+    "dependencies",
+    "runtime",
+    "filter/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-09-16T21:27:35Z",
+  "state": "closed",
+  "merged": true
+}

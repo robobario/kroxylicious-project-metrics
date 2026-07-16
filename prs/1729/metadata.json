@@ -1,0 +1,12 @@
+{
+  "number": 1729,
+  "title": "Manually set RENOVATE_GIT_AUTHOR in renovate configuration",
+  "author": "k-wall",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-01-16T10:38:05Z",
+  "state": "closed",
+  "merged": true
+}

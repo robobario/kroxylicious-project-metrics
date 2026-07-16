@@ -1,0 +1,10 @@
+{
+  "number": 1496,
+  "title": "Remove the instance methods from KafkaProxyExceptionMapper",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-09-06T05:39:30Z",
+  "state": "closed",
+  "merged": false
+}

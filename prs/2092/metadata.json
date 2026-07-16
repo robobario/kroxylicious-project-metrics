@@ -1,0 +1,13 @@
+{
+  "number": 2092,
+  "title": "Consume referent checksum",
+  "author": "SamBarker",
+  "labels": [
+    "kind/enhancement",
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-04-23T05:33:10Z",
+  "state": "closed",
+  "merged": true
+}

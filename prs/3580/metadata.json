@@ -1,0 +1,12 @@
+{
+  "number": 3580,
+  "title": "chore(docs): Migrate the callouts to bullets",
+  "author": "k-wall",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-03-31T16:01:36Z",
+  "state": "closed",
+  "merged": true
+}

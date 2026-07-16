@@ -1,0 +1,10 @@
+{
+  "number": 3891,
+  "title": "ci(docker): fix aarch64 proxy image missing native Netty transport JARs",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-05-07T00:05:15Z",
+  "state": "closed",
+  "merged": true
+}

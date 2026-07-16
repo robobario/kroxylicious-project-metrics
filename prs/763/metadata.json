@@ -1,0 +1,10 @@
+{
+  "number": 763,
+  "title": "Make KMS responsible for encoding immutable kek id into edek",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-11-30T02:24:55Z",
+  "state": "closed",
+  "merged": true
+}

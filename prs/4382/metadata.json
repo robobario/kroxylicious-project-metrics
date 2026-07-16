@@ -1,0 +1,13 @@
+{
+  "number": 4382,
+  "title": "build(deps): bump com.github.spotbugs:spotbugs-annotations from 4.10.2 to 4.10.3",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-15T07:14:21Z",
+  "state": "open",
+  "merged": false
+}

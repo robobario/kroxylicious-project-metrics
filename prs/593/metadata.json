@@ -1,0 +1,10 @@
+{
+  "number": 593,
+  "title": "Tolerate multiple messages being read from client during connection",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-09-04T00:10:16Z",
+  "state": "closed",
+  "merged": true
+}

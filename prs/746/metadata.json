@@ -1,0 +1,10 @@
+{
+  "number": 746,
+  "title": "Modify tarLongFileMode to be able to create big assemblies",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-11-27T10:53:29Z",
+  "state": "closed",
+  "merged": true
+}

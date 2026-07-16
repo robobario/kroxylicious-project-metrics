@@ -1,0 +1,10 @@
+{
+  "number": 4389,
+  "title": "fix(docs): Replaced invalid @link block tags with @see and promoted invalid block tag warning to Error",
+  "author": "AdityaThakur1998",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-15T10:25:17Z",
+  "state": "closed",
+  "merged": true
+}

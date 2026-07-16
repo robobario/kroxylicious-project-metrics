@@ -1,0 +1,13 @@
+{
+  "number": 2611,
+  "title": "build(deps): bump com.fasterxml.jackson:jackson-bom from 2.19.1 to 2.19.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-08-25T05:55:12Z",
+  "state": "closed",
+  "merged": true
+}

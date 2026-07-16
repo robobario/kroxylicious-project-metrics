@@ -1,0 +1,10 @@
+{
+  "number": 3357,
+  "title": "fix(ci): repair Discover STs bash script in system-tests-merge workflow",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-02-25T03:51:12Z",
+  "state": "closed",
+  "merged": true
+}

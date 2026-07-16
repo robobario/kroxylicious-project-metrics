@@ -1,0 +1,13 @@
+{
+  "number": 2313,
+  "title": "CRD: Enable user to specify proxy container resources",
+  "author": "robobario",
+  "labels": [
+    "kube/operator",
+    "prio/essential"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-16T00:08:22Z",
+  "state": "closed",
+  "merged": true
+}

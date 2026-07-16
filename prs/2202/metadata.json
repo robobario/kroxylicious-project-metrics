@@ -1,0 +1,13 @@
+{
+  "number": 2202,
+  "title": "Bump io.sundr:builder-annotations from 0.200.3 to 0.200.4",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-05-19T03:09:43Z",
+  "state": "closed",
+  "merged": true
+}

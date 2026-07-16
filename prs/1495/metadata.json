@@ -1,0 +1,10 @@
+{
+  "number": 1495,
+  "title": "Ensure the state machine transitions to failed when closing in response to an exception",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-09-06T05:10:12Z",
+  "state": "closed",
+  "merged": false
+}

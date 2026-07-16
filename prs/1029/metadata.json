@@ -1,0 +1,13 @@
+{
+  "number": 1029,
+  "title": "Upgrade to Kafka 3.7.0",
+  "author": "k-wall",
+  "labels": [
+    "kind/enhancement",
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-02-21T11:20:28Z",
+  "state": "closed",
+  "merged": true
+}

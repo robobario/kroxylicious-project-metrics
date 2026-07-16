@@ -1,0 +1,13 @@
+{
+  "number": 3171,
+  "title": "build(deps): bump io.strimzi:api from 0.48.0 to 0.50.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-01-19T03:52:52Z",
+  "state": "closed",
+  "merged": true
+}

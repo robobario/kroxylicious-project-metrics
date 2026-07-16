@@ -1,0 +1,10 @@
+{
+  "number": 1196,
+  "title": "include the git sha of the current checkout in the perf test results",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-05-10T01:48:15Z",
+  "state": "closed",
+  "merged": true
+}

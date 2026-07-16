@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-06-09T11:54:01Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2022-06-09T11:54:06Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-06-09T11:56:35Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-06-09T12:18:08Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-06-09T15:29:56Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2022-06-09T15:30:25Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "number": 3848,
+  "title": "feat(benchmarks): workload improvements and profiling fixes",
+  "author": "SamBarker",
+  "labels": [
+    "kind/bug",
+    "kind/enhancement",
+    "performance"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-01T00:51:20Z",
+  "state": "closed",
+  "merged": true
+}

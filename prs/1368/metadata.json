@@ -1,0 +1,10 @@
+{
+  "number": 1368,
+  "title": "Enable local rendering of the asciidoc diagrams (such as a2s)",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-07-18T13:26:49Z",
+  "state": "closed",
+  "merged": true
+}

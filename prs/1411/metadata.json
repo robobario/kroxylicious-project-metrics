@@ -1,0 +1,13 @@
+{
+  "number": 1411,
+  "title": "record-encryption: document KEK rotation implications and config",
+  "author": "robobario",
+  "labels": [
+    "documentation",
+    "filter/record-encryption"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-09T00:14:51Z",
+  "state": "closed",
+  "merged": true
+}

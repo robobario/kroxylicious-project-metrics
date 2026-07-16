@@ -1,0 +1,10 @@
+{
+  "number": 157,
+  "title": "Fix maven warnings related to license and test properties.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-02-27T12:07:05Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,12 @@
+{
+  "number": 4174,
+  "title": "[ST] add logging of env variables used in run and log collection in case of failure outisde of test itself scope",
+  "author": "henryZrncik",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-22T21:25:33Z",
+  "state": "open",
+  "merged": false
+}

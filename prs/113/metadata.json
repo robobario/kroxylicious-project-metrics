@@ -1,0 +1,10 @@
+{
+  "number": 113,
+  "title": "build.directory is deprecated switch to project.build.directory",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-01-16T03:14:03Z",
+  "state": "closed",
+  "merged": true
+}

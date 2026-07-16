@@ -1,0 +1,10 @@
+{
+  "number": 443,
+  "title": "Obtain upstream ApiVersions when proxy is not SASL offloading",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-10T04:53:39Z",
+  "state": "closed",
+  "merged": true
+}

@@ -1,0 +1,14 @@
+{
+  "number": 3331,
+  "title": "fix(crd): make the spec object required across all the CRDs (except KafkaProxy).  KafkaProxy without specs are deprecated.",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "kube/operator",
+    "kube/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-02-19T15:02:36Z",
+  "state": "closed",
+  "merged": true
+}

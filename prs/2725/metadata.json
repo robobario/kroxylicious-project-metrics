@@ -1,0 +1,10 @@
+{
+  "number": 2725,
+  "title": "chore(renovate): add renovate rules for the dependencies used by the record encryption quickstart",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-10-02T13:20:15Z",
+  "state": "closed",
+  "merged": true
+}
