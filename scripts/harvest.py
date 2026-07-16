@@ -95,9 +95,19 @@ def extract_timeline_events(timeline):
             events.append({"type": "review_requested", "timestamp": item["created_at"], "actor": actor})
         elif event_type == "reviewed":
             user = (item.get("user") or {}).get("login")
-            events.append({"type": "reviewed", "timestamp": item["submitted_at"], "actor": user})
+            events.append({
+                "type": "reviewed",
+                "timestamp": item["submitted_at"],
+                "actor": user,
+                "author_association": item.get("author_association"),
+            })
         elif event_type == "commented":
-            events.append({"type": "comment", "timestamp": item["created_at"], "actor": actor})
+            events.append({
+                "type": "comment",
+                "timestamp": item["created_at"],
+                "actor": actor,
+                "author_association": item.get("author_association"),
+            })
     return events
 
 
