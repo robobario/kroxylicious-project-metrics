@@ -146,15 +146,9 @@ def test_extract_timeline_events_review_requested():
 
 
 def test_extract_timeline_events_reviewed():
-    timeline = [{"event": "reviewed", "submitted_at": "2024-01-13T14:00:00Z", "user": {"login": "dave"}, "state": "approved", "author_association": "MEMBER"}]
-    events = extract_timeline_events(timeline)
-    assert events[0] == {"type": "reviewed", "timestamp": "2024-01-13T14:00:00Z", "actor": "dave", "author_association": "MEMBER"}
-
-
-def test_extract_timeline_events_reviewed_no_association():
     timeline = [{"event": "reviewed", "submitted_at": "2024-01-13T14:00:00Z", "user": {"login": "dave"}, "state": "approved"}]
     events = extract_timeline_events(timeline)
-    assert events[0]["author_association"] is None
+    assert events[0] == {"type": "reviewed", "timestamp": "2024-01-13T14:00:00Z", "actor": "dave"}
 
 
 def test_extract_timeline_events_reviewed_pending_skipped():
@@ -164,21 +158,9 @@ def test_extract_timeline_events_reviewed_pending_skipped():
 
 
 def test_extract_timeline_events_comment():
-    timeline = [{"event": "commented", "created_at": "2024-01-11T11:00:00Z", "actor": {"login": "eve"}, "author_association": "CONTRIBUTOR"}]
-    events = extract_timeline_events(timeline)
-    assert events[0] == {"type": "comment", "timestamp": "2024-01-11T11:00:00Z", "actor": "eve", "author_association": "CONTRIBUTOR"}
-
-
-def test_extract_timeline_events_comment_member():
-    timeline = [{"event": "commented", "created_at": "2024-01-11T11:00:00Z", "actor": {"login": "maintainer"}, "author_association": "MEMBER"}]
-    events = extract_timeline_events(timeline)
-    assert events[0]["author_association"] == "MEMBER"
-
-
-def test_extract_timeline_events_comment_no_association():
     timeline = [{"event": "commented", "created_at": "2024-01-11T11:00:00Z", "actor": {"login": "eve"}}]
     events = extract_timeline_events(timeline)
-    assert events[0]["author_association"] is None
+    assert events[0] == {"type": "comment", "timestamp": "2024-01-11T11:00:00Z", "actor": "eve"}
 
 
 def test_extract_timeline_events_skips_unknown():

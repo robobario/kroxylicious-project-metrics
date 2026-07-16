@@ -11,8 +11,6 @@ from pathlib import Path
 
 UTC = timezone.utc
 
-COMMITTER_ASSOCIATIONS = frozenset({"MEMBER", "OWNER"})
-
 HIST_BUCKETS = [
     (0,   1,          "<1d"),
     (1,   3,          "1-3d"),
@@ -221,8 +219,19 @@ def histogram(days_list):
     return labels, counts
 
 
-def time_to_engagement_days(events):
-    """Returns days from created to first MEMBER/OWNER comment or review, or None."""
+def load_committers(path):
+    """Returns frozenset of committer GitHub usernames from a plain text file."""
+    if not path.exists():
+        return frozenset()
+    return frozenset(
+        line.strip()
+        for line in path.read_text().splitlines()
+        if line.strip() and not line.startswith("#")
+    )
+
+
+def time_to_engagement_days(events, committers):
+    """Returns days from created to first committer comment or review, or None."""
     created = None
     for e in events:
         if e["type"] == "created" and created is None:
@@ -231,7 +240,7 @@ def time_to_engagement_days(events):
         if (
             created is not None
             and e["type"] in ("reviewed", "comment")
-            and e.get("author_association") in COMMITTER_ASSOCIATIONS
+            and e.get("actor") in committers
         ):
             return (_parse_ts(e["timestamp"]) - created).total_seconds() / 86400
     return None
@@ -286,7 +295,7 @@ def compute_stats(resolved):
     }
 
 
-def load_resolved(data_dir):
+def load_resolved(data_dir, committers=frozenset()):
     resolved = []
     prs_dir = data_dir / "prs"
     if not prs_dir.exists():
@@ -304,7 +313,7 @@ def load_resolved(data_dir):
         if metadata_path.exists():
             metadata = json.loads(metadata_path.read_text())
             is_ftc = metadata.get("author_association") == "FIRST_TIME_CONTRIBUTOR"
-        engagement = time_to_engagement_days(events)
+        engagement = time_to_engagement_days(events, committers)
         resolved.append((*result, is_ftc, engagement))
     return resolved
 
@@ -351,8 +360,8 @@ def render_html(stats, generated_at):
     )
 
 
-def build_site(data_dir, site_dir, generated_at):
-    resolved = load_resolved(data_dir)
+def build_site(data_dir, site_dir, generated_at, committers=frozenset()):
+    resolved = load_resolved(data_dir, committers)
     stats = compute_stats(resolved)
     html = render_html(stats, generated_at)
     site_dir.mkdir(parents=True, exist_ok=True)
@@ -363,8 +372,10 @@ def build_site(data_dir, site_dir, generated_at):
 def main():
     data_dir = Path(os.environ.get("DATA_DIR", "data"))
     site_dir = Path(os.environ.get("SITE_DIR", "site"))
+    committers_file = Path(os.environ.get("COMMITTERS_FILE", "committers.txt"))
     generated_at = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
-    stats = build_site(data_dir, site_dir, generated_at)
+    committers = load_committers(committers_file)
+    stats = build_site(data_dir, site_dir, generated_at, committers)
     print(f"Site built. {stats['total_resolved']} resolved PRs. Median: {stats['median_days']} days. FTC: {stats['ftc_count']} ({stats['ftc_pct']}%).")
 
 

@@ -100,9 +100,6 @@ def lint_events(path, data):
             violations.append(f"{loc}: invalid type '{event['type']}'")
         if "actor" not in event:
             violations.append(f"{loc}: missing 'actor'")
-        aa = event.get("author_association")
-        if aa is not None and aa not in VALID_AUTHOR_ASSOCIATIONS:
-            violations.append(f"{loc}: 'author_association' has unrecognised value '{aa}'")
         if "timestamp" not in event:
             violations.append(f"{loc}: missing 'timestamp'")
         else:

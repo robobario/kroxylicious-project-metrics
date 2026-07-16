@@ -1,0 +1,10 @@
+# Kroxylicious Committers — GitHub usernames
+# One username per line. Lines starting with # are ignored.
+# Keep in sync with https://github.com/kroxylicious/kroxylicious/blob/main/COMMITTERS.md
+tombentley
+robobario
+SamBarker
+gracegrimwood
+k-wall
+franvila
+PaulRMellor
