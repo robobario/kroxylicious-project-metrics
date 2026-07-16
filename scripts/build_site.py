@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read harvested PR data, compute statistics, and emit site/index.html."""
 
+import html as html_lib
 import json
 import os
 import statistics
@@ -118,6 +119,19 @@ _HTML = """\
     }
     .chart-wrap { position: relative; height: 320px; }
     .no-data { color: var(--ink-m); font-size: 0.9rem; padding: 1rem 0; }
+    .pr-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .pr-table th { text-align: left; padding: 0.5rem 0.75rem; color: var(--ink-m); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--grid); }
+    .pr-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--grid); vertical-align: middle; }
+    .pr-table td.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); white-space: nowrap; }
+    .pr-table tr:last-child td { border-bottom: none; }
+    .pr-table a { color: var(--ink-1); text-decoration: none; }
+    .pr-table a:hover { text-decoration: underline; }
+    .age-fresh    { background: rgba(0,131,0,0.06); }
+    .age-moderate { background: rgba(237,161,0,0.08); }
+    .age-old      { background: rgba(235,104,52,0.10); }
+    .age-stale    { background: rgba(227,73,72,0.12); }
+    .legend { font-size: 0.75rem; color: var(--ink-m); margin-top: 1rem; display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 0.3rem; }
   </style>
 </head>
 <body>
@@ -127,6 +141,7 @@ _HTML = """\
   <nav class="tabs">
     <button class="tab-btn active" data-tab="recent">Last 3 months</button>
     <button class="tab-btn" data-tab="alltime">All time</button>
+    <button class="tab-btn" data-tab="open">Open PRs</button>
   </nav>
 
   <div id="tab-recent" class="tab-panel active">
@@ -135,6 +150,10 @@ _HTML = """\
 
   <div id="tab-alltime" class="tab-panel">
     __ALL_CONTENT__
+  </div>
+
+  <div id="tab-open" class="tab-panel">
+    __OPEN_PRS_CONTENT__
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
@@ -208,6 +227,17 @@ def histogram(days_list):
                 break
     labels = [label for _, _, label in HIST_BUCKETS]
     return labels, counts
+
+
+def load_committers(path):
+    """Returns frozenset of committer GitHub usernames from a plain text file."""
+    if not path.exists():
+        return frozenset()
+    return frozenset(
+        line.strip()
+        for line in path.read_text().splitlines()
+        if line.strip() and not line.startswith("#")
+    )
 
 
 def time_to_engagement_days(events):
@@ -432,6 +462,112 @@ def _fmt(v):
     return "—" if v is None else f"{v}d"
 
 
+def _age_class(age_days):
+    if age_days < 7:
+        return "age-fresh"
+    elif age_days < 30:
+        return "age-moderate"
+    elif age_days < 90:
+        return "age-old"
+    return "age-stale"
+
+
+def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
+    """Returns open PRs sorted oldest-first, each as a dict."""
+    open_prs = []
+    prs_dir = data_dir / "prs"
+    if not prs_dir.exists():
+        return open_prs
+    for pr_dir in sorted(prs_dir.iterdir()):
+        metadata_path = pr_dir / "metadata.json"
+        events_path   = pr_dir / "events.json"
+        if not metadata_path.exists():
+            continue
+        try:
+            meta = json.loads(metadata_path.read_text())
+        except json.JSONDecodeError:
+            continue
+        if meta.get("state") != "open":
+            continue
+        try:
+            pr_number = int(pr_dir.name)
+        except ValueError:
+            continue
+        created_at = meta.get("created_at", "")
+        if not created_at:
+            continue
+        events = []
+        if events_path.exists():
+            try:
+                events = json.loads(events_path.read_text())
+            except json.JSONDecodeError:
+                pass
+        author = meta.get("author", "")
+        age_days = (now_dt - _parse_ts(created_at)).total_seconds() / 86400
+        is_bot = author.endswith("[bot]")
+        is_ftc = pr_number in ftc_pr_numbers
+        is_committer = (author in committers) and not is_bot
+        engagement_days = time_to_engagement_days(events)
+        open_prs.append({
+            "number":         pr_number,
+            "title":          meta.get("title", ""),
+            "author":         author,
+            "age_days":       round(age_days, 1),
+            "is_bot":         is_bot,
+            "is_ftc":         is_ftc,
+            "is_committer":   is_committer,
+            "engagement_days": engagement_days,
+        })
+    open_prs.sort(key=lambda p: p["age_days"], reverse=True)
+    return open_prs
+
+
+def _open_prs_html(open_prs, pr_base_url):
+    if not open_prs:
+        return '<p class="no-data">No open PRs found in harvested data.</p>'
+
+    rows = []
+    for pr in open_prs:
+        badges = []
+        if pr["is_bot"]:
+            badges.append("🤖")
+        else:
+            if pr["is_ftc"]:
+                badges.append("🌱")
+            elif not pr["is_committer"]:
+                badges.append("👤")
+        if pr["engagement_days"] is None:
+            badges.append("👀")
+
+        badge_str = (" " + " ".join(badges)) if badges else ""
+        title = html_lib.escape(pr["title"])
+        url = f"{pr_base_url}/pull/{pr['number']}" if pr_base_url else "#"
+        eng_str = _fmt(round(pr["engagement_days"], 1)) if pr["engagement_days"] is not None else "—"
+
+        rows.append(
+            f'<tr class="{_age_class(pr["age_days"])}">'
+            f'<td><a href="{url}">#{pr["number"]}{badge_str}</a> {title}</td>'
+            f'<td class="num">{_fmt(pr["age_days"])}</td>'
+            f'<td class="num">{eng_str}</td>'
+            f'</tr>'
+        )
+
+    legend = (
+        '<div class="legend">'
+        '<span class="legend-item">🌱 first-time contributor</span>'
+        '<span class="legend-item">👤 non-committer</span>'
+        '<span class="legend-item">🤖 bot</span>'
+        '<span class="legend-item">👀 no engagement yet</span>'
+        '</div>'
+    )
+    return (
+        '<table class="pr-table">'
+        '<thead><tr><th>PR</th><th>Open for</th><th>First engagement</th></tr></thead>'
+        '<tbody>' + "".join(rows) + '</tbody>'
+        '</table>' + legend
+    )
+
+
 def _stat_group_html(label, dist, color_class, pr_base_url=None):
     parts = []
     for name, key in [("Median", "median"), ("Mean", "mean"), ("p95", "p95"), ("p99", "p99"), ("Max", "max")]:
@@ -533,7 +669,7 @@ def _tab_content_html(stats, hist_title, res_trend_title, eng_trend_title,
     )
 
 
-def render_html(all_stats, recent_stats, generated_at, pr_base_url=None):
+def render_html(all_stats, recent_stats, generated_at, pr_base_url=None, open_prs=None):
     recent_hist_id      = "hist-recent"
     recent_trend_id     = "trend-recent"
     recent_eng_trend_id = "eng-trend-recent"
@@ -573,16 +709,19 @@ def render_html(all_stats, recent_stats, generated_at, pr_base_url=None):
         f" else if (name === 'alltime') {{ {all_js} }}"
     )
 
+    open_prs_content = _open_prs_html(open_prs or [], pr_base_url)
+
     return (
         _HTML
         .replace("__GENERATED_AT__", generated_at)
         .replace("__RECENT_CONTENT__", recent_content)
         .replace("__ALL_CONTENT__", all_content)
+        .replace("__OPEN_PRS_CONTENT__", open_prs_content)
         .replace("__CHART_JS__", chart_js)
     )
 
 
-def build_site(data_dir, site_dir, generated_at, pr_base_url=None):
+def build_site(data_dir, site_dir, generated_at, pr_base_url=None, committers=frozenset()):
     resolved = load_resolved(data_dir)
     recent_cutoff = datetime.now(UTC) - timedelta(days=RECENT_DAYS)
     recent_resolved = filter_resolved_since(resolved, recent_cutoff)
@@ -590,20 +729,26 @@ def build_site(data_dir, site_dir, generated_at, pr_base_url=None):
     all_stats    = compute_stats(resolved,        monthly_stats_trend, monthly_engagement_trend)
     recent_stats = compute_stats(recent_resolved, weekly_stats_trend,   weekly_engagement_trend)
 
-    html = render_html(all_stats, recent_stats, generated_at, pr_base_url)
+    ftc_pr_numbers = compute_ftc_pr_numbers(data_dir)
+    now_dt = datetime.now(UTC)
+    open_prs = load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt)
+
+    html = render_html(all_stats, recent_stats, generated_at, pr_base_url, open_prs)
     site_dir.mkdir(parents=True, exist_ok=True)
     (site_dir / "index.html").write_text(html)
-    return {"all": all_stats, "recent": recent_stats}
+    return {"all": all_stats, "recent": recent_stats, "open_prs": open_prs}
 
 
 def main():
     data_dir = Path(os.environ.get("DATA_DIR", "data"))
     site_dir = Path(os.environ.get("SITE_DIR", "site"))
+    committers_file = Path(os.environ.get("COMMITTERS_FILE", "committers.txt"))
     owner = os.environ.get("GITHUB_OWNER", "kroxylicious")
     repo  = os.environ.get("GITHUB_REPO",  "kroxylicious")
     pr_base_url = f"https://github.com/{owner}/{repo}"
     generated_at = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
-    stats = build_site(data_dir, site_dir, generated_at, pr_base_url)
+    committers = load_committers(committers_file)
+    stats = build_site(data_dir, site_dir, generated_at, pr_base_url, committers)
     a = stats["all"]
     r = stats["recent"]
     print(
