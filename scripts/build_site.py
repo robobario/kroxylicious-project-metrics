@@ -39,6 +39,7 @@ _HTML = """\
       --grid:      #e1e0d9;
       --s1:        #2a78d6;
       --s2:        #008300;
+      --s3:        #eb6834;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -50,6 +51,7 @@ _HTML = """\
         --grid:      #2c2c2a;
         --s1:        #3987e5;
         --s2:        #008300;
+        --s3:        #d95926;
       }
     }
     *, *::before, *::after { box-sizing: border-box; }
@@ -89,9 +91,18 @@ _HTML = """\
     }
     .kpi-value { font-size: 3rem; font-weight: 700; line-height: 1; color: var(--s1); margin-bottom: 0.5rem; }
     .kpi-value.ftc { color: var(--s2); }
-    .kpi-value.engagement { color: var(--ink-2); }
     .kpi-label { font-size: 0.9rem; font-weight: 600; color: var(--ink-2); }
     .kpi-sub   { font-size: 0.8rem; color: var(--ink-m); margin-top: 0.25rem; }
+    .stat-group { background: var(--surface-1); border: 1px solid var(--grid); border-radius: 8px; padding: 1.25rem 1.5rem; flex: 1; min-width: 260px; }
+    .stat-group-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+    .stat-group--resolution .stat-group-label,
+    .stat-group--resolution .stat-value { color: var(--s1); }
+    .stat-group--engagement .stat-group-label,
+    .stat-group--engagement .stat-value { color: var(--s3); }
+    .stat-row { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .stat { display: flex; flex-direction: column; gap: 0.2rem; min-width: 52px; }
+    .stat-name  { font-size: 0.7rem; color: var(--ink-m); }
+    .stat-value { font-size: 1.5rem; font-weight: 700; line-height: 1; }
     .panel {
       background: var(--surface-1);
       border: 1px solid var(--grid);
@@ -265,6 +276,27 @@ def filter_resolved_since(resolved, since_dt):
     return [item for item in resolved if item[0] >= since_dt]
 
 
+def _percentile(sorted_vals, p):
+    n = len(sorted_vals)
+    idx = p / 100 * (n - 1)
+    lo = int(idx)
+    hi = min(lo + 1, n - 1)
+    return round(sorted_vals[lo] + (idx - lo) * (sorted_vals[hi] - sorted_vals[lo]), 1)
+
+
+def _dist_stats(values):
+    if not values:
+        return {"median": None, "mean": None, "p95": None, "p99": None, "max": None}
+    sv = sorted(values)
+    return {
+        "median": round(statistics.median(values), 1),
+        "mean":   round(sum(values) / len(values), 1),
+        "p95":    _percentile(sv, 95),
+        "p99":    _percentile(sv, 99),
+        "max":    round(max(values), 1),
+    }
+
+
 def compute_stats(resolved, trend_fn=None):
     if trend_fn is None:
         trend_fn = monthly_medians_by_group
@@ -273,8 +305,6 @@ def compute_stats(resolved, trend_fn=None):
     engagement_times = [e for _, _, _, e in resolved if e is not None]
     total = len(resolved)
 
-    median = round(statistics.median(all_days), 1) if all_days else None
-    median_engagement = round(statistics.median(engagement_times), 1) if engagement_times else None
     hist_labels, hist_counts = histogram(all_days)
     trend_labels, trend_ftc_medians, trend_non_ftc_medians = trend_fn(resolved)
 
@@ -282,8 +312,8 @@ def compute_stats(resolved, trend_fn=None):
         "total_resolved": total,
         "ftc_count": ftc_count,
         "ftc_pct": round(100 * ftc_count / total) if total else 0,
-        "median_days": median,
-        "median_engagement_days": median_engagement,
+        "resolution": _dist_stats(all_days),
+        "engagement": _dist_stats(engagement_times),
         "hist_labels": hist_labels,
         "hist_counts": hist_counts,
         "trend_labels": trend_labels,
@@ -339,24 +369,42 @@ def load_resolved(data_dir, committers=frozenset()):
     return resolved
 
 
-def _kpi_row_html(stats):
-    median = stats["median_days"]
-    engagement = stats["median_engagement_days"]
+def _fmt(v):
+    return "—" if v is None else f"{v}d"
+
+
+def _stat_group_html(label, dist, color_class):
+    stats_html = "".join(
+        f'<div class="stat"><span class="stat-name">{name}</span>'
+        f'<span class="stat-value">{_fmt(dist[key])}</span></div>'
+        for name, key in [
+            ("Median", "median"), ("Mean", "mean"),
+            ("p95", "p95"), ("p99", "p99"), ("Max", "max"),
+        ]
+    )
     return (
-        f'<div class="kpi-row">'
-        f'<div class="kpi"><div class="kpi-value">'
-        f'{"— " if median is None else f"{median} days"}'
-        f'</div><div class="kpi-label">Median time to resolution</div>'
-        f'<div class="kpi-sub">{stats["total_resolved"]} resolved PRs</div></div>'
-        f'<div class="kpi"><div class="kpi-value ftc">{stats["ftc_count"]}</div>'
-        f'<div class="kpi-label">First-time contributor PRs</div>'
-        f'<div class="kpi-sub">{stats["ftc_pct"]}% of resolved PRs</div></div>'
-        f'<div class="kpi"><div class="kpi-value engagement">'
-        f'{"—" if engagement is None else f"{engagement} days"}'
-        f'</div><div class="kpi-label">Median time to first Committer engagement</div>'
-        f'<div class="kpi-sub">member or owner</div></div>'
+        f'<div class="stat-group stat-group--{color_class}">'
+        f'<div class="stat-group-label">{label}</div>'
+        f'<div class="stat-row">{stats_html}</div>'
         f'</div>'
     )
+
+
+def _kpi_row_html(stats):
+    resolution_group = _stat_group_html(
+        "Time to resolution", stats["resolution"], "resolution"
+    )
+    ftc_tile = (
+        f'<div class="kpi">'
+        f'<div class="kpi-value ftc">{stats["ftc_count"]}</div>'
+        f'<div class="kpi-label">First-time contributor PRs</div>'
+        f'<div class="kpi-sub">{stats["ftc_pct"]}% of {stats["total_resolved"]} resolved</div>'
+        f'</div>'
+    )
+    engagement_group = _stat_group_html(
+        "Time to first Committer engagement", stats["engagement"], "engagement"
+    )
+    return f'<div class="kpi-row">{resolution_group}{ftc_tile}{engagement_group}</div>'
 
 
 def _chart_area_html(canvas_id, has_data):
