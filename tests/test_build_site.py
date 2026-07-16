@@ -6,12 +6,15 @@ import pytest
 from build_site import (
     compute_stats,
     histogram,
+    load_committers,
     monthly_medians_by_group,
     render_html,
     resolution_time_days,
     time_to_engagement_days,
     build_site,
 )
+
+COMMITTERS = frozenset({"maintainer", "k-wall"})
 
 UTC = timezone.utc
 
@@ -86,56 +89,56 @@ def test_resolution_time_days_sub_day():
 
 def _engagement_events(created, reviews=(), comments=()):
     evts = [{"type": "created", "timestamp": created, "actor": "alice"}]
-    for ts, assoc in reviews:
-        evts.append({"type": "reviewed", "timestamp": ts, "actor": "bob", "author_association": assoc})
-    for ts, assoc in comments:
-        evts.append({"type": "comment", "timestamp": ts, "actor": "carol", "author_association": assoc})
+    for ts, actor in reviews:
+        evts.append({"type": "reviewed", "timestamp": ts, "actor": actor})
+    for ts, actor in comments:
+        evts.append({"type": "comment", "timestamp": ts, "actor": actor})
     return sorted(evts, key=lambda e: e["timestamp"])
 
 
-def test_time_to_engagement_member_review():
+def test_time_to_engagement_committer_review():
     events = _engagement_events(
         "2024-01-10T10:00:00Z",
-        reviews=[("2024-01-12T10:00:00Z", "MEMBER")],
+        reviews=[("2024-01-12T10:00:00Z", "maintainer")],
     )
-    assert time_to_engagement_days(events) == pytest.approx(2.0)
+    assert time_to_engagement_days(events, COMMITTERS) == pytest.approx(2.0)
 
 
-def test_time_to_engagement_owner_comment():
+def test_time_to_engagement_committer_comment():
     events = _engagement_events(
         "2024-01-10T10:00:00Z",
-        comments=[("2024-01-11T10:00:00Z", "OWNER")],
+        comments=[("2024-01-11T10:00:00Z", "k-wall")],
     )
-    assert time_to_engagement_days(events) == pytest.approx(1.0)
+    assert time_to_engagement_days(events, COMMITTERS) == pytest.approx(1.0)
 
 
 def test_time_to_engagement_uses_first_qualifying():
     events = _engagement_events(
         "2024-01-10T10:00:00Z",
-        comments=[("2024-01-11T10:00:00Z", "OWNER"), ("2024-01-13T10:00:00Z", "MEMBER")],
+        comments=[("2024-01-11T10:00:00Z", "k-wall"), ("2024-01-13T10:00:00Z", "maintainer")],
     )
-    assert time_to_engagement_days(events) == pytest.approx(1.0)
+    assert time_to_engagement_days(events, COMMITTERS) == pytest.approx(1.0)
 
 
 def test_time_to_engagement_non_committer_ignored():
     events = _engagement_events(
         "2024-01-10T10:00:00Z",
-        reviews=[("2024-01-12T10:00:00Z", "CONTRIBUTOR")],
+        reviews=[("2024-01-12T10:00:00Z", "external-contributor")],
     )
-    assert time_to_engagement_days(events) is None
+    assert time_to_engagement_days(events, COMMITTERS) is None
 
 
 def test_time_to_engagement_no_reviews():
     events = _events("2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z")
-    assert time_to_engagement_days(events) is None
+    assert time_to_engagement_days(events, COMMITTERS) is None
 
 
-def test_time_to_engagement_null_association_ignored():
+def test_time_to_engagement_empty_committers():
     events = _engagement_events(
         "2024-01-10T10:00:00Z",
-        reviews=[("2024-01-12T10:00:00Z", None)],
+        reviews=[("2024-01-12T10:00:00Z", "maintainer")],
     )
-    assert time_to_engagement_days(events) is None
+    assert time_to_engagement_days(events, frozenset()) is None
 
 
 # --- histogram ---
@@ -347,8 +350,8 @@ def test_render_html_trend_chart_has_two_datasets():
 def _write_pr(pr_dir, created, closed_type, closed, assoc="CONTRIBUTOR", reviews=()):
     pr_dir.mkdir(parents=True, exist_ok=True)
     events = [{"type": "created", "timestamp": created, "actor": "alice"}]
-    for ts, rassoc in reviews:
-        events.append({"type": "reviewed", "timestamp": ts, "actor": "bob", "author_association": rassoc})
+    for ts, actor in reviews:
+        events.append({"type": "reviewed", "timestamp": ts, "actor": actor})
     events.append({"type": closed_type, "timestamp": closed, "actor": "bob"})
     events.sort(key=lambda e: e["timestamp"])
     (pr_dir / "events.json").write_text(json.dumps(events))
@@ -367,10 +370,20 @@ def test_build_site_engagement_computed(tmp_path):
     _write_pr(
         tmp_path / "prs" / "1",
         "2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z",
-        reviews=[("2024-01-12T10:00:00Z", "MEMBER")],
+        reviews=[("2024-01-12T10:00:00Z", "maintainer")],
     )
-    stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
+    stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z", COMMITTERS)
     assert stats["median_engagement_days"] == pytest.approx(2.0)
+
+
+def test_build_site_engagement_requires_committers(tmp_path):
+    _write_pr(
+        tmp_path / "prs" / "1",
+        "2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z",
+        reviews=[("2024-01-12T10:00:00Z", "maintainer")],
+    )
+    stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z", frozenset())
+    assert stats["median_engagement_days"] is None
 
 
 def test_build_site_ftc_counted(tmp_path):
@@ -402,3 +415,16 @@ def test_build_site_no_data(tmp_path):
     stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
     assert stats["total_resolved"] == 0
     assert "No resolved PRs" in (tmp_path / "site" / "index.html").read_text()
+
+
+# --- load_committers ---
+
+
+def test_load_committers_parses_usernames(tmp_path):
+    f = tmp_path / "committers.txt"
+    f.write_text("# comment\nalice\nbob\n\ncarol\n")
+    assert load_committers(f) == frozenset({"alice", "bob", "carol"})
+
+
+def test_load_committers_missing_file(tmp_path):
+    assert load_committers(tmp_path / "missing.txt") == frozenset()

@@ -101,19 +101,9 @@ def extract_timeline_events(timeline):
             if submitted_at is None:
                 continue
             user = (item.get("user") or {}).get("login")
-            events.append({
-                "type": "reviewed",
-                "timestamp": submitted_at,
-                "actor": user,
-                "author_association": item.get("author_association"),
-            })
+            events.append({"type": "reviewed", "timestamp": submitted_at, "actor": user})
         elif event_type == "commented":
-            events.append({
-                "type": "comment",
-                "timestamp": item["created_at"],
-                "actor": actor,
-                "author_association": item.get("author_association"),
-            })
+            events.append({"type": "comment", "timestamp": item["created_at"], "actor": actor})
     return events
 
 
