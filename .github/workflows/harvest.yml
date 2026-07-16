@@ -2,7 +2,7 @@ name: Harvest PR data
 
 on:
   schedule:
-    - cron: '17 */4 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
     inputs:
       full_rescrape:
