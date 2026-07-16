@@ -1,0 +1,11 @@
+[project]
+name = "kroxylicious-project-metrics"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-mock>=3.14", "responses>=0.25"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
