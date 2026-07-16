@@ -27,6 +27,7 @@ OPEN_PR = {
     "base": {"ref": "main"},
     "labels": [{"name": "enhancement"}],
     "author_association": "CONTRIBUTOR",
+    "draft": False,
     "created_at": "2024-01-10T10:00:00Z",
     "updated_at": "2024-01-15T12:00:00Z",
     "closed_at": None,
@@ -79,6 +80,16 @@ def test_extract_metadata_merged_pr():
 def test_extract_metadata_no_labels():
     meta = extract_metadata(CLOSED_UNMERGED_PR)
     assert meta["labels"] == []
+
+
+def test_extract_metadata_draft_captured():
+    meta = extract_metadata({**OPEN_PR, "draft": True})
+    assert meta["draft"] is True
+
+
+def test_extract_metadata_draft_defaults_false():
+    pr = {k: v for k, v in OPEN_PR.items() if k != "draft"}
+    assert extract_metadata(pr)["draft"] is False
 
 
 # --- extract_pr_events ---
