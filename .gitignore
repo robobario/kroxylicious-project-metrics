@@ -21,3 +21,6 @@ htmlcov/
 
 # Generated site output
 site/
+
+# PR data — lives in the _data branch, not main
+data/
