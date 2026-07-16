@@ -9,6 +9,7 @@ from build_site import (
     monthly_medians_by_group,
     render_html,
     resolution_time_days,
+    time_to_engagement_days,
     build_site,
 )
 
@@ -80,6 +81,63 @@ def test_resolution_time_days_sub_day():
     assert days == pytest.approx(0.5)
 
 
+# --- time_to_engagement_days ---
+
+
+def _engagement_events(created, reviews=(), comments=()):
+    evts = [{"type": "created", "timestamp": created, "actor": "alice"}]
+    for ts, assoc in reviews:
+        evts.append({"type": "reviewed", "timestamp": ts, "actor": "bob", "author_association": assoc})
+    for ts, assoc in comments:
+        evts.append({"type": "comment", "timestamp": ts, "actor": "carol", "author_association": assoc})
+    return sorted(evts, key=lambda e: e["timestamp"])
+
+
+def test_time_to_engagement_member_review():
+    events = _engagement_events(
+        "2024-01-10T10:00:00Z",
+        reviews=[("2024-01-12T10:00:00Z", "MEMBER")],
+    )
+    assert time_to_engagement_days(events) == pytest.approx(2.0)
+
+
+def test_time_to_engagement_owner_comment():
+    events = _engagement_events(
+        "2024-01-10T10:00:00Z",
+        comments=[("2024-01-11T10:00:00Z", "OWNER")],
+    )
+    assert time_to_engagement_days(events) == pytest.approx(1.0)
+
+
+def test_time_to_engagement_uses_first_qualifying():
+    events = _engagement_events(
+        "2024-01-10T10:00:00Z",
+        comments=[("2024-01-11T10:00:00Z", "OWNER"), ("2024-01-13T10:00:00Z", "MEMBER")],
+    )
+    assert time_to_engagement_days(events) == pytest.approx(1.0)
+
+
+def test_time_to_engagement_non_committer_ignored():
+    events = _engagement_events(
+        "2024-01-10T10:00:00Z",
+        reviews=[("2024-01-12T10:00:00Z", "CONTRIBUTOR")],
+    )
+    assert time_to_engagement_days(events) is None
+
+
+def test_time_to_engagement_no_reviews():
+    events = _events("2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z")
+    assert time_to_engagement_days(events) is None
+
+
+def test_time_to_engagement_null_association_ignored():
+    events = _engagement_events(
+        "2024-01-10T10:00:00Z",
+        reviews=[("2024-01-12T10:00:00Z", None)],
+    )
+    assert time_to_engagement_days(events) is None
+
+
 # --- histogram ---
 
 
@@ -117,8 +175,8 @@ def test_histogram_accumulates():
 
 def test_monthly_medians_by_group_single_month_mixed():
     resolved = [
-        (datetime(2024, 1, 10, tzinfo=UTC), 5.0, False),
-        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True),
+        (datetime(2024, 1, 10, tzinfo=UTC), 5.0, False, None),
+        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True,  1.0),
     ]
     months, ftc, non_ftc = monthly_medians_by_group(resolved)
     assert months == ["2024-01"]
@@ -128,9 +186,9 @@ def test_monthly_medians_by_group_single_month_mixed():
 
 def test_monthly_medians_by_group_ftc_absent_in_month():
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 4.0, False),
-        (datetime(2024, 2, 10, tzinfo=UTC), 6.0, False),
-        (datetime(2024, 2, 20, tzinfo=UTC), 2.0, True),
+        (datetime(2024, 1, 15, tzinfo=UTC), 4.0, False, None),
+        (datetime(2024, 2, 10, tzinfo=UTC), 6.0, False, 2.0),
+        (datetime(2024, 2, 20, tzinfo=UTC), 2.0, True,  0.5),
     ]
     months, ftc, non_ftc = monthly_medians_by_group(resolved)
     assert months == ["2024-01", "2024-02"]
@@ -140,8 +198,8 @@ def test_monthly_medians_by_group_ftc_absent_in_month():
 
 def test_monthly_medians_by_group_sorted():
     resolved = [
-        (datetime(2024, 3, 1, tzinfo=UTC), 2.0, False),
-        (datetime(2024, 1, 1, tzinfo=UTC), 1.0, True),
+        (datetime(2024, 3, 1, tzinfo=UTC), 2.0, False, None),
+        (datetime(2024, 1, 1, tzinfo=UTC), 1.0, True,  None),
     ]
     months, _, _ = monthly_medians_by_group(resolved)
     assert months == ["2024-01", "2024-03"]
@@ -152,7 +210,7 @@ def test_monthly_medians_by_group_empty():
 
 
 def test_monthly_medians_by_group_ftc_only():
-    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 7.0, True)]
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 7.0, True, 1.5)]
     months, ftc, non_ftc = monthly_medians_by_group(resolved)
     assert months == ["2024-01"]
     assert ftc == [7.0]
@@ -166,6 +224,7 @@ def test_compute_stats_empty():
     stats = compute_stats([])
     assert stats["total_resolved"] == 0
     assert stats["median_days"] is None
+    assert stats["median_engagement_days"] is None
     assert stats["ftc_count"] == 0
     assert stats["ftc_pct"] == 0
     assert all(c == 0 for c in stats["hist_counts"])
@@ -174,21 +233,28 @@ def test_compute_stats_empty():
 
 def test_compute_stats_with_data():
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False),
-        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True),
-        (datetime(2024, 2, 5, tzinfo=UTC), 10.0, False),
+        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, 1.0),
+        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True,  None),
+        (datetime(2024, 2, 5,  tzinfo=UTC), 10.0, False, 2.0),
     ]
     stats = compute_stats(resolved)
     assert stats["total_resolved"] == 3
     assert stats["median_days"] == 5.0
     assert stats["ftc_count"] == 1
     assert stats["ftc_pct"] == 33
+    assert stats["median_engagement_days"] == 1.5
     assert len(stats["hist_labels"]) == 7
     assert len(stats["trend_months"]) == 2
 
 
+def test_compute_stats_no_engagement():
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None)]
+    stats = compute_stats(resolved)
+    assert stats["median_engagement_days"] is None
+
+
 def test_compute_stats_all_ftc():
-    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 4.0, True)]
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 4.0, True, 0.5)]
     stats = compute_stats(resolved)
     assert stats["ftc_count"] == 1
     assert stats["ftc_pct"] == 100
@@ -197,14 +263,15 @@ def test_compute_stats_all_ftc():
 # --- render_html ---
 
 
-def _stats(median=5.0, total=10, ftc_count=2, hist_counts=None,
-           trend_months=None, trend_ftc=None, trend_non_ftc=None):
+def _stats(median=5.0, total=10, ftc_count=2, engagement=3.0,
+           hist_counts=None, trend_months=None, trend_ftc=None, trend_non_ftc=None):
     labels = ["<1d", "1-3d", "3-7d", "7-14d", "14-30d", "30-60d", "60d+"]
     return {
         "median_days": median,
         "total_resolved": total,
         "ftc_count": ftc_count,
         "ftc_pct": round(100 * ftc_count / total) if total else 0,
+        "median_engagement_days": engagement,
         "hist_labels": labels,
         "hist_counts": hist_counts or [0, 2, 5, 2, 1, 0, 0],
         "trend_months": trend_months or ["2024-01", "2024-02"],
@@ -216,6 +283,16 @@ def _stats(median=5.0, total=10, ftc_count=2, hist_counts=None,
 def test_render_html_shows_median():
     html = render_html(_stats(median=7.5), "2024-01-15T12:00:00Z")
     assert "7.5 days" in html
+
+
+def test_render_html_shows_engagement():
+    html = render_html(_stats(engagement=2.5), "2024-01-15T12:00:00Z")
+    assert "2.5 days" in html
+
+
+def test_render_html_shows_engagement_dash_when_none():
+    html = render_html(_stats(engagement=None), "2024-01-15T12:00:00Z")
+    assert "Committer engagement" in html
 
 
 def test_render_html_shows_resolved_count():
@@ -235,8 +312,8 @@ def test_render_html_shows_generated_at():
 
 def test_render_html_no_data_shows_placeholder():
     html = render_html(
-        _stats(median=None, total=0, ftc_count=0, hist_counts=[0]*7,
-               trend_months=[], trend_ftc=[], trend_non_ftc=[]),
+        _stats(median=None, total=0, ftc_count=0, engagement=None,
+               hist_counts=[0]*7, trend_months=[], trend_ftc=[], trend_non_ftc=[]),
         "2024-01-15T12:00:00Z",
     )
     assert "No resolved PRs" in html
@@ -267,36 +344,43 @@ def test_render_html_trend_chart_has_two_datasets():
 # --- build_site (integration) ---
 
 
+def _write_pr(pr_dir, created, closed_type, closed, assoc="CONTRIBUTOR", reviews=()):
+    pr_dir.mkdir(parents=True, exist_ok=True)
+    events = [{"type": "created", "timestamp": created, "actor": "alice"}]
+    for ts, rassoc in reviews:
+        events.append({"type": "reviewed", "timestamp": ts, "actor": "bob", "author_association": rassoc})
+    events.append({"type": closed_type, "timestamp": closed, "actor": "bob"})
+    events.sort(key=lambda e: e["timestamp"])
+    (pr_dir / "events.json").write_text(json.dumps(events))
+    (pr_dir / "metadata.json").write_text(json.dumps(_meta(assoc)))
+
+
 def test_build_site_writes_index(tmp_path):
-    prs_dir = tmp_path / "prs" / "1"
-    prs_dir.mkdir(parents=True)
-    events = [
-        {"type": "created",       "timestamp": "2024-01-10T10:00:00Z", "actor": "alice"},
-        {"type": "closed_merged", "timestamp": "2024-01-15T10:00:00Z", "actor": "bob"},
-    ]
-    (prs_dir / "events.json").write_text(json.dumps(events))
-    (prs_dir / "metadata.json").write_text(json.dumps(_meta("CONTRIBUTOR")))
-
-    site_dir = tmp_path / "site"
-    build_site(tmp_path, site_dir, "2024-01-16T00:00:00Z")
-
-    content = (site_dir / "index.html").read_text()
+    _write_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z")
+    stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
+    content = (tmp_path / "site" / "index.html").read_text()
     assert "5.0 days" in content
+    assert stats["total_resolved"] == 1
+
+
+def test_build_site_engagement_computed(tmp_path):
+    _write_pr(
+        tmp_path / "prs" / "1",
+        "2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z",
+        reviews=[("2024-01-12T10:00:00Z", "MEMBER")],
+    )
+    stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
+    assert stats["median_engagement_days"] == pytest.approx(2.0)
 
 
 def test_build_site_ftc_counted(tmp_path):
     for i, assoc in enumerate(["FIRST_TIME_CONTRIBUTOR", "CONTRIBUTOR", "MEMBER"]):
-        pr_dir = tmp_path / "prs" / str(i + 1)
-        pr_dir.mkdir(parents=True)
-        events = [
-            {"type": "created",       "timestamp": f"2024-01-{10 + i}T10:00:00Z", "actor": "x"},
-            {"type": "closed_merged", "timestamp": f"2024-01-{15 + i}T10:00:00Z", "actor": "y"},
-        ]
-        (pr_dir / "events.json").write_text(json.dumps(events))
-        (pr_dir / "metadata.json").write_text(json.dumps(_meta(assoc)))
-
-    site_dir = tmp_path / "site"
-    stats = build_site(tmp_path, site_dir, "2024-01-20T00:00:00Z")
+        _write_pr(
+            tmp_path / "prs" / str(i + 1),
+            f"2024-01-{10 + i}T10:00:00Z", "closed_merged", f"2024-01-{15 + i}T10:00:00Z",
+            assoc=assoc,
+        )
+    stats = build_site(tmp_path, tmp_path / "site", "2024-01-20T00:00:00Z")
     assert stats["ftc_count"] == 1
     assert stats["total_resolved"] == 3
 
@@ -309,14 +393,12 @@ def test_build_site_no_metadata_treated_as_non_ftc(tmp_path):
         {"type": "closed_merged", "timestamp": "2024-01-15T10:00:00Z", "actor": "bob"},
     ]
     (pr_dir / "events.json").write_text(json.dumps(events))
-
     stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
     assert stats["ftc_count"] == 0
 
 
 def test_build_site_no_data(tmp_path):
     (tmp_path / "prs").mkdir()
-    site_dir = tmp_path / "site"
-    stats = build_site(tmp_path, site_dir, "2024-01-16T00:00:00Z")
+    stats = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
     assert stats["total_resolved"] == 0
-    assert "No resolved PRs" in (site_dir / "index.html").read_text()
+    assert "No resolved PRs" in (tmp_path / "site" / "index.html").read_text()

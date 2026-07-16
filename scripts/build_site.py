@@ -11,6 +11,8 @@ from pathlib import Path
 
 UTC = timezone.utc
 
+COMMITTER_ASSOCIATIONS = frozenset({"MEMBER", "OWNER"})
+
 HIST_BUCKETS = [
     (0,   1,          "<1d"),
     (1,   3,          "1-3d"),
@@ -71,6 +73,7 @@ _HTML = """\
     }
     .kpi-value { font-size: 3rem; font-weight: 700; line-height: 1; color: var(--s1); margin-bottom: 0.5rem; }
     .kpi-value.ftc { color: var(--s2); }
+    .kpi-value.engagement { color: var(--ink-2); }
     .kpi-label { font-size: 0.9rem; font-weight: 600; color: var(--ink-2); }
     .kpi-sub   { font-size: 0.8rem; color: var(--ink-m); margin-top: 0.25rem; }
     .panel {
@@ -98,6 +101,11 @@ _HTML = """\
       <div class="kpi-value ftc">__FTC_COUNT__</div>
       <div class="kpi-label">First-time contributor PRs</div>
       <div class="kpi-sub">__FTC_PCT__% of resolved PRs</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-value engagement">__ENGAGEMENT__</div>
+      <div class="kpi-label">Median time to first Committer engagement</div>
+      <div class="kpi-sub">member or owner</div>
     </div>
   </div>
 
@@ -213,15 +221,31 @@ def histogram(days_list):
     return labels, counts
 
 
+def time_to_engagement_days(events):
+    """Returns days from created to first MEMBER/OWNER comment or review, or None."""
+    created = None
+    for e in events:
+        if e["type"] == "created" and created is None:
+            created = _parse_ts(e["timestamp"])
+            continue
+        if (
+            created is not None
+            and e["type"] in ("reviewed", "comment")
+            and e.get("author_association") in COMMITTER_ASSOCIATIONS
+        ):
+            return (_parse_ts(e["timestamp"]) - created).total_seconds() / 86400
+    return None
+
+
 def monthly_medians_by_group(resolved):
     """
-    resolved: list of (close_datetime, days_float, is_ftc)
+    resolved: list of (close_datetime, days_float, is_ftc, engagement_days)
     Returns (months, ftc_medians, non_ftc_medians) in chronological order.
     Months where a group has no data carry None.
     """
     ftc_by_month = defaultdict(list)
     non_ftc_by_month = defaultdict(list)
-    for close_dt, days, is_ftc in resolved:
+    for close_dt, days, is_ftc, _ in resolved:
         key = close_dt.strftime("%Y-%m")
         (ftc_by_month if is_ftc else non_ftc_by_month)[key].append(days)
 
@@ -238,11 +262,13 @@ def monthly_medians_by_group(resolved):
 
 
 def compute_stats(resolved):
-    all_days = [days for _, days, _ in resolved]
-    ftc_count = sum(1 for _, _, is_ftc in resolved if is_ftc)
+    all_days = [days for _, days, _, _ in resolved]
+    ftc_count = sum(1 for _, _, is_ftc, _ in resolved if is_ftc)
+    engagement_times = [e for _, _, _, e in resolved if e is not None]
     total = len(resolved)
 
     median = round(statistics.median(all_days), 1) if all_days else None
+    median_engagement = round(statistics.median(engagement_times), 1) if engagement_times else None
     hist_labels, hist_counts = histogram(all_days)
     trend_months, trend_ftc_medians, trend_non_ftc_medians = monthly_medians_by_group(resolved)
 
@@ -251,6 +277,7 @@ def compute_stats(resolved):
         "ftc_count": ftc_count,
         "ftc_pct": round(100 * ftc_count / total) if total else 0,
         "median_days": median,
+        "median_engagement_days": median_engagement,
         "hist_labels": hist_labels,
         "hist_counts": hist_counts,
         "trend_months": trend_months,
@@ -277,13 +304,16 @@ def load_resolved(data_dir):
         if metadata_path.exists():
             metadata = json.loads(metadata_path.read_text())
             is_ftc = metadata.get("author_association") == "FIRST_TIME_CONTRIBUTOR"
-        resolved.append((*result, is_ftc))
+        engagement = time_to_engagement_days(events)
+        resolved.append((*result, is_ftc, engagement))
     return resolved
 
 
 def render_html(stats, generated_at):
     median = stats["median_days"]
     median_str = f"{median} days" if median is not None else "—"
+    engagement = stats["median_engagement_days"]
+    engagement_str = f"{engagement} days" if engagement is not None else "—"
     ftc_count = stats["ftc_count"]
     ftc_pct = stats["ftc_pct"]
 
@@ -314,6 +344,7 @@ def render_html(stats, generated_at):
         .replace("__TOTAL_RESOLVED__", str(stats["total_resolved"]))
         .replace("__FTC_COUNT__", str(ftc_count))
         .replace("__FTC_PCT__", str(ftc_pct))
+        .replace("__ENGAGEMENT__", engagement_str)
         .replace("__HIST_BODY__", hist_body)
         .replace("__TREND_BODY__", trend_body)
         .replace("__CHART_JS__", chart_js)
