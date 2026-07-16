@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-07-16T04:42:48Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-07-16T04:42:49Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-16T04:45:54Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-16T04:47:03Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-16T04:53:54Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-07-16T04:53:55Z",
+    "actor": null
+  }
+]
