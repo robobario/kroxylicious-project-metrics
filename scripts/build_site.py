@@ -543,6 +543,8 @@ def _open_prs_html(open_prs, pr_base_url):
     for pr in open_prs:
         badges = []
         badge_spans = []
+        if pr["age_days"] < 1.0:
+            badge_spans.append('<span title="opened in the last 24 hours">⭐</span>')
         if pr["is_bot"]:
             badge_spans.append('<span title="bot">🤖</span>')
         else:
@@ -579,6 +581,7 @@ def _open_prs_html(open_prs, pr_base_url):
         '<span class="legend-item">👤 non-committer</span>'
         '<span class="legend-item">🤖 bot</span>'
         '<span class="legend-item">👀 no engagement yet</span>'
+        '<span class="legend-item">⭐ opened in the last 24 hours</span>'
         '</div>'
     )
     return (
