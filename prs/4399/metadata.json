@@ -1,0 +1,11 @@
+{
+  "number": 4399,
+  "title": "ci(release): validate POM metadata for Central Portal in lint",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-16T09:14:26Z",
+  "state": "open",
+  "merged": false,
+  "draft": false
+}
