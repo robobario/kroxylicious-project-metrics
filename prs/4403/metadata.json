@@ -1,0 +1,11 @@
+{
+  "number": 4403,
+  "title": "build: switch CHANGELOG to logchange",
+  "author": "piotrpdev",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-16T14:10:54Z",
+  "state": "open",
+  "merged": false,
+  "draft": false
+}
