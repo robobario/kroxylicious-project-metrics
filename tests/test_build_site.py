@@ -733,6 +733,15 @@ def test_load_open_prs_sorted_oldest_first_within_tier(tmp_path):
     assert result[0]["number"] == 1  # oldest non-committer first
 
 
+def test_load_open_prs_ftc_before_non_committer(tmp_path):
+    _write_open_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", author="outsider")  # non-committer, older
+    _write_open_pr(tmp_path / "prs" / "2", "2024-01-15T10:00:00Z", author="newbie")    # FTC, newer
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, {2}, frozenset(), now)
+    assert result[0]["number"] == 2   # FTC surfaces first despite being newer
+    assert result[1]["number"] == 1
+
+
 def test_load_open_prs_non_committer_before_committer(tmp_path):
     _write_open_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", author="k-wall")    # committer, older
     _write_open_pr(tmp_path / "prs" / "2", "2024-01-15T10:00:00Z", author="outsider")  # non-committer, newer
