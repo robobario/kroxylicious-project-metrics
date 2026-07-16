@@ -195,6 +195,28 @@ def test_lint_events_all_valid_types(tmp_path):
     assert lint_events(tmp_path / "events.json", events) == []
 
 
+def test_lint_events_author_association_absent_ok(tmp_path):
+    event = {"type": "reviewed", "timestamp": "2024-01-13T14:00:00Z", "actor": "bob"}
+    assert lint_events(tmp_path / "events.json", [event]) == []
+
+
+def test_lint_events_author_association_null_ok(tmp_path):
+    event = {"type": "reviewed", "timestamp": "2024-01-13T14:00:00Z", "actor": "bob", "author_association": None}
+    assert lint_events(tmp_path / "events.json", [event]) == []
+
+
+def test_lint_events_author_association_valid(tmp_path):
+    for assoc in ("MEMBER", "OWNER", "CONTRIBUTOR", "COLLABORATOR", "NONE"):
+        event = {"type": "comment", "timestamp": "2024-01-13T14:00:00Z", "actor": "x", "author_association": assoc}
+        assert lint_events(tmp_path / "events.json", [event]) == []
+
+
+def test_lint_events_author_association_invalid(tmp_path):
+    event = {"type": "comment", "timestamp": "2024-01-13T14:00:00Z", "actor": "x", "author_association": "ROBOT"}
+    violations = lint_events(tmp_path / "events.json", [event])
+    assert any("author_association" in v for v in violations)
+
+
 # --- lint_pr_dir ---
 
 
