@@ -10,7 +10,6 @@ from build_site import (
     compute_stats,
     filter_resolved_since,
     histogram,
-    load_committers,
     monthly_medians_by_group,
     render_html,
     resolution_time_days,
@@ -19,7 +18,6 @@ from build_site import (
     build_site,
 )
 
-COMMITTERS = frozenset({"maintainer", "k-wall"})
 UTC = timezone.utc
 
 
@@ -86,60 +84,67 @@ def _engagement_events(created, reviews=(), comments=()):
     return sorted(evts, key=lambda e: e["timestamp"])
 
 
-def test_time_to_engagement_committer_review():
-    events = _engagement_events("2024-01-10T10:00:00Z", reviews=[("2024-01-12T10:00:00Z", "maintainer")])
-    assert time_to_engagement_days(events, COMMITTERS) == pytest.approx(2.0)
+def test_time_to_engagement_any_human_review():
+    events = _engagement_events("2024-01-10T10:00:00Z", reviews=[("2024-01-12T10:00:00Z", "somereviewer")])
+    assert time_to_engagement_days(events) == pytest.approx(2.0)
 
 
-def test_time_to_engagement_committer_comment():
-    events = _engagement_events("2024-01-10T10:00:00Z", comments=[("2024-01-11T10:00:00Z", "k-wall")])
-    assert time_to_engagement_days(events, COMMITTERS) == pytest.approx(1.0)
+def test_time_to_engagement_any_human_comment():
+    events = _engagement_events("2024-01-10T10:00:00Z", comments=[("2024-01-11T10:00:00Z", "bob")])
+    assert time_to_engagement_days(events) == pytest.approx(1.0)
 
 
 def test_time_to_engagement_uses_first_qualifying():
     events = _engagement_events(
         "2024-01-10T10:00:00Z",
-        comments=[("2024-01-11T10:00:00Z", "k-wall"), ("2024-01-13T10:00:00Z", "maintainer")],
+        comments=[("2024-01-11T10:00:00Z", "bob"), ("2024-01-13T10:00:00Z", "carol")],
     )
-    assert time_to_engagement_days(events, COMMITTERS) == pytest.approx(1.0)
-
-
-def test_time_to_engagement_non_committer_ignored():
-    events = _engagement_events("2024-01-10T10:00:00Z", reviews=[("2024-01-12T10:00:00Z", "external")])
-    assert time_to_engagement_days(events, COMMITTERS) is None
+    assert time_to_engagement_days(events) == pytest.approx(1.0)
 
 
 def test_time_to_engagement_author_self_comment_not_counted():
-    # PR author is a committer but their own comment should not count
-    committers_incl_author = COMMITTERS | {"alice"}
     events = _engagement_events(
         "2024-01-10T10:00:00Z",
-        comments=[("2024-01-11T10:00:00Z", "alice")],  # author commenting on own PR
+        comments=[("2024-01-11T10:00:00Z", "alice")],  # alice is the PR author
     )
-    assert time_to_engagement_days(events, committers_incl_author) is None
+    assert time_to_engagement_days(events) is None
 
 
 def test_time_to_engagement_self_then_other_uses_other():
-    # Author comments first, then a different committer — only the second should count
-    committers_incl_author = COMMITTERS | {"alice"}
     events = _engagement_events(
         "2024-01-10T10:00:00Z",
         comments=[
-            ("2024-01-11T10:00:00Z", "alice"),       # self — skip
-            ("2024-01-13T10:00:00Z", "maintainer"),  # other committer — counts
+            ("2024-01-11T10:00:00Z", "alice"),  # self — skip
+            ("2024-01-13T10:00:00Z", "bob"),    # other human — counts
         ],
     )
-    assert time_to_engagement_days(events, committers_incl_author) == pytest.approx(3.0)
+    assert time_to_engagement_days(events) == pytest.approx(3.0)
+
+
+def test_time_to_engagement_bot_ignored():
+    events = _engagement_events("2024-01-10T10:00:00Z", reviews=[("2024-01-12T10:00:00Z", "dependabot[bot]")])
+    assert time_to_engagement_days(events) is None
+
+
+def test_time_to_engagement_sonatype_bot_ignored():
+    events = _engagement_events("2024-01-10T10:00:00Z", comments=[("2024-01-11T10:00:00Z", "sonatype-nexus-community[bot]")])
+    assert time_to_engagement_days(events) is None
+
+
+def test_time_to_engagement_bot_then_human_uses_human():
+    events = _engagement_events(
+        "2024-01-10T10:00:00Z",
+        comments=[
+            ("2024-01-11T10:00:00Z", "renovate[bot]"),  # bot — skip
+            ("2024-01-13T10:00:00Z", "bob"),             # human — counts
+        ],
+    )
+    assert time_to_engagement_days(events) == pytest.approx(3.0)
 
 
 def test_time_to_engagement_no_reviews():
     events = _events("2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z")
-    assert time_to_engagement_days(events, COMMITTERS) is None
-
-
-def test_time_to_engagement_empty_committers():
-    events = _engagement_events("2024-01-10T10:00:00Z", reviews=[("2024-01-12T10:00:00Z", "maintainer")])
-    assert time_to_engagement_days(events, frozenset()) is None
+    assert time_to_engagement_days(events) is None
 
 
 # --- histogram ---
@@ -416,7 +421,7 @@ def test_render_html_shows_engagement_stats():
 def test_render_html_shows_stat_group_labels():
     html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z")
     assert "Time to resolution" in html
-    assert "Time to first Committer engagement" in html
+    assert "Time to first engagement" in html
 
 
 def test_render_html_shows_all_stat_names():
@@ -523,7 +528,7 @@ def test_build_site_recent_filters_old_prs(tmp_path):
 def test_build_site_engagement_computed(tmp_path):
     _write_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", "closed_merged",
               "2024-01-15T10:00:00Z", reviews=[("2024-01-12T10:00:00Z", "maintainer")])
-    result = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z", COMMITTERS)
+    result = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
     assert result["all"]["engagement"]["median"] == pytest.approx(2.0)
 
 
@@ -574,14 +579,3 @@ def test_compute_ftc_pr_numbers_no_metadata(tmp_path):
     assert compute_ftc_pr_numbers(tmp_path) == frozenset()
 
 
-# --- load_committers ---
-
-
-def test_load_committers_parses_usernames(tmp_path):
-    f = tmp_path / "committers.txt"
-    f.write_text("# comment\nalice\nbob\n\ncarol\n")
-    assert load_committers(f) == frozenset({"alice", "bob", "carol"})
-
-
-def test_load_committers_missing_file(tmp_path):
-    assert load_committers(tmp_path / "missing.txt") == frozenset()

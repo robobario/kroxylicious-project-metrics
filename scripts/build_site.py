@@ -203,19 +203,8 @@ def histogram(days_list):
     return labels, counts
 
 
-def load_committers(path):
-    """Returns frozenset of committer GitHub usernames from a plain text file."""
-    if not path.exists():
-        return frozenset()
-    return frozenset(
-        line.strip()
-        for line in path.read_text().splitlines()
-        if line.strip() and not line.startswith("#")
-    )
-
-
-def time_to_engagement_days(events, committers):
-    """Returns days from created to first committer comment or review by someone other than the PR author, or None."""
+def time_to_engagement_days(events):
+    """Returns days from created to first human (non-author, non-bot) comment or review, or None."""
     created = None
     author = None
     for e in events:
@@ -223,11 +212,13 @@ def time_to_engagement_days(events, committers):
             created = _parse_ts(e["timestamp"])
             author = e.get("actor")
             continue
+        actor = e.get("actor") or ""
         if (
             created is not None
             and e["type"] in ("reviewed", "comment")
-            and e.get("actor") in committers
-            and e.get("actor") != author
+            and actor
+            and actor != author
+            and not actor.endswith("[bot]")
         ):
             return (_parse_ts(e["timestamp"]) - created).total_seconds() / 86400
     return None
@@ -356,7 +347,7 @@ def compute_ftc_pr_numbers(data_dir):
     return frozenset(number for _, number in first_by_author.values())
 
 
-def load_resolved(data_dir, committers=frozenset()):
+def load_resolved(data_dir):
     ftc_pr_numbers = compute_ftc_pr_numbers(data_dir)
     resolved = []
     prs_dir = data_dir / "prs"
@@ -374,7 +365,7 @@ def load_resolved(data_dir, committers=frozenset()):
             pr_number = int(pr_dir.name)
         except ValueError:
             continue
-        engagement = time_to_engagement_days(events, committers)
+        engagement = time_to_engagement_days(events)
         resolved.append((*result, pr_number in ftc_pr_numbers, engagement, pr_number))
     return resolved
 
@@ -414,7 +405,7 @@ def _kpi_row_html(stats, pr_base_url=None):
         f'</div>'
     )
     engagement_group = _stat_group_html(
-        "Time to first Committer engagement", stats["engagement"], "engagement", pr_base_url
+        "Time to first engagement", stats["engagement"], "engagement", pr_base_url
     )
     return f'<div class="kpi-row">{resolution_group}{ftc_tile}{engagement_group}</div>'
 
@@ -506,8 +497,8 @@ def render_html(all_stats, recent_stats, generated_at, pr_base_url=None):
     )
 
 
-def build_site(data_dir, site_dir, generated_at, committers=frozenset(), pr_base_url=None):
-    resolved = load_resolved(data_dir, committers)
+def build_site(data_dir, site_dir, generated_at, pr_base_url=None):
+    resolved = load_resolved(data_dir)
     recent_cutoff = datetime.now(UTC) - timedelta(days=RECENT_DAYS)
     recent_resolved = filter_resolved_since(resolved, recent_cutoff)
 
@@ -523,13 +514,11 @@ def build_site(data_dir, site_dir, generated_at, committers=frozenset(), pr_base
 def main():
     data_dir = Path(os.environ.get("DATA_DIR", "data"))
     site_dir = Path(os.environ.get("SITE_DIR", "site"))
-    committers_file = Path(os.environ.get("COMMITTERS_FILE", "committers.txt"))
     owner = os.environ.get("GITHUB_OWNER", "kroxylicious")
     repo  = os.environ.get("GITHUB_REPO",  "kroxylicious")
     pr_base_url = f"https://github.com/{owner}/{repo}"
     generated_at = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
-    committers = load_committers(committers_file)
-    stats = build_site(data_dir, site_dir, generated_at, committers, pr_base_url)
+    stats = build_site(data_dir, site_dir, generated_at, pr_base_url)
     a = stats["all"]
     r = stats["recent"]
     print(
