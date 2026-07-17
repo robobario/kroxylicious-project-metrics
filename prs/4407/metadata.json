@@ -1,0 +1,11 @@
+{
+  "number": 4407,
+  "title": "test(systemtests): re-test OperatorChangeDetectionST against JOSDK 5.4.1-SNAPSHOT",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-17T00:14:54Z",
+  "state": "open",
+  "merged": false,
+  "draft": true
+}

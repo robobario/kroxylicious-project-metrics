@@ -1,0 +1,11 @@
+{
+  "number": 4406,
+  "title": "ci(release): build release images during staging, tag version at promote",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-16T23:27:02Z",
+  "state": "open",
+  "merged": false,
+  "draft": false
+}
