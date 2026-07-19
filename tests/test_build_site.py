@@ -903,6 +903,22 @@ def test_open_prs_html_non_ancient_has_no_data_attr():
     assert 'data-ancient="true"' not in html
 
 
+def test_open_prs_html_author_link():
+    html = _open_prs_html([_make_pr(author="bob")], None)
+    assert '<a href="https://github.com/bob">@bob</a>' in html
+
+
+def test_open_prs_html_avatar_style_on_non_bot():
+    html = _open_prs_html([_make_pr(author="alice", is_bot=False)], None)
+    assert "url('https://github.com/alice.png')" in html
+
+
+def test_open_prs_html_no_avatar_style_on_bot():
+    html = _open_prs_html([_make_pr(author="renovate[bot]", is_bot=True)], None)
+    assert "renovate[bot].png" not in html
+    assert "--avatar-url" not in html
+
+
 def test_open_prs_html_has_checkbox():
     html = _open_prs_html([_make_pr()], None)
     assert 'id="hide-ancient"' in html

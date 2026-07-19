@@ -121,12 +121,25 @@ _HTML = """\
     .no-data { color: var(--ink-m); font-size: 0.9rem; padding: 1rem 0; }
     .pr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.875rem; }
     .pr-card {
+      position: relative;
+      overflow: hidden;
       border: 1px solid var(--grid);
       border-radius: 8px;
       padding: 0.875rem 1rem;
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
+    }
+    .pr-card::after {
+      content: "";
+      position: absolute;
+      bottom: -4px; right: -4px;
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background-image: var(--avatar-url);
+      background-size: cover;
+      opacity: 0.18;
+      pointer-events: none;
     }
     .pr-card--ftc        { background: rgba(0,131,0,0.07); }
     .pr-card--external   { background: rgba(235,104,52,0.07); }
@@ -137,6 +150,9 @@ _HTML = """\
       display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .pr-card-title a { color: inherit; text-decoration: none; }
     .pr-card-title a:hover { text-decoration: underline; }
+    .pr-card-author { font-size: 0.72rem; color: var(--ink-m); }
+    .pr-card-author a { color: inherit; text-decoration: none; }
+    .pr-card-author a:hover { text-decoration: underline; }
     .pr-card-badges { font-size: 0.85rem; line-height: 1; min-height: 1rem; }
     .pr-card-meta { font-size: 0.7rem; color: var(--ink-m); margin-top: auto; padding-top: 0.4rem; border-top: 1px solid var(--grid); }
     .pr-card-meta .age { font-weight: 600; color: var(--ink-2); }
@@ -585,11 +601,19 @@ def _open_prs_html(open_prs, pr_base_url):
         eng_str = _fmt(round(pr["engagement_days"], 1)) if pr["engagement_days"] is not None else "—"
         ancient_attr = ' data-ancient="true"' if pr["age_days"] >= _ANCIENT_DAYS else ""
         tier_class = _tier_card_class(pr)
+        author = pr["author"]
+        author_url = f"https://github.com/{author}"
+
+        if not pr["is_bot"]:
+            avatar_style = f' style="--avatar-url: url(\'https://github.com/{author}.png\')"'
+        else:
+            avatar_style = ""
 
         cards.append(
-            f'<div class="pr-card {tier_class}"{ancient_attr}>'
+            f'<div class="pr-card {tier_class}"{ancient_attr}{avatar_style}>'
             f'<div class="pr-card-number">#{pr["number"]}</div>'
             f'<div class="pr-card-title"><a href="{url}">{title}</a></div>'
+            f'<div class="pr-card-author"><a href="{author_url}">@{html_lib.escape(author)}</a></div>'
             f'<div class="pr-card-badges">{badges_html}</div>'
             f'<div class="pr-card-meta">'
             f'<span class="age">{_fmt(pr["age_days"])} old</span>'
