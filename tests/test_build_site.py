@@ -797,7 +797,7 @@ def test_load_open_prs_no_engagement(tmp_path):
     assert result[0]["engagement_days"] is None
 
 
-def test_load_open_prs_draft_flag(tmp_path):
+def test_load_open_prs_draft_excluded(tmp_path):
     pr_dir = tmp_path / "prs" / "9"
     pr_dir.mkdir(parents=True)
     (pr_dir / "events.json").write_text("[]")
@@ -808,25 +808,25 @@ def test_load_open_prs_draft_flag(tmp_path):
     }))
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
-    assert result[0]["is_draft"] is True
+    assert result == []
 
 
-def test_load_open_prs_draft_defaults_false(tmp_path):
+def test_load_open_prs_non_draft_included(tmp_path):
     _write_open_pr(tmp_path / "prs" / "10", "2024-01-10T10:00:00Z")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
-    assert result[0]["is_draft"] is False
+    assert len(result) == 1
+    assert "is_draft" not in result[0]
 
 
 # --- _open_prs_html ---
 
 
 def _make_pr(number=1, title="Fix it", author="alice", age_days=5.0,
-             is_bot=False, is_ftc=False, is_committer=True, engagement_days=None,
-             is_draft=False):
+             is_bot=False, is_ftc=False, is_committer=True, engagement_days=None):
     return {"number": number, "title": title, "author": author, "age_days": age_days,
             "is_bot": is_bot, "is_ftc": is_ftc, "is_committer": is_committer,
-            "engagement_days": engagement_days, "is_draft": is_draft}
+            "engagement_days": engagement_days}
 
 
 def test_open_prs_html_empty():
@@ -834,10 +834,11 @@ def test_open_prs_html_empty():
     assert "no-data" in html.lower() or "No open" in html
 
 
-def test_open_prs_html_title_and_number_in_link():
+def test_open_prs_html_title_and_number_present():
     html = _open_prs_html([_make_pr(42, "My PR")], "https://github.com/o/r")
-    # Both number and title must be inside the anchor tag
-    assert '<a href="https://github.com/o/r/pull/42">#42 My PR</a>' in html
+    # Number appears in the card header, title inside the anchor
+    assert "#42" in html
+    assert '<a href="https://github.com/o/r/pull/42">My PR</a>' in html
 
 
 def test_open_prs_html_emojis_after_link():
@@ -873,51 +874,45 @@ def test_open_prs_html_no_engagement_emoji_with_tooltip():
 
 def test_open_prs_html_no_waiting_emoji_when_engaged():
     html = _open_prs_html([_make_pr(engagement_days=2.0)], None)
-    tbody_start = html.index("<tbody>")
-    tbody_end   = html.index("</tbody>")
-    assert "👀" not in html[tbody_start:tbody_end]
+    grid_start = html.index('id="pr-grid-open"')
+    grid_end   = html.index("</div>", grid_start) + len("</div>")
+    assert "👀" not in html[grid_start:grid_end]
 
 
 def test_open_prs_html_star_for_new_pr():
     html = _open_prs_html([_make_pr(age_days=0.5)], None)
-    tbody_start = html.index("<tbody>")
-    tbody_end   = html.index("</tbody>")
-    assert "⭐" in html[tbody_start:tbody_end]
+    grid_start = html.index('id="pr-grid-open"')
+    assert "⭐" in html[grid_start:]
     assert 'title="opened in the last 24 hours"' in html
 
 
 def test_open_prs_html_no_star_for_older_pr():
     html = _open_prs_html([_make_pr(age_days=1.0)], None)
-    tbody_start = html.index("<tbody>")
-    tbody_end   = html.index("</tbody>")
-    assert "⭐" not in html[tbody_start:tbody_end]
+    grid_start = html.index('id="pr-grid-open"')
+    grid_end   = html.index("</div>", grid_start) + len("</div>")
+    assert "⭐" not in html[grid_start:grid_end]
 
 
-def test_open_prs_html_age_class():
+def test_open_prs_html_ancient_has_data_attr():
     html = _open_prs_html([_make_pr(age_days=100.0)], None)
-    assert "age-stale" in html
+    assert 'data-ancient="true"' in html
 
 
-def test_open_prs_html_draft_row_has_data_attr():
-    html = _open_prs_html([_make_pr(is_draft=True)], None)
-    assert 'data-draft="true"' in html
-
-
-def test_open_prs_html_non_draft_has_no_data_attr():
-    html = _open_prs_html([_make_pr(is_draft=False)], None)
-    assert 'data-draft="true"' not in html
+def test_open_prs_html_non_ancient_has_no_data_attr():
+    html = _open_prs_html([_make_pr(age_days=5.0)], None)
+    assert 'data-ancient="true"' not in html
 
 
 def test_open_prs_html_has_checkbox():
     html = _open_prs_html([_make_pr()], None)
-    assert 'id="show-drafts"' in html
-    assert "Show draft PRs" in html
+    assert 'id="hide-ancient"' in html
+    assert "Hide PRs older than 90 days" in html
 
 
-def test_render_html_open_tab_has_draft_js():
-    html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z", open_prs=[_make_pr(is_draft=True)])
-    assert "show-drafts" in html
-    assert "hide-drafts" in html
+def test_render_html_open_tab_has_ancient_js():
+    html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z", open_prs=[_make_pr()])
+    assert "hide-ancient" in html
+    assert "pr-grid-open" in html
 
 
 # --- load_committers ---

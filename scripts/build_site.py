@@ -119,22 +119,32 @@ _HTML = """\
     }
     .chart-wrap { position: relative; height: 320px; }
     .no-data { color: var(--ink-m); font-size: 0.9rem; padding: 1rem 0; }
-    .pr-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-    .pr-table th { text-align: left; padding: 0.5rem 0.75rem; color: var(--ink-m); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--grid); }
-    .pr-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--grid); vertical-align: middle; }
-    .pr-table td.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); white-space: nowrap; }
-    .pr-table tr:last-child td { border-bottom: none; }
-    .pr-table a { color: var(--ink-1); text-decoration: none; }
-    .pr-table a:hover { text-decoration: underline; }
-    .age-fresh    { background: rgba(0,131,0,0.06); }
-    .age-moderate { background: rgba(237,161,0,0.08); }
-    .age-old      { background: rgba(235,104,52,0.10); }
-    .age-stale    { background: rgba(227,73,72,0.12); }
+    .pr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.875rem; }
+    .pr-card {
+      border: 1px solid var(--grid);
+      border-radius: 8px;
+      padding: 0.875rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .pr-card--ftc        { background: rgba(0,131,0,0.07); }
+    .pr-card--external   { background: rgba(235,104,52,0.07); }
+    .pr-card--committer  { background: rgba(42,120,214,0.06); }
+    .pr-card--bot        { background: var(--surface-1); opacity: 0.7; }
+    .pr-card-number { font-size: 0.7rem; font-weight: 600; color: var(--ink-m); }
+    .pr-card-title { font-size: 0.8rem; font-weight: 500; color: var(--ink-1); line-height: 1.35;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .pr-card-title a { color: inherit; text-decoration: none; }
+    .pr-card-title a:hover { text-decoration: underline; }
+    .pr-card-badges { font-size: 0.85rem; line-height: 1; min-height: 1rem; }
+    .pr-card-meta { font-size: 0.7rem; color: var(--ink-m); margin-top: auto; padding-top: 0.4rem; border-top: 1px solid var(--grid); }
+    .pr-card-meta .age { font-weight: 600; color: var(--ink-2); }
     .legend { font-size: 0.75rem; color: var(--ink-m); margin-top: 1rem; display: flex; gap: 1.25rem; flex-wrap: wrap; }
     .legend-item { display: flex; align-items: center; gap: 0.3rem; }
     .pr-controls { margin-bottom: 1rem; font-size: 0.875rem; color: var(--ink-2); display: flex; align-items: center; gap: 0.5rem; }
     .pr-controls input[type="checkbox"] { cursor: pointer; }
-    #open-pr-table.hide-drafts tr[data-draft="true"] { display: none; }
+    #pr-grid-open.hide-ancient .pr-card[data-ancient="true"] { display: none; }
   </style>
 </head>
 <body>
@@ -142,21 +152,21 @@ _HTML = """\
   <p class="meta">Generated __GENERATED_AT__</p>
 
   <nav class="tabs">
-    <button class="tab-btn active" data-tab="recent">Last 3 months</button>
+    <button class="tab-btn active" data-tab="open">Open PRs</button>
+    <button class="tab-btn" data-tab="recent">Last 3 months</button>
     <button class="tab-btn" data-tab="alltime">All time</button>
-    <button class="tab-btn" data-tab="open">Open PRs</button>
   </nav>
 
-  <div id="tab-recent" class="tab-panel active">
+  <div id="tab-open" class="tab-panel active">
+    __OPEN_PRS_CONTENT__
+  </div>
+
+  <div id="tab-recent" class="tab-panel">
     __RECENT_CONTENT__
   </div>
 
   <div id="tab-alltime" class="tab-panel">
     __ALL_CONTENT__
-  </div>
-
-  <div id="tab-open" class="tab-panel">
-    __OPEN_PRS_CONTENT__
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
@@ -194,7 +204,7 @@ _HTML = """\
       });
     });
 
-    initTab('recent');
+    initTab('open');
   </script>
 </body>
 </html>
@@ -476,7 +486,7 @@ def _age_class(age_days):
 
 
 def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
-    """Returns open PRs sorted oldest-first, each as a dict."""
+    """Returns open PRs sorted by tier then oldest-first, excluding drafts, each as a dict."""
     open_prs = []
     prs_dir = data_dir / "prs"
     if not prs_dir.exists():
@@ -491,6 +501,8 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
         except json.JSONDecodeError:
             continue
         if meta.get("state") != "open":
+            continue
+        if meta.get("draft", False):
             continue
         try:
             pr_number = int(pr_dir.name)
@@ -519,9 +531,9 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
             "is_bot":          is_bot,
             "is_ftc":          is_ftc,
             "is_committer":    is_committer,
-            "is_draft":        meta.get("draft", False),
             "engagement_days": engagement_days,
         })
+
     def _tier(p):
         if p["is_bot"]:
             return 3
@@ -535,13 +547,25 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
     return open_prs
 
 
+_ANCIENT_DAYS = 90
+
+
+def _tier_card_class(pr):
+    if pr["is_bot"]:
+        return "pr-card--bot"
+    if pr["is_ftc"]:
+        return "pr-card--ftc"
+    if not pr["is_committer"]:
+        return "pr-card--external"
+    return "pr-card--committer"
+
+
 def _open_prs_html(open_prs, pr_base_url):
     if not open_prs:
         return '<p class="no-data">No open PRs found in harvested data.</p>'
 
-    rows = []
+    cards = []
     for pr in open_prs:
-        badges = []
         badge_spans = []
         if pr["age_days"] < 1.0:
             badge_spans.append('<span title="opened in the last 24 hours">⭐</span>')
@@ -555,24 +579,29 @@ def _open_prs_html(open_prs, pr_base_url):
         if pr["engagement_days"] is None:
             badge_spans.append('<span title="no engagement yet">👀</span>')
 
-        badges_html = (" " + " ".join(badge_spans)) if badge_spans else ""
+        badges_html = " ".join(badge_spans)
         title = html_lib.escape(pr["title"])
         url = f"{pr_base_url}/pull/{pr['number']}" if pr_base_url else "#"
         eng_str = _fmt(round(pr["engagement_days"], 1)) if pr["engagement_days"] is not None else "—"
-        draft_attr = ' data-draft="true"' if pr.get("is_draft") else ""
+        ancient_attr = ' data-ancient="true"' if pr["age_days"] >= _ANCIENT_DAYS else ""
+        tier_class = _tier_card_class(pr)
 
-        rows.append(
-            f'<tr class="{_age_class(pr["age_days"])}"{draft_attr}>'
-            f'<td><a href="{url}">#{pr["number"]} {title}</a>{badges_html}</td>'
-            f'<td class="num">{_fmt(pr["age_days"])}</td>'
-            f'<td class="num">{eng_str}</td>'
-            f'</tr>'
+        cards.append(
+            f'<div class="pr-card {tier_class}"{ancient_attr}>'
+            f'<div class="pr-card-number">#{pr["number"]}</div>'
+            f'<div class="pr-card-title"><a href="{url}">{title}</a></div>'
+            f'<div class="pr-card-badges">{badges_html}</div>'
+            f'<div class="pr-card-meta">'
+            f'<span class="age">{_fmt(pr["age_days"])} old</span>'
+            f' &middot; engaged {eng_str}'
+            f'</div>'
+            f'</div>'
         )
 
     controls = (
         '<div class="pr-controls">'
-        '<input type="checkbox" id="show-drafts">'
-        '<label for="show-drafts">Show draft PRs</label>'
+        '<input type="checkbox" id="hide-ancient" checked>'
+        '<label for="hide-ancient">Hide PRs older than 90 days</label>'
         '</div>'
     )
     legend = (
@@ -586,10 +615,10 @@ def _open_prs_html(open_prs, pr_base_url):
     )
     return (
         controls
-        + '<table class="pr-table" id="open-pr-table">'
-        + '<thead><tr><th>PR</th><th>Open for</th><th>First engagement</th></tr></thead>'
-        + '<tbody>' + "".join(rows) + '</tbody>'
-        + '</table>' + legend
+        + '<div class="pr-grid" id="pr-grid-open">'
+        + "".join(cards)
+        + '</div>'
+        + legend
     )
 
 
@@ -730,11 +759,11 @@ def render_html(all_stats, recent_stats, generated_at, pr_base_url=None, open_pr
     all_js    = _tab_js(all_stats, all_hist_id, all_trend_id, all_eng_trend_id)
 
     open_js = (
-        "const cb=document.getElementById('show-drafts'),"
-        "t=document.getElementById('open-pr-table');"
-        "if(cb&&t){"
-        "t.classList.add('hide-drafts');"
-        "cb.addEventListener('change',()=>t.classList.toggle('hide-drafts',!cb.checked));}"
+        "const cb=document.getElementById('hide-ancient'),"
+        "g=document.getElementById('pr-grid-open');"
+        "if(cb&&g){"
+        "g.classList.add('hide-ancient');"
+        "cb.addEventListener('change',()=>g.classList.toggle('hide-ancient',cb.checked));}"
     )
     chart_js = (
         f"if (name === 'recent') {{ {recent_js} }}"
