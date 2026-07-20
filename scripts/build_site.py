@@ -464,7 +464,7 @@ def compute_stats(resolved, trend_fn=None, eng_trend_fn=None):
 def _iter_repo_prs_dirs(data_dir):
     """Yields (owner, repo, pr_dir) for every PR dir across all repos under data_dir."""
     for owner_dir in sorted(data_dir.iterdir()):
-        if not owner_dir.is_dir():
+        if not owner_dir.is_dir() or owner_dir.name.startswith("."):
             continue
         for repo_dir in sorted(owner_dir.iterdir()):
             prs_dir = repo_dir / "prs"
