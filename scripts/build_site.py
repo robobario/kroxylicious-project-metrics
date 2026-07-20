@@ -161,6 +161,20 @@ _HTML = """\
     .pr-controls { margin-bottom: 1rem; font-size: 0.875rem; color: var(--ink-2); display: flex; align-items: center; gap: 0.5rem; }
     .pr-controls input[type="checkbox"] { cursor: pointer; }
     #pr-grid-open.hide-ancient .pr-card[data-ancient="true"] { display: none; }
+    .repo-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .repo-chip {
+      padding: 0.25rem 0.625rem;
+      border: 1px solid var(--grid);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      background: none;
+      color: var(--ink-2);
+      cursor: pointer;
+    }
+    .repo-chip.active { background: var(--s1); color: #fff; border-color: var(--s1); }
+    .repo-chip:hover:not(.active) { border-color: var(--s1); color: var(--s1); }
+    .pr-repo-tag { font-size: 0.65rem; color: var(--ink-m); font-family: monospace; }
   </style>
 </head>
 <body>
@@ -625,11 +639,14 @@ def _open_prs_html(open_prs):
         else:
             avatar_style = ""
 
+        repo_tag = f'<div class="pr-repo-tag">{html_lib.escape(repo)}</div>' if repo else ""
+        repo_attr = f' data-repo-filter="{html_lib.escape(repo)}"' if repo else ""
         cards.append(
-            f'<div class="pr-card {tier_class}"{ancient_attr}{avatar_style}>'
+            f'<div class="pr-card {tier_class}"{ancient_attr}{repo_attr}{avatar_style}>'
             f'<div class="pr-card-number">#{pr["number"]}</div>'
             f'<div class="pr-card-title"><a href="{url}">{title}</a></div>'
             f'<div class="pr-card-author"><a href="{author_url}">@{html_lib.escape(author)}</a></div>'
+            f'{repo_tag}'
             f'<div class="pr-card-badges">{badges_html}</div>'
             f'<div class="pr-card-meta">'
             f'<span class="age">{_fmt(pr["age_days"])} old</span>'
@@ -637,6 +654,18 @@ def _open_prs_html(open_prs):
             f'</div>'
             f'</div>'
         )
+
+    distinct_repos = list(dict.fromkeys(pr.get("repo", "") for pr in open_prs if pr.get("repo")))
+    chips_html = ""
+    if len(distinct_repos) > 1:
+        chip_items = ['<button class="repo-chip active" data-repo="">All</button>']
+        for r in distinct_repos:
+            label = r.split("/")[-1] if "/" in r else r
+            chip_items.append(
+                f'<button class="repo-chip" data-repo="{html_lib.escape(r)}">'
+                f'{html_lib.escape(label)}</button>'
+            )
+        chips_html = '<div class="repo-chips">' + "".join(chip_items) + "</div>"
 
     controls = (
         '<div class="pr-controls">'
@@ -654,7 +683,8 @@ def _open_prs_html(open_prs):
         '</div>'
     )
     return (
-        controls
+        chips_html
+        + controls
         + '<div class="pr-grid" id="pr-grid-open">'
         + "".join(cards)
         + '</div>'
@@ -799,6 +829,16 @@ def render_html(all_stats, recent_stats, generated_at, open_prs=None):
         "if(cb&&g){"
         "g.classList.add('hide-ancient');"
         "cb.addEventListener('change',()=>g.classList.toggle('hide-ancient',cb.checked));}"
+        "document.querySelectorAll('.repo-chip').forEach(chip=>{"
+        "chip.addEventListener('click',()=>{"
+        "document.querySelectorAll('.repo-chip').forEach(c=>c.classList.remove('active'));"
+        "chip.classList.add('active');"
+        "const r=chip.dataset.repo;"
+        "if(r){g.setAttribute('data-repo-filter',r);"
+        "g.querySelectorAll('.pr-card').forEach(c=>{"
+        "c.style.display=c.dataset.repoFilter===r?'':'none';});}"
+        "else{g.removeAttribute('data-repo-filter');"
+        "g.querySelectorAll('.pr-card').forEach(c=>{c.style.display='';});}});});"
     )
     chart_js = (
         f"if (name === 'recent') {{ {recent_js} }}"

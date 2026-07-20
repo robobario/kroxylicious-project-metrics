@@ -969,10 +969,44 @@ def test_open_prs_html_has_checkbox():
     assert "Hide PRs older than 90 days" in html
 
 
+def test_open_prs_html_repo_tag_on_card():
+    html = _open_prs_html([_make_pr(repo="org/my-repo")])
+    assert "org/my-repo" in html
+    assert 'class="pr-repo-tag"' in html
+
+
+def test_open_prs_html_repo_filter_attr_on_card():
+    html = _open_prs_html([_make_pr(repo="org/my-repo")])
+    assert 'data-repo-filter="org/my-repo"' in html
+
+
+def test_open_prs_html_chips_shown_for_multiple_repos():
+    prs = [_make_pr(1, repo="org/repo-a"), _make_pr(2, repo="org/repo-b")]
+    html = _open_prs_html(prs)
+    assert 'class="repo-chips"' in html
+    assert 'data-repo=""' in html          # "All" chip
+    assert 'data-repo="org/repo-a"' in html
+    assert 'data-repo="org/repo-b"' in html
+    assert "repo-a" in html                # label is repo name without owner
+    assert "repo-b" in html
+
+
+def test_open_prs_html_no_chips_for_single_repo():
+    html = _open_prs_html([_make_pr(repo="org/repo-a"), _make_pr(2, repo="org/repo-a")])
+    assert 'class="repo-chips"' not in html
+
+
 def test_render_html_open_tab_has_ancient_js():
     html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z", open_prs=[_make_pr()])
     assert "hide-ancient" in html
     assert "pr-grid-open" in html
+
+
+def test_render_html_chip_filter_js_present():
+    prs = [_make_pr(1, repo="org/repo-a"), _make_pr(2, repo="org/repo-b")]
+    html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z", open_prs=prs)
+    assert "repo-chip" in html
+    assert "data-repo-filter" in html
 
 
 # --- load_committers ---
