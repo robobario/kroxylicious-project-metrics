@@ -1,6 +1,6 @@
 {
   "number": 638,
-  "title": "Bump octokit/request-action from 45eef13998ff762839b0a0de9bbcf41970fd056d to b66ca9cd744693e9c29b490fc08831ab66c4a970",
+  "title": "chore(deps): Bump octokit/request-action from 45eef13998ff762839b0a0de9bbcf41970fd056d to b66ca9cd744693e9c29b490fc08831ab66c4a970",
   "author": "dependabot[bot]",
   "labels": [
     "dependencies",
