@@ -12,7 +12,9 @@ from harvest import (
     extract_timeline_events,
     harvest,
     iter_prs,
+    load_repos,
     merge_events,
+    migrate_flat_layout,
     since_from_state,
 )
 
@@ -322,6 +324,63 @@ def test_harvest_writes_files(tmp_path):
 
     state = json.loads((tmp_path / "last_harvest.json").read_text())
     assert state["last_run"] == "2024-01-16T00:00:00+00:00"
+
+
+# --- load_repos ---
+
+
+def test_load_repos_parses_owner_repo(tmp_path):
+    f = tmp_path / "repos.txt"
+    f.write_text("kroxylicious/kroxylicious\n")
+    assert load_repos(f) == [("kroxylicious", "kroxylicious")]
+
+
+def test_load_repos_multiple(tmp_path):
+    f = tmp_path / "repos.txt"
+    f.write_text("org/repo-a\norg/repo-b\n")
+    assert load_repos(f) == [("org", "repo-a"), ("org", "repo-b")]
+
+
+def test_load_repos_skips_comments_and_blanks(tmp_path):
+    f = tmp_path / "repos.txt"
+    f.write_text("# comment\n\norg/repo\n")
+    assert load_repos(f) == [("org", "repo")]
+
+
+def test_load_repos_skips_malformed_lines(tmp_path):
+    f = tmp_path / "repos.txt"
+    f.write_text("noslash\norg/repo\n")
+    assert load_repos(f) == [("org", "repo")]
+
+
+# --- migrate_flat_layout ---
+
+
+def test_migrate_flat_layout_moves_prs_and_state(tmp_path):
+    prs = tmp_path / "prs" / "1"
+    prs.mkdir(parents=True)
+    (prs / "metadata.json").write_text("{}")
+    (tmp_path / "last_harvest.json").write_text('{"last_run": null}')
+
+    migrate_flat_layout(tmp_path, "org", "repo")
+
+    assert not (tmp_path / "prs").exists()
+    assert not (tmp_path / "last_harvest.json").exists()
+    assert (tmp_path / "org" / "repo" / "prs" / "1" / "metadata.json").exists()
+    assert (tmp_path / "org" / "repo" / "last_harvest.json").exists()
+
+
+def test_migrate_flat_layout_no_op_when_already_migrated(tmp_path):
+    (tmp_path / "org" / "repo" / "prs").mkdir(parents=True)
+    migrate_flat_layout(tmp_path, "org", "repo")
+    assert (tmp_path / "org" / "repo" / "prs").exists()
+
+
+def test_migrate_flat_layout_missing_state_file(tmp_path):
+    (tmp_path / "prs").mkdir()
+    migrate_flat_layout(tmp_path, "org", "repo")
+    assert (tmp_path / "org" / "repo" / "prs").exists()
+    assert not (tmp_path / "org" / "repo" / "last_harvest.json").exists()
 
 
 @responses_lib.activate

@@ -6,6 +6,7 @@ import pytest
 from build_site import (
     _age_class,
     _dist_stats,
+    _iter_repo_prs_dirs,
     _open_prs_html,
     _percentile,
     compute_ftc_pr_numbers,
@@ -350,13 +351,13 @@ def test_dist_stats_values():
     assert d["max"]    == pytest.approx(10.0)
     assert d["p95"] is not None
     assert d["p99"] is not None
-    assert d["max_pr"] is None  # no pr_numbers provided
+    assert d["max_pr_url"] is None  # no pr_urls provided
 
 
-def test_dist_stats_max_pr():
-    d = _dist_stats([5.0, 10.0, 3.0], pr_numbers=[42, 99, 7])
-    assert d["max"]    == pytest.approx(10.0)
-    assert d["max_pr"] == 99
+def test_dist_stats_max_pr_url():
+    d = _dist_stats([5.0, 10.0, 3.0], pr_urls=["u42", "u99", "u7"])
+    assert d["max"]        == pytest.approx(10.0)
+    assert d["max_pr_url"] == "u99"
 
 
 # --- compute_stats ---
@@ -375,27 +376,27 @@ def test_compute_stats_empty():
 
 def test_compute_stats_with_data():
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, 1.0, 10),
-        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True,  None, 11),
-        (datetime(2024, 2, 5,  tzinfo=UTC), 10.0, False, 2.0, 12),
+        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, 1.0, 10, "org/a"),
+        (datetime(2024, 1, 20, tzinfo=UTC), 3.0, True,  None, 11, "org/a"),
+        (datetime(2024, 2, 5,  tzinfo=UTC), 10.0, False, 2.0, 12, "org/b"),
     ]
     stats = compute_stats(resolved)
     assert stats["total_resolved"] == 3
     assert stats["resolution"]["median"] == 5.0
     assert stats["resolution"]["max"] == 10.0
-    assert stats["resolution"]["max_pr"] == 12
+    assert stats["resolution"]["max_pr_url"] == "https://github.com/org/b/pull/12"
     assert stats["ftc_count"] == 1
     assert stats["ftc_pct"] == 33
     assert stats["engagement"]["median"] == 1.5
-    assert stats["engagement"]["max_pr"] == 12
+    assert stats["engagement"]["max_pr_url"] == "https://github.com/org/b/pull/12"
     assert len(stats["hist_labels"]) == 7
     assert len(stats["trend_labels"]) == 2
 
 
 def test_compute_stats_uses_provided_trend_fn():
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1),
-        (datetime(2024, 1, 22, tzinfo=UTC), 3.0, False, None, 2),
+        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1, "org/r"),
+        (datetime(2024, 1, 22, tzinfo=UTC), 3.0, False, None, 2, "org/r"),
     ]
     stats = compute_stats(resolved, trend_fn=weekly_stats_trend)
     assert len(stats["trend_labels"]) == 2
@@ -403,7 +404,7 @@ def test_compute_stats_uses_provided_trend_fn():
 
 
 def test_compute_stats_trend_has_all_series():
-    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1)]
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1, "org/r")]
     stats = compute_stats(resolved)
     for key in ("trend_medians", "trend_means", "trend_p95s", "trend_p99s", "trend_maxes"):
         assert key in stats
@@ -412,8 +413,8 @@ def test_compute_stats_trend_has_all_series():
 
 def test_compute_stats_engagement_trend_populated():
     resolved = [
-        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, 2.0, 1),
-        (datetime(2024, 2, 5,  tzinfo=UTC), 3.0, False, 1.0, 2),
+        (datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, 2.0, 1, "org/r"),
+        (datetime(2024, 2, 5,  tzinfo=UTC), 3.0, False, 1.0, 2, "org/r"),
     ]
     stats = compute_stats(resolved)
     for key in ("eng_trend_labels", "eng_trend_medians", "eng_trend_means",
@@ -423,18 +424,18 @@ def test_compute_stats_engagement_trend_populated():
 
 
 def test_compute_stats_engagement_trend_empty_when_no_engagement():
-    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1)]
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1, "org/r")]
     stats = compute_stats(resolved)
     assert stats["eng_trend_labels"] == []
 
 
 def test_compute_stats_no_engagement():
-    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1)]
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 5.0, False, None, 1, "org/r")]
     assert compute_stats(resolved)["engagement"]["median"] is None
 
 
 def test_compute_stats_all_ftc():
-    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 4.0, True, 0.5, 1)]
+    resolved = [(datetime(2024, 1, 15, tzinfo=UTC), 4.0, True, 0.5, 1, "org/r")]
     stats = compute_stats(resolved)
     assert stats["ftc_count"] == 1
     assert stats["ftc_pct"] == 100
@@ -443,8 +444,8 @@ def test_compute_stats_all_ftc():
 # --- render_html ---
 
 
-def _dist(median=5.0, mean=6.0, p95=12.0, p99=20.0, max_=25.0, max_pr=None):
-    return {"median": median, "mean": mean, "p95": p95, "p99": p99, "max": max_, "max_pr": max_pr}
+def _dist(median=5.0, mean=6.0, p95=12.0, p99=20.0, max_=25.0, max_pr_url=None):
+    return {"median": median, "mean": mean, "p95": p95, "p99": p99, "max": max_, "max_pr_url": max_pr_url}
 
 
 def _stats(total=10, ftc_count=2, resolution=None, engagement=None,
@@ -560,22 +561,15 @@ def test_render_html_embeds_both_tabs_data():
 
 
 def test_render_html_max_links_to_pr():
-    stats = _stats(resolution=_dist(max_pr=42))
-    html = render_html(stats, stats, "2024-01-15T12:00:00Z",
-                       pr_base_url="https://github.com/org/repo")
-    assert "https://github.com/org/repo/pull/42" in html
-
-
-def test_render_html_max_no_link_without_pr_base_url():
-    stats = _stats(resolution=_dist(max_pr=42))
+    url = "https://github.com/org/repo/pull/42"
+    stats = _stats(resolution=_dist(max_pr_url=url))
     html = render_html(stats, stats, "2024-01-15T12:00:00Z")
-    assert "/pull/42" not in html
+    assert url in html
 
 
-def test_render_html_max_no_link_when_max_pr_none():
-    stats = _stats(resolution=_dist(max_pr=None))
-    html = render_html(stats, stats, "2024-01-15T12:00:00Z",
-                       pr_base_url="https://github.com/org/repo")
+def test_render_html_max_no_link_when_max_pr_url_none():
+    stats = _stats(resolution=_dist(max_pr_url=None))
+    html = render_html(stats, stats, "2024-01-15T12:00:00Z")
     assert 'class="stat-link"' not in html
 
 
@@ -598,8 +592,12 @@ def _write_pr(pr_dir, created, closed_type, closed, author="alice", reviews=()):
     }))
 
 
+def _prs_dir(data_dir, owner="org", repo="repo"):
+    return data_dir / owner / repo / "prs"
+
+
 def test_build_site_writes_index(tmp_path):
-    _write_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z")
+    _write_pr(_prs_dir(tmp_path) / "1", "2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z")
     result = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
     assert (tmp_path / "site" / "index.html").exists()
     assert result["all"]["total_resolved"] == 1
@@ -609,9 +607,9 @@ def test_build_site_recent_filters_old_prs(tmp_path):
     now = datetime.now(UTC)
     recent = (now - timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
     old = (now - timedelta(days=120)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    _write_pr(tmp_path / "prs" / "1", old, "closed_merged",
+    _write_pr(_prs_dir(tmp_path) / "1", old, "closed_merged",
               (now - timedelta(days=115)).strftime("%Y-%m-%dT%H:%M:%SZ"), author="alice")
-    _write_pr(tmp_path / "prs" / "2", recent, "closed_merged",
+    _write_pr(_prs_dir(tmp_path) / "2", recent, "closed_merged",
               (now - timedelta(days=25)).strftime("%Y-%m-%dT%H:%M:%SZ"), author="bob")
     result = build_site(tmp_path, tmp_path / "site", "now")
     assert result["all"]["total_resolved"] == 2
@@ -619,26 +617,35 @@ def test_build_site_recent_filters_old_prs(tmp_path):
 
 
 def test_build_site_engagement_computed(tmp_path):
-    _write_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", "closed_merged",
+    _write_pr(_prs_dir(tmp_path) / "1", "2024-01-10T10:00:00Z", "closed_merged",
               "2024-01-15T10:00:00Z", reviews=[("2024-01-12T10:00:00Z", "maintainer")])
     result = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
     assert result["all"]["engagement"]["median"] == pytest.approx(2.0)
 
 
 def test_build_site_ftc_counted(tmp_path):
-    _write_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z", author="alice")
-    _write_pr(tmp_path / "prs" / "2", "2024-01-12T10:00:00Z", "closed_merged", "2024-01-17T10:00:00Z", author="alice")
-    _write_pr(tmp_path / "prs" / "3", "2024-01-11T10:00:00Z", "closed_merged", "2024-01-16T10:00:00Z", author="bob")
+    _write_pr(_prs_dir(tmp_path) / "1", "2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z", author="alice")
+    _write_pr(_prs_dir(tmp_path) / "2", "2024-01-12T10:00:00Z", "closed_merged", "2024-01-17T10:00:00Z", author="alice")
+    _write_pr(_prs_dir(tmp_path) / "3", "2024-01-11T10:00:00Z", "closed_merged", "2024-01-16T10:00:00Z", author="bob")
     result = build_site(tmp_path, tmp_path / "site", "2024-01-20T00:00:00Z")
     assert result["all"]["ftc_count"] == 2
     assert result["all"]["total_resolved"] == 3
 
 
 def test_build_site_no_data(tmp_path):
-    (tmp_path / "prs").mkdir()
+    _prs_dir(tmp_path).mkdir(parents=True)
     result = build_site(tmp_path, tmp_path / "site", "2024-01-16T00:00:00Z")
     assert result["all"]["total_resolved"] == 0
     assert "No data yet" in (tmp_path / "site" / "index.html").read_text()
+
+
+def test_build_site_aggregates_across_repos(tmp_path):
+    _write_pr(_prs_dir(tmp_path, "org", "repo-a") / "1", "2024-01-10T10:00:00Z",
+              "closed_merged", "2024-01-15T10:00:00Z", author="alice")
+    _write_pr(_prs_dir(tmp_path, "org", "repo-b") / "1", "2024-01-11T10:00:00Z",
+              "closed_merged", "2024-01-16T10:00:00Z", author="bob")
+    result = build_site(tmp_path, tmp_path / "site", "2024-01-20T00:00:00Z")
+    assert result["all"]["total_resolved"] == 2
 
 
 # --- compute_ftc_pr_numbers ---
@@ -654,22 +661,46 @@ def _write_meta(pr_dir, author, created_at):
 
 
 def test_compute_ftc_pr_numbers_first_pr_per_author(tmp_path):
-    _write_meta(tmp_path / "prs" / "1", "alice", "2024-01-10T10:00:00Z")
-    _write_meta(tmp_path / "prs" / "2", "alice", "2024-01-12T10:00:00Z")
-    _write_meta(tmp_path / "prs" / "3", "bob",   "2024-01-11T10:00:00Z")
+    base = tmp_path / "org" / "repo" / "prs"
+    _write_meta(base / "1", "alice", "2024-01-10T10:00:00Z")
+    _write_meta(base / "2", "alice", "2024-01-12T10:00:00Z")
+    _write_meta(base / "3", "bob",   "2024-01-11T10:00:00Z")
     result = compute_ftc_pr_numbers(tmp_path)
-    assert 1 in result
-    assert 2 not in result
-    assert 3 in result
+    assert ("org", "repo", 1) in result
+    assert ("org", "repo", 2) not in result
+    assert ("org", "repo", 3) in result
 
 
-def test_compute_ftc_pr_numbers_no_prs_dir(tmp_path):
+def test_compute_ftc_pr_numbers_cross_repo(tmp_path):
+    _write_meta(tmp_path / "org" / "repo-a" / "prs" / "1", "alice", "2024-01-10T10:00:00Z")
+    _write_meta(tmp_path / "org" / "repo-b" / "prs" / "5", "alice", "2024-02-01T10:00:00Z")
+    result = compute_ftc_pr_numbers(tmp_path)
+    assert ("org", "repo-a", 1) in result
+    assert ("org", "repo-b", 5) not in result  # alice's first is in repo-a
+
+
+def test_compute_ftc_pr_numbers_no_repos(tmp_path):
     assert compute_ftc_pr_numbers(tmp_path) == frozenset()
 
 
 def test_compute_ftc_pr_numbers_no_metadata(tmp_path):
-    (tmp_path / "prs" / "1").mkdir(parents=True)
+    (tmp_path / "org" / "repo" / "prs" / "1").mkdir(parents=True)
     assert compute_ftc_pr_numbers(tmp_path) == frozenset()
+
+
+# --- _iter_repo_prs_dirs ---
+
+
+def test_iter_repo_prs_dirs_yields_all(tmp_path):
+    (tmp_path / "org" / "repo-a" / "prs" / "1").mkdir(parents=True)
+    (tmp_path / "org" / "repo-b" / "prs" / "2").mkdir(parents=True)
+    results = list(_iter_repo_prs_dirs(tmp_path))
+    assert ("org", "repo-a", tmp_path / "org" / "repo-a" / "prs" / "1") in results
+    assert ("org", "repo-b", tmp_path / "org" / "repo-b" / "prs" / "2") in results
+
+
+def test_iter_repo_prs_dirs_empty_data_dir(tmp_path):
+    assert list(_iter_repo_prs_dirs(tmp_path)) == []
 
 
 # --- _age_class ---
@@ -707,18 +738,23 @@ def _write_open_pr(pr_dir, created, author="alice", title="An open PR",
     }))
 
 
+def _open_prs_base(tmp_path, owner="org", repo="repo"):
+    return tmp_path / owner / repo / "prs"
+
+
 def test_load_open_prs_basic(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "5", "2024-01-10T10:00:00Z")
+    _write_open_pr(_open_prs_base(tmp_path) / "5", "2024-01-10T10:00:00Z")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
     assert len(result) == 1
     assert result[0]["number"] == 5
     assert result[0]["age_days"] == pytest.approx(10.0, abs=0.5)
+    assert result[0]["repo"] == "org/repo"
 
 
 def test_load_open_prs_skips_closed(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z")
-    _write_pr(tmp_path / "prs" / "2", "2024-01-08T10:00:00Z", "closed_merged", "2024-01-12T10:00:00Z")
+    _write_open_pr(_open_prs_base(tmp_path) / "1", "2024-01-10T10:00:00Z")
+    _write_pr(_open_prs_base(tmp_path) / "2", "2024-01-08T10:00:00Z", "closed_merged", "2024-01-12T10:00:00Z")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
     assert len(result) == 1
@@ -726,25 +762,25 @@ def test_load_open_prs_skips_closed(tmp_path):
 
 
 def test_load_open_prs_sorted_oldest_first_within_tier(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "1", "2024-01-05T10:00:00Z")  # older
-    _write_open_pr(tmp_path / "prs" / "2", "2024-01-10T10:00:00Z")  # newer
+    _write_open_pr(_open_prs_base(tmp_path) / "1", "2024-01-05T10:00:00Z")  # older
+    _write_open_pr(_open_prs_base(tmp_path) / "2", "2024-01-10T10:00:00Z")  # newer
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
     assert result[0]["number"] == 1  # oldest non-committer first
 
 
 def test_load_open_prs_ftc_before_non_committer(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", author="outsider")  # non-committer, older
-    _write_open_pr(tmp_path / "prs" / "2", "2024-01-15T10:00:00Z", author="newbie")    # FTC, newer
+    _write_open_pr(_open_prs_base(tmp_path) / "1", "2024-01-10T10:00:00Z", author="outsider")
+    _write_open_pr(_open_prs_base(tmp_path) / "2", "2024-01-15T10:00:00Z", author="newbie")
     now = datetime(2024, 1, 20, tzinfo=UTC)
-    result = load_open_prs(tmp_path, {2}, frozenset(), now)
+    result = load_open_prs(tmp_path, {("org", "repo", 2)}, frozenset(), now)
     assert result[0]["number"] == 2   # FTC surfaces first despite being newer
     assert result[1]["number"] == 1
 
 
 def test_load_open_prs_non_committer_before_committer(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "1", "2024-01-10T10:00:00Z", author="k-wall")    # committer, older
-    _write_open_pr(tmp_path / "prs" / "2", "2024-01-15T10:00:00Z", author="outsider")  # non-committer, newer
+    _write_open_pr(_open_prs_base(tmp_path) / "1", "2024-01-10T10:00:00Z", author="k-wall")
+    _write_open_pr(_open_prs_base(tmp_path) / "2", "2024-01-15T10:00:00Z", author="outsider")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), COMMITTERS, now)
     assert result[0]["number"] == 2   # non-committer surfaces first despite being newer
@@ -752,8 +788,8 @@ def test_load_open_prs_non_committer_before_committer(tmp_path):
 
 
 def test_load_open_prs_bot_after_humans(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "1", "2024-01-01T10:00:00Z", author="dependabot[bot]")  # bot, very old
-    _write_open_pr(tmp_path / "prs" / "2", "2024-01-18T10:00:00Z", author="outsider")         # human, very new
+    _write_open_pr(_open_prs_base(tmp_path) / "1", "2024-01-01T10:00:00Z", author="dependabot[bot]")
+    _write_open_pr(_open_prs_base(tmp_path) / "2", "2024-01-18T10:00:00Z", author="outsider")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
     assert result[0]["number"] == 2   # human first
@@ -761,14 +797,14 @@ def test_load_open_prs_bot_after_humans(tmp_path):
 
 
 def test_load_open_prs_ftc_flag(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "7", "2024-01-10T10:00:00Z", author="newbie")
+    _write_open_pr(_open_prs_base(tmp_path) / "7", "2024-01-10T10:00:00Z", author="newbie")
     now = datetime(2024, 1, 20, tzinfo=UTC)
-    result = load_open_prs(tmp_path, {7}, frozenset(), now)
+    result = load_open_prs(tmp_path, {("org", "repo", 7)}, frozenset(), now)
     assert result[0]["is_ftc"] is True
 
 
 def test_load_open_prs_bot_flag(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "3", "2024-01-10T10:00:00Z", author="dependabot[bot]")
+    _write_open_pr(_open_prs_base(tmp_path) / "3", "2024-01-10T10:00:00Z", author="dependabot[bot]")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
     assert result[0]["is_bot"] is True
@@ -776,14 +812,14 @@ def test_load_open_prs_bot_flag(tmp_path):
 
 
 def test_load_open_prs_committer_flag(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "4", "2024-01-10T10:00:00Z", author="k-wall")
+    _write_open_pr(_open_prs_base(tmp_path) / "4", "2024-01-10T10:00:00Z", author="k-wall")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), COMMITTERS, now)
     assert result[0]["is_committer"] is True
 
 
 def test_load_open_prs_engagement_computed(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "6", "2024-01-10T10:00:00Z",
+    _write_open_pr(_open_prs_base(tmp_path) / "6", "2024-01-10T10:00:00Z",
                    author="alice", review_actor="bob")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
@@ -791,14 +827,14 @@ def test_load_open_prs_engagement_computed(tmp_path):
 
 
 def test_load_open_prs_no_engagement(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "8", "2024-01-10T10:00:00Z")
+    _write_open_pr(_open_prs_base(tmp_path) / "8", "2024-01-10T10:00:00Z")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
     assert result[0]["engagement_days"] is None
 
 
 def test_load_open_prs_draft_excluded(tmp_path):
-    pr_dir = tmp_path / "prs" / "9"
+    pr_dir = _open_prs_base(tmp_path) / "9"
     pr_dir.mkdir(parents=True)
     (pr_dir / "events.json").write_text("[]")
     (pr_dir / "metadata.json").write_text(json.dumps({
@@ -812,123 +848,165 @@ def test_load_open_prs_draft_excluded(tmp_path):
 
 
 def test_load_open_prs_non_draft_included(tmp_path):
-    _write_open_pr(tmp_path / "prs" / "10", "2024-01-10T10:00:00Z")
+    _write_open_pr(_open_prs_base(tmp_path) / "10", "2024-01-10T10:00:00Z")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
     assert len(result) == 1
     assert "is_draft" not in result[0]
 
 
+def test_load_open_prs_aggregates_multiple_repos(tmp_path):
+    _write_open_pr(_open_prs_base(tmp_path, "org", "repo-a") / "1", "2024-01-10T10:00:00Z")
+    _write_open_pr(_open_prs_base(tmp_path, "org", "repo-b") / "2", "2024-01-11T10:00:00Z")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    repos = {pr["repo"] for pr in result}
+    assert repos == {"org/repo-a", "org/repo-b"}
+
+
 # --- _open_prs_html ---
 
 
 def _make_pr(number=1, title="Fix it", author="alice", age_days=5.0,
-             is_bot=False, is_ftc=False, is_committer=True, engagement_days=None):
+             is_bot=False, is_ftc=False, is_committer=True, engagement_days=None,
+             repo="o/r"):
     return {"number": number, "title": title, "author": author, "age_days": age_days,
             "is_bot": is_bot, "is_ftc": is_ftc, "is_committer": is_committer,
-            "engagement_days": engagement_days}
+            "engagement_days": engagement_days, "repo": repo}
 
 
 def test_open_prs_html_empty():
-    html = _open_prs_html([], None)
+    html = _open_prs_html([])
     assert "no-data" in html.lower() or "No open" in html
 
 
 def test_open_prs_html_title_and_number_present():
-    html = _open_prs_html([_make_pr(42, "My PR")], "https://github.com/o/r")
-    # Number appears in the card header, title inside the anchor
+    html = _open_prs_html([_make_pr(42, "My PR", repo="o/r")])
     assert "#42" in html
     assert '<a href="https://github.com/o/r/pull/42">My PR</a>' in html
 
 
 def test_open_prs_html_emojis_after_link():
-    html = _open_prs_html([_make_pr(is_ftc=True, is_committer=False)], None)
-    # Emoji must appear after the closing </a>
+    html = _open_prs_html([_make_pr(is_ftc=True, is_committer=False)])
     close_a = html.index("</a>")
     assert "🌱" in html[close_a:]
 
 
 def test_open_prs_html_ftc_emoji_with_tooltip():
-    html = _open_prs_html([_make_pr(is_ftc=True, is_committer=False)], None)
+    html = _open_prs_html([_make_pr(is_ftc=True, is_committer=False)])
     assert 'title="first-time contributor"' in html
     assert "🌱" in html
 
 
 def test_open_prs_html_non_committer_emoji_with_tooltip():
-    html = _open_prs_html([_make_pr(is_committer=False)], None)
+    html = _open_prs_html([_make_pr(is_committer=False)])
     assert 'title="non-committer"' in html
     assert "👤" in html
 
 
 def test_open_prs_html_bot_emoji_with_tooltip():
-    html = _open_prs_html([_make_pr(is_bot=True, author="bot[bot]")], None)
+    html = _open_prs_html([_make_pr(is_bot=True, author="bot[bot]")])
     assert 'title="bot"' in html
     assert "🤖" in html
 
 
 def test_open_prs_html_no_engagement_emoji_with_tooltip():
-    html = _open_prs_html([_make_pr(engagement_days=None)], None)
+    html = _open_prs_html([_make_pr(engagement_days=None)])
     assert 'title="no engagement yet"' in html
     assert "👀" in html
 
 
 def test_open_prs_html_no_waiting_emoji_when_engaged():
-    html = _open_prs_html([_make_pr(engagement_days=2.0)], None)
+    html = _open_prs_html([_make_pr(engagement_days=2.0)])
     grid_start = html.index('id="pr-grid-open"')
     grid_end   = html.index("</div>", grid_start) + len("</div>")
     assert "👀" not in html[grid_start:grid_end]
 
 
 def test_open_prs_html_star_for_new_pr():
-    html = _open_prs_html([_make_pr(age_days=0.5)], None)
+    html = _open_prs_html([_make_pr(age_days=0.5)])
     grid_start = html.index('id="pr-grid-open"')
     assert "⭐" in html[grid_start:]
     assert 'title="opened in the last 24 hours"' in html
 
 
 def test_open_prs_html_no_star_for_older_pr():
-    html = _open_prs_html([_make_pr(age_days=1.0)], None)
+    html = _open_prs_html([_make_pr(age_days=1.0)])
     grid_start = html.index('id="pr-grid-open"')
     grid_end   = html.index("</div>", grid_start) + len("</div>")
     assert "⭐" not in html[grid_start:grid_end]
 
 
 def test_open_prs_html_ancient_has_data_attr():
-    html = _open_prs_html([_make_pr(age_days=100.0)], None)
+    html = _open_prs_html([_make_pr(age_days=100.0)])
     assert 'data-ancient="true"' in html
 
 
 def test_open_prs_html_non_ancient_has_no_data_attr():
-    html = _open_prs_html([_make_pr(age_days=5.0)], None)
+    html = _open_prs_html([_make_pr(age_days=5.0)])
     assert 'data-ancient="true"' not in html
 
 
 def test_open_prs_html_author_link():
-    html = _open_prs_html([_make_pr(author="bob")], None)
+    html = _open_prs_html([_make_pr(author="bob")])
     assert '<a href="https://github.com/bob">@bob</a>' in html
 
 
 def test_open_prs_html_avatar_style_on_non_bot():
-    html = _open_prs_html([_make_pr(author="alice", is_bot=False)], None)
+    html = _open_prs_html([_make_pr(author="alice", is_bot=False)])
     assert "url('https://github.com/alice.png')" in html
 
 
 def test_open_prs_html_no_avatar_style_on_bot():
-    html = _open_prs_html([_make_pr(author="renovate[bot]", is_bot=True)], None)
+    html = _open_prs_html([_make_pr(author="renovate[bot]", is_bot=True)])
     assert "renovate[bot].png" not in html
     assert "--avatar-url" not in html
 
 
 def test_open_prs_html_has_checkbox():
-    html = _open_prs_html([_make_pr()], None)
+    html = _open_prs_html([_make_pr()])
     assert 'id="hide-ancient"' in html
     assert "Hide PRs older than 90 days" in html
+
+
+def test_open_prs_html_repo_tag_on_card():
+    html = _open_prs_html([_make_pr(repo="org/my-repo")])
+    assert "org/my-repo" in html
+    assert 'class="pr-repo-tag"' in html
+
+
+def test_open_prs_html_repo_filter_attr_on_card():
+    html = _open_prs_html([_make_pr(repo="org/my-repo")])
+    assert 'data-repo-filter="org/my-repo"' in html
+
+
+def test_open_prs_html_chips_shown_for_multiple_repos():
+    prs = [_make_pr(1, repo="org/repo-a"), _make_pr(2, repo="org/repo-b")]
+    html = _open_prs_html(prs)
+    assert 'class="repo-chips"' in html
+    assert 'data-repo=""' in html          # "All" chip
+    assert 'data-repo="org/repo-a"' in html
+    assert 'data-repo="org/repo-b"' in html
+    assert "repo-a" in html                # label is repo name without owner
+    assert "repo-b" in html
+
+
+def test_open_prs_html_no_chips_for_single_repo():
+    html = _open_prs_html([_make_pr(repo="org/repo-a"), _make_pr(2, repo="org/repo-a")])
+    assert 'class="repo-chips"' not in html
 
 
 def test_render_html_open_tab_has_ancient_js():
     html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z", open_prs=[_make_pr()])
     assert "hide-ancient" in html
     assert "pr-grid-open" in html
+
+
+def test_render_html_chip_filter_js_present():
+    prs = [_make_pr(1, repo="org/repo-a"), _make_pr(2, repo="org/repo-b")]
+    html = render_html(_stats(), _stats(), "2024-01-15T12:00:00Z", open_prs=prs)
+    assert "repo-chip" in html
+    assert "data-repo-filter" in html
 
 
 # --- load_committers ---

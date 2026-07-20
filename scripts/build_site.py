@@ -161,6 +161,20 @@ _HTML = """\
     .pr-controls { margin-bottom: 1rem; font-size: 0.875rem; color: var(--ink-2); display: flex; align-items: center; gap: 0.5rem; }
     .pr-controls input[type="checkbox"] { cursor: pointer; }
     #pr-grid-open.hide-ancient .pr-card[data-ancient="true"] { display: none; }
+    .repo-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .repo-chip {
+      padding: 0.25rem 0.625rem;
+      border: 1px solid var(--grid);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      background: none;
+      color: var(--ink-2);
+      cursor: pointer;
+    }
+    .repo-chip.active { background: var(--s1); color: #fff; border-color: var(--s1); }
+    .repo-chip:hover:not(.active) { border-color: var(--s1); color: var(--s1); }
+    .pr-repo-tag { font-size: 0.65rem; color: var(--ink-m); font-family: monospace; }
   </style>
 </head>
 <body>
@@ -382,19 +396,19 @@ def _percentile(sorted_vals, p):
     return round(sorted_vals[lo] + (idx - lo) * (sorted_vals[hi] - sorted_vals[lo]), 1)
 
 
-def _dist_stats(values, pr_numbers=None):
+def _dist_stats(values, pr_urls=None):
     if not values:
-        return {"median": None, "mean": None, "p95": None, "p99": None, "max": None, "max_pr": None}
+        return {"median": None, "mean": None, "p95": None, "p99": None, "max": None, "max_pr_url": None}
     sv = sorted(values)
     max_val = max(values)
-    max_pr = pr_numbers[values.index(max_val)] if pr_numbers else None
+    max_pr_url = pr_urls[values.index(max_val)] if pr_urls else None
     return {
-        "median": round(statistics.median(values), 1),
-        "mean":   round(sum(values) / len(values), 1),
-        "p95":    _percentile(sv, 95),
-        "p99":    _percentile(sv, 99),
-        "max":    round(max_val, 1),
-        "max_pr": max_pr,
+        "median":     round(statistics.median(values), 1),
+        "mean":       round(sum(values) / len(values), 1),
+        "p95":        _percentile(sv, 95),
+        "p99":        _percentile(sv, 99),
+        "max":        round(max_val, 1),
+        "max_pr_url": max_pr_url,
     }
 
 
@@ -404,13 +418,20 @@ def compute_stats(resolved, trend_fn=None, eng_trend_fn=None):
     if eng_trend_fn is None:
         eng_trend_fn = monthly_engagement_trend
 
-    all_days   = [days for _, days, *_ in resolved]
-    all_pr_nos = [pr   for *_, pr      in resolved]
-    ftc_count  = sum(1 for _, _, is_ftc, *_ in resolved if is_ftc)
+    all_days    = [days for _, days, *_ in resolved]
+    all_pr_urls = [
+        f"https://github.com/{repo}/pull/{pr}"
+        for _, _, _, _, pr, repo in resolved
+    ]
+    ftc_count = sum(1 for _, _, is_ftc, *_ in resolved if is_ftc)
 
-    eng_pairs      = [(e, pr) for _, _, _, e, pr in resolved if e is not None]
-    eng_values     = [e  for e, _  in eng_pairs]
-    eng_pr_numbers = [pr for _, pr in eng_pairs]
+    eng_items  = [
+        (e, f"https://github.com/{repo}/pull/{pr}")
+        for _, _, _, e, pr, repo in resolved
+        if e is not None
+    ]
+    eng_values = [e   for e, _   in eng_items]
+    eng_urls   = [url for _, url in eng_items]
 
     total = len(resolved)
     hist_labels, hist_counts = histogram(all_days)
@@ -421,8 +442,8 @@ def compute_stats(resolved, trend_fn=None, eng_trend_fn=None):
         "total_resolved": total,
         "ftc_count": ftc_count,
         "ftc_pct": round(100 * ftc_count / total) if total else 0,
-        "resolution": _dist_stats(all_days, all_pr_nos),
-        "engagement": _dist_stats(eng_values, eng_pr_numbers),
+        "resolution": _dist_stats(all_days, all_pr_urls),
+        "engagement": _dist_stats(eng_values, eng_urls),
         "hist_labels": hist_labels,
         "hist_counts": hist_counts,
         "trend_labels":   list(trend_labels),
@@ -440,13 +461,24 @@ def compute_stats(resolved, trend_fn=None, eng_trend_fn=None):
     }
 
 
+def _iter_repo_prs_dirs(data_dir):
+    """Yields (owner, repo, pr_dir) for every PR dir across all repos under data_dir."""
+    for owner_dir in sorted(data_dir.iterdir()):
+        if not owner_dir.is_dir():
+            continue
+        for repo_dir in sorted(owner_dir.iterdir()):
+            prs_dir = repo_dir / "prs"
+            if not prs_dir.is_dir():
+                continue
+            for pr_dir in sorted(prs_dir.iterdir()):
+                if pr_dir.is_dir():
+                    yield owner_dir.name, repo_dir.name, pr_dir
+
+
 def compute_ftc_pr_numbers(data_dir):
-    """Returns the set of PR numbers that are each author's first PR in the dataset."""
-    prs_dir = data_dir / "prs"
-    if not prs_dir.exists():
-        return frozenset()
+    """Returns frozenset of (owner, repo, number) for each author's first PR across all repos."""
     first_by_author = {}
-    for pr_dir in prs_dir.iterdir():
+    for owner, repo, pr_dir in _iter_repo_prs_dirs(data_dir):
         metadata_path = pr_dir / "metadata.json"
         if not metadata_path.exists():
             continue
@@ -457,20 +489,18 @@ def compute_ftc_pr_numbers(data_dir):
             number = meta.get("number")
             if not (author and created_at and number is not None):
                 continue
+            key = (owner, repo, number)
             if author not in first_by_author or created_at < first_by_author[author][0]:
-                first_by_author[author] = (created_at, number)
+                first_by_author[author] = (created_at, key)
         except (json.JSONDecodeError, KeyError):
             continue
-    return frozenset(number for _, number in first_by_author.values())
+    return frozenset(key for _, key in first_by_author.values())
 
 
 def load_resolved(data_dir):
     ftc_pr_numbers = compute_ftc_pr_numbers(data_dir)
     resolved = []
-    prs_dir = data_dir / "prs"
-    if not prs_dir.exists():
-        return resolved
-    for pr_dir in sorted(prs_dir.iterdir()):
+    for owner, repo, pr_dir in _iter_repo_prs_dirs(data_dir):
         events_path = pr_dir / "events.json"
         if not events_path.exists():
             continue
@@ -483,7 +513,8 @@ def load_resolved(data_dir):
         except ValueError:
             continue
         engagement = time_to_engagement_days(events)
-        resolved.append((*result, pr_number in ftc_pr_numbers, engagement, pr_number))
+        owner_repo = f"{owner}/{repo}"
+        resolved.append((*result, (owner, repo, pr_number) in ftc_pr_numbers, engagement, pr_number, owner_repo))
     return resolved
 
 
@@ -504,10 +535,7 @@ def _age_class(age_days):
 def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
     """Returns open PRs sorted by tier then oldest-first, excluding drafts, each as a dict."""
     open_prs = []
-    prs_dir = data_dir / "prs"
-    if not prs_dir.exists():
-        return open_prs
-    for pr_dir in sorted(prs_dir.iterdir()):
+    for owner, repo, pr_dir in _iter_repo_prs_dirs(data_dir):
         metadata_path = pr_dir / "metadata.json"
         events_path   = pr_dir / "events.json"
         if not metadata_path.exists():
@@ -536,13 +564,14 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
         author = meta.get("author", "")
         age_days = (now_dt - _parse_ts(created_at)).total_seconds() / 86400
         is_bot = author.endswith("[bot]")
-        is_ftc = pr_number in ftc_pr_numbers
+        is_ftc = (owner, repo, pr_number) in ftc_pr_numbers
         is_committer = (author in committers) and not is_bot
         engagement_days = time_to_engagement_days(events)
         open_prs.append({
             "number":          pr_number,
             "title":           meta.get("title", ""),
             "author":          author,
+            "repo":            f"{owner}/{repo}",
             "age_days":        round(age_days, 1),
             "is_bot":          is_bot,
             "is_ftc":          is_ftc,
@@ -576,7 +605,7 @@ def _tier_card_class(pr):
     return "pr-card--committer"
 
 
-def _open_prs_html(open_prs, pr_base_url):
+def _open_prs_html(open_prs):
     if not open_prs:
         return '<p class="no-data">No open PRs found in harvested data.</p>'
 
@@ -597,7 +626,8 @@ def _open_prs_html(open_prs, pr_base_url):
 
         badges_html = " ".join(badge_spans)
         title = html_lib.escape(pr["title"])
-        url = f"{pr_base_url}/pull/{pr['number']}" if pr_base_url else "#"
+        repo = pr.get("repo", "")
+        url = f"https://github.com/{repo}/pull/{pr['number']}" if repo else "#"
         eng_str = _fmt(round(pr["engagement_days"], 1)) if pr["engagement_days"] is not None else "—"
         ancient_attr = ' data-ancient="true"' if pr["age_days"] >= _ANCIENT_DAYS else ""
         tier_class = _tier_card_class(pr)
@@ -609,11 +639,14 @@ def _open_prs_html(open_prs, pr_base_url):
         else:
             avatar_style = ""
 
+        repo_tag = f'<div class="pr-repo-tag">{html_lib.escape(repo)}</div>' if repo else ""
+        repo_attr = f' data-repo-filter="{html_lib.escape(repo)}"' if repo else ""
         cards.append(
-            f'<div class="pr-card {tier_class}"{ancient_attr}{avatar_style}>'
+            f'<div class="pr-card {tier_class}"{ancient_attr}{repo_attr}{avatar_style}>'
             f'<div class="pr-card-number">#{pr["number"]}</div>'
             f'<div class="pr-card-title"><a href="{url}">{title}</a></div>'
             f'<div class="pr-card-author"><a href="{author_url}">@{html_lib.escape(author)}</a></div>'
+            f'{repo_tag}'
             f'<div class="pr-card-badges">{badges_html}</div>'
             f'<div class="pr-card-meta">'
             f'<span class="age">{_fmt(pr["age_days"])} old</span>'
@@ -621,6 +654,18 @@ def _open_prs_html(open_prs, pr_base_url):
             f'</div>'
             f'</div>'
         )
+
+    distinct_repos = list(dict.fromkeys(pr.get("repo", "") for pr in open_prs if pr.get("repo")))
+    chips_html = ""
+    if len(distinct_repos) > 1:
+        chip_items = ['<button class="repo-chip active" data-repo="">All</button>']
+        for r in distinct_repos:
+            label = r.split("/")[-1] if "/" in r else r
+            chip_items.append(
+                f'<button class="repo-chip" data-repo="{html_lib.escape(r)}">'
+                f'{html_lib.escape(label)}</button>'
+            )
+        chips_html = '<div class="repo-chips">' + "".join(chip_items) + "</div>"
 
     controls = (
         '<div class="pr-controls">'
@@ -638,7 +683,8 @@ def _open_prs_html(open_prs, pr_base_url):
         '</div>'
     )
     return (
-        controls
+        chips_html
+        + controls
         + '<div class="pr-grid" id="pr-grid-open">'
         + "".join(cards)
         + '</div>'
@@ -646,13 +692,12 @@ def _open_prs_html(open_prs, pr_base_url):
     )
 
 
-def _stat_group_html(label, dist, color_class, pr_base_url=None):
+def _stat_group_html(label, dist, color_class):
     parts = []
     for name, key in [("Median", "median"), ("Mean", "mean"), ("p95", "p95"), ("p99", "p99"), ("Max", "max")]:
         val = _fmt(dist[key])
-        if key == "max" and dist.get("max_pr") is not None and pr_base_url:
-            url = f"{pr_base_url}/pull/{dist['max_pr']}"
-            val = f'<a class="stat-link" href="{url}">{val}</a>'
+        if key == "max" and dist.get("max_pr_url"):
+            val = f'<a class="stat-link" href="{dist["max_pr_url"]}">{val}</a>'
         parts.append(
             f'<div class="stat"><span class="stat-name">{name}</span>'
             f'<span class="stat-value">{val}</span></div>'
@@ -665,10 +710,8 @@ def _stat_group_html(label, dist, color_class, pr_base_url=None):
     )
 
 
-def _kpi_row_html(stats, pr_base_url=None):
-    resolution_group = _stat_group_html(
-        "Time to resolution", stats["resolution"], "resolution", pr_base_url
-    )
+def _kpi_row_html(stats):
+    resolution_group = _stat_group_html("Time to resolution", stats["resolution"], "resolution")
     ftc_tile = (
         f'<div class="kpi">'
         f'<div class="kpi-value ftc">{stats["ftc_count"]}</div>'
@@ -676,9 +719,7 @@ def _kpi_row_html(stats, pr_base_url=None):
         f'<div class="kpi-sub">{stats["ftc_pct"]}% of {stats["total_resolved"]} resolved</div>'
         f'</div>'
     )
-    engagement_group = _stat_group_html(
-        "Time to first engagement", stats["engagement"], "engagement", pr_base_url
-    )
+    engagement_group = _stat_group_html("Time to first engagement", stats["engagement"], "engagement")
     return f'<div class="kpi-row">{resolution_group}{ftc_tile}{engagement_group}</div>'
 
 
@@ -733,11 +774,11 @@ def _trend_chart_js(canvas_id, labels, medians, means, p95s, p99s, maxes):
 
 
 def _tab_content_html(stats, hist_title, res_trend_title, eng_trend_title,
-                      hist_id, res_trend_id, eng_trend_id, pr_base_url=None):
+                      hist_id, res_trend_id, eng_trend_id):
     has_res_trend = stats["total_resolved"] and bool(stats["trend_labels"])
     has_eng_trend = stats["total_resolved"] and bool(stats["eng_trend_labels"])
     return (
-        f"{_kpi_row_html(stats, pr_base_url)}"
+        f"{_kpi_row_html(stats)}"
         f'<div class="panel"><h2>{hist_title}</h2>'
         f"{_chart_area_html(hist_id, stats['total_resolved'])}</div>"
         f'<div class="panel"><h2>{res_trend_title}</h2>'
@@ -747,7 +788,7 @@ def _tab_content_html(stats, hist_title, res_trend_title, eng_trend_title,
     )
 
 
-def render_html(all_stats, recent_stats, generated_at, pr_base_url=None, open_prs=None):
+def render_html(all_stats, recent_stats, generated_at, open_prs=None):
     recent_hist_id      = "hist-recent"
     recent_trend_id     = "trend-recent"
     recent_eng_trend_id = "eng-trend-recent"
@@ -760,14 +801,14 @@ def render_html(all_stats, recent_stats, generated_at, pr_base_url=None, open_pr
         "Resolution time distribution",
         "Weekly resolution time (days)",
         "Weekly time to first engagement (days)",
-        recent_hist_id, recent_trend_id, recent_eng_trend_id, pr_base_url,
+        recent_hist_id, recent_trend_id, recent_eng_trend_id,
     )
     all_content = _tab_content_html(
         all_stats,
         "Resolution time distribution",
         "Monthly resolution time (days)",
         "Monthly time to first engagement (days)",
-        all_hist_id, all_trend_id, all_eng_trend_id, pr_base_url,
+        all_hist_id, all_trend_id, all_eng_trend_id,
     )
 
     def _tab_js(s, hist_id, res_id, eng_id):
@@ -788,6 +829,16 @@ def render_html(all_stats, recent_stats, generated_at, pr_base_url=None, open_pr
         "if(cb&&g){"
         "g.classList.add('hide-ancient');"
         "cb.addEventListener('change',()=>g.classList.toggle('hide-ancient',cb.checked));}"
+        "document.querySelectorAll('.repo-chip').forEach(chip=>{"
+        "chip.addEventListener('click',()=>{"
+        "document.querySelectorAll('.repo-chip').forEach(c=>c.classList.remove('active'));"
+        "chip.classList.add('active');"
+        "const r=chip.dataset.repo;"
+        "if(r){g.setAttribute('data-repo-filter',r);"
+        "g.querySelectorAll('.pr-card').forEach(c=>{"
+        "c.style.display=c.dataset.repoFilter===r?'':'none';});}"
+        "else{g.removeAttribute('data-repo-filter');"
+        "g.querySelectorAll('.pr-card').forEach(c=>{c.style.display='';});}});});"
     )
     chart_js = (
         f"if (name === 'recent') {{ {recent_js} }}"
@@ -795,7 +846,7 @@ def render_html(all_stats, recent_stats, generated_at, pr_base_url=None, open_pr
         f" else if (name === 'open') {{ {open_js} }}"
     )
 
-    open_prs_content = _open_prs_html(open_prs or [], pr_base_url)
+    open_prs_content = _open_prs_html(open_prs or [])
 
     return (
         _HTML
@@ -807,7 +858,7 @@ def render_html(all_stats, recent_stats, generated_at, pr_base_url=None, open_pr
     )
 
 
-def build_site(data_dir, site_dir, generated_at, pr_base_url=None, committers=frozenset()):
+def build_site(data_dir, site_dir, generated_at, committers=frozenset()):
     resolved = load_resolved(data_dir)
     recent_cutoff = datetime.now(UTC) - timedelta(days=RECENT_DAYS)
     recent_resolved = filter_resolved_since(resolved, recent_cutoff)
@@ -819,7 +870,7 @@ def build_site(data_dir, site_dir, generated_at, pr_base_url=None, committers=fr
     now_dt = datetime.now(UTC)
     open_prs = load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt)
 
-    html = render_html(all_stats, recent_stats, generated_at, pr_base_url, open_prs)
+    html = render_html(all_stats, recent_stats, generated_at, open_prs)
     site_dir.mkdir(parents=True, exist_ok=True)
     (site_dir / "index.html").write_text(html)
     return {"all": all_stats, "recent": recent_stats, "open_prs": open_prs}
@@ -829,12 +880,9 @@ def main():
     data_dir = Path(os.environ.get("DATA_DIR", "data"))
     site_dir = Path(os.environ.get("SITE_DIR", "site"))
     committers_file = Path(os.environ.get("COMMITTERS_FILE", "committers.txt"))
-    owner = os.environ.get("GITHUB_OWNER", "kroxylicious")
-    repo  = os.environ.get("GITHUB_REPO",  "kroxylicious")
-    pr_base_url = f"https://github.com/{owner}/{repo}"
     generated_at = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     committers = load_committers(committers_file)
-    stats = build_site(data_dir, site_dir, generated_at, pr_base_url, committers)
+    stats = build_site(data_dir, site_dir, generated_at, committers)
     a = stats["all"]
     r = stats["recent"]
     print(
