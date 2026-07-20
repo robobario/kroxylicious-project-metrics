@@ -1,0 +1,10 @@
+{
+  "number": 4316,
+  "title": "bug: Non-Deterministic Test QuickStartDT (Strimzi example download fails with 429 Too Many Requests, status code=429)",
+  "state": "closed",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}

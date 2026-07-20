@@ -1,0 +1,6 @@
+{
+  "number": 4252,
+  "title": "bugfix(routing): translate currentLeader.leaderId in Fetch v12-v15 Responses",
+  "state": "closed",
+  "labels": []
+}

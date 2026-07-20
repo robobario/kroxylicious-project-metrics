@@ -1,0 +1,9 @@
+{
+  "number": 4280,
+  "title": "chore(ci): add Central Portal POM validation to CI",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "release-process"
+  ]
+}

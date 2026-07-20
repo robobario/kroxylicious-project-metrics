@@ -1,0 +1,10 @@
+{
+  "number": 4391,
+  "title": "Add a Filter implementing SASL Termination",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "triaged",
+    "design-proposal-needed"
+  ]
+}

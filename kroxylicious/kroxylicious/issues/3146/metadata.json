@@ -1,0 +1,11 @@
+{
+  "number": 3146,
+  "title": "CipherTrust Manager KMS plugin for Record Encryption.",
+  "state": "closed",
+  "labels": [
+    "triaged",
+    "filter/record-encryption",
+    "kind/investigation",
+    "size/XL"
+  ]
+}

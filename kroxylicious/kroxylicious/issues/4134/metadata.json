@@ -1,0 +1,10 @@
+{
+  "number": 4134,
+  "title": "docs: document operator infrastructure annotations concepts and procedures",
+  "state": "closed",
+  "labels": [
+    "documentation",
+    "triaged",
+    "kube/operator"
+  ]
+}

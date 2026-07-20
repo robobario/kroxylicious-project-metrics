@@ -1,0 +1,8 @@
+{
+  "number": 4279,
+  "title": "chore(ci): remove tag-push trigger from docker.yaml",
+  "state": "open",
+  "labels": [
+    "release-process"
+  ]
+}

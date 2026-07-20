@@ -9,5 +9,7 @@
   "target_branch": "main",
   "created_at": "2026-06-24T02:00:30Z",
   "state": "closed",
-  "merged": false
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
 }

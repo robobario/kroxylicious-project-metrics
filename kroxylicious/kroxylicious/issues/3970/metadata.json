@@ -1,0 +1,9 @@
+{
+  "number": 3970,
+  "title": "Extend Operator Strimzi integration to support Kafka resource in different namespace to KafkaService",
+  "state": "closed",
+  "labels": [
+    "kind/enhancement",
+    "kube/operator"
+  ]
+}

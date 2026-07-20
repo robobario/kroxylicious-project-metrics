@@ -1,0 +1,11 @@
+{
+  "number": 4258,
+  "title": "bug(operator): Operator logs kroxylicious-runtime version info instead of its own",
+  "state": "closed",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "easy-starter",
+    "triaged"
+  ]
+}

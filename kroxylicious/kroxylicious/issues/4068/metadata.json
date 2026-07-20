@@ -1,0 +1,10 @@
+{
+  "number": 4068,
+  "title": "Flaky test: MinikubeWebhookInstallKT.shouldInstallAndInjectSidecar fails on verifyFailClosed",
+  "state": "closed",
+  "labels": [
+    "help wanted",
+    "test",
+    "triaged"
+  ]
+}

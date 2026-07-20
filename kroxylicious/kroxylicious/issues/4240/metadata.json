@@ -1,0 +1,11 @@
+{
+  "number": 4240,
+  "title": "feat(routing): upstream TLS must be applied per-route, not per-virtual-cluster",
+  "state": "closed",
+  "labels": [
+    "kind/bug",
+    "triaged",
+    "runtime",
+    "routing/runtime"
+  ]
+}

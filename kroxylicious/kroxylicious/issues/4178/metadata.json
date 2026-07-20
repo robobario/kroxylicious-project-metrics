@@ -1,0 +1,8 @@
+{
+  "number": 4178,
+  "title": "[Routing Runtime] RouterFactory lifecycle does not match proposal 070 contract",
+  "state": "closed",
+  "labels": [
+    "routing/runtime"
+  ]
+}

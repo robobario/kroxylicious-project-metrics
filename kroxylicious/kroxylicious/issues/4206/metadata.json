@@ -1,0 +1,11 @@
+{
+  "number": 4206,
+  "title": "feat(routing): client backpressure must reflect writability of all backend connections",
+  "state": "closed",
+  "labels": [
+    "kind/bug",
+    "triaged",
+    "runtime",
+    "routing/runtime"
+  ]
+}

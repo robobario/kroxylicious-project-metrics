@@ -1,0 +1,10 @@
+{
+  "number": 4370,
+  "title": "bug: Non-Deterministic Test KafkaProxyReconcilerIT.deploymentChecksumUpdatesWhenOpenshiftRouteHostAssigned",
+  "state": "closed",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "number": 4256,
+  "title": "bugfix(routing): node ID translation incomplete for Fetch, ShareFetch, ShareAcknowledge, DescribeTopicPartitions responses",
+  "state": "closed",
+  "labels": [
+    "triaged",
+    "routing/runtime"
+  ]
+}

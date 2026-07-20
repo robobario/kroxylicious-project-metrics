@@ -1,0 +1,9 @@
+{
+  "number": 4248,
+  "title": "refactor(runtime): reduce constructor arity in VirtualClusterModel and related classes",
+  "state": "closed",
+  "labels": [
+    "triaged",
+    "kind/refactoring"
+  ]
+}

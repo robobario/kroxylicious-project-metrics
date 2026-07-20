@@ -1,0 +1,9 @@
+{
+  "number": 4173,
+  "title": "consider redacting/removing edek/iv/tag from Edek#toString (even though they're encrypted)",
+  "state": "closed",
+  "labels": [
+    "filter/record-encryption",
+    "kind/refactoring"
+  ]
+}

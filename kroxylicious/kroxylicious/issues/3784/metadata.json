@@ -1,0 +1,11 @@
+{
+  "number": 3784,
+  "title": "Remove deprecated AWS KMS credential fields from Config",
+  "state": "open",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "triaged",
+    "lifecycle/deprecation"
+  ]
+}

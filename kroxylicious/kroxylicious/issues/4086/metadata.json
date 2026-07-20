@@ -1,0 +1,11 @@
+{
+  "number": 4086,
+  "title": "Remove nullables from FilterChainFactory",
+  "state": "closed",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "triaged",
+    "kind/refactoring"
+  ]
+}

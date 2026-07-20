@@ -1,0 +1,11 @@
+{
+  "number": 3783,
+  "title": "Remove deprecated shutdownQuietPeriodSeconds field from NettySettings",
+  "state": "open",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "triaged",
+    "lifecycle/deprecation"
+  ]
+}

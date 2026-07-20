@@ -1,0 +1,10 @@
+{
+  "number": 4368,
+  "title": "bug: Non-Deterministic Test RoutingPassThroughIT.shouldVirtualizeNodeIdsInDescribeTopicPartitionsResponse",
+  "state": "closed",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}

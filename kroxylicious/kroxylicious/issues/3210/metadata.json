@@ -1,0 +1,12 @@
+{
+  "number": 3210,
+  "title": "Switch compilation target to Java 21",
+  "state": "closed",
+  "labels": [
+    "help wanted",
+    "dev/maven",
+    "triaged",
+    "lifecycle/deprecation",
+    "size/S"
+  ]
+}

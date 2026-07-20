@@ -1,0 +1,10 @@
+{
+  "number": 4249,
+  "title": "feat(routing): hot-reload clusterDefinition changes",
+  "state": "closed",
+  "labels": [
+    "kind/enhancement",
+    "triaged",
+    "hot-reload"
+  ]
+}

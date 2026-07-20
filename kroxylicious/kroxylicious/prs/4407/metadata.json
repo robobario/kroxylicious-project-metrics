@@ -7,5 +7,6 @@
   "created_at": "2026-07-17T00:14:54Z",
   "state": "open",
   "merged": false,
-  "draft": true
+  "draft": true,
+  "linked_issues": []
 }

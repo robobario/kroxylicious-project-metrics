@@ -1,0 +1,9 @@
+{
+  "number": 4282,
+  "title": "fix(ci): fix hardcoded 'main' in stage script for release branch support",
+  "state": "closed",
+  "labels": [
+    "help wanted",
+    "release-process"
+  ]
+}

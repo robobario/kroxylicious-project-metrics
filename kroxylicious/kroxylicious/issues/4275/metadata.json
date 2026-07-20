@@ -1,0 +1,9 @@
+{
+  "number": 4275,
+  "title": "chore: `kroxylicious-openmessaging-benchmarks/scripts/setup-cluster.sh` hardcodes a version number in docs",
+  "state": "closed",
+  "labels": [
+    "documentation",
+    "dev"
+  ]
+}

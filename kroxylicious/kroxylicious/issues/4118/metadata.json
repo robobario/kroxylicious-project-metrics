@@ -1,0 +1,12 @@
+{
+  "number": 4118,
+  "title": "CipherTrust: Add domain support for password grant type",
+  "state": "closed",
+  "labels": [
+    "kind/enhancement",
+    "help wanted",
+    "triaged",
+    "filter/record-encryption",
+    "blocked/external-dependency"
+  ]
+}

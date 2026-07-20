@@ -1,0 +1,12 @@
+{
+  "number": 3785,
+  "title": "Remove deprecated WireFormatVersion.V2 enum value",
+  "state": "open",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "triaged",
+    "filter/record-validation",
+    "lifecycle/deprecation"
+  ]
+}

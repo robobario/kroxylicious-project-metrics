@@ -1,0 +1,11 @@
+{
+  "number": 4228,
+  "title": "KrpcGeneratorTest fails on Windows: output path not created (File.separator vs \"/\" in template name handling)",
+  "state": "closed",
+  "labels": [
+    "kind/bug",
+    "help wanted",
+    "dev/maven",
+    "triaged"
+  ]
+}

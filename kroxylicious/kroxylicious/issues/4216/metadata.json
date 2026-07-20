@@ -1,0 +1,13 @@
+{
+  "number": 4216,
+  "title": "Use exhaustive switch expressions for sealed type dispatch in VirtualClusterLifecycle",
+  "state": "closed",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "triaged",
+    "java",
+    "runtime",
+    "kind/refactoring"
+  ]
+}

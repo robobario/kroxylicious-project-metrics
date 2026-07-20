@@ -1,0 +1,11 @@
+{
+  "number": 4226,
+  "title": "feat(routing): integrate Router lifecycle with hot-reload",
+  "state": "closed",
+  "labels": [
+    "triaged",
+    "kind/investigation",
+    "routing/runtime",
+    "hot-reload"
+  ]
+}

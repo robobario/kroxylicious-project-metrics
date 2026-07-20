@@ -1,0 +1,9 @@
+{
+  "number": 4153,
+  "title": "[Routing Runtime] Support static routing in the Router runtime",
+  "state": "closed",
+  "labels": [
+    "kind/enhancement",
+    "routing/api"
+  ]
+}

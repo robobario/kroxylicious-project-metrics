@@ -1,0 +1,10 @@
+{
+  "number": 4218,
+  "title": "Use List.getFirst() and List.getLast() instead of list.get(0) / list.get(list.size() - 1)",
+  "state": "closed",
+  "labels": [
+    "good first issue",
+    "triaged",
+    "kind/refactoring"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "number": 1461,
+  "title": "Find a way to avoid CHANGELOG conflicts",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "triaged",
+    "dev/release"
+  ]
+}
