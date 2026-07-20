@@ -7,6 +7,8 @@ from build_site import (
     _age_class,
     _dist_stats,
     _iter_repo_prs_dirs,
+    _linked_issues_html,
+    _load_linked_issues,
     _open_prs_html,
     _percentile,
     compute_ftc_pr_numbers,
@@ -855,6 +857,40 @@ def test_load_open_prs_non_draft_included(tmp_path):
     assert "is_draft" not in result[0]
 
 
+def test_load_open_prs_resolves_linked_issues(tmp_path):
+    pr_dir = _open_prs_base(tmp_path) / "11"
+    pr_dir.mkdir(parents=True)
+    (pr_dir / "events.json").write_text("[]")
+    (pr_dir / "metadata.json").write_text(json.dumps({
+        "number": 11, "title": "PR with link", "author": "alice",
+        "labels": [], "target_branch": "main", "created_at": "2024-01-10T10:00:00Z",
+        "state": "open", "merged": False, "linked_issues": [77],
+    }))
+    issue_dir = tmp_path / "org" / "repo" / "issues" / "77"
+    issue_dir.mkdir(parents=True)
+    (issue_dir / "metadata.json").write_text(json.dumps(
+        {"number": 77, "title": "The linked bug", "state": "open", "labels": []}
+    ))
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert len(result) == 1
+    assert result[0]["linked_issues"] == [{"number": 77, "title": "The linked bug", "state": "open"}]
+
+
+def test_load_open_prs_linked_issues_empty_when_unresolved(tmp_path):
+    pr_dir = _open_prs_base(tmp_path) / "12"
+    pr_dir.mkdir(parents=True)
+    (pr_dir / "events.json").write_text("[]")
+    (pr_dir / "metadata.json").write_text(json.dumps({
+        "number": 12, "title": "PR", "author": "alice",
+        "labels": [], "target_branch": "main", "created_at": "2024-01-10T10:00:00Z",
+        "state": "open", "merged": False, "linked_issues": [999],
+    }))
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert result[0]["linked_issues"] == []
+
+
 def test_load_open_prs_aggregates_multiple_repos(tmp_path):
     _write_open_pr(_open_prs_base(tmp_path, "org", "repo-a") / "1", "2024-01-10T10:00:00Z")
     _write_open_pr(_open_prs_base(tmp_path, "org", "repo-b") / "2", "2024-01-11T10:00:00Z")
@@ -864,15 +900,83 @@ def test_load_open_prs_aggregates_multiple_repos(tmp_path):
     assert repos == {"org/repo-a", "org/repo-b"}
 
 
+# --- _load_linked_issues ---
+
+
+def test_load_linked_issues_returns_metadata(tmp_path):
+    issue_dir = tmp_path / "issues" / "10"
+    issue_dir.mkdir(parents=True)
+    (issue_dir / "metadata.json").write_text(json.dumps(
+        {"number": 10, "title": "A bug", "state": "open", "labels": []}
+    ))
+    result = _load_linked_issues(tmp_path, [10])
+    assert result == [{"number": 10, "title": "A bug", "state": "open"}]
+
+
+def test_load_linked_issues_skips_missing(tmp_path):
+    assert _load_linked_issues(tmp_path, [99]) == []
+
+
+def test_load_linked_issues_empty_list(tmp_path):
+    assert _load_linked_issues(tmp_path, []) == []
+
+
+def test_load_linked_issues_multiple(tmp_path):
+    for n, title in [(1, "First"), (2, "Second")]:
+        p = tmp_path / "issues" / str(n)
+        p.mkdir(parents=True)
+        (p / "metadata.json").write_text(json.dumps(
+            {"number": n, "title": title, "state": "closed", "labels": []}
+        ))
+    result = _load_linked_issues(tmp_path, [1, 2])
+    assert len(result) == 2
+    titles = {r["title"] for r in result}
+    assert titles == {"First", "Second"}
+
+
+# --- _linked_issues_html ---
+
+
+def test_linked_issues_html_empty():
+    assert _linked_issues_html([]) == ""
+
+
+def test_linked_issues_html_single_issue():
+    html = _linked_issues_html([{"number": 42, "title": "Fix the thing", "state": "open"}])
+    assert "#42" in html
+    assert "Fix the thing" in html
+    assert "(open)" in html
+    assert 'class="pr-card-linked"' in html
+
+
+def test_linked_issues_html_multiple():
+    issues = [
+        {"number": 1, "title": "First", "state": "open"},
+        {"number": 2, "title": "Second", "state": "closed"},
+    ]
+    html = _linked_issues_html(issues)
+    assert "#1" in html
+    assert "#2" in html
+    assert "First" in html
+    assert "Second" in html
+
+
+def test_linked_issues_html_escapes_title():
+    html = _linked_issues_html([{"number": 1, "title": "<script>", "state": "open"}])
+    assert "<script>" not in html
+    assert "&lt;script&gt;" in html
+
+
 # --- _open_prs_html ---
 
 
 def _make_pr(number=1, title="Fix it", author="alice", age_days=5.0,
              is_bot=False, is_ftc=False, is_committer=True, engagement_days=None,
-             repo="o/r"):
+             repo="o/r", linked_issues=None):
     return {"number": number, "title": title, "author": author, "age_days": age_days,
             "is_bot": is_bot, "is_ftc": is_ftc, "is_committer": is_committer,
-            "engagement_days": engagement_days, "repo": repo}
+            "engagement_days": engagement_days, "repo": repo,
+            "linked_issues": linked_issues or []}
 
 
 def test_open_prs_html_empty():
@@ -994,6 +1098,19 @@ def test_open_prs_html_chips_shown_for_multiple_repos():
 def test_open_prs_html_no_chips_for_single_repo():
     html = _open_prs_html([_make_pr(repo="org/repo-a"), _make_pr(2, repo="org/repo-a")])
     assert 'class="repo-chips"' not in html
+
+
+def test_open_prs_html_shows_linked_issue():
+    pr = _make_pr(linked_issues=[{"number": 55, "title": "A bug", "state": "open"}])
+    html = _open_prs_html([pr])
+    assert "#55" in html
+    assert "A bug" in html
+    assert "(open)" in html
+
+
+def test_open_prs_html_no_linked_section_when_empty():
+    html = _open_prs_html([_make_pr(linked_issues=[])])
+    assert 'class="pr-card-linked"' not in html
 
 
 def test_render_html_open_tab_has_ancient_js():

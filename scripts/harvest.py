@@ -4,6 +4,7 @@
 import json
 import logging
 import os
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -51,6 +52,19 @@ def iter_timeline(session, owner, repo, pr_number):
         url = _parse_next_link(resp.headers.get("Link", ""))
 
 
+_LINKED_ISSUE_RE = re.compile(
+    r"(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)",
+    re.IGNORECASE,
+)
+
+
+def extract_linked_issues(body):
+    """Returns a sorted, deduplicated list of issue numbers referenced in body."""
+    if not body:
+        return []
+    return sorted({int(n) for n in _LINKED_ISSUE_RE.findall(body)})
+
+
 def extract_metadata(pr):
     return {
         "number": pr["number"],
@@ -62,6 +76,7 @@ def extract_metadata(pr):
         "state": pr["state"],
         "merged": pr.get("merged_at") is not None,
         "draft": pr.get("draft", False),
+        "linked_issues": extract_linked_issues(pr.get("body")),
     }
 
 
@@ -159,6 +174,30 @@ def write_json(path, data):
     path.write_text(json.dumps(data, indent=2) + "\n")
 
 
+def fetch_issue_metadata(session, owner, repo, issue_number):
+    url = f"{GITHUB_API}/repos/{owner}/{repo}/issues/{issue_number}"
+    resp = session.get(url)
+    resp.raise_for_status()
+    data = resp.json()
+    return {
+        "number": data["number"],
+        "title": data["title"],
+        "state": data["state"],
+        "labels": [label["name"] for label in data.get("labels", [])],
+    }
+
+
+def harvest_linked_issues(session, owner, repo, linked_issue_numbers, data_dir):
+    for n in linked_issue_numbers:
+        issue_path = data_dir / "issues" / str(n) / "metadata.json"
+        if issue_path.exists():
+            continue
+        issue_path.parent.mkdir(parents=True, exist_ok=True)
+        meta = fetch_issue_metadata(session, owner, repo, n)
+        write_json(issue_path, meta)
+        log.info("           issue #%d harvested (%s)", n, meta["state"])
+
+
 def process_pr(session, owner, repo, pr, data_dir):
     pr_dir = data_dir / "prs" / str(pr["number"])
     pr_dir.mkdir(parents=True, exist_ok=True)
@@ -166,7 +205,10 @@ def process_pr(session, owner, repo, pr, data_dir):
     title = pr["title"][:60] + ("…" if len(pr["title"]) > 60 else "")
     log.info("  #%-5d  %-62s  [%s]", pr["number"], title, pr["state"])
 
-    write_json(pr_dir / "metadata.json", extract_metadata(pr))
+    metadata = extract_metadata(pr)
+    write_json(pr_dir / "metadata.json", metadata)
+
+    harvest_linked_issues(session, owner, repo, metadata["linked_issues"], data_dir)
 
     new_events = extract_pr_events(pr)
     new_events.extend(extract_timeline_events(list(iter_timeline(session, owner, repo, pr["number"]))))

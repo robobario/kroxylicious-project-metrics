@@ -7,10 +7,13 @@ import responses as responses_lib
 
 from harvest import (
     _parse_next_link,
+    extract_linked_issues,
     extract_metadata,
     extract_pr_events,
     extract_timeline_events,
+    fetch_issue_metadata,
     harvest,
+    harvest_linked_issues,
     iter_prs,
     load_repos,
     merge_events,
@@ -60,6 +63,50 @@ CLOSED_UNMERGED_PR = {
 }
 
 
+# --- extract_linked_issues ---
+
+
+def test_extract_linked_issues_none_body():
+    assert extract_linked_issues(None) == []
+
+
+def test_extract_linked_issues_empty_body():
+    assert extract_linked_issues("") == []
+
+
+def test_extract_linked_issues_no_keywords():
+    assert extract_linked_issues("This PR adds a new feature, see #42 for context") == []
+
+
+@pytest.mark.parametrize("keyword", [
+    "close", "closes", "closed",
+    "fix", "fixes", "fixed",
+    "resolve", "resolves", "resolved",
+])
+def test_extract_linked_issues_all_keywords(keyword):
+    assert extract_linked_issues(f"{keyword} #99") == [99]
+
+
+def test_extract_linked_issues_case_insensitive():
+    assert extract_linked_issues("FIXES #10") == [10]
+    assert extract_linked_issues("Closes #20") == [20]
+
+
+def test_extract_linked_issues_multiple_distinct():
+    body = "Closes #10\nFixes #20\nResolves #30"
+    assert extract_linked_issues(body) == [10, 20, 30]
+
+
+def test_extract_linked_issues_deduplicates():
+    body = "Closes #5\nFixes #5"
+    assert extract_linked_issues(body) == [5]
+
+
+def test_extract_linked_issues_returns_sorted():
+    body = "Closes #30\nFixes #10\nResolves #20"
+    assert extract_linked_issues(body) == [10, 20, 30]
+
+
 # --- extract_metadata ---
 
 
@@ -92,6 +139,16 @@ def test_extract_metadata_draft_captured():
 def test_extract_metadata_draft_defaults_false():
     pr = {k: v for k, v in OPEN_PR.items() if k != "draft"}
     assert extract_metadata(pr)["draft"] is False
+
+
+def test_extract_metadata_linked_issues_populated():
+    pr = {**OPEN_PR, "body": "Fixes #42\nCloses #7"}
+    assert extract_metadata(pr)["linked_issues"] == [7, 42]
+
+
+def test_extract_metadata_linked_issues_empty_when_no_body():
+    pr = {k: v for k, v in OPEN_PR.items() if k != "body"}
+    assert extract_metadata(pr)["linked_issues"] == []
 
 
 # --- extract_pr_events ---
@@ -287,6 +344,73 @@ def test_iter_prs_follows_pagination():
     assert [pr["number"] for pr in result] == [10, 9]
 
 
+# --- fetch_issue_metadata ---
+
+
+@responses_lib.activate
+def test_fetch_issue_metadata_returns_fields():
+    responses_lib.add(
+        responses_lib.GET,
+        f"{GITHUB_API}/repos/owner/repo/issues/42",
+        json={
+            "number": 42,
+            "title": "Some bug",
+            "state": "open",
+            "labels": [{"name": "bug"}],
+        },
+        status=200,
+    )
+    session = requests.Session()
+    meta = fetch_issue_metadata(session, "owner", "repo", 42)
+    assert meta == {"number": 42, "title": "Some bug", "state": "open", "labels": ["bug"]}
+
+
+@responses_lib.activate
+def test_fetch_issue_metadata_no_labels():
+    responses_lib.add(
+        responses_lib.GET,
+        f"{GITHUB_API}/repos/owner/repo/issues/7",
+        json={"number": 7, "title": "Unlabelled", "state": "closed", "labels": []},
+        status=200,
+    )
+    meta = fetch_issue_metadata(requests.Session(), "owner", "repo", 7)
+    assert meta["labels"] == []
+
+
+# --- harvest_linked_issues ---
+
+
+@responses_lib.activate
+def test_harvest_linked_issues_writes_file(tmp_path):
+    responses_lib.add(
+        responses_lib.GET,
+        f"{GITHUB_API}/repos/owner/repo/issues/10",
+        json={"number": 10, "title": "A bug", "state": "open", "labels": []},
+        status=200,
+    )
+    harvest_linked_issues(requests.Session(), "owner", "repo", [10], tmp_path)
+    issue_path = tmp_path / "issues" / "10" / "metadata.json"
+    assert issue_path.exists()
+    assert json.loads(issue_path.read_text())["title"] == "A bug"
+
+
+@responses_lib.activate
+def test_harvest_linked_issues_skips_existing(tmp_path):
+    issue_path = tmp_path / "issues" / "10" / "metadata.json"
+    issue_path.parent.mkdir(parents=True)
+    issue_path.write_text(json.dumps({"number": 10, "title": "Old", "state": "open", "labels": []}))
+
+    harvest_linked_issues(requests.Session(), "owner", "repo", [10], tmp_path)
+    assert len(responses_lib.calls) == 0
+    assert json.loads(issue_path.read_text())["title"] == "Old"
+
+
+@responses_lib.activate
+def test_harvest_linked_issues_empty_list_no_requests(tmp_path):
+    harvest_linked_issues(requests.Session(), "owner", "repo", [], tmp_path)
+    assert len(responses_lib.calls) == 0
+
+
 # --- harvest (integration) ---
 
 
@@ -381,6 +505,38 @@ def test_migrate_flat_layout_missing_state_file(tmp_path):
     migrate_flat_layout(tmp_path, "org", "repo")
     assert (tmp_path / "org" / "repo" / "prs").exists()
     assert not (tmp_path / "org" / "repo" / "last_harvest.json").exists()
+
+
+@responses_lib.activate
+def test_harvest_writes_linked_issue_metadata(tmp_path):
+    pr_with_link = {**MERGED_PR, "body": "Fixes #55"}
+    (tmp_path / "prs").mkdir()
+    (tmp_path / "last_harvest.json").write_text('{"last_run": "2024-01-01T00:00:00+00:00"}')
+
+    responses_lib.add(
+        responses_lib.GET,
+        f"{GITHUB_API}/repos/owner/repo/pulls",
+        json=[pr_with_link],
+        status=200,
+    )
+    responses_lib.add(
+        responses_lib.GET,
+        f"{GITHUB_API}/repos/owner/repo/issues/2/timeline",
+        json=[],
+        status=200,
+    )
+    responses_lib.add(
+        responses_lib.GET,
+        f"{GITHUB_API}/repos/owner/repo/issues/55",
+        json={"number": 55, "title": "The linked issue", "state": "open", "labels": []},
+        status=200,
+    )
+
+    harvest(requests.Session(), "owner", "repo", tmp_path, datetime(2024, 1, 16, tzinfo=UTC))
+
+    issue_path = tmp_path / "issues" / "55" / "metadata.json"
+    assert issue_path.exists()
+    assert json.loads(issue_path.read_text())["title"] == "The linked issue"
 
 
 @responses_lib.activate

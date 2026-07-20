@@ -154,6 +154,7 @@ _HTML = """\
     .pr-card-author a { color: inherit; text-decoration: none; }
     .pr-card-author a:hover { text-decoration: underline; }
     .pr-card-badges { font-size: 0.85rem; line-height: 1; min-height: 1rem; }
+    .pr-card-linked { font-size: 0.68rem; color: var(--ink-m); line-height: 1.4; }
     .pr-card-meta { font-size: 0.7rem; color: var(--ink-m); margin-top: auto; padding-top: 0.4rem; border-top: 1px solid var(--grid); }
     .pr-card-meta .age { font-weight: 600; color: var(--ink-2); }
     .legend { font-size: 0.75rem; color: var(--ink-m); margin-top: 1rem; display: flex; gap: 1.25rem; flex-wrap: wrap; }
@@ -567,6 +568,9 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
         is_ftc = (owner, repo, pr_number) in ftc_pr_numbers
         is_committer = (author in committers) and not is_bot
         engagement_days = time_to_engagement_days(events)
+        linked_issues = _load_linked_issues(
+            data_dir / owner / repo, meta.get("linked_issues", [])
+        )
         open_prs.append({
             "number":          pr_number,
             "title":           meta.get("title", ""),
@@ -577,6 +581,7 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
             "is_ftc":          is_ftc,
             "is_committer":    is_committer,
             "engagement_days": engagement_days,
+            "linked_issues":   linked_issues,
         })
 
     def _tier(p):
@@ -592,6 +597,25 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
     return open_prs
 
 
+def _load_linked_issues(repo_dir, issue_numbers):
+    """Returns list of {number, title, state} for each resolvable linked issue number."""
+    result = []
+    for n in issue_numbers:
+        path = repo_dir / "issues" / str(n) / "metadata.json"
+        if not path.exists():
+            continue
+        try:
+            meta = json.loads(path.read_text())
+            result.append({
+                "number": n,
+                "title": meta.get("title", ""),
+                "state": meta.get("state", ""),
+            })
+        except (json.JSONDecodeError, KeyError):
+            continue
+    return result
+
+
 _ANCIENT_DAYS = 90
 
 
@@ -603,6 +627,19 @@ def _tier_card_class(pr):
     if not pr["is_committer"]:
         return "pr-card--external"
     return "pr-card--committer"
+
+
+def _linked_issues_html(linked_issues):
+    if not linked_issues:
+        return ""
+    items = []
+    for issue in linked_issues:
+        state = issue.get("state", "")
+        state_label = f" ({state})" if state else ""
+        items.append(
+            f'<span>#{issue["number"]}: {html_lib.escape(issue["title"])}{html_lib.escape(state_label)}</span>'
+        )
+    return '<div class="pr-card-linked">' + " ".join(items) + "</div>"
 
 
 def _open_prs_html(open_prs):
@@ -641,6 +678,7 @@ def _open_prs_html(open_prs):
 
         repo_tag = f'<div class="pr-repo-tag">{html_lib.escape(repo)}</div>' if repo else ""
         repo_attr = f' data-repo-filter="{html_lib.escape(repo)}"' if repo else ""
+        linked_html = _linked_issues_html(pr.get("linked_issues", []))
         cards.append(
             f'<div class="pr-card {tier_class}"{ancient_attr}{repo_attr}{avatar_style}>'
             f'<div class="pr-card-number">#{pr["number"]}</div>'
@@ -648,6 +686,7 @@ def _open_prs_html(open_prs):
             f'<div class="pr-card-author"><a href="{author_url}">@{html_lib.escape(author)}</a></div>'
             f'{repo_tag}'
             f'<div class="pr-card-badges">{badges_html}</div>'
+            f'{linked_html}'
             f'<div class="pr-card-meta">'
             f'<span class="age">{_fmt(pr["age_days"])} old</span>'
             f' &middot; engaged {eng_str}'
