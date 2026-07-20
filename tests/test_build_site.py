@@ -8,7 +8,7 @@ from build_site import (
     _dist_stats,
     _is_bot,
     _iter_repo_prs_dirs,
-    _linked_issues_html,
+    _linked_issue_refs_html,
     _load_linked_issues,
     _open_prs_html,
     _percentile,
@@ -963,45 +963,45 @@ def test_load_linked_issues_multiple(tmp_path):
     assert titles == {"First", "Second"}
 
 
-# --- _linked_issues_html ---
+# --- _linked_issue_refs_html ---
 
 
-def test_linked_issues_html_empty():
-    assert _linked_issues_html([], "o/r") == ""
+def test_linked_issue_refs_html_empty():
+    assert _linked_issue_refs_html([], "o/r") == ""
 
 
-def test_linked_issues_html_single_issue():
-    html = _linked_issues_html([{"number": 42, "title": "Fix the thing", "state": "open"}], "o/r")
-    assert "Issue #42" in html
+def test_linked_issue_refs_html_single_issue():
+    html = _linked_issue_refs_html([{"number": 42, "title": "Fix the thing", "state": "open"}], "o/r")
+    assert "#42" in html
     assert 'href="https://github.com/o/r/issues/42"' in html
-    assert "Fix the thing" in html
-    assert "(open)" in html
-    assert 'class="pr-card-linked"' in html
+    assert "Closes" in html
+    assert "Fix the thing" not in html
+    assert "(open)" not in html
 
 
-def test_linked_issues_html_number_and_title_are_links():
-    html = _linked_issues_html([{"number": 42, "title": "Fix the thing", "state": "open"}], "o/r")
+def test_linked_issue_refs_html_number_is_link():
+    html = _linked_issue_refs_html([{"number": 42, "title": "Fix the thing", "state": "open"}], "o/r")
     issue_url = "https://github.com/o/r/issues/42"
-    assert f'<a href="{issue_url}">Issue #42</a>' in html
-    assert f'<a href="{issue_url}">Fix the thing</a>' in html
+    assert f'<a href="{issue_url}">#{42}</a>' in html
 
 
-def test_linked_issues_html_multiple():
+def test_linked_issue_refs_html_multiple():
     issues = [
         {"number": 1, "title": "First", "state": "open"},
         {"number": 2, "title": "Second", "state": "closed"},
     ]
-    html = _linked_issues_html(issues, "o/r")
-    assert "Issue #1" in html
-    assert "Issue #2" in html
-    assert "First" in html
-    assert "Second" in html
+    html = _linked_issue_refs_html(issues, "o/r")
+    assert "#1" in html
+    assert "#2" in html
+    assert "First" not in html
+    assert "Second" not in html
 
 
-def test_linked_issues_html_escapes_title():
-    html = _linked_issues_html([{"number": 1, "title": "<script>", "state": "open"}], "o/r")
-    assert "<script>" not in html
-    assert "&lt;script&gt;" in html
+def test_linked_issue_refs_html_format():
+    issues = [{"number": 456, "title": "A", "state": "open"}, {"number": 789, "title": "B", "state": "open"}]
+    html = _linked_issue_refs_html(issues, "o/r")
+    assert html.startswith(" (Closes ")
+    assert html.endswith(")")
 
 
 # --- _open_prs_html ---
@@ -1143,17 +1143,29 @@ def test_open_prs_html_no_chips_for_single_repo():
 
 
 def test_open_prs_html_shows_linked_issue():
-    pr = _make_pr(repo="o/r", linked_issues=[{"number": 55, "title": "A bug", "state": "open"}])
+    pr = _make_pr(number=123, repo="o/r", linked_issues=[{"number": 55, "title": "A bug", "state": "open"}])
     html = _open_prs_html([pr])
-    assert "Issue #55" in html
+    assert "#55" in html
     assert 'href="https://github.com/o/r/issues/55"' in html
-    assert "A bug" in html
-    assert "(open)" in html
+    assert "Closes" in html
+    assert "A bug" not in html
+    assert "(open)" not in html
 
 
-def test_open_prs_html_no_linked_section_when_empty():
+def test_open_prs_html_linked_issues_inline_in_number_line():
+    pr = _make_pr(number=123, repo="o/r", linked_issues=[{"number": 456, "title": "T", "state": "open"}, {"number": 789, "title": "U", "state": "open"}])
+    html = _open_prs_html([pr])
+    assert 'class="pr-card-number"' in html
+    number_div_start = html.index('class="pr-card-number"')
+    number_div_end = html.index("</div>", number_div_start)
+    number_div = html[number_div_start:number_div_end]
+    assert "#456" in number_div
+    assert "#789" in number_div
+
+
+def test_open_prs_html_no_linked_refs_when_empty():
     html = _open_prs_html([_make_pr(linked_issues=[])])
-    assert 'class="pr-card-linked"' not in html
+    assert "Closes" not in html
 
 
 def test_render_html_open_tab_has_ancient_js():

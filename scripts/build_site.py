@@ -154,7 +154,6 @@ _HTML = """\
     .pr-card-author a { color: inherit; text-decoration: none; }
     .pr-card-author a:hover { text-decoration: underline; }
     .pr-card-badges { font-size: 0.85rem; line-height: 1; min-height: 1rem; }
-    .pr-card-linked { font-size: 0.68rem; color: var(--ink-m); line-height: 1.4; }
     .pr-card-meta { font-size: 0.7rem; color: var(--ink-m); margin-top: auto; padding-top: 0.4rem; border-top: 1px solid var(--grid); }
     .pr-card-meta .age { font-weight: 600; color: var(--ink-2); }
     .legend { font-size: 0.75rem; color: var(--ink-m); margin-top: 1rem; display: flex; gap: 1.25rem; flex-wrap: wrap; }
@@ -638,21 +637,15 @@ def _tier_card_class(pr):
     return "pr-card--committer"
 
 
-def _linked_issues_html(linked_issues, repo):
+def _linked_issue_refs_html(linked_issues, repo):
     if not linked_issues:
         return ""
-    items = []
+    refs = []
     for issue in linked_issues:
         n = issue["number"]
         issue_url = f"https://github.com/{repo}/issues/{n}"
-        state = issue.get("state", "")
-        state_label = f" ({state})" if state else ""
-        items.append(
-            f'<span><a href="{issue_url}">Issue #{n}</a>: '
-            f'<a href="{issue_url}">{html_lib.escape(issue["title"])}</a>'
-            f'{html_lib.escape(state_label)}</span>'
-        )
-    return '<div class="pr-card-linked">' + " ".join(items) + "</div>"
+        refs.append(f'<a href="{issue_url}">#{n}</a>')
+    return " (Closes " + ", ".join(refs) + ")"
 
 
 def _open_prs_html(open_prs):
@@ -691,15 +684,14 @@ def _open_prs_html(open_prs):
 
         repo_tag = f'<div class="pr-repo-tag">{html_lib.escape(repo)}</div>' if repo else ""
         repo_attr = f' data-repo-filter="{html_lib.escape(repo)}"' if repo else ""
-        linked_html = _linked_issues_html(pr.get("linked_issues", []), repo)
+        refs_html = _linked_issue_refs_html(pr.get("linked_issues", []), repo)
         cards.append(
             f'<div class="pr-card {tier_class}"{ancient_attr}{repo_attr}{avatar_style}>'
-            f'<div class="pr-card-number"><a href="{url}">#{pr["number"]}</a></div>'
+            f'<div class="pr-card-number"><a href="{url}">#{pr["number"]}</a>{refs_html}</div>'
             f'<div class="pr-card-title"><a href="{url}">{title}</a></div>'
             f'<div class="pr-card-author"><a href="{author_url}">@{html_lib.escape(author)}</a></div>'
             f'{repo_tag}'
             f'<div class="pr-card-badges">{badges_html}</div>'
-            f'{linked_html}'
             f'<div class="pr-card-meta">'
             f'<span class="age">{_fmt(pr["age_days"])} old</span>'
             f' &middot; engaged {eng_str}'
