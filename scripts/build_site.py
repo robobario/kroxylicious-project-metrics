@@ -629,15 +629,19 @@ def _tier_card_class(pr):
     return "pr-card--committer"
 
 
-def _linked_issues_html(linked_issues):
+def _linked_issues_html(linked_issues, repo):
     if not linked_issues:
         return ""
     items = []
     for issue in linked_issues:
+        n = issue["number"]
+        issue_url = f"https://github.com/{repo}/issues/{n}"
         state = issue.get("state", "")
         state_label = f" ({state})" if state else ""
         items.append(
-            f'<span>#{issue["number"]}: {html_lib.escape(issue["title"])}{html_lib.escape(state_label)}</span>'
+            f'<span><a href="{issue_url}">Issue #{n}</a>: '
+            f'<a href="{issue_url}">{html_lib.escape(issue["title"])}</a>'
+            f'{html_lib.escape(state_label)}</span>'
         )
     return '<div class="pr-card-linked">' + " ".join(items) + "</div>"
 
@@ -678,10 +682,10 @@ def _open_prs_html(open_prs):
 
         repo_tag = f'<div class="pr-repo-tag">{html_lib.escape(repo)}</div>' if repo else ""
         repo_attr = f' data-repo-filter="{html_lib.escape(repo)}"' if repo else ""
-        linked_html = _linked_issues_html(pr.get("linked_issues", []))
+        linked_html = _linked_issues_html(pr.get("linked_issues", []), repo)
         cards.append(
             f'<div class="pr-card {tier_class}"{ancient_attr}{repo_attr}{avatar_style}>'
-            f'<div class="pr-card-number">#{pr["number"]}</div>'
+            f'<div class="pr-card-number"><a href="{url}">#{pr["number"]}</a></div>'
             f'<div class="pr-card-title"><a href="{url}">{title}</a></div>'
             f'<div class="pr-card-author"><a href="{author_url}">@{html_lib.escape(author)}</a></div>'
             f'{repo_tag}'

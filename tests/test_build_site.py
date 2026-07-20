@@ -938,15 +938,23 @@ def test_load_linked_issues_multiple(tmp_path):
 
 
 def test_linked_issues_html_empty():
-    assert _linked_issues_html([]) == ""
+    assert _linked_issues_html([], "o/r") == ""
 
 
 def test_linked_issues_html_single_issue():
-    html = _linked_issues_html([{"number": 42, "title": "Fix the thing", "state": "open"}])
-    assert "#42" in html
+    html = _linked_issues_html([{"number": 42, "title": "Fix the thing", "state": "open"}], "o/r")
+    assert "Issue #42" in html
+    assert 'href="https://github.com/o/r/issues/42"' in html
     assert "Fix the thing" in html
     assert "(open)" in html
     assert 'class="pr-card-linked"' in html
+
+
+def test_linked_issues_html_number_and_title_are_links():
+    html = _linked_issues_html([{"number": 42, "title": "Fix the thing", "state": "open"}], "o/r")
+    issue_url = "https://github.com/o/r/issues/42"
+    assert f'<a href="{issue_url}">Issue #42</a>' in html
+    assert f'<a href="{issue_url}">Fix the thing</a>' in html
 
 
 def test_linked_issues_html_multiple():
@@ -954,15 +962,15 @@ def test_linked_issues_html_multiple():
         {"number": 1, "title": "First", "state": "open"},
         {"number": 2, "title": "Second", "state": "closed"},
     ]
-    html = _linked_issues_html(issues)
-    assert "#1" in html
-    assert "#2" in html
+    html = _linked_issues_html(issues, "o/r")
+    assert "Issue #1" in html
+    assert "Issue #2" in html
     assert "First" in html
     assert "Second" in html
 
 
 def test_linked_issues_html_escapes_title():
-    html = _linked_issues_html([{"number": 1, "title": "<script>", "state": "open"}])
+    html = _linked_issues_html([{"number": 1, "title": "<script>", "state": "open"}], "o/r")
     assert "<script>" not in html
     assert "&lt;script&gt;" in html
 
@@ -986,8 +994,13 @@ def test_open_prs_html_empty():
 
 def test_open_prs_html_title_and_number_present():
     html = _open_prs_html([_make_pr(42, "My PR", repo="o/r")])
-    assert "#42" in html
+    assert '#42' in html
     assert '<a href="https://github.com/o/r/pull/42">My PR</a>' in html
+
+
+def test_open_prs_html_number_is_linked():
+    html = _open_prs_html([_make_pr(42, repo="o/r")])
+    assert '<a href="https://github.com/o/r/pull/42">#42</a>' in html
 
 
 def test_open_prs_html_emojis_after_link():
@@ -1101,9 +1114,10 @@ def test_open_prs_html_no_chips_for_single_repo():
 
 
 def test_open_prs_html_shows_linked_issue():
-    pr = _make_pr(linked_issues=[{"number": 55, "title": "A bug", "state": "open"}])
+    pr = _make_pr(repo="o/r", linked_issues=[{"number": 55, "title": "A bug", "state": "open"}])
     html = _open_prs_html([pr])
-    assert "#55" in html
+    assert "Issue #55" in html
+    assert 'href="https://github.com/o/r/issues/55"' in html
     assert "A bug" in html
     assert "(open)" in html
 
