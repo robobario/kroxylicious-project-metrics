@@ -261,3 +261,9 @@ def test_lint_aggregates_multiple_repos(tmp_path):
 
 def test_lint_empty_data_dir(tmp_path):
     assert lint(tmp_path) == []
+
+
+def test_lint_ignores_hidden_dirs(tmp_path):
+    (tmp_path / ".git" / "hooks").mkdir(parents=True)
+    (tmp_path / ".git" / "info").mkdir(parents=True)
+    assert lint(tmp_path) == []

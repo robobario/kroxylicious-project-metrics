@@ -118,10 +118,10 @@ def lint_pr_dir(pr_dir):
 def lint(data_dir):
     violations = []
     for owner_dir in sorted(data_dir.iterdir()):
-        if not owner_dir.is_dir():
+        if not owner_dir.is_dir() or owner_dir.name.startswith("."):
             continue
         for repo_dir in sorted(owner_dir.iterdir()):
-            if not repo_dir.is_dir():
+            if not repo_dir.is_dir() or repo_dir.name.startswith("."):
                 continue
             violations.extend(lint_state_file(repo_dir))
             prs_dir = repo_dir / "prs"
