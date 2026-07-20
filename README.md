@@ -3,7 +3,7 @@
 Collects PR data from [kroxylicious/kroxylicious](https://github.com/kroxylicious/kroxylicious) and publishes a metrics dashboard to GitHub Pages.
 
 Two GitHub Actions pipelines run automatically:
-- **Harvest** — every 4 hours, fetches PR events from the GitHub API and commits raw data to the `_data` branch.
+- **Harvest** — every 15 minutes, fetches PR events from the GitHub API and commits raw data to the `_data` branch.
 - **Publish** — on every push to `main` and after each harvest, builds and deploys the static site.
 
 ## Prerequisites
