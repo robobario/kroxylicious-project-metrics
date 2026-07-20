@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import pytest
 import requests
@@ -537,6 +537,32 @@ def test_harvest_writes_linked_issue_metadata(tmp_path):
     issue_path = tmp_path / "issues" / "55" / "metadata.json"
     assert issue_path.exists()
     assert json.loads(issue_path.read_text())["title"] == "The linked issue"
+
+
+@responses_lib.activate
+def test_harvest_since_override_bypasses_last_harvest(tmp_path):
+    (tmp_path / "prs").mkdir()
+    # last_run is after MERGED_PR.updated_at; without override iter_prs would skip the PR
+    (tmp_path / "last_harvest.json").write_text('{"last_run": "2024-01-16T00:00:00+00:00"}')
+
+    responses_lib.add(
+        responses_lib.GET,
+        f"{GITHUB_API}/repos/owner/repo/pulls",
+        json=[MERGED_PR],
+        status=200,
+    )
+    responses_lib.add(
+        responses_lib.GET,
+        f"{GITHUB_API}/repos/owner/repo/issues/2/timeline",
+        json=[],
+        status=200,
+    )
+
+    run_start = datetime(2024, 1, 20, tzinfo=UTC)
+    since_override = datetime(2024, 1, 1, tzinfo=UTC)
+    harvest(requests.Session(), "owner", "repo", tmp_path, run_start, since=since_override)
+
+    assert (tmp_path / "prs" / "2" / "metadata.json").exists()
 
 
 @responses_lib.activate
