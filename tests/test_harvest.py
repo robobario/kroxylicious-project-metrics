@@ -7,6 +7,7 @@ import responses as responses_lib
 
 from harvest import (
     _parse_next_link,
+    extract_linked_issues,
     extract_metadata,
     extract_pr_events,
     extract_timeline_events,
@@ -60,6 +61,50 @@ CLOSED_UNMERGED_PR = {
 }
 
 
+# --- extract_linked_issues ---
+
+
+def test_extract_linked_issues_none_body():
+    assert extract_linked_issues(None) == []
+
+
+def test_extract_linked_issues_empty_body():
+    assert extract_linked_issues("") == []
+
+
+def test_extract_linked_issues_no_keywords():
+    assert extract_linked_issues("This PR adds a new feature, see #42 for context") == []
+
+
+@pytest.mark.parametrize("keyword", [
+    "close", "closes", "closed",
+    "fix", "fixes", "fixed",
+    "resolve", "resolves", "resolved",
+])
+def test_extract_linked_issues_all_keywords(keyword):
+    assert extract_linked_issues(f"{keyword} #99") == [99]
+
+
+def test_extract_linked_issues_case_insensitive():
+    assert extract_linked_issues("FIXES #10") == [10]
+    assert extract_linked_issues("Closes #20") == [20]
+
+
+def test_extract_linked_issues_multiple_distinct():
+    body = "Closes #10\nFixes #20\nResolves #30"
+    assert extract_linked_issues(body) == [10, 20, 30]
+
+
+def test_extract_linked_issues_deduplicates():
+    body = "Closes #5\nFixes #5"
+    assert extract_linked_issues(body) == [5]
+
+
+def test_extract_linked_issues_returns_sorted():
+    body = "Closes #30\nFixes #10\nResolves #20"
+    assert extract_linked_issues(body) == [10, 20, 30]
+
+
 # --- extract_metadata ---
 
 
@@ -92,6 +137,16 @@ def test_extract_metadata_draft_captured():
 def test_extract_metadata_draft_defaults_false():
     pr = {k: v for k, v in OPEN_PR.items() if k != "draft"}
     assert extract_metadata(pr)["draft"] is False
+
+
+def test_extract_metadata_linked_issues_populated():
+    pr = {**OPEN_PR, "body": "Fixes #42\nCloses #7"}
+    assert extract_metadata(pr)["linked_issues"] == [7, 42]
+
+
+def test_extract_metadata_linked_issues_empty_when_no_body():
+    pr = {k: v for k, v in OPEN_PR.items() if k != "body"}
+    assert extract_metadata(pr)["linked_issues"] == []
 
 
 # --- extract_pr_events ---

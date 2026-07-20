@@ -4,6 +4,7 @@
 import json
 import logging
 import os
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -51,6 +52,19 @@ def iter_timeline(session, owner, repo, pr_number):
         url = _parse_next_link(resp.headers.get("Link", ""))
 
 
+_LINKED_ISSUE_RE = re.compile(
+    r"(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)",
+    re.IGNORECASE,
+)
+
+
+def extract_linked_issues(body):
+    """Returns a sorted, deduplicated list of issue numbers referenced in body."""
+    if not body:
+        return []
+    return sorted({int(n) for n in _LINKED_ISSUE_RE.findall(body)})
+
+
 def extract_metadata(pr):
     return {
         "number": pr["number"],
@@ -62,6 +76,7 @@ def extract_metadata(pr):
         "state": pr["state"],
         "merged": pr.get("merged_at") is not None,
         "draft": pr.get("draft", False),
+        "linked_issues": extract_linked_issues(pr.get("body")),
     }
 
 
