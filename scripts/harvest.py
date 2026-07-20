@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Harvest PR events from GitHub and write raw data to the data directory."""
 
+import argparse
 import json
 import logging
 import os
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -221,9 +222,10 @@ def process_pr(session, owner, repo, pr, data_dir):
     write_json(pr_dir / "events.json", merged)
 
 
-def harvest(session, owner, repo, data_dir, run_start):
-    state = load_json(data_dir / "last_harvest.json", {"last_run": None})
-    since = since_from_state(state.get("last_run"))
+def harvest(session, owner, repo, data_dir, run_start, since=None):
+    if since is None:
+        state = load_json(data_dir / "last_harvest.json", {"last_run": None})
+        since = since_from_state(state.get("last_run"))
     log.info("Harvesting %s/%s — PRs updated since %s", owner, repo, since.strftime("%Y-%m-%d %H:%M UTC"))
 
     count = 0
@@ -236,6 +238,15 @@ def harvest(session, owner, repo, data_dir, run_start):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--days",
+        type=int,
+        metavar="N",
+        help="Re-process PRs updated in the last N days, ignoring last_harvest.json",
+    )
+    args = parser.parse_args()
+
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
         print("GITHUB_TOKEN is required", file=sys.stderr)
@@ -262,8 +273,9 @@ def main():
     migrate_flat_layout(data_dir, first_owner, first_repo)
 
     run_start = datetime.now(UTC)
+    since_override = run_start - timedelta(days=args.days) if args.days is not None else None
     for owner, repo in repos:
-        harvest(session, owner, repo, data_dir / owner / repo, run_start)
+        harvest(session, owner, repo, data_dir / owner / repo, run_start, since=since_override)
 
 
 if __name__ == "__main__":
