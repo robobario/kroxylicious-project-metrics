@@ -5,6 +5,7 @@ import pytest
 
 from build_site import (
     _age_class,
+    _days_author_waiting,
     _dist_stats,
     _is_bot,
     _iter_repo_prs_dirs,
@@ -162,6 +163,55 @@ def test_time_to_engagement_bot_then_human_uses_human():
 def test_time_to_engagement_no_reviews():
     events = _events("2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z")
     assert time_to_engagement_days(events) is None
+
+
+# --- _days_author_waiting ---
+
+
+def _now():
+    return datetime(2024, 1, 20, 12, 0, 0, tzinfo=UTC)
+
+
+def test_days_author_waiting_no_response_counts_from_created():
+    events = [{"type": "created", "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"}]
+    assert _days_author_waiting(events, _now()) == pytest.approx(10.0)
+
+
+def test_days_author_waiting_human_responded_after_author_is_zero():
+    events = [
+        {"type": "created",  "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"},
+        {"type": "reviewed", "timestamp": "2024-01-15T12:00:00Z", "actor": "bob"},
+    ]
+    assert _days_author_waiting(events, _now()) == pytest.approx(0.0)
+
+
+def test_days_author_waiting_author_replied_after_human_counts_from_author_reply():
+    events = [
+        {"type": "created",  "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"},
+        {"type": "reviewed", "timestamp": "2024-01-13T12:00:00Z", "actor": "bob"},
+        {"type": "comment",  "timestamp": "2024-01-15T12:00:00Z", "actor": "alice"},
+    ]
+    assert _days_author_waiting(events, _now()) == pytest.approx(5.0)
+
+
+def test_days_author_waiting_bot_response_ignored():
+    events = [
+        {"type": "created",  "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"},
+        {"type": "comment",  "timestamp": "2024-01-15T12:00:00Z", "actor": "renovate[bot]"},
+    ]
+    assert _days_author_waiting(events, _now()) == pytest.approx(10.0)
+
+
+def test_days_author_waiting_known_bot_ignored():
+    events = [
+        {"type": "created",  "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"},
+        {"type": "comment",  "timestamp": "2024-01-15T12:00:00Z", "actor": "kroxylicious-robot"},
+    ]
+    assert _days_author_waiting(events, _now()) == pytest.approx(10.0)
+
+
+def test_days_author_waiting_empty_events_is_zero():
+    assert _days_author_waiting([], _now()) == pytest.approx(0.0)
 
 
 # --- _is_bot ---

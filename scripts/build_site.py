@@ -531,6 +531,30 @@ def _fmt(v):
     return "—" if v is None else f"{v}d"
 
 
+def _days_author_waiting(events, now_dt):
+    """Returns days since the author's last action with no subsequent human response, or 0.0."""
+    author = None
+    last_author_ts = None
+    last_human_response_ts = None
+    for e in events:
+        if e["type"] == "created" and author is None:
+            author = e.get("actor")
+            last_author_ts = _parse_ts(e["timestamp"])
+            continue
+        actor = e.get("actor") or ""
+        if not actor:
+            continue
+        if actor == author and e["type"] in ("comment", "reviewed"):
+            last_author_ts = _parse_ts(e["timestamp"])
+        elif not _is_bot(actor) and actor != author and e["type"] in ("comment", "reviewed"):
+            last_human_response_ts = _parse_ts(e["timestamp"])
+    if last_author_ts is None:
+        return 0.0
+    if last_human_response_ts is not None and last_human_response_ts >= last_author_ts:
+        return 0.0
+    return (now_dt - last_author_ts).total_seconds() / 86400
+
+
 def _age_class(age_days):
     if age_days < 7:
         return "age-fresh"
@@ -576,20 +600,22 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
         is_ftc = (owner, repo, pr_number) in ftc_pr_numbers
         is_committer = (author in committers) and not is_bot
         engagement_days = time_to_engagement_days(events)
+        days_author_waiting = _days_author_waiting(events, now_dt)
         linked_issues = _load_linked_issues(
             data_dir / owner / repo, meta.get("linked_issues", [])
         )
         open_prs.append({
-            "number":          pr_number,
-            "title":           meta.get("title", ""),
-            "author":          author,
-            "repo":            f"{owner}/{repo}",
-            "age_days":        round(age_days, 1),
-            "is_bot":          is_bot,
-            "is_ftc":          is_ftc,
-            "is_committer":    is_committer,
-            "engagement_days": engagement_days,
-            "linked_issues":   linked_issues,
+            "number":               pr_number,
+            "title":                meta.get("title", ""),
+            "author":               author,
+            "repo":                 f"{owner}/{repo}",
+            "age_days":             round(age_days, 1),
+            "is_bot":               is_bot,
+            "is_ftc":               is_ftc,
+            "is_committer":         is_committer,
+            "engagement_days":      engagement_days,
+            "days_author_waiting":  days_author_waiting,
+            "linked_issues":        linked_issues,
         })
 
     def _tier(p):
