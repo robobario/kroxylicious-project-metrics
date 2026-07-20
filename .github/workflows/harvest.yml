@@ -9,6 +9,10 @@ on:
         description: 'Delete all existing data and re-harvest from the project epoch'
         type: boolean
         default: false
+      days:
+        description: 'Re-process PRs updated in the last N days (overrides last_harvest.json)'
+        type: number
+        required: false
 
 permissions:
   contents: write
@@ -56,7 +60,10 @@ jobs:
       - name: Harvest PR data
         env:
           GITHUB_TOKEN: ${{ secrets.KROXYLICIOUS_PAT }}
-        run: python scripts/harvest.py
+        run: |
+          args=""
+          [ -n "${{ inputs.days }}" ] && args="--days ${{ inputs.days }}"
+          python scripts/harvest.py $args
 
       - name: Lint data
         run: python scripts/lint.py
