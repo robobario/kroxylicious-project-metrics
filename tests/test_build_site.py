@@ -986,8 +986,13 @@ def test_open_prs_html_empty():
 
 def test_open_prs_html_title_and_number_present():
     html = _open_prs_html([_make_pr(42, "My PR", repo="o/r")])
-    assert "#42" in html
+    assert '#42' in html
     assert '<a href="https://github.com/o/r/pull/42">My PR</a>' in html
+
+
+def test_open_prs_html_number_is_linked():
+    html = _open_prs_html([_make_pr(42, repo="o/r")])
+    assert '<a href="https://github.com/o/r/pull/42">#42</a>' in html
 
 
 def test_open_prs_html_emojis_after_link():

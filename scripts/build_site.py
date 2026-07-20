@@ -681,7 +681,7 @@ def _open_prs_html(open_prs):
         linked_html = _linked_issues_html(pr.get("linked_issues", []))
         cards.append(
             f'<div class="pr-card {tier_class}"{ancient_attr}{repo_attr}{avatar_style}>'
-            f'<div class="pr-card-number">#{pr["number"]}</div>'
+            f'<div class="pr-card-number"><a href="{url}">#{pr["number"]}</a></div>'
             f'<div class="pr-card-title"><a href="{url}">{title}</a></div>'
             f'<div class="pr-card-author"><a href="{author_url}">@{html_lib.escape(author)}</a></div>'
             f'{repo_tag}'
