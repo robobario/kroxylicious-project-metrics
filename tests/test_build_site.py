@@ -6,6 +6,7 @@ import pytest
 from build_site import (
     _age_class,
     _dist_stats,
+    _is_bot,
     _iter_repo_prs_dirs,
     _linked_issues_html,
     _load_linked_issues,
@@ -142,6 +143,11 @@ def test_time_to_engagement_sonatype_bot_ignored():
     assert time_to_engagement_days(events) is None
 
 
+def test_time_to_engagement_known_bot_ignored():
+    events = _engagement_events("2024-01-10T10:00:00Z", comments=[("2024-01-11T10:00:00Z", "kroxylicious-robot")])
+    assert time_to_engagement_days(events) is None
+
+
 def test_time_to_engagement_bot_then_human_uses_human():
     events = _engagement_events(
         "2024-01-10T10:00:00Z",
@@ -156,6 +162,21 @@ def test_time_to_engagement_bot_then_human_uses_human():
 def test_time_to_engagement_no_reviews():
     events = _events("2024-01-10T10:00:00Z", "closed_merged", "2024-01-15T10:00:00Z")
     assert time_to_engagement_days(events) is None
+
+
+# --- _is_bot ---
+
+
+def test_is_bot_suffix():
+    assert _is_bot("dependabot[bot]") is True
+
+
+def test_is_bot_known():
+    assert _is_bot("kroxylicious-robot") is True
+
+
+def test_is_bot_human():
+    assert _is_bot("alice") is False
 
 
 # --- histogram ---
@@ -807,6 +828,14 @@ def test_load_open_prs_ftc_flag(tmp_path):
 
 def test_load_open_prs_bot_flag(tmp_path):
     _write_open_pr(_open_prs_base(tmp_path) / "3", "2024-01-10T10:00:00Z", author="dependabot[bot]")
+    now = datetime(2024, 1, 20, tzinfo=UTC)
+    result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
+    assert result[0]["is_bot"] is True
+    assert result[0]["is_ftc"] is False
+
+
+def test_load_open_prs_known_bot_flag(tmp_path):
+    _write_open_pr(_open_prs_base(tmp_path) / "3", "2024-01-10T10:00:00Z", author="kroxylicious-robot")
     now = datetime(2024, 1, 20, tzinfo=UTC)
     result = load_open_prs(tmp_path, frozenset(), frozenset(), now)
     assert result[0]["is_bot"] is True

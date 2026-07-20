@@ -284,6 +284,15 @@ def load_committers(path):
     )
 
 
+_KNOWN_BOTS = frozenset({
+    "kroxylicious-robot",
+})
+
+
+def _is_bot(username):
+    return username.endswith("[bot]") or username in _KNOWN_BOTS
+
+
 def time_to_engagement_days(events):
     """Returns days from created to first human (non-author, non-bot) comment or review, or None."""
     created = None
@@ -299,7 +308,7 @@ def time_to_engagement_days(events):
             and e["type"] in ("reviewed", "comment")
             and actor
             and actor != author
-            and not actor.endswith("[bot]")
+            and not _is_bot(actor)
         ):
             return (_parse_ts(e["timestamp"]) - created).total_seconds() / 86400
     return None
@@ -564,7 +573,7 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
                 pass
         author = meta.get("author", "")
         age_days = (now_dt - _parse_ts(created_at)).total_seconds() / 86400
-        is_bot = author.endswith("[bot]")
+        is_bot = _is_bot(author)
         is_ftc = (owner, repo, pr_number) in ftc_pr_numbers
         is_committer = (author in committers) and not is_bot
         engagement_days = time_to_engagement_days(events)
