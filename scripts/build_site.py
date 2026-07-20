@@ -3,6 +3,7 @@
 
 import html as html_lib
 import json
+import math
 import os
 import statistics
 import sys
@@ -565,8 +566,30 @@ def _age_class(age_days):
     return "age-stale"
 
 
+_NO_ENGAGEMENT_BONUS = 50.0
+_AGE_NUDGE_WEIGHT = 0.5
+
+
+def _tier(pr):
+    if pr["is_bot"]:
+        return 3
+    if pr["is_ftc"]:
+        return 0
+    if not pr["is_committer"]:
+        return 1
+    return 2
+
+
+def attention_score(pr):
+    """Urgency score within a tier — higher means more attention needed."""
+    base = pr["days_author_waiting"]
+    if pr["engagement_days"] is None:
+        base += _NO_ENGAGEMENT_BONUS
+    return base + math.log1p(pr["age_days"]) * _AGE_NUDGE_WEIGHT
+
+
 def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
-    """Returns open PRs sorted by tier then oldest-first, excluding drafts, each as a dict."""
+    """Returns open PRs sorted by attention score descending, excluding drafts, each as a dict."""
     open_prs = []
     for owner, repo, pr_dir in _iter_repo_prs_dirs(data_dir):
         metadata_path = pr_dir / "metadata.json"
@@ -618,16 +641,7 @@ def load_open_prs(data_dir, ftc_pr_numbers, committers, now_dt):
             "linked_issues":        linked_issues,
         })
 
-    def _tier(p):
-        if p["is_bot"]:
-            return 3
-        if p["is_ftc"]:
-            return 0  # first-time contributors surface first
-        if not p["is_committer"]:
-            return 1  # other non-committer humans
-        return 2
-
-    open_prs.sort(key=lambda p: (_tier(p), -p["age_days"]))
+    open_prs.sort(key=lambda p: (_tier(p), -attention_score(p)))
     return open_prs
 
 
