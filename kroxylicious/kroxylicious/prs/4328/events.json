@@ -53,5 +53,15 @@
     "type": "comment",
     "timestamp": "2026-07-20T16:41:24Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-07-20T22:40:28Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-20T22:40:28Z",
+    "actor": "robobario"
   }
 ]
