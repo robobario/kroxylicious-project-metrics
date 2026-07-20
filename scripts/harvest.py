@@ -116,6 +116,33 @@ def merge_events(existing, new_events):
 PROJECT_EPOCH = datetime(2022, 1, 1, tzinfo=UTC)
 
 
+def load_repos(repos_file):
+    """Returns list of (owner, repo) tuples parsed from repos.txt."""
+    repos = []
+    for line in repos_file.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        owner, sep, repo = line.partition("/")
+        if sep and owner and repo:
+            repos.append((owner, repo))
+    return repos
+
+
+def migrate_flat_layout(data_dir, owner, repo):
+    """Move old flat data/prs/ tree to data/<owner>/<repo>/prs/ on first run."""
+    old_prs = data_dir / "prs"
+    if not old_prs.exists():
+        return
+    target = data_dir / owner / repo
+    target.mkdir(parents=True, exist_ok=True)
+    old_prs.rename(target / "prs")
+    old_state = data_dir / "last_harvest.json"
+    if old_state.exists():
+        old_state.rename(target / "last_harvest.json")
+    log.info("Migrated flat layout → %s/%s/", owner, repo)
+
+
 def since_from_state(last_run):
     if last_run:
         return datetime.fromisoformat(last_run)
@@ -172,9 +199,13 @@ def main():
         print("GITHUB_TOKEN is required", file=sys.stderr)
         sys.exit(1)
 
-    owner = os.environ.get("GITHUB_OWNER", "kroxylicious")
-    repo = os.environ.get("GITHUB_REPO", "kroxylicious")
     data_dir = Path(os.environ.get("DATA_DIR", "data"))
+    repos_file = Path(os.environ.get("REPOS_FILE", "repos.txt"))
+
+    repos = load_repos(repos_file)
+    if not repos:
+        print(f"No repos found in {repos_file}", file=sys.stderr)
+        sys.exit(1)
 
     session = requests.Session()
     session.headers.update({
@@ -185,8 +216,12 @@ def main():
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s  %(message)s", datefmt="%H:%M:%S")
 
+    first_owner, first_repo = repos[0]
+    migrate_flat_layout(data_dir, first_owner, first_repo)
+
     run_start = datetime.now(UTC)
-    harvest(session, owner, repo, data_dir, run_start)
+    for owner, repo in repos:
+        harvest(session, owner, repo, data_dir / owner / repo, run_start)
 
 
 if __name__ == "__main__":
