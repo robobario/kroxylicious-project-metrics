@@ -5,8 +5,11 @@ import pytest
 
 from build_site import (
     _age_class,
+    _days_author_waiting,
     _dist_stats,
     _is_bot,
+    _tier,
+    attention_score,
     _iter_repo_prs_dirs,
     _linked_issue_refs_html,
     _load_linked_issues,
@@ -164,6 +167,55 @@ def test_time_to_engagement_no_reviews():
     assert time_to_engagement_days(events) is None
 
 
+# --- _days_author_waiting ---
+
+
+def _now():
+    return datetime(2024, 1, 20, 12, 0, 0, tzinfo=UTC)
+
+
+def test_days_author_waiting_no_response_counts_from_created():
+    events = [{"type": "created", "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"}]
+    assert _days_author_waiting(events, _now()) == pytest.approx(10.0)
+
+
+def test_days_author_waiting_human_responded_after_author_is_zero():
+    events = [
+        {"type": "created",  "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"},
+        {"type": "reviewed", "timestamp": "2024-01-15T12:00:00Z", "actor": "bob"},
+    ]
+    assert _days_author_waiting(events, _now()) == pytest.approx(0.0)
+
+
+def test_days_author_waiting_author_replied_after_human_counts_from_author_reply():
+    events = [
+        {"type": "created",  "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"},
+        {"type": "reviewed", "timestamp": "2024-01-13T12:00:00Z", "actor": "bob"},
+        {"type": "comment",  "timestamp": "2024-01-15T12:00:00Z", "actor": "alice"},
+    ]
+    assert _days_author_waiting(events, _now()) == pytest.approx(5.0)
+
+
+def test_days_author_waiting_bot_response_ignored():
+    events = [
+        {"type": "created",  "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"},
+        {"type": "comment",  "timestamp": "2024-01-15T12:00:00Z", "actor": "renovate[bot]"},
+    ]
+    assert _days_author_waiting(events, _now()) == pytest.approx(10.0)
+
+
+def test_days_author_waiting_known_bot_ignored():
+    events = [
+        {"type": "created",  "timestamp": "2024-01-10T12:00:00Z", "actor": "alice"},
+        {"type": "comment",  "timestamp": "2024-01-15T12:00:00Z", "actor": "kroxylicious-robot"},
+    ]
+    assert _days_author_waiting(events, _now()) == pytest.approx(10.0)
+
+
+def test_days_author_waiting_empty_events_is_zero():
+    assert _days_author_waiting([], _now()) == pytest.approx(0.0)
+
+
 # --- _is_bot ---
 
 
@@ -177,6 +229,65 @@ def test_is_bot_known():
 
 def test_is_bot_human():
     assert _is_bot("alice") is False
+
+
+# --- attention_score ---
+
+
+def _score_pr(is_bot=False, is_ftc=False, is_committer=True, engagement_days=1.0,
+              days_author_waiting=0.0, age_days=1.0):
+    return {
+        "is_bot": is_bot, "is_ftc": is_ftc, "is_committer": is_committer,
+        "engagement_days": engagement_days,
+        "days_author_waiting": days_author_waiting, "age_days": age_days,
+    }
+
+
+def test_attention_score_no_engagement_adds_bonus():
+    without = attention_score(_score_pr(engagement_days=1.0))
+    with_none = attention_score(_score_pr(engagement_days=None))
+    assert with_none > without
+
+
+def test_attention_score_waiting_days_increases_score():
+    idle    = attention_score(_score_pr(days_author_waiting=0.0))
+    waiting = attention_score(_score_pr(days_author_waiting=10.0))
+    assert waiting > idle
+
+
+def test_attention_score_older_pr_gets_slight_nudge():
+    young = attention_score(_score_pr(age_days=1.0))
+    old   = attention_score(_score_pr(age_days=200.0))
+    assert old > young
+
+
+def test_attention_score_ignores_tier_flags():
+    base = attention_score(_score_pr(is_ftc=False, is_committer=True,  days_author_waiting=5.0))
+    ftc  = attention_score(_score_pr(is_ftc=True,  is_committer=False, days_author_waiting=5.0))
+    assert base == pytest.approx(ftc)
+
+
+# --- _tier ---
+
+
+def _tier_pr(is_bot=False, is_ftc=False, is_committer=False):
+    return {"is_bot": is_bot, "is_ftc": is_ftc, "is_committer": is_committer}
+
+
+def test_tier_bot():
+    assert _tier(_tier_pr(is_bot=True)) == 3
+
+
+def test_tier_ftc():
+    assert _tier(_tier_pr(is_ftc=True)) == 0
+
+
+def test_tier_external():
+    assert _tier(_tier_pr()) == 1
+
+
+def test_tier_committer():
+    assert _tier(_tier_pr(is_committer=True)) == 2
 
 
 # --- histogram ---
