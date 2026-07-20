@@ -33,5 +33,15 @@
     "type": "reviewed",
     "timestamp": "2026-07-20T11:00:22Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-20T11:41:58Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-07-20T13:00:48Z",
+    "actor": "k-wall"
   }
 ]

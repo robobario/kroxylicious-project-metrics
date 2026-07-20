@@ -1,0 +1,10 @@
+{
+  "number": 4417,
+  "title": "bug: Non-Deterministic Test KafkaServiceBootstrapReconcilerIT.shouldUpdateStatusOnceTrustAnchorConfigMapDeleted",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}
