@@ -216,16 +216,22 @@ def test_lint_pr_dir_invalid_json_metadata(tmp_path):
 # --- lint (integration) ---
 
 
+def _repo_dir(data_dir, owner="org", repo="repo"):
+    return data_dir / owner / repo
+
+
 def test_lint_clean_data_dir(tmp_path):
-    (tmp_path / "last_harvest.json").write_text('{"last_run": null}')
-    (tmp_path / "prs").mkdir()
+    rd = _repo_dir(tmp_path)
+    (rd / "prs").mkdir(parents=True)
+    (rd / "last_harvest.json").write_text('{"last_run": null}')
     assert lint(tmp_path) == []
 
 
 def test_lint_reports_all_pr_violations(tmp_path):
-    (tmp_path / "last_harvest.json").write_text('{"last_run": null}')
-    pr_dir = tmp_path / "prs" / "1"
+    rd = _repo_dir(tmp_path)
+    pr_dir = rd / "prs" / "1"
     pr_dir.mkdir(parents=True)
+    (rd / "last_harvest.json").write_text('{"last_run": null}')
     (pr_dir / "metadata.json").write_text(json.dumps({**VALID_METADATA, "number": "wrong"}))
     (pr_dir / "events.json").write_text(json.dumps([{"type": "bad", "timestamp": "2024-01-10T10:00:00Z", "actor": "x"}]))
     violations = lint(tmp_path)
@@ -234,6 +240,24 @@ def test_lint_reports_all_pr_violations(tmp_path):
 
 
 def test_lint_missing_state_file(tmp_path):
-    (tmp_path / "prs").mkdir()
+    rd = _repo_dir(tmp_path)
+    (rd / "prs").mkdir(parents=True)
     violations = lint(tmp_path)
     assert any("last_harvest.json" in v for v in violations)
+
+
+def test_lint_aggregates_multiple_repos(tmp_path):
+    for repo in ("repo-a", "repo-b"):
+        rd = _repo_dir(tmp_path, repo=repo)
+        (rd / "prs").mkdir(parents=True)
+        (rd / "last_harvest.json").write_text('{"last_run": null}')
+        pr_dir = rd / "prs" / "1"
+        pr_dir.mkdir()
+        (pr_dir / "metadata.json").write_text(json.dumps({**VALID_METADATA, "number": "bad"}))
+        (pr_dir / "events.json").write_text(json.dumps(VALID_EVENTS))
+    violations = lint(tmp_path)
+    assert sum(1 for v in violations if "number" in v) == 2  # one per repo
+
+
+def test_lint_empty_data_dir(tmp_path):
+    assert lint(tmp_path) == []
