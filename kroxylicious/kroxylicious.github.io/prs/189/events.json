@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-08-14T20:53:49Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-08-14T20:53:50Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-08-20T15:38:29Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-08-25T02:39:57Z",
+    "actor": null
+  }
+]

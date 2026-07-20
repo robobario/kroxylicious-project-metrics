@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-07-03T02:36:18Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-07-03T02:36:19Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-07-03T02:50:19Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-07-03T02:50:31Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-07-03T03:58:22Z",
+    "actor": null
+  }
+]

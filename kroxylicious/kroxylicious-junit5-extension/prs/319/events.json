@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-05-26T19:05:09Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-05-26T19:05:32Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-05-29T08:08:23Z",
+    "actor": null
+  }
+]

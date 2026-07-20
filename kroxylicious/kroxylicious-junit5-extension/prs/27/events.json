@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-02-20T11:11:37Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-02-21T01:09:56Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-02-21T01:10:03Z",
+    "actor": null
+  }
+]

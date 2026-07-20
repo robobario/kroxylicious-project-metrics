@@ -1,0 +1,102 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-09-29T03:39:37Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-10-02T09:09:27Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-02T09:28:19Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-10-02T10:12:45Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-10-02T10:18:27Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-10-02T10:23:25Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-10-02T20:27:24Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-02T22:01:40Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T08:02:20Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T08:17:15Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T08:22:22Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T08:29:36Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T08:30:30Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T08:32:01Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T08:40:58Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T09:09:03Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T11:09:03Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-10-03T21:58:33Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-10-03T22:18:06Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-10-03T22:19:48Z",
+    "actor": null
+  }
+]

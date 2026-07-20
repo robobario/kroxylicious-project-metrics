@@ -1,0 +1,11 @@
+{
+  "number": 87,
+  "title": "Remove hardcoded key ID from mvn gpg plugin config",
+  "author": "grdryn",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-20T22:42:40Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

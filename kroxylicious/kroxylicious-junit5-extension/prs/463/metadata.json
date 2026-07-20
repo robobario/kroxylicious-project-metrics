@@ -1,0 +1,14 @@
+{
+  "number": 463,
+  "title": "Bump kafka.version from 3.9.0 to 4.0.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-24T05:51:09Z",
+  "state": "closed",
+  "merged": false,
+  "draft": false
+}

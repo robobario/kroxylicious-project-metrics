@@ -1,0 +1,42 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-10-28T03:37:24Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-10-28T03:37:25Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-10-28T03:39:06Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-10-28T03:57:34Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-10-28T04:12:26Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-10-28T09:28:55Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-10-28T18:29:56Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-10-28T18:30:06Z",
+    "actor": null
+  }
+]

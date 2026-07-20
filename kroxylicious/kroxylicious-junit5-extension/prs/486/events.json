@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-06-02T06:22:06Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-06-02T06:22:07Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-06-02T06:48:14Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-06-16T05:50:24Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2025-06-16T05:50:25Z",
+    "actor": null
+  }
+]

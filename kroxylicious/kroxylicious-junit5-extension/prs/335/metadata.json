@@ -1,0 +1,11 @@
+{
+  "number": 335,
+  "title": "Enable sonar in junit5 ext repo",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-06-18T09:01:09Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

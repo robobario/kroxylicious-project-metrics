@@ -1,0 +1,11 @@
+{
+  "number": 159,
+  "title": "Refactor release-archives page to use a custom liquid filter",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-03T21:32:30Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

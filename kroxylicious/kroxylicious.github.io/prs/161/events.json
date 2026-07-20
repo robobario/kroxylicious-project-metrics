@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-07-09T15:34:42Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-07-09T15:34:43Z",
+    "actor": "gunnarmorling"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-07-09T15:35:28Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-07-09T15:35:33Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-07-09T15:36:51Z",
+    "actor": "gunnarmorling"
+  }
+]

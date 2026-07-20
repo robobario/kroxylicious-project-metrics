@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-11-27T01:08:06Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-11-27T03:37:25Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-11-27T03:39:14Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-11-27T03:39:58Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-11-27T03:45:27Z",
+    "actor": null
+  }
+]

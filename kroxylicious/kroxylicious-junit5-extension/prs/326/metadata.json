@@ -1,0 +1,14 @@
+{
+  "number": 326,
+  "title": "Bump net.bytebuddy:byte-buddy from 1.14.15 to 1.14.17",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-06-03T05:53:52Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

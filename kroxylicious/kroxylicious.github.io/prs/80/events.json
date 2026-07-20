@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-11-06T01:27:08Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-11-06T09:15:38Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-11-06T23:12:52Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-11-06T23:12:58Z",
+    "actor": null
+  }
+]

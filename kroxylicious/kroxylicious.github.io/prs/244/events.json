@@ -1,0 +1,37 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-03-31T20:16:59Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-03-31T20:17:00Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-03-31T20:17:31Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-03-31T20:21:39Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-03-31T20:51:03Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-04-01T01:11:17Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-04-01T01:26:21Z",
+    "actor": null
+  }
+]

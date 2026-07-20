@@ -1,0 +1,11 @@
+{
+  "number": 178,
+  "title": "Fix some code smells reported by sonar",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-09-13T10:08:44Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

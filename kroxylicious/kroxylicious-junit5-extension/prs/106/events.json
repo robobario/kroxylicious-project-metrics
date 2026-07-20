@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-05-15T06:00:29Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-15T07:45:35Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-15T07:45:46Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-05-15T07:46:31Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-05-15T07:50:45Z",
+    "actor": null
+  }
+]

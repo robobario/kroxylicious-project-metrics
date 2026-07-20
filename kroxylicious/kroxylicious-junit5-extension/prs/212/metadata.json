@@ -1,0 +1,11 @@
+{
+  "number": 212,
+  "title": "Fix #211: Use spotbugs annotations for nullability annotations",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-10-25T15:24:36Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

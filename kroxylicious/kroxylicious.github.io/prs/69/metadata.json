@@ -1,0 +1,13 @@
+{
+  "number": 69,
+  "title": "Bump rexml from 3.2.8 to 3.3.6",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-08-22T20:38:00Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

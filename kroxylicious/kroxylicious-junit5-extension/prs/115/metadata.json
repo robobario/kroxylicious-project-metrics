@@ -1,0 +1,13 @@
+{
+  "number": 115,
+  "title": "Bump maven-dependency-plugin from 3.5.0 to 3.6.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-05-29T06:02:32Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

@@ -1,0 +1,14 @@
+{
+  "number": 485,
+  "title": "Bump junit.version from 5.12.2 to 5.13.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-06-02T06:05:42Z",
+  "state": "closed",
+  "merged": false,
+  "draft": false
+}

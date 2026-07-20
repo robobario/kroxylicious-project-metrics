@@ -1,0 +1,42 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-03-26T05:20:22Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-03-26T05:20:23Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-03-26T05:38:21Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-03-26T22:32:03Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-03-26T22:54:57Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-03-26T22:59:16Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-03-26T23:43:58Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-03-27T00:24:57Z",
+    "actor": null
+  }
+]

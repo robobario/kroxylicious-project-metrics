@@ -1,0 +1,11 @@
+{
+  "number": 177,
+  "title": "Fix #176: Changes needed to get the tests working, at least",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-09-12T03:14:39Z",
+  "state": "closed",
+  "merged": false,
+  "draft": true
+}

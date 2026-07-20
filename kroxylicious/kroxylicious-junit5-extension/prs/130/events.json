@@ -1,0 +1,37 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-06-20T15:44:34Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-06-20T15:44:38Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-06-20T15:44:40Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-06-20T15:46:45Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-06-21T06:55:51Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-06-22T08:38:01Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-06-22T09:23:08Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "number": 215,
+  "title": "chore(docs): Record Encryption use-case ought to mention Azure Key Vault.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-01-19T11:00:24Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

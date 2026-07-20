@@ -1,0 +1,37 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-11-06T05:37:59Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-11-06T07:58:27Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-11-06T07:59:02Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-11-06T07:59:24Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-11-06T08:08:51Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-11-06T08:30:13Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-11-06T08:30:23Z",
+    "actor": null
+  }
+]

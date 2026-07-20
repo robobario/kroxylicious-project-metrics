@@ -1,0 +1,11 @@
+{
+  "number": 184,
+  "title": "fix: stop Utils#createTopic trying to create topic if admin client gets closed",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-09-21T14:22:24Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

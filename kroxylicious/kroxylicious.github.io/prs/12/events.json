@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-11-23T23:04:09Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-11-23T23:04:59Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-11-23T23:05:38Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-10-31T09:46:10Z",
+    "actor": "joschi"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-10-31T09:46:11Z",
+    "actor": "joschi"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-11-01T20:48:06Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-11-01T20:48:29Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "number": 549,
+  "title": "Bump org.apache.maven.plugins:maven-jar-plugin from 3.4.2 to 3.5.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-11-17T05:05:33Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

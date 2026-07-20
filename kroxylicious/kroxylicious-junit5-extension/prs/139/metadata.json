@@ -1,0 +1,13 @@
+{
+  "number": 139,
+  "title": "Fix BeforeEachTest so that it doesn't fail sporadically",
+  "author": "k-wall",
+  "labels": [
+    "bug"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-07-03T14:00:52Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

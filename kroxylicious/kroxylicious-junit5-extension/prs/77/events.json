@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-04-06T01:26:33Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-06T01:29:01Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-06T08:06:39Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-06T08:07:39Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-04-10T22:53:12Z",
+    "actor": null
+  }
+]

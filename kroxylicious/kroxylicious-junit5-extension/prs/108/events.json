@@ -1,0 +1,82 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-05-15T15:33:20Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-15T15:35:28Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-15T17:49:00Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-15T17:49:02Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-15T18:02:11Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T11:59:16Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T11:59:19Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T11:59:22Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T11:59:24Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-05-16T14:36:05Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-05-16T14:36:05Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T14:54:04Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-16T14:55:02Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-17T05:42:20Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-18T01:11:06Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-05-18T08:54:21Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-03-05T02:51:20Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-03-05T02:51:21Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-03-05T02:55:27Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-03-05T02:55:29Z",
+    "actor": null
+  }
+]

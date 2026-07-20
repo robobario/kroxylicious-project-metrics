@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-09-19T16:07:50Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-09-20T01:53:55Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-09-20T01:54:05Z",
+    "actor": null
+  }
+]

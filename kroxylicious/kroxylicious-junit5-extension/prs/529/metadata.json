@@ -1,0 +1,14 @@
+{
+  "number": 529,
+  "title": "Bump org.apache.maven.plugins:maven-compiler-plugin from 3.14.0 to 3.14.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-09-22T05:10:13Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

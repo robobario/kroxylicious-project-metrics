@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-11-06T23:35:53Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-11-06T23:35:54Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-11-07T03:21:40Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-11-07T03:36:13Z",
+    "actor": null
+  }
+]

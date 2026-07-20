@@ -1,0 +1,11 @@
+{
+  "number": 319,
+  "title": "Allow Kafka provided by the framework to support SASL OAUTHBEARER authentication",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-05-26T19:05:09Z",
+  "state": "closed",
+  "merged": false,
+  "draft": true
+}

@@ -1,0 +1,13 @@
+{
+  "number": 279,
+  "title": "Bump org.testcontainers:testcontainers-bom from 1.19.5 to 1.19.6",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-02-26T05:20:30Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

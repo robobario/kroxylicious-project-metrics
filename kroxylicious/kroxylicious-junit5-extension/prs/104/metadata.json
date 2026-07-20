@@ -1,0 +1,11 @@
+{
+  "number": 104,
+  "title": "Added target to saslPlainAuth userpassword interface",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-11T12:26:50Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

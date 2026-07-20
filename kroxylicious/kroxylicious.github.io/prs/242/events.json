@@ -1,0 +1,37 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-03-25T00:47:38Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-03-25T00:47:39Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-03-25T00:58:29Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-03-26T10:10:00Z",
+    "actor": "PaulRMellor"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-03-27T12:01:21Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-03-27T12:02:04Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-03-29T20:13:53Z",
+    "actor": null
+  }
+]

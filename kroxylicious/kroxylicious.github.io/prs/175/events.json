@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-07-29T03:53:56Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-07-29T03:53:57Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-07-30T01:54:01Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-07-30T02:30:31Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-07-31T13:23:26Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-07-31T13:24:03Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "number": 46,
+  "title": "Allow TemplateTest methods to be run individually",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-03-02T19:15:08Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

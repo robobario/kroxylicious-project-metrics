@@ -1,0 +1,11 @@
+{
+  "number": 422,
+  "title": "Make the reflective invocations a little more generic",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "dependabot/maven/kafka.version-3.9.0",
+  "created_at": "2024-11-19T01:28:41Z",
+  "state": "closed",
+  "merged": false,
+  "draft": false
+}

@@ -1,0 +1,14 @@
+{
+  "number": 469,
+  "title": "Bump net.revelc.code.formatter:formatter-maven-plugin from 2.25.0 to 2.26.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-31T05:28:14Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

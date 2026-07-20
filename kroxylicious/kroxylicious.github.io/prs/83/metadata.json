@@ -1,0 +1,11 @@
+{
+  "number": 83,
+  "title": "Correct typos in schema enforcement use case docs.",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-11-11T18:56:43Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

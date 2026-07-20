@@ -1,0 +1,11 @@
+{
+  "number": 597,
+  "title": "fix actions warning and refactor common actions",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-03-16T12:43:22Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

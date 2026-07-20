@@ -1,0 +1,14 @@
+{
+  "number": 562,
+  "title": "Bump org.testcontainers:testcontainers-bom from 2.0.2 to 2.0.3",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-12-22T05:04:17Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

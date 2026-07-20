@@ -1,0 +1,11 @@
+{
+  "number": 117,
+  "title": "added await condition to wait for the consistency test topics to be deleted",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-29T11:34:42Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

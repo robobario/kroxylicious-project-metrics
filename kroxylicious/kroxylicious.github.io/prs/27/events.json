@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-01-14T22:41:16Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-01-14T22:49:17Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-01-14T22:54:32Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-01-14T22:58:07Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-01-14T23:53:53Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-01-14T23:54:17Z",
+    "actor": null
+  }
+]

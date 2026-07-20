@@ -1,0 +1,37 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-05-10T12:10:28Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-05-10T12:10:28Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-05-10T12:10:29Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-05-10T12:10:29Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-05-10T12:10:29Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-05-10T12:19:26Z",
+    "actor": "tombentley"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-05-10T12:20:24Z",
+    "actor": null
+  }
+]

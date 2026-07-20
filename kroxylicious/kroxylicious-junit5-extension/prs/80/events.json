@@ -1,0 +1,47 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-04-10T10:01:20Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-04-10T10:01:20Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-04-10T10:01:20Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-10T10:14:12Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-10T10:16:23Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-10T10:23:14Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-04-10T10:23:57Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-04-10T11:09:46Z",
+    "actor": null
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-10T22:56:38Z",
+    "actor": "SamBarker"
+  }
+]

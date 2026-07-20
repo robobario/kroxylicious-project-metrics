@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-04-20T22:42:40Z",
+    "actor": "grdryn"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2023-04-20T22:44:00Z",
+    "actor": "grdryn"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-04-20T22:48:35Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-04-21T14:44:12Z",
+    "actor": null
+  }
+]

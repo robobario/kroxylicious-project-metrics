@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-07-13T11:33:34Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-07-13T11:33:37Z",
+    "actor": "sonatype-lift[bot]"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-07-19T15:52:40Z",
+    "actor": null
+  }
+]

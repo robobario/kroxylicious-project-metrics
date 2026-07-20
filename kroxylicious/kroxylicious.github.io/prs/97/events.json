@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-01-31T13:35:45Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-01-31T13:35:55Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-01-31T18:17:35Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-01-31T18:17:44Z",
+    "actor": null
+  }
+]

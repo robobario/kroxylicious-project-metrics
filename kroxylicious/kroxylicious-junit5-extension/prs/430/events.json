@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-11-22T12:23:18Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-11-22T12:41:16Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-11-22T12:45:20Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-11-22T12:50:36Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-11-22T12:50:37Z",
+    "actor": null
+  }
+]

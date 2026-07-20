@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-11-03T05:06:07Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-11-03T05:06:07Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-11-07T10:57:14Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-11-17T05:06:08Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2025-11-17T05:06:09Z",
+    "actor": null
+  }
+]

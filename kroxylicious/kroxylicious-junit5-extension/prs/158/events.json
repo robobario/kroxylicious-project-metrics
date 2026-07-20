@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-07-24T05:28:47Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-07-24T09:28:49Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-07-24T09:28:56Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-07-24T09:28:59Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-07-24T09:35:22Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-07-24T09:52:44Z",
+    "actor": null
+  }
+]

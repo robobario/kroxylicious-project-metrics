@@ -1,0 +1,12 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-03-02T08:09:52Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-03-02T08:24:21Z",
+    "actor": null
+  }
+]

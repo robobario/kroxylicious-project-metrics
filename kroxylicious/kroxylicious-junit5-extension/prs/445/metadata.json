@@ -1,0 +1,14 @@
+{
+  "number": 445,
+  "title": "Bump com.github.spotbugs:spotbugs-annotations from 4.9.0 to 4.9.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-02-10T05:41:59Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

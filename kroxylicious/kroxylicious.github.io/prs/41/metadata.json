@@ -1,0 +1,11 @@
+{
+  "number": 41,
+  "title": "Update references to `EnvelopeEncryption` to be `RecordEncryption`.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-03-01T01:49:29Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

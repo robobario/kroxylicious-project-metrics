@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-07-03T22:48:28Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-07-03T22:48:28Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2025-07-03T22:50:31Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-07-10T15:09:35Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-07-13T21:01:57Z",
+    "actor": null
+  }
+]

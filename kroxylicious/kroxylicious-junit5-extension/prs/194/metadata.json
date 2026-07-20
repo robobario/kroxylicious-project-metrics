@@ -1,0 +1,13 @@
+{
+  "number": 194,
+  "title": "Bump org.mockito:mockito-bom from 5.5.0 to 5.6.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-10-09T05:58:23Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

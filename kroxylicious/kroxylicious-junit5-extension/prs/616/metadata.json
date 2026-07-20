@@ -1,0 +1,13 @@
+{
+  "number": 616,
+  "title": "deps: Upgrade to Kafka 4.3.0",
+  "author": "k-wall",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-05-18T13:16:46Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

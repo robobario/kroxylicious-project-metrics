@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-09-25T13:57:28Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-09-25T14:31:19Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-25T14:31:19Z",
+    "actor": "k-wall"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "number": 642,
+  "title": "Bump docker/setup-qemu-action from 4.1.0 to 4.2.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-06T05:04:36Z",
+  "state": "open",
+  "merged": false,
+  "draft": false
+}

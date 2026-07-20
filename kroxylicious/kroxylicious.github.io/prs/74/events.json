@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-09-12T01:22:09Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-12T07:20:51Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-09-17T22:02:43Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-09-18T00:39:09Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-09-25T23:25:12Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-10-01T20:29:29Z",
+    "actor": null
+  }
+]

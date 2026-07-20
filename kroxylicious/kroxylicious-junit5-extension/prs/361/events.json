@@ -1,0 +1,12 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-07-15T10:45:08Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2024-08-05T16:33:42Z",
+    "actor": null
+  }
+]

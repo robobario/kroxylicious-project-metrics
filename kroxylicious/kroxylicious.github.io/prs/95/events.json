@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-01-30T02:48:24Z",
+    "actor": "kroxylicious-robot"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-01-31T01:39:56Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-01-31T01:40:11Z",
+    "actor": null
+  }
+]

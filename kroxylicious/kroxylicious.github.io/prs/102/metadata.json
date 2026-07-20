@@ -1,0 +1,11 @@
+{
+  "number": 102,
+  "title": "allow -> allowed & deny -> denied in yaml snippets",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-02-09T22:58:18Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

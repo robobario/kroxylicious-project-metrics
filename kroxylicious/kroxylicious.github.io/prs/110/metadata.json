@@ -1,0 +1,14 @@
+{
+  "number": 110,
+  "title": "Restructure docs navigation",
+  "author": "gracegrimwood",
+  "labels": [
+    "documentation",
+    "enhancement"
+  ],
+  "target_branch": "main",
+  "created_at": "2025-03-26T05:20:22Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

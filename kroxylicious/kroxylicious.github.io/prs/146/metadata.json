@@ -1,0 +1,11 @@
+{
+  "number": 146,
+  "title": "Build the website using the same Dockerfile in the github action",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-02T04:26:01Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

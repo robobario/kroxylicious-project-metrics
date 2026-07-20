@@ -1,0 +1,42 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-01-15T20:55:58Z",
+    "actor": "insectengine"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-16T08:58:36Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reopened",
+    "timestamp": "2024-01-16T08:58:39Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-01-16T08:59:24Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-16T17:48:36Z",
+    "actor": "insectengine"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-01-17T09:37:41Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-01-17T09:38:18Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-01-17T09:38:30Z",
+    "actor": "k-wall"
+  }
+]

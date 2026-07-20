@@ -1,0 +1,11 @@
+{
+  "number": 22,
+  "title": "Refactor some tests to use assertAll",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-01-17T12:23:53Z",
+  "state": "closed",
+  "merged": false,
+  "draft": false
+}

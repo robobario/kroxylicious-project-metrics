@@ -1,0 +1,42 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-12-17T01:18:45Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-12-17T01:35:05Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-12-17T03:32:24Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-12-17T03:35:46Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-12-17T09:47:21Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-12-17T09:48:24Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-12-17T19:55:36Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-12-17T21:47:12Z",
+    "actor": null
+  }
+]

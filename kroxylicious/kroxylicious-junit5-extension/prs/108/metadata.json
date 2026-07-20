@@ -1,0 +1,11 @@
+{
+  "number": 108,
+  "title": "Fix #84: allow brokers to be added to/removed from the cluster",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-05-15T15:33:20Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

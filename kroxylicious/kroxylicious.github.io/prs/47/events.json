@@ -1,0 +1,72 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-04-21T22:07:49Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-21T22:38:26Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-21T23:15:27Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-22T00:08:31Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-04-22T01:58:09Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-22T02:01:50Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-22T03:07:48Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-22T03:26:49Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-22T03:44:55Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-22T06:31:58Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-22T10:26:12Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-04-22T22:35:26Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-04-22T23:05:45Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-04-22T23:18:41Z",
+    "actor": null
+  }
+]

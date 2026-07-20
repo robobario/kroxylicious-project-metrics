@@ -1,0 +1,13 @@
+{
+  "number": 209,
+  "title": "Fix #143: Default native kafka image tag from the version of Kafka on the classpath",
+  "author": "k-wall",
+  "labels": [
+    "bug"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-10-24T15:58:22Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

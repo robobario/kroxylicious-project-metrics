@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-03-06T03:49:08Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-03-06T03:49:09Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-03-06T10:39:12Z",
+    "actor": "PaulRMellor"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-03-08T19:06:41Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-03-08T20:41:00Z",
+    "actor": null
+  }
+]

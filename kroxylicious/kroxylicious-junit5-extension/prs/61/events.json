@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-03-13T06:04:15Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-03-20T06:03:14Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-03-20T06:03:15Z",
+    "actor": null
+  }
+]

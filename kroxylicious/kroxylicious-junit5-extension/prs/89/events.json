@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-04-21T15:28:23Z",
+    "actor": "racheljpg"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-04-21T16:08:23Z",
+    "actor": "grdryn"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-04-25T22:13:22Z",
+    "actor": null
+  }
+]

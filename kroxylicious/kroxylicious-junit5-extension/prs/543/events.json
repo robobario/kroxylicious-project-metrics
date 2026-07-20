@@ -1,0 +1,17 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-11-03T15:04:54Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-11-03T15:04:55Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2025-11-03T15:15:21Z",
+    "actor": null
+  }
+]

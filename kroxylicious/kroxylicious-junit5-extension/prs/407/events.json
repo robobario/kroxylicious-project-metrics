@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-11-04T00:37:24Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-11-04T00:55:28Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-11-04T01:13:37Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-11-04T01:13:37Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

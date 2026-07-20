@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2023-11-23T22:16:05Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-11-23T22:39:49Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2023-11-23T22:43:37Z",
+    "actor": null
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2023-11-24T11:02:43Z",
+    "actor": "k-wall"
+  }
+]

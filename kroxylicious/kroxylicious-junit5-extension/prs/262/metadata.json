@@ -1,0 +1,11 @@
+{
+  "number": 262,
+  "title": "Support embedding a 3.7 broker",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-01-12T00:19:32Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

@@ -1,0 +1,14 @@
+{
+  "number": 610,
+  "title": "Bump org.projectlombok:lombok from 1.18.44 to 1.18.46",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-04-27T05:18:10Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

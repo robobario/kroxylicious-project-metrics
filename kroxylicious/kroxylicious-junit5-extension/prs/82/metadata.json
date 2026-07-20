@@ -1,0 +1,11 @@
+{
+  "number": 82,
+  "title": "Added getNumOfBrokers method in KafkaCluster interface",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-04-14T09:00:38Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

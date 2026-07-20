@@ -1,0 +1,13 @@
+{
+  "number": 268,
+  "title": "Bump org.apache.maven.plugins:maven-surefire-plugin from 3.2.3 to 3.2.5",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2024-01-15T05:19:03Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

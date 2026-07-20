@@ -1,0 +1,42 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2025-11-13T17:21:32Z",
+    "actor": "piotrpdev"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-11-13T17:21:32Z",
+    "actor": "piotrpdev"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-11-28T13:11:20Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-11-28T13:15:08Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2025-11-28T17:00:17Z",
+    "actor": "piotrpdev"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-12-03T12:28:27Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2025-12-03T12:48:59Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2025-12-03T12:50:21Z",
+    "actor": null
+  }
+]

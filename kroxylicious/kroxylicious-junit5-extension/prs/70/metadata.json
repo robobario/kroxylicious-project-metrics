@@ -1,0 +1,11 @@
+{
+  "number": 70,
+  "title": "Configure `__transactionState_` topic like we do `__consumer_offsets_`",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-03-30T22:05:00Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

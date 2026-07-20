@@ -1,0 +1,11 @@
+{
+  "number": 149,
+  "title": "use ubi9-minimal rather than busybox for OneShotContainer",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-13T17:26:10Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

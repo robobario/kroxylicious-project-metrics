@@ -1,0 +1,14 @@
+{
+  "number": 635,
+  "title": "Bump org.sonatype.central:central-publishing-maven-plugin from 0.10.0 to 0.11.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-22T05:03:04Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

@@ -1,0 +1,11 @@
+{
+  "number": 250,
+  "title": "Remove github discussions",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-04-22T05:01:35Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

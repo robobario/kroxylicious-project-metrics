@@ -1,0 +1,11 @@
+{
+  "number": 145,
+  "title": "GitHub build with docker image",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-07-02T04:21:42Z",
+  "state": "closed",
+  "merged": false,
+  "draft": false
+}

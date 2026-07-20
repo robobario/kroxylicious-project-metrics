@@ -1,0 +1,11 @@
+{
+  "number": 98,
+  "title": "upgrade to deploy-pages v4",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2025-02-02T03:26:18Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

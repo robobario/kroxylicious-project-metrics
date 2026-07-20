@@ -1,0 +1,11 @@
+{
+  "number": 9,
+  "title": "apply duct-tape to `InVMKafkaCluster.start` to ensure all nodes are p\u2026",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2022-12-05T00:08:58Z",
+  "state": "closed",
+  "merged": false,
+  "draft": false
+}

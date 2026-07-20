@@ -1,0 +1,11 @@
+{
+  "number": 45,
+  "title": "Don't list external or anon as early.start.listeners",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-03-02T18:21:41Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

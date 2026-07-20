@@ -1,0 +1,14 @@
+{
+  "number": 252,
+  "title": "[GitHub] [Actions] Update actions/cache, setup-java, checkout to avoid node12 deprecation warning",
+  "author": "k-wall",
+  "labels": [
+    "dependencies",
+    "release-process"
+  ],
+  "target_branch": "main",
+  "created_at": "2023-12-11T09:45:06Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

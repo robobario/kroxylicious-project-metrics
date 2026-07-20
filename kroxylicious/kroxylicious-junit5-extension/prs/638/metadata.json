@@ -1,0 +1,14 @@
+{
+  "number": 638,
+  "title": "Bump octokit/request-action from 45eef13998ff762839b0a0de9bbcf41970fd056d to b66ca9cd744693e9c29b490fc08831ab66c4a970",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-06-22T05:04:40Z",
+  "state": "open",
+  "merged": false,
+  "draft": false
+}

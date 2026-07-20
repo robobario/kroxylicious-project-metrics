@@ -1,0 +1,11 @@
+{
+  "number": 192,
+  "title": "Refactor import sort maven plugin configuration to use same approach as main project",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-10-06T11:39:27Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false
+}

@@ -1,0 +1,11 @@
+{
+  "number": 412,
+  "title": "Remove unused site plugin declaration",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2024-11-04T02:25:09Z",
+  "state": "closed",
+  "merged": false,
+  "draft": false
+}

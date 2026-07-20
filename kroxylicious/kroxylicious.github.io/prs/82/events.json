@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-11-07T06:00:02Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-11-07T06:00:02Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-11-07T06:00:02Z",
+    "actor": "gracegrimwood"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-11-07T09:25:58Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-11-07T09:26:19Z",
+    "actor": null
+  }
+]

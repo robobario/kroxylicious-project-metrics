@@ -1,0 +1,57 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2022-12-05T00:08:58Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-12-07T03:28:18Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-12-07T03:29:09Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2022-12-21T15:21:11Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-11T10:34:11Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-11T20:58:37Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-12T09:07:41Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-12T11:10:15Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-01-13T02:11:33Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2023-02-03T03:25:28Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2023-02-03T03:25:28Z",
+    "actor": "SamBarker"
+  }
+]

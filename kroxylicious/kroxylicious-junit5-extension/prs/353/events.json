@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-07-08T04:52:21Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-07-08T07:03:01Z",
+    "actor": "showuon"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-07-08T14:57:59Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-07-08T15:00:41Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-07-08T15:09:17Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-07-08T22:39:11Z",
+    "actor": null
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2024-08-09T18:47:16Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-08-11T17:23:11Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-08-11T17:24:25Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-08-11T17:26:16Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2024-08-11T17:26:16Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-08-12T22:43:52Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-13T14:50:58Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-08-13T20:31:55Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-08-14T12:33:14Z",
+    "actor": "ddaviesbrackett-dwp"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2024-08-14T17:16:27Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-08-15T02:40:09Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-08-15T03:27:50Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2024-08-19T15:48:13Z",
+    "actor": "katheris"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2024-08-20T14:38:19Z",
+    "actor": null
+  }
+]

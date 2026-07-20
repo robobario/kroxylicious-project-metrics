@@ -1,0 +1,11 @@
+{
+  "number": 152,
+  "title": "Add a custom docker client strategy that configures the HTTP client f\u2026",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2023-07-19T22:51:06Z",
+  "state": "closed",
+  "merged": false,
+  "draft": true
+}
