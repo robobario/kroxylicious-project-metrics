@@ -2,7 +2,9 @@
   "number": 4415,
   "title": "refactor(operator): use JOSDK 5.4 named secondary lookup in TLS consistency check",
   "author": "SamBarker",
-  "labels": [],
+  "labels": [
+    "kube/operator"
+  ],
   "target_branch": "main",
   "created_at": "2026-07-19T22:23:21Z",
   "state": "open",
