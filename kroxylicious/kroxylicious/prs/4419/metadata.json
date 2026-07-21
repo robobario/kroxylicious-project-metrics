@@ -2,7 +2,9 @@
   "number": 4419,
   "title": "fix: resolved all DefaultCharset Error Prone warnings",
   "author": "AdityaThakur1998",
-  "labels": [],
+  "labels": [
+    "kind/refactoring"
+  ],
   "target_branch": "main",
   "created_at": "2026-07-21T09:10:53Z",
   "state": "open",
