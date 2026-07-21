@@ -1,0 +1,12 @@
+{
+  "number": 656,
+  "title": "ci(sonar): opt in to unsafe PR checkout for fork PRs",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-21T00:14:07Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
