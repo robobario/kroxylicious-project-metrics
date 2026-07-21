@@ -1,0 +1,12 @@
+{
+  "number": 659,
+  "title": "ci(sonar): run scanner under JDK 21",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-21T21:28:10Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
