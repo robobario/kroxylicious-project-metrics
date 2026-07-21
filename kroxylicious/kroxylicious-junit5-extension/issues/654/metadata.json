@@ -1,0 +1,10 @@
+{
+  "number": 654,
+  "title": "bug: Non-Deterministic Test TestcontainersKafkaClusterTest.scramUsersCreated",
+  "state": "open",
+  "labels": [
+    "bug",
+    "triaged",
+    "tests"
+  ]
+}
