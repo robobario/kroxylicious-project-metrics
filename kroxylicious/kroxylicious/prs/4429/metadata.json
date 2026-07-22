@@ -1,6 +1,6 @@
 {
   "number": 4429,
-  "title": "ci: don't trigger some workflows on docs changes",
+  "title": "ci: don't trigger some workflows on docs changes in PRs",
   "author": "piotrpdev",
   "labels": [],
   "target_branch": "main",
