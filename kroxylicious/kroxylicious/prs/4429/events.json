@@ -8,5 +8,15 @@
     "type": "review_requested",
     "timestamp": "2026-07-22T09:37:54Z",
     "actor": "piotrpdev"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-22T10:05:39Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-22T10:07:04Z",
+    "actor": "sonarqubecloud[bot]"
   }
 ]
