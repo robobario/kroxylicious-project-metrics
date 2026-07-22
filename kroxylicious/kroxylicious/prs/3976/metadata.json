@@ -1,6 +1,6 @@
 {
   "number": 3976,
-  "title": "Upgrade to Apache Kafka 4.3.1",
+  "title": "Upgrade to Apache Kafka 4.3.x",
   "author": "k-wall",
   "labels": [
     "dependencies",

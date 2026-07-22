@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-07-22T08:49:19Z",
+    "actor": "piotrpdev"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-07-22T08:49:20Z",
+    "actor": "piotrpdev"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-22T09:30:54Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-07-22T09:32:15Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]
