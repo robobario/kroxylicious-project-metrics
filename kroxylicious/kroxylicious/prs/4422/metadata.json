@@ -1,0 +1,14 @@
+{
+  "number": 4422,
+  "title": "feat(runtime): add RoutingContext to frames and RouteFilterHandler",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-22T02:17:12Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4156
+  ]
+}
