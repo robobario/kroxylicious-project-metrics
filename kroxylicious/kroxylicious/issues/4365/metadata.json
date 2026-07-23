@@ -1,0 +1,11 @@
+{
+  "number": 4365,
+  "title": "docs: documentation PR for older point releases sets latestVersion",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "documentation",
+    "help wanted",
+    "website"
+  ]
+}

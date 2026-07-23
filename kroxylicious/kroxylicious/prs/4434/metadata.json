@@ -1,0 +1,14 @@
+{
+  "number": 4434,
+  "title": "fix(docs): preserve latest release ordering",
+  "author": "TheDarkniteFalls",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-23T08:06:38Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    4365
+  ]
+}
