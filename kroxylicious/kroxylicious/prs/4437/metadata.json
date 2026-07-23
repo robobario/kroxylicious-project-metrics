@@ -1,0 +1,12 @@
+{
+  "number": 4437,
+  "title": "fix: resolved InvalidInlineTag warnings and promoted the check to ERROR",
+  "author": "AdityaThakur1998",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-23T11:21:14Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

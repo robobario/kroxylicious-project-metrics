@@ -1,0 +1,12 @@
+{
+  "number": 4436,
+  "title": "fix: resolved ArrayRecordComponent warnings and promoted the check to Error",
+  "author": "AdityaThakur1998",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-23T10:19:56Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
