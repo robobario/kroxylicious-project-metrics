@@ -7,8 +7,8 @@
   ],
   "target_branch": "main",
   "created_at": "2026-06-18T08:53:33Z",
-  "state": "open",
-  "merged": false,
+  "state": "closed",
+  "merged": true,
   "draft": false,
   "linked_issues": []
 }
