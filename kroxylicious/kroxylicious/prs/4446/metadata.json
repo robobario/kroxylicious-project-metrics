@@ -1,0 +1,15 @@
+{
+  "number": 4446,
+  "title": "build(deps): bump renovatebot/github-action from 46.1.19 to 46.1.20",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-25T03:33:02Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
