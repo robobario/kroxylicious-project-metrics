@@ -1,0 +1,9 @@
+{
+  "number": 4281,
+  "title": "chore(ci): add commit-SHA tagging to container images",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "release-process"
+  ]
+}
