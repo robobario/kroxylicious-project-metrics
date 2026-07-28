@@ -1,0 +1,12 @@
+{
+  "number": 277,
+  "title": "docs: update schema validation use case to include Avro and Protobuf",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-07-28T16:26:07Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
