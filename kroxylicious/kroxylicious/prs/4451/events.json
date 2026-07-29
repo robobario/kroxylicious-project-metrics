@@ -28,5 +28,15 @@
     "type": "comment",
     "timestamp": "2026-07-29T07:42:17Z",
     "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-07-29T21:29:17Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-07-29T21:29:30Z",
+    "actor": null
   }
 ]

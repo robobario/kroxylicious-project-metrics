@@ -1,0 +1,15 @@
+{
+  "number": 4474,
+  "title": "ci: [DRAFT] enforce single squashed commit and conventional commit format on PRs",
+  "author": "robobario",
+  "labels": [
+    "dev/github_actions",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-07-29T21:29:17Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
