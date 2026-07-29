@@ -5,8 +5,8 @@
   "labels": [],
   "target_branch": "main",
   "created_at": "2026-07-23T08:06:38Z",
-  "state": "open",
-  "merged": false,
+  "state": "closed",
+  "merged": true,
   "draft": false,
   "linked_issues": [
     4365
