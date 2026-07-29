@@ -43,5 +43,10 @@
     "type": "comment",
     "timestamp": "2026-07-28T11:18:08Z",
     "actor": "m1a2st"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-07-29T16:06:33Z",
+    "actor": null
   }
 ]
