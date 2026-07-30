@@ -1,6 +1,6 @@
 {
   "number": 4472,
-  "title": "refactor(krpc-plugin): eliminate kafka-clients dependency",
+  "title": "refactor(krpc-plugin): eliminate kafka-clients dependency simplifying the problem that design#116 is trying to solve.",
   "author": "k-wall",
   "labels": [
     "kind/refactoring",
@@ -10,6 +10,6 @@
   "created_at": "2026-07-29T18:01:42Z",
   "state": "open",
   "merged": false,
-  "draft": true,
+  "draft": false,
   "linked_issues": []
 }
