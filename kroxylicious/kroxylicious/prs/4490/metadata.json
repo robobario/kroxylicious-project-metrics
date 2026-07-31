@@ -1,6 +1,6 @@
 {
   "number": 4490,
-  "title": "docs(testing): document integration tester package",
+  "title": "fix(testing): define tester package nullness",
   "author": "oozan",
   "labels": [],
   "target_branch": "main",
