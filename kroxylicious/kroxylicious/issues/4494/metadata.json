@@ -1,0 +1,10 @@
+{
+  "number": 4494,
+  "title": "Remove deprecated 4-arg onRequest/onResponse methods from RequestFilter and ResponseFilter",
+  "state": "open",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "lifecycle/deprecation"
+  ]
+}
