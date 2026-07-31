@@ -1,0 +1,10 @@
+{
+  "number": 667,
+  "title": "Replace JUnit Assertions.assertTrue in ScramInitialiser with plain Java check",
+  "state": "open",
+  "labels": [
+    "enhancement",
+    "good first issue",
+    "help wanted"
+  ]
+}

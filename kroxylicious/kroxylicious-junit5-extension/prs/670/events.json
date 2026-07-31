@@ -8,5 +8,15 @@
     "type": "review_requested",
     "timestamp": "2026-07-31T17:52:08Z",
     "actor": "SpaleRuby"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-07-31T19:57:58Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-07-31T19:58:09Z",
+    "actor": null
   }
 ]
