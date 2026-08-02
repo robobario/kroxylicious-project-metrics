@@ -1,0 +1,9 @@
+{
+  "number": 4283,
+  "title": "chore(ci): replace hard-coded -pl module lists with Maven profiles",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "release-process"
+  ]
+}
