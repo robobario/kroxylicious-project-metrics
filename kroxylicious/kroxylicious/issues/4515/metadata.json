@@ -1,0 +1,11 @@
+{
+  "number": 4515,
+  "title": "Runtime: add per-mechanism authentication outcome metrics",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "triaged",
+    "observability",
+    "filter/sasl-termination"
+  ]
+}

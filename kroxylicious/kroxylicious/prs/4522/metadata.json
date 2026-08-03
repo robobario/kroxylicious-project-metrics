@@ -1,0 +1,17 @@
+{
+  "number": 4522,
+  "title": "feat(runtime): add authentication outcome metrics",
+  "author": "tombentley",
+  "labels": [
+    "kind/enhancement",
+    "observability"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-03T21:08:38Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    4515
+  ]
+}
