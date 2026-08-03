@@ -23,5 +23,15 @@
     "type": "reviewed",
     "timestamp": "2026-07-08T02:06:10Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-03T16:08:36Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-08-03T16:08:56Z",
+    "actor": "k-wall"
   }
 ]
