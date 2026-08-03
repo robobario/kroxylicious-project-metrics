@@ -1,0 +1,12 @@
+{
+  "number": 4514,
+  "title": "fix(kms-tls): silence Gitleaks false positives on test private keys",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-03T13:12:56Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
