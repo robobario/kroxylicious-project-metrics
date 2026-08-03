@@ -1,0 +1,12 @@
+{
+  "number": 4511,
+  "title": "[DRAFT] test(routing): add ITs reproducing three dynamic-routing bugs",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-03T05:06:00Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
