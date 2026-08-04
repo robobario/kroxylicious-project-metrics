@@ -63,5 +63,10 @@
     "type": "review_requested",
     "timestamp": "2026-08-04T17:50:27Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-08-04T18:26:34Z",
+    "actor": "k-wall"
   }
 ]
