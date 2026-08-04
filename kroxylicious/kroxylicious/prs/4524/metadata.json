@@ -1,0 +1,12 @@
+{
+  "number": 4524,
+  "title": "fix(routing): four correctness fixes for dynamic routing",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-04T02:11:06Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
