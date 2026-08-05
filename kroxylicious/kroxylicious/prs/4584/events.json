@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-08-05T17:21:11Z",
+    "actor": "matheusandre1"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T18:25:47Z",
+    "actor": "matheusandre1"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T18:28:12Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T18:29:55Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-08-05T18:41:13Z",
+    "actor": "matheusandre1"
+  }
+]
