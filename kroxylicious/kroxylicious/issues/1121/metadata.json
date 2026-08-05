@@ -1,0 +1,11 @@
+{
+  "number": 1121,
+  "title": "Create filter formatter to easily log request and responses",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "good first issue",
+    "help wanted",
+    "triaged"
+  ]
+}

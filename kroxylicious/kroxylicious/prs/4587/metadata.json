@@ -1,0 +1,12 @@
+{
+  "number": 4587,
+  "title": "fix: remove javadoc warnings suppression and enhance exception handllng in AuthorizerException",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-05T19:47:21Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
