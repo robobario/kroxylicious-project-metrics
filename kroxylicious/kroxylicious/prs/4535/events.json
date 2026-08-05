@@ -18,5 +18,35 @@
     "type": "comment",
     "timestamp": "2026-08-05T09:59:03Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-08-05T12:59:32Z",
+    "actor": "matheusandre1"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T13:02:22Z",
+    "actor": "matheusandre1"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T13:44:00Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T13:51:34Z",
+    "actor": "matheusandre1"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T14:36:02Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T14:37:44Z",
+    "actor": "sonarqubecloud[bot]"
   }
 ]

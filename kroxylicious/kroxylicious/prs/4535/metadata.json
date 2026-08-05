@@ -1,12 +1,14 @@
 {
   "number": 4535,
-  "title": "fix: PatternMatchingInstanceof warnings",
+  "title": "fix: resolve PatternMatchingInstanceof findings and promote the check to error",
   "author": "matheusandre1",
-  "labels": [],
+  "labels": [
+    "kind/refactoring"
+  ],
   "target_branch": "main",
   "created_at": "2026-08-05T05:03:14Z",
   "state": "open",
   "merged": false,
-  "draft": true,
+  "draft": false,
   "linked_issues": []
 }
