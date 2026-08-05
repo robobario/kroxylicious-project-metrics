@@ -23,5 +23,25 @@
     "type": "review_requested",
     "timestamp": "2026-08-05T18:41:13Z",
     "actor": "matheusandre1"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-08-05T21:45:15Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T21:58:20Z",
+    "actor": "matheusandre1"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T22:15:03Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-08-05T22:15:32Z",
+    "actor": null
   }
 ]
