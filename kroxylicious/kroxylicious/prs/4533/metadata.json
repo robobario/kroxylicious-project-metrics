@@ -1,0 +1,12 @@
+{
+  "number": 4533,
+  "title": "test(operator): fix non-deterministic AllReconcilersIT failures",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-05T01:41:09Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
