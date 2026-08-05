@@ -1,0 +1,8 @@
+{
+  "number": 4537,
+  "title": "Break the build on javadoc warnings, disable per-module",
+  "state": "open",
+  "labels": [
+    "kind/tech-debt"
+  ]
+}

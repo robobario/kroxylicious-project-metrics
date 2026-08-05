@@ -38,5 +38,20 @@
     "type": "reviewed",
     "timestamp": "2026-08-05T04:52:23Z",
     "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T07:57:52Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T08:47:08Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-05T10:11:44Z",
+    "actor": "k-wall"
   }
 ]

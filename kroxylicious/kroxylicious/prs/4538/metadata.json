@@ -1,0 +1,16 @@
+{
+  "number": 4538,
+  "title": "Break the build on javadoc warnings by default, disabled per-module",
+  "author": "tombentley",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-05T07:50:45Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4537
+  ]
+}
