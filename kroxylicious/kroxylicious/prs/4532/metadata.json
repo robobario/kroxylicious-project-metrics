@@ -1,6 +1,6 @@
 {
-  "number": 4526,
-  "title": "feat(sasl-termination): add SASL termination filter with OAUTHBEARER",
+  "number": 4532,
+  "title": "feat(scram-credential-store): add SCRAM credential store SPI",
   "author": "tombentley",
   "labels": [
     "kind/enhancement",
@@ -8,11 +8,11 @@
     "filter/sasl-termination"
   ],
   "target_branch": "main",
-  "created_at": "2026-08-04T05:41:38Z",
+  "created_at": "2026-08-05T00:36:04Z",
   "state": "open",
   "merged": false,
-  "draft": false,
+  "draft": true,
   "linked_issues": [
-    4519
+    4516
   ]
 }

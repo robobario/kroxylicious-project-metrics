@@ -1,0 +1,11 @@
+{
+  "number": 4516,
+  "title": "SASL termination: define SCRAM credential store SPI",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "triaged",
+    "security",
+    "filter/sasl-termination"
+  ]
+}
