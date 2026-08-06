@@ -13,5 +13,30 @@
     "type": "comment",
     "timestamp": "2026-08-06T12:18:42Z",
     "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-06T12:52:27Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-06T12:54:13Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-08-06T12:55:12Z",
+    "actor": "matheusandre1"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-08-06T14:22:29Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-08-06T14:22:32Z",
+    "actor": null
   }
 ]

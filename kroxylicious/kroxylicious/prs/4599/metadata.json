@@ -1,0 +1,12 @@
+{
+  "number": 4599,
+  "title": "docs(sasl-inspection): update documentation and remove javadoc warnings",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-06T13:59:39Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
