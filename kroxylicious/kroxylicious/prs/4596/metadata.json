@@ -1,0 +1,14 @@
+{
+  "number": 4596,
+  "title": "docs: add Client Authentication guide",
+  "author": "tombentley",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-06T07:31:35Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
