@@ -1,0 +1,12 @@
+{
+  "number": 4594,
+  "title": "fix(kroxylicious-kafka-message-tools): enhance documentation for transformer interfaces and methods",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-06T02:53:07Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}
