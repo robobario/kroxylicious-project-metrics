@@ -1,0 +1,15 @@
+{
+  "number": 4603,
+  "title": "build(deps): bump org.jsoup:jsoup from 1.22.2 to 1.23.1 in /kroxylicious-docs",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-07T02:39:49Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
