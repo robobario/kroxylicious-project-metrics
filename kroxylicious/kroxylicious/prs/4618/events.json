@@ -13,5 +13,10 @@
     "type": "comment",
     "timestamp": "2026-08-07T21:12:30Z",
     "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-08-07T22:01:51Z",
+    "actor": "matheusandre1"
   }
 ]
