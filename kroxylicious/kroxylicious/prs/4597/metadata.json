@@ -2,7 +2,9 @@
   "number": 4597,
   "title": "feat(kroxylicious-simple-transform): enhance documentation and remove  javadoc warnings in transformation classes",
   "author": "matheusandre1",
-  "labels": [],
+  "labels": [
+    "documentation"
+  ],
   "target_branch": "main",
   "created_at": "2026-08-06T11:51:21Z",
   "state": "closed",

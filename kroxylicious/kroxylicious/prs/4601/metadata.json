@@ -2,11 +2,13 @@
   "number": 4601,
   "title": "docs: kms-provider-aws-kms-test-support enhance documentation for AWS KMS test support classes",
   "author": "matheusandre1",
-  "labels": [],
+  "labels": [
+    "documentation"
+  ],
   "target_branch": "main",
   "created_at": "2026-08-07T01:13:10Z",
-  "state": "open",
-  "merged": false,
+  "state": "closed",
+  "merged": true,
   "draft": false,
   "linked_issues": []
 }
