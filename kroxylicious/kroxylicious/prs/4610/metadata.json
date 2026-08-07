@@ -1,0 +1,14 @@
+{
+  "number": 4610,
+  "title": "fix: move @Nullable/@NonNull to valid annotation positions",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-07T14:11:36Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4609
+  ]
+}

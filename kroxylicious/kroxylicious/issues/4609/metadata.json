@@ -1,0 +1,8 @@
+{
+  "number": 4609,
+  "title": "VS Code (Eclipse JDT) flags @Nullable annotation disallowed in TYPE_USE positions",
+  "state": "open",
+  "labels": [
+    "kind/bug"
+  ]
+}
