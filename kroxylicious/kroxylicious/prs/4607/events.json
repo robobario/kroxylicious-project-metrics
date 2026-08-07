@@ -28,5 +28,25 @@
     "type": "review_requested",
     "timestamp": "2026-08-07T14:06:13Z",
     "actor": "matheusandre1"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-08-07T15:03:05Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-08-07T15:31:23Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-08-07T15:31:31Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-07T15:33:24Z",
+    "actor": "k-wall"
   }
 ]
