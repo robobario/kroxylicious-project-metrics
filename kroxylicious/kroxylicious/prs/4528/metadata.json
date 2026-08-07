@@ -2,7 +2,9 @@
   "number": 4528,
   "title": "feat(filters): add protocol logging filter",
   "author": "AdityaThakur1998",
-  "labels": [],
+  "labels": [
+    "filters/protocol-logger"
+  ],
   "target_branch": "main",
   "created_at": "2026-08-04T22:13:32Z",
   "state": "open",
