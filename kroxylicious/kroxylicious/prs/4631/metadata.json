@@ -1,0 +1,12 @@
+{
+  "number": 4631,
+  "title": "docs(fortanix-dsm-test-support): enhance documentation and remove unused properties",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-08T17:48:45Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
