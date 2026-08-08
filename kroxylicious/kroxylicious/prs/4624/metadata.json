@@ -1,0 +1,15 @@
+{
+  "number": 4624,
+  "title": "build(deps): bump step-security/harden-runner from 2.20.0 to 2.20.1",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-08T03:33:48Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
