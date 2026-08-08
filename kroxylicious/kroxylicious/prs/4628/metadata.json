@@ -1,0 +1,12 @@
+{
+  "number": 4628,
+  "title": " docs(kroxylicious-kms-provider-azure-key-vault-kms)  enchance, update documentation and remove warnings",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-08T15:26:03Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
