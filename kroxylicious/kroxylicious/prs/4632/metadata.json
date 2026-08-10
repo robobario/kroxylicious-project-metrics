@@ -1,0 +1,12 @@
+{
+  "number": 4632,
+  "title": "build(ci): normalise license plugin excludes",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-10T00:21:07Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}
