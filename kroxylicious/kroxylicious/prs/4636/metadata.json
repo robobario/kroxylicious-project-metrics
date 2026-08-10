@@ -1,0 +1,14 @@
+{
+  "number": 4636,
+  "title": "test(runtime): cover multi-facet changes in a single hot reload",
+  "author": "RafaelReia",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-10T21:43:56Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    4251
+  ]
+}

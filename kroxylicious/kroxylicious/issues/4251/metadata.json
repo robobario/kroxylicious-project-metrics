@@ -1,0 +1,11 @@
+{
+  "number": 4251,
+  "title": "Add a Hot Reload IT covering a single reload with many modifications in different areas",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "test",
+    "triaged",
+    "hot-reload"
+  ]
+}
