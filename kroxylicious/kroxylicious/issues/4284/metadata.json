@@ -1,0 +1,8 @@
+{
+  "number": 4284,
+  "title": "chore(ci): move tag and GitHub release creation to promote workflow",
+  "state": "open",
+  "labels": [
+    "release-process"
+  ]
+}

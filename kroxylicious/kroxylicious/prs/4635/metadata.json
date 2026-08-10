@@ -1,0 +1,14 @@
+{
+  "number": 4635,
+  "title": "ci(release): move git tag and GitHub release creation to promote workflow",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-10T10:50:13Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4284
+  ]
+}
