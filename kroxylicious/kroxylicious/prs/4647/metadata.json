@@ -1,0 +1,12 @@
+{
+  "number": 4647,
+  "title": "docs(kms-provider-hashicorp-vault) enchance documentation and remove warnings",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-12T18:41:16Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
