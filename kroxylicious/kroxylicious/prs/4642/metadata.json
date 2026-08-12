@@ -1,0 +1,14 @@
+{
+  "number": 4642,
+  "title": "feat(scram-credential-store): add keystore-based SCRAM credential provider",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-12T02:20:05Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4517
+  ]
+}

@@ -2,13 +2,11 @@
   "number": 676,
   "title": "Kroxylicious junit extension development version 0.16.0",
   "author": "kroxylicious-robot",
-  "labels": [
-    "__relcand_id-31546007358"
-  ],
+  "labels": [],
   "target_branch": "main",
   "created_at": "2026-08-11T23:32:56Z",
-  "state": "open",
-  "merged": false,
+  "state": "closed",
+  "merged": true,
   "draft": false,
   "linked_issues": []
 }

@@ -1,0 +1,11 @@
+{
+  "number": 4517,
+  "title": "SASL termination: implement keystore-backed credential store",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "triaged",
+    "security",
+    "filter/sasl-termination"
+  ]
+}

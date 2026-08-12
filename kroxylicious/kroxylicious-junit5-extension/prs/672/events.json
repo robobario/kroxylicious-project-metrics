@@ -13,5 +13,10 @@
     "type": "comment",
     "timestamp": "2026-08-05T21:30:14Z",
     "actor": "robobario"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-08-12T01:31:59Z",
+    "actor": null
   }
 ]

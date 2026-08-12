@@ -13,5 +13,10 @@
     "type": "reviewed",
     "timestamp": "2026-08-11T23:18:51Z",
     "actor": "tombentley"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-08-12T00:24:29Z",
+    "actor": null
   }
 ]

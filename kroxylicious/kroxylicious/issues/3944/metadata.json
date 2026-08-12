@@ -1,0 +1,10 @@
+{
+  "number": 3944,
+  "title": "bug: Non-Deterministic Test KroxyliciousTestersTest#testConsumerMethods",
+  "state": "closed",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}

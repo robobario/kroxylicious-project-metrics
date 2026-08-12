@@ -1,0 +1,14 @@
+{
+  "number": 4640,
+  "title": "build(deps): bump kroxy.extension.version from 0.15.0 to 0.16.0",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-12T01:14:58Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    3944
+  ]
+}
