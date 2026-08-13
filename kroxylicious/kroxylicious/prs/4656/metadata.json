@@ -1,0 +1,18 @@
+{
+  "number": 4656,
+  "title": "feat(scram-credential-store): add keystore credential management CLI tool",
+  "author": "tombentley",
+  "labels": [
+    "kind/enhancement",
+    "security",
+    "filter/sasl-termination"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-13T04:55:42Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    4518
+  ]
+}

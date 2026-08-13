@@ -1,0 +1,11 @@
+{
+  "number": 4518,
+  "title": "SASL termination: add keystore credential management CLI tool",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "triaged",
+    "security",
+    "filter/sasl-termination"
+  ]
+}
