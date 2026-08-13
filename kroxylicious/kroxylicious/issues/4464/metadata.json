@@ -1,0 +1,10 @@
+{
+  "number": 4464,
+  "title": "KMS providers: missing HTTP request timeouts and inconsistent timeout values",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "triaged",
+    "filter/record-encryption"
+  ]
+}

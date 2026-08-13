@@ -1,0 +1,20 @@
+{
+  "number": 4650,
+  "title": "fix(kms): add missing HTTP request timeouts, standardize to 20s",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "kms/fortanix",
+    "kms/thales",
+    "kms/aws",
+    "kms/azure"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-12T23:27:30Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4464
+  ]
+}

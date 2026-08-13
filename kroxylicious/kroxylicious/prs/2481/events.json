@@ -33,5 +33,15 @@
     "type": "comment",
     "timestamp": "2026-05-06T21:13:14Z",
     "actor": "robobario"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-08-12T23:56:38Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-12T23:56:38Z",
+    "actor": "tombentley"
   }
 ]
