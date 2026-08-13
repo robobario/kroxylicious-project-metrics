@@ -1,0 +1,12 @@
+{
+  "number": 4657,
+  "title": "docs(authorization): enhance documentation with Javadoc comments for various enforcement classes",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-13T13:52:48Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
