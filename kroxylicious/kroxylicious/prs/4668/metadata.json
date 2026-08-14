@@ -1,0 +1,12 @@
+{
+  "number": 4668,
+  "title": "ci(release): move docs publication from stage to promote",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-14T04:45:52Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
