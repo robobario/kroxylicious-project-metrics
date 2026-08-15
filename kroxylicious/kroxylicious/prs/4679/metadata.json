@@ -1,0 +1,14 @@
+{
+  "number": 4679,
+  "title": "chore(deps): update nagyesta/lowkey-vault docker tag to v7.3.74",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-15T03:55:07Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
