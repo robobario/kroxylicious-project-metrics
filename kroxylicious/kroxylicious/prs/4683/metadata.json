@@ -1,0 +1,16 @@
+{
+  "number": 4683,
+  "title": "feat(sasl-termination): add SCRAM-SHA-256/512 mechanism handlers",
+  "author": "tombentley",
+  "labels": [
+    "kind/enhancement",
+    "security",
+    "filter/sasl-termination"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-16T23:12:50Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
