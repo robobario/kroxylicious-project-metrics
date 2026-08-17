@@ -1,0 +1,16 @@
+{
+  "number": 4692,
+  "title": "docs(authn): add SCRAM-SHA-256/512 documentation to Authentication guide",
+  "author": "tombentley",
+  "labels": [
+    "documentation",
+    "security",
+    "filter/sasl-termination"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-17T23:14:19Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
