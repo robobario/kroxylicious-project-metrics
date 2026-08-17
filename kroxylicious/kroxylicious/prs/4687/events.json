@@ -8,5 +8,15 @@
     "type": "review_requested",
     "timestamp": "2026-08-17T10:27:27Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-17T11:01:11Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-17T11:03:21Z",
+    "actor": "sonarqubecloud[bot]"
   }
 ]
