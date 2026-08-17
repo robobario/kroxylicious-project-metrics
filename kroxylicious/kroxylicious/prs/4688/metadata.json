@@ -1,0 +1,12 @@
+{
+  "number": 4688,
+  "title": "refactor: migrate from test-frame to kubetest4j dependencies and imports",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-17T21:40:38Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
