@@ -1,0 +1,14 @@
+{
+  "number": 4687,
+  "title": "ci(release): converge image build logic and retire docker.yaml",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-17T10:27:26Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4287
+  ]
+}

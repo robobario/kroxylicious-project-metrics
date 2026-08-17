@@ -1,0 +1,8 @@
+{
+  "number": 4287,
+  "title": "chore(ci): converge image build logic and retire docker.yaml",
+  "state": "open",
+  "labels": [
+    "release-process"
+  ]
+}
