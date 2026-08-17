@@ -1,0 +1,12 @@
+{
+  "number": 4685,
+  "title": "feat(kroxylicious-api): generate Kafka *Data classes into io.kroxylicious namespace",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-17T02:00:14Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
