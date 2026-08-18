@@ -1,0 +1,12 @@
+{
+  "number": 4697,
+  "title": "test(sasl-termination): System tests for `SaslTermination` on Kubernetes",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-18T04:01:20Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}

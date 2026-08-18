@@ -1,0 +1,12 @@
+{
+  "number": 4695,
+  "title": "ci: use $/ self-repository references for local actions and workflows",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-18T03:44:12Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

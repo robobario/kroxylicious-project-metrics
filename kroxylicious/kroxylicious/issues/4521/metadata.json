@@ -1,0 +1,11 @@
+{
+  "number": 4521,
+  "title": "SASL termination: add authentication guide documentation",
+  "state": "open",
+  "labels": [
+    "documentation",
+    "kind/enhancement",
+    "triaged",
+    "filter/sasl-termination"
+  ]
+}
