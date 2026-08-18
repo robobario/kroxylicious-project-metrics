@@ -1,0 +1,11 @@
+{
+  "number": 4468,
+  "title": "Stop publishing dist modules to Maven Central",
+  "state": "open",
+  "labels": [
+    "dev/maven",
+    "kind/tech-debt",
+    "triaged",
+    "dev/release"
+  ]
+}

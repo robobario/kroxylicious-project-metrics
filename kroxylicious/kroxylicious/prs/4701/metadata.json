@@ -1,0 +1,14 @@
+{
+  "number": 4701,
+  "title": "build(release): stop publishing dist artefacts to Maven Central",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-18T22:26:57Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4468
+  ]
+}
