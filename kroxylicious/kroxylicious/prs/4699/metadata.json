@@ -1,0 +1,12 @@
+{
+  "number": 4699,
+  "title": "refactor(record-validation): remove deprecated `WireFormatVersion.V2`  and update documentation",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-18T14:32:16Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
