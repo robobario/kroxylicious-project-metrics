@@ -1,0 +1,12 @@
+{
+  "number": 4704,
+  "title": "ci(release): remove legacy kroxylicious image references from workflows",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-19T20:05:24Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
