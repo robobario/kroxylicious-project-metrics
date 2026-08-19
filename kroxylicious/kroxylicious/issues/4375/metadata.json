@@ -1,0 +1,9 @@
+{
+  "number": 4375,
+  "title": "Bug: HeadersAssertTest fails on Windows due to line endings in assertion messages",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "test"
+  ]
+}
