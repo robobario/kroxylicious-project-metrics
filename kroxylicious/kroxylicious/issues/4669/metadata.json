@@ -1,0 +1,8 @@
+{
+  "number": 4669,
+  "title": "fix: make protocol logging filter failsafe against uncaught exceptions",
+  "state": "open",
+  "labels": [
+    "filters/protocol-logger"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "number": 4714,
+  "title": "fix(filters): made ProtocolLogger filter resilient to formatting exceptions",
+  "author": "AdityaThakur1998",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-20T14:04:13Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4669
+  ]
+}
