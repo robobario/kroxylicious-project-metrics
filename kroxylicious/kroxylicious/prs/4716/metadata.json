@@ -1,0 +1,12 @@
+{
+  "number": 4716,
+  "title": "test(routing): ignore exceptions in topic description assertions",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-20T22:44:55Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
