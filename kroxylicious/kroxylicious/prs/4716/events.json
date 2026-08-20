@@ -3,5 +3,20 @@
     "type": "created",
     "timestamp": "2026-08-20T22:44:55Z",
     "actor": "matheusandre1"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-08-20T23:16:08Z",
+    "actor": "matheusandre1"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-20T23:17:03Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-20T23:19:01Z",
+    "actor": "sonarqubecloud[bot]"
   }
 ]
