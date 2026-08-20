@@ -1,0 +1,14 @@
+{
+  "number": 4706,
+  "title": "build(release): stop publishing operator/admission jars to Maven Central",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-20T02:00:33Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4469
+  ]
+}

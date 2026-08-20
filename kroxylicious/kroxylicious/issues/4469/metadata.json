@@ -1,0 +1,11 @@
+{
+  "number": 4469,
+  "title": "Stop publishing binary/runnable modules to Maven Central",
+  "state": "open",
+  "labels": [
+    "dev/maven",
+    "kind/tech-debt",
+    "triaged",
+    "dev/release"
+  ]
+}
