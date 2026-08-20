@@ -1,0 +1,11 @@
+{
+  "number": 4471,
+  "title": "Reduce checksum files published to Maven Central by changing checksums config from 'all' to 'required'",
+  "state": "open",
+  "labels": [
+    "dev/maven",
+    "kind/tech-debt",
+    "triaged",
+    "dev/release"
+  ]
+}
