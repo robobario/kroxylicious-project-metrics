@@ -1,0 +1,12 @@
+{
+  "number": 4712,
+  "title": "feat(kafka-common-tests): scaffold wire-fidelity harness module",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-20T05:21:08Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
