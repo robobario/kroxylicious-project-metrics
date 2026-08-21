@@ -58,5 +58,15 @@
     "type": "review_requested",
     "timestamp": "2026-08-21T08:48:50Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-21T09:23:54Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-21T09:25:47Z",
+    "actor": "sonarqubecloud[bot]"
   }
 ]
