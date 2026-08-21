@@ -1,0 +1,12 @@
+{
+  "number": 4721,
+  "title": "tactically disable disable javadoc generation on forked Kafka sources.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-21T02:29:49Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

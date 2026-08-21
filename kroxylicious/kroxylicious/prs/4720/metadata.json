@@ -1,0 +1,12 @@
+{
+  "number": 4720,
+  "title": "docs(testing): add guidelines for using Awaitility with AssertionError",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-21T01:57:02Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
