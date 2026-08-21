@@ -1,0 +1,8 @@
+{
+  "number": 4525,
+  "title": "chore: switch maven-gpg-plugin to Bouncy Castle signer to simplify release",
+  "state": "open",
+  "labels": [
+    "triaged"
+  ]
+}
