@@ -1,0 +1,15 @@
+{
+  "number": 4732,
+  "title": "build(deps): bump at.yawk.lz4:lz4-java from 1.10.1 to 1.11.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-22T03:37:07Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
