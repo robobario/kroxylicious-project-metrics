@@ -1,0 +1,12 @@
+{
+  "number": 4736,
+  "title": "fix(helm): add dynamic node port assignment for edge service in localstack overrides",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-23T18:47:34Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
