@@ -1,0 +1,14 @@
+{
+  "number": 4739,
+  "title": "fix(aws-kms): remove deprecated longTermCredentials and ec2MetadataCredentials fields",
+  "author": "jjj-n",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-24T04:33:22Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    3784
+  ]
+}
