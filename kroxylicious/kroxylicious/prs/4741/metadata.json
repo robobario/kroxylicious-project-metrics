@@ -1,0 +1,12 @@
+{
+  "number": 4741,
+  "title": "test(sasl-termination): fix flaky ScramTimingTest convergence",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-24T05:13:32Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
