@@ -2,7 +2,11 @@
   "number": 4737,
   "title": "refactor(module): extract KafkaApiMessageConverter into standalone module",
   "author": "robobario",
-  "labels": [],
+  "labels": [
+    "test",
+    "kind/refactoring",
+    "filters/protocol-logger"
+  ],
   "target_branch": "main",
   "created_at": "2026-08-24T01:38:06Z",
   "state": "open",
