@@ -1,6 +1,6 @@
 {
   "number": 4757,
-  "title": "feat(api): express short-circuit error response API in terms of Errors codes rather than ApiException",
+  "title": "feat(api): express short-circuit error response APIs in terms of Errors codes (rather than ApiException)",
   "author": "k-wall",
   "labels": [],
   "target_branch": "main",
