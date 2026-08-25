@@ -1,0 +1,12 @@
+{
+  "number": 4757,
+  "title": "feat(api): express short-circuit error response API in terms of Errors codes rather than ApiException",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-25T16:56:19Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
