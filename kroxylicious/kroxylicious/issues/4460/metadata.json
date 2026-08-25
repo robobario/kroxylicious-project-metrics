@@ -1,0 +1,11 @@
+{
+  "number": 4460,
+  "title": "Validate logchange CHANGELOG entries locally",
+  "state": "open",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "dev/maven",
+    "triaged"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "number": 4751,
+  "title": "build: validate changelog entries locally",
+  "author": "jjj-n",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-25T10:27:30Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4460
+  ]
+}

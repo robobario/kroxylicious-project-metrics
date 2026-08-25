@@ -1,0 +1,14 @@
+{
+  "number": 4749,
+  "title": "demonstrate the effectiveness of #4745",
+  "author": "SamBarker",
+  "labels": [
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-25T10:13:50Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
