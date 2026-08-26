@@ -38,5 +38,15 @@
     "type": "comment",
     "timestamp": "2026-07-29T19:04:17Z",
     "actor": "henryZrncik"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-08-26T07:45:48Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-26T07:45:48Z",
+    "actor": "henryZrncik"
   }
 ]
