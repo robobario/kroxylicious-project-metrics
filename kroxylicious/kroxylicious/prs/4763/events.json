@@ -18,5 +18,10 @@
     "type": "reviewed",
     "timestamp": "2026-08-26T09:25:26Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-08-26T11:39:59Z",
+    "actor": "SamBarker"
   }
 ]
