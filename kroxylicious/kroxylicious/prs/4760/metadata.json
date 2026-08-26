@@ -1,0 +1,12 @@
+{
+  "number": 4760,
+  "title": "build(tests): set default -Xmx5g for failsafe forked JVMs",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-26T03:23:56Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}

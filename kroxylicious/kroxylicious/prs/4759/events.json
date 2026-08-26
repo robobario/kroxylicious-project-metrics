@@ -3,5 +3,15 @@
     "type": "created",
     "timestamp": "2026-08-26T03:10:26Z",
     "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-26T03:28:28Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-08-26T03:28:30Z",
+    "actor": null
   }
 ]
