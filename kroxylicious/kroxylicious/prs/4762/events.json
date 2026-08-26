@@ -73,5 +73,10 @@
     "type": "comment",
     "timestamp": "2026-08-26T10:42:48Z",
     "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-08-26T10:54:37Z",
+    "actor": null
   }
 ]
