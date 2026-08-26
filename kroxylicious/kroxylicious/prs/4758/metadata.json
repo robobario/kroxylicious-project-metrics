@@ -1,0 +1,12 @@
+{
+  "number": 4758,
+  "title": "refactor(tests): use unique resource names in VirtualKafkaClusterReconcilerIT to avoid conflicts",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-26T00:40:03Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
