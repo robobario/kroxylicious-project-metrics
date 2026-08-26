@@ -1,10 +1,9 @@
 {
   "number": 4755,
-  "title": "feat(api): introduce owned ApiKeys and Errors under io.kroxylicious.kafka",
+  "title": "feat(api): introduce owned ApiKeys under io.kroxylicious.kafka",
   "author": "k-wall",
   "labels": [
-    "filter/api",
-    "DO-NOT-MERGE"
+    "filter/api"
   ],
   "target_branch": "main",
   "created_at": "2026-08-25T13:48:55Z",
