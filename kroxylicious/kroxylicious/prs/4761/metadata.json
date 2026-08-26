@@ -1,0 +1,12 @@
+{
+  "number": 4761,
+  "title": "test(resilience): enhance resilience tests with Awaitility for topic propagation",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-26T04:32:56Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
