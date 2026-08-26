@@ -1,0 +1,10 @@
+{
+  "number": 4753,
+  "title": "bug: Non-Deterministic Test TxnOffsetCommitTxnIdAuthzIT",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}

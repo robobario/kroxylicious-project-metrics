@@ -1,0 +1,14 @@
+{
+  "number": 4762,
+  "title": "fix(tests): tests running out of heap",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-26T05:00:37Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4753
+  ]
+}
