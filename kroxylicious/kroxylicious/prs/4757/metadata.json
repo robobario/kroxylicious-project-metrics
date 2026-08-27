@@ -4,13 +4,12 @@
   "author": "k-wall",
   "labels": [
     "filter/api",
-    "DO-NOT-MERGE",
     "routing/api"
   ],
   "target_branch": "main",
   "created_at": "2026-08-25T16:56:19Z",
-  "state": "open",
-  "merged": false,
+  "state": "closed",
+  "merged": true,
   "draft": false,
   "linked_issues": []
 }

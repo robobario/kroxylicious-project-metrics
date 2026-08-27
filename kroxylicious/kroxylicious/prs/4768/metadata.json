@@ -1,0 +1,14 @@
+{
+  "number": 4768,
+  "title": "fix(api)!: stop deriving TopicNameMappingException cause from Errors.exception()",
+  "author": "k-wall",
+  "labels": [
+    "filter/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-27T10:40:18Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

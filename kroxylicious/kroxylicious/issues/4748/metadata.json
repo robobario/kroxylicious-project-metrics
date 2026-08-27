@@ -1,0 +1,11 @@
+{
+  "number": 4748,
+  "title": "KafkaProxyExceptionMapper depends on kafka-clients wrapper API not covered by the io.kroxylicious.kafka.* migration",
+  "state": "open",
+  "labels": [
+    "kind/tech-debt",
+    "kafka-protocol",
+    "runtime",
+    "filter/api"
+  ]
+}

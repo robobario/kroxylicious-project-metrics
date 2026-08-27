@@ -1,0 +1,14 @@
+{
+  "number": 4769,
+  "title": "refactor(filter-test-support): remove ApiException from MockFilterContext",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-27T13:08:05Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

@@ -1,0 +1,17 @@
+{
+  "number": 4767,
+  "title": "refactor(runtime): build error responses without kafka-clients wrappers",
+  "author": "robobario",
+  "labels": [
+    "runtime",
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-27T06:43:11Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4748
+  ]
+}
