@@ -1,0 +1,14 @@
+{
+  "number": 4781,
+  "title": "test(codec): remove org.apache.kafka.common.requests.* usage from KafkaRequestDecoderTest",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-28T05:01:08Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4779
+  ]
+}

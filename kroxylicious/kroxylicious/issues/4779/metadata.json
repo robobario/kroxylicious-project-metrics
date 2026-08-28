@@ -1,0 +1,9 @@
+{
+  "number": 4779,
+  "title": "test(codec): remove org.apache.kafka.common.requests.* usage from KafkaRequestDecoderTest",
+  "state": "open",
+  "labels": [
+    "runtime",
+    "kind/refactoring"
+  ]
+}

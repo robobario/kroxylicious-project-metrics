@@ -1,0 +1,9 @@
+{
+  "number": 4778,
+  "title": "Vendor JSON converters for kroxylicious-api message classes",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "runtime"
+  ]
+}
