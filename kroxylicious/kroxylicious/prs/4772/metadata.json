@@ -2,7 +2,9 @@
   "number": 4772,
   "title": "fix(vault-kms): resolveAlias returns versioned WrappingKey for HashiCorp Vault KMS to improve key rotation cache invalidation",
   "author": "AdityaThakur1998",
-  "labels": [],
+  "labels": [
+    "kms/hashicorp"
+  ],
   "target_branch": "main",
   "created_at": "2026-08-27T22:42:37Z",
   "state": "open",
