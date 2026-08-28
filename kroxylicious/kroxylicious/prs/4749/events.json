@@ -8,5 +8,10 @@
     "type": "comment",
     "timestamp": "2026-08-25T13:58:28Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-08-28T00:36:41Z",
+    "actor": null
   }
 ]

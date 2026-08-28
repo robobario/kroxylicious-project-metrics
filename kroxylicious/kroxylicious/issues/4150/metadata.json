@@ -1,0 +1,11 @@
+{
+  "number": 4150,
+  "title": "Use WrappingKey for HashiCorp Vault KMS to improve key rotation cache invalidation",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "help wanted",
+    "filter/record-encryption",
+    "kms/hashicorp"
+  ]
+}
