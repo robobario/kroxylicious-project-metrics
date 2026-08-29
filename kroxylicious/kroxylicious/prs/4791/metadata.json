@@ -1,0 +1,15 @@
+{
+  "number": 4791,
+  "title": "build(deps): bump org.jsoup:jsoup from 1.23.1 to 1.23.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-29T03:33:06Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
