@@ -8,5 +8,50 @@
     "type": "review_requested",
     "timestamp": "2026-08-31T00:52:45Z",
     "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-31T01:25:15Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-31T02:32:22Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-31T03:55:01Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-31T03:57:06Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-08-31T04:02:05Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-08-31T04:51:22Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-31T05:04:17Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-08-31T05:10:30Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-08-31T05:10:37Z",
+    "actor": null
   }
 ]
