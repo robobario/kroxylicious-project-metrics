@@ -1,6 +1,6 @@
 {
   "number": 4801,
-  "title": "Draft: Migrate the filter APIs to the new types",
+  "title": "Migrate the filter APIs to the new types",
   "author": "robobario",
   "labels": [],
   "target_branch": "main",
