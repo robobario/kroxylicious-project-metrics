@@ -1,0 +1,14 @@
+{
+  "number": 4800,
+  "title": "docs: use clusterDefinitions instead of targetCluster #4277",
+  "author": "AzazelSensei",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-08-31T01:11:55Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4277
+  ]
+}

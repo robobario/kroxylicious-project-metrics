@@ -1,0 +1,14 @@
+{
+  "number": 4799,
+  "title": "Remove usages of org.apache.kafka.common.requests from filters",
+  "author": "robobario",
+  "labels": [
+    "kind/refactoring"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-08-31T00:52:44Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

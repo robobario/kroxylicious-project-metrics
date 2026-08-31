@@ -1,0 +1,8 @@
+{
+  "number": 4277,
+  "title": "Update documentation, examples, test code to use `clusterDefinitions` rather than `targetClusters`",
+  "state": "open",
+  "labels": [
+    "documentation"
+  ]
+}

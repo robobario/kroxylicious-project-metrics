@@ -1,0 +1,6 @@
+{
+  "number": 4782,
+  "title": "Routing layer depends on kafka-clients ApiException, blocked by io.kroxylicious.kafka.* migration",
+  "state": "open",
+  "labels": []
+}
