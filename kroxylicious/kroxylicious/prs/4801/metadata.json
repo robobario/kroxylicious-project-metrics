@@ -8,5 +8,8 @@
   "state": "open",
   "merged": false,
   "draft": false,
-  "linked_issues": []
+  "linked_issues": [
+    4581,
+    4582
+  ]
 }
