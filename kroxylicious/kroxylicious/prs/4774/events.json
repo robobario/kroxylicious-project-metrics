@@ -3,5 +3,10 @@
     "type": "created",
     "timestamp": "2026-08-28T00:37:35Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-09-01T05:24:10Z",
+    "actor": null
   }
 ]
