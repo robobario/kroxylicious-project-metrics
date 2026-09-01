@@ -1,0 +1,14 @@
+{
+  "number": 4809,
+  "title": "fix(runtime): deliver out-of-band responses by recipient, not route (#4808)",
+  "author": "hrishabhg",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-01T11:19:44Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    4808
+  ]
+}
