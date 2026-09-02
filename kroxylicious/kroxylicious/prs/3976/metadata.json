@@ -3,8 +3,7 @@
   "title": "Complete the upgrade to Apache Kafka 4.3.x",
   "author": "k-wall",
   "labels": [
-    "dependencies",
-    "DO-NOT-MERGE"
+    "dependencies"
   ],
   "target_branch": "main",
   "created_at": "2026-05-18T17:30:29Z",

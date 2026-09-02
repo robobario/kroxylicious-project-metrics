@@ -1,0 +1,12 @@
+{
+  "number": 4816,
+  "title": "feat(migrations): migrate to 0.24 dependencies as part of migration",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-02T02:34:37Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

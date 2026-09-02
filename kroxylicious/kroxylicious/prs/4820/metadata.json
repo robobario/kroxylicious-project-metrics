@@ -1,0 +1,15 @@
+{
+  "number": 4820,
+  "title": "fix: release artefact signatures not produced",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-02T04:33:49Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}
