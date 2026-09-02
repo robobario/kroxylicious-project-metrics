@@ -1,10 +1,10 @@
 {
-  "number": 4816,
-  "title": "feat(migrations): migrate to 0.24 dependencies as part of migration scripts",
+  "number": 280,
+  "title": "Announcing 0.24.0",
   "author": "SamBarker",
   "labels": [],
   "target_branch": "main",
-  "created_at": "2026-09-02T02:34:37Z",
+  "created_at": "2026-09-02T09:36:16Z",
   "state": "open",
   "merged": false,
   "draft": false,

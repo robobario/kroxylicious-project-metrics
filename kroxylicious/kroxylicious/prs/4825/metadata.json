@@ -1,0 +1,14 @@
+{
+  "number": 4825,
+  "title": "fix(bom): distribute only required checksums for the BOM too",
+  "author": "k-wall",
+  "labels": [
+    "dev/release"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-02T09:28:17Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}
