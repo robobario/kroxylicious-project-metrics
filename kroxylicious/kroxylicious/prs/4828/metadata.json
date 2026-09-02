@@ -1,0 +1,12 @@
+{
+  "number": 4828,
+  "title": "build(migrations): silence surefire classpath conflict warnings",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-02T12:54:26Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

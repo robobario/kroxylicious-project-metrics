@@ -1,0 +1,12 @@
+{
+  "number": 4829,
+  "title": "feat(record-validation): remove redundant wireFormatVersion config",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-02T13:42:27Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
