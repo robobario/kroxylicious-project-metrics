@@ -1,0 +1,12 @@
+{
+  "number": 4831,
+  "title": "Implement proposal 119: Making the Authorizer API standalone",
+  "author": "tomncooper",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-02T16:12:46Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

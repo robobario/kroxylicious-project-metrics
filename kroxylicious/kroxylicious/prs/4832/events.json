@@ -1,0 +1,27 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-09-02T17:45:01Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-09-02T17:45:02Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-02T17:47:57Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-02T18:16:16Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-02T18:18:18Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]
