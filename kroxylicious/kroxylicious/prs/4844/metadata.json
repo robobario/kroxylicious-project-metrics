@@ -1,0 +1,14 @@
+{
+  "number": 4844,
+  "title": "fix(release): preserve changelog/unreleased/.gitkeep across releases",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-03T15:18:32Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4842
+  ]
+}

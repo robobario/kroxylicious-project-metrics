@@ -1,0 +1,9 @@
+{
+  "number": 4842,
+  "title": "Release process removes changelog/unreleased/.gitkeep",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "release-process"
+  ]
+}
