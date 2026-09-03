@@ -1,0 +1,12 @@
+{
+  "number": 4835,
+  "title": "ci(workflows): update changelog entry workflow to gate on PR author for Dependabot compatibility",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-03T02:25:17Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
