@@ -1,0 +1,9 @@
+{
+  "number": 4841,
+  "title": "Release process corrupts kroxylicious-openmessaging-benchmarks/scripts/setup-cluster.sh#L14",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "release-process"
+  ]
+}

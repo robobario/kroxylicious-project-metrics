@@ -1,0 +1,14 @@
+{
+  "number": 4843,
+  "title": "fix(release): stop appending duplicate -SNAPSHOT to benchmark version",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-03T15:11:51Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4841
+  ]
+}
