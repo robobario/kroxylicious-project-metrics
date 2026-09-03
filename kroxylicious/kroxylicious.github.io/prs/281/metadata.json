@@ -1,11 +1,11 @@
 {
-  "number": 4807,
-  "title": "Test/migrations runtime",
+  "number": 281,
+  "title": "Add release post generator script",
   "author": "SamBarker",
   "labels": [],
   "target_branch": "main",
-  "created_at": "2026-09-01T05:25:10Z",
-  "state": "closed",
+  "created_at": "2026-09-03T07:10:57Z",
+  "state": "open",
   "merged": false,
   "draft": false,
   "linked_issues": []

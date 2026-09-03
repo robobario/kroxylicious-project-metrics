@@ -28,5 +28,15 @@
     "type": "comment",
     "timestamp": "2026-09-01T18:26:21Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-02T12:39:48Z",
+    "actor": "MBoegers"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-09-03T07:44:04Z",
+    "actor": null
   }
 ]

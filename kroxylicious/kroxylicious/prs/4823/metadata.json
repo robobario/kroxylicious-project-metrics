@@ -2,7 +2,9 @@
   "number": 4823,
   "title": "[DT]  fix loading of images and minikube provision in Record Encryption Quickstart",
   "author": "henryZrncik",
-  "labels": [],
+  "labels": [
+    "test"
+  ],
   "target_branch": "main",
   "created_at": "2026-09-02T07:58:51Z",
   "state": "open",
