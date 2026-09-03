@@ -8,5 +8,20 @@
     "type": "review_requested",
     "timestamp": "2026-09-03T15:18:33Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-09-03T20:03:35Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-03T20:44:02Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-03T20:45:56Z",
+    "actor": "sonarqubecloud[bot]"
   }
 ]
