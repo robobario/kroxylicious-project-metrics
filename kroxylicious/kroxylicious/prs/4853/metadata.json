@@ -1,0 +1,17 @@
+{
+  "number": 4853,
+  "title": "test(systemtests): fix SCRAM auth test for non-JVM clients",
+  "author": "k-wall",
+  "labels": [
+    "test",
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-04T14:56:08Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4811
+  ]
+}
