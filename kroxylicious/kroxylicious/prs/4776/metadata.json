@@ -2,7 +2,9 @@
   "number": 4776,
   "title": "fix(runtime): ensure virtual cluster model is closed on initializatio  failure to prevent resource leaks",
   "author": "matheusandre1",
-  "labels": [],
+  "labels": [
+    "test"
+  ],
   "target_branch": "main",
   "created_at": "2026-08-28T02:25:01Z",
   "state": "open",

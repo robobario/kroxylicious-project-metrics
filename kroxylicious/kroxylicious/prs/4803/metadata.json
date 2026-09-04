@@ -2,7 +2,9 @@
   "number": 4803,
   "title": "feat(encryption filter): K8s vault auth",
   "author": "livespotty",
-  "labels": [],
+  "labels": [
+    "kms/hashicorp"
+  ],
   "target_branch": "main",
   "created_at": "2026-08-31T20:30:42Z",
   "state": "open",
