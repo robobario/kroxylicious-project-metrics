@@ -1,0 +1,10 @@
+{
+  "number": 4851,
+  "title": "Release promote fails: staged image tag mismatch from non-deterministic git rev-parse --short",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "dev/release",
+    "dev/github_actions"
+  ]
+}
