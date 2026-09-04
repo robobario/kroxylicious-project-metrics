@@ -1,13 +1,13 @@
 {
-  "number": 4845,
+  "number": 4848,
   "title": "Kroxylicious release version 0.24.0 development version 0.25.0-SNAPSHOT",
   "author": "kroxylicious-robot",
   "labels": [
-    "__relcand_id-33821130808"
+    "__relcand_id-33834470206"
   ],
   "target_branch": "main",
-  "created_at": "2026-09-04T00:51:49Z",
-  "state": "closed",
+  "created_at": "2026-09-04T04:16:33Z",
+  "state": "open",
   "merged": false,
   "draft": false,
   "linked_issues": []

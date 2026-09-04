@@ -1,47 +1,42 @@
 [
   {
     "type": "created",
-    "timestamp": "2026-09-04T00:51:49Z",
+    "timestamp": "2026-09-04T04:16:33Z",
     "actor": "kroxylicious-robot"
   },
   {
     "type": "review_requested",
-    "timestamp": "2026-09-04T00:51:50Z",
+    "timestamp": "2026-09-04T04:16:34Z",
     "actor": "kroxylicious-robot"
   },
   {
     "type": "comment",
-    "timestamp": "2026-09-04T01:01:14Z",
+    "timestamp": "2026-09-04T04:31:03Z",
     "actor": "kroxylicious-robot"
   },
   {
     "type": "comment",
-    "timestamp": "2026-09-04T01:21:17Z",
+    "timestamp": "2026-09-04T04:51:25Z",
     "actor": "sonarqubecloud[bot]"
   },
   {
     "type": "comment",
-    "timestamp": "2026-09-04T01:22:59Z",
+    "timestamp": "2026-09-04T04:53:18Z",
     "actor": "sonarqubecloud[bot]"
   },
   {
-    "type": "comment",
-    "timestamp": "2026-09-04T03:34:58Z",
+    "type": "reviewed",
+    "timestamp": "2026-09-04T05:17:22Z",
     "actor": "SamBarker"
   },
   {
     "type": "comment",
-    "timestamp": "2026-09-04T03:35:06Z",
+    "timestamp": "2026-09-04T05:17:40Z",
     "actor": "SamBarker"
   },
   {
-    "type": "closed_unmerged",
-    "timestamp": "2026-09-04T03:36:11Z",
-    "actor": null
-  },
-  {
     "type": "comment",
-    "timestamp": "2026-09-04T03:36:11Z",
+    "timestamp": "2026-09-04T05:18:33Z",
     "actor": "kroxylicious-robot"
   }
 ]
