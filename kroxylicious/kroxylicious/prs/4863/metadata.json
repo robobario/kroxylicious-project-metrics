@@ -1,0 +1,15 @@
+{
+  "number": 4863,
+  "title": "build(deps): bump org.freemarker:freemarker from 2.3.34 to 2.3.35",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-05T03:35:17Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
