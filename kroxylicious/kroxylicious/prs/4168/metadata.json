@@ -1,6 +1,6 @@
 {
   "number": 4168,
-  "title": "chore(deps): update dependency kubernetes/kubernetes to v1.37.0",
+  "title": "chore(deps): update kubernetes packages",
   "author": "kroxylicious-robot",
   "labels": [
     "dependencies",
