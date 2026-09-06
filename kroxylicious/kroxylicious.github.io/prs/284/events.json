@@ -13,5 +13,10 @@
     "type": "reviewed",
     "timestamp": "2026-09-04T11:20:16Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-09-06T21:29:36Z",
+    "actor": null
   }
 ]

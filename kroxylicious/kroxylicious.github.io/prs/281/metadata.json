@@ -1,6 +1,6 @@
 {
   "number": 281,
-  "title": "Add release post generator script",
+  "title": "Add script to generate release announcments.",
   "author": "SamBarker",
   "labels": [],
   "target_branch": "main",
