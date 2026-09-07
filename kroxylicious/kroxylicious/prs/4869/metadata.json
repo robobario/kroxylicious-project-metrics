@@ -1,0 +1,15 @@
+{
+  "number": 4869,
+  "title": "chore(base image): [Experiment] Upgrade to UBI-10",
+  "author": "k-wall",
+  "labels": [
+    "dependencies",
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-07T08:13:40Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}

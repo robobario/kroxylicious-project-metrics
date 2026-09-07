@@ -78,5 +78,10 @@
     "type": "comment",
     "timestamp": "2026-09-07T04:08:30Z",
     "actor": "tombentley"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-09-07T05:24:58Z",
+    "actor": null
   }
 ]

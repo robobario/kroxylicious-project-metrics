@@ -1,32 +1,27 @@
 [
   {
     "type": "created",
-    "timestamp": "2026-08-31T05:03:26Z",
+    "timestamp": "2026-09-07T05:03:12Z",
     "actor": "dependabot[bot]"
   },
   {
     "type": "review_requested",
-    "timestamp": "2026-08-31T05:03:27Z",
+    "timestamp": "2026-09-07T05:03:13Z",
     "actor": "dependabot[bot]"
   },
   {
     "type": "comment",
-    "timestamp": "2026-08-31T06:02:27Z",
-    "actor": "sonarqubecloud[bot]"
-  },
-  {
-    "type": "comment",
-    "timestamp": "2026-09-07T08:01:00Z",
+    "timestamp": "2026-09-07T05:46:08Z",
     "actor": "sonarqubecloud[bot]"
   },
   {
     "type": "reviewed",
-    "timestamp": "2026-09-07T09:43:36Z",
+    "timestamp": "2026-09-07T05:49:31Z",
     "actor": "SamBarker"
   },
   {
     "type": "closed_merged",
-    "timestamp": "2026-09-07T09:43:43Z",
+    "timestamp": "2026-09-07T05:49:37Z",
     "actor": null
   }
 ]
