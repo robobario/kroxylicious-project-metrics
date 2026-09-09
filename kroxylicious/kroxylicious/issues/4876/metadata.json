@@ -1,0 +1,10 @@
+{
+  "number": 4876,
+  "title": "bug: Non-Deterministic Test OauthBearerValidationIT.authWithExpiredTokenIsNotForwardedToServer",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}
