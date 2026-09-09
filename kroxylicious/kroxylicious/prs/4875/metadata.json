@@ -1,0 +1,12 @@
+{
+  "number": 4875,
+  "title": "fix(authorizer): suppress remaining Identity deprecation warnings",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-09T02:40:16Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
