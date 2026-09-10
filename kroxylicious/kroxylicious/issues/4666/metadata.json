@@ -1,0 +1,8 @@
+{
+  "number": 4666,
+  "title": "Populate Implementation-Version in JAR manifests via parent pom",
+  "state": "open",
+  "labels": [
+    "triaged"
+  ]
+}
