@@ -1,6 +1,6 @@
 {
   "number": 4877,
-  "title": "test(it): close admin before scraping metrics in OauthBearerValidationIT",
+  "title": "test(it): Fixes the non-deterministic behaviour in OauthBearerValidationIT",
   "author": "k-wall",
   "labels": [
     "test"
