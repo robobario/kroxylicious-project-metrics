@@ -1,0 +1,11 @@
+{
+  "number": 4882,
+  "title": "bug: Non-Deterministic Test SaslTerminationST.testScramSha256Authentication (409 Conflict updating VirtualKafkaCluster)",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged",
+    "test/system-test"
+  ]
+}

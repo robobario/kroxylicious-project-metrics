@@ -1,0 +1,9 @@
+{
+  "number": 4853,
+  "title": "test(systemtests): fix SCRAM auth test for non-JVM clients",
+  "state": "closed",
+  "labels": [
+    "test",
+    "test/system-test"
+  ]
+}
