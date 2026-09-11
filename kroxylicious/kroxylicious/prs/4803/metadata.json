@@ -3,6 +3,7 @@
   "title": "feat(encryption filter): K8s vault auth",
   "author": "livespotty",
   "labels": [
+    "DO-NOT-MERGE",
     "kms/hashicorp"
   ],
   "target_branch": "main",
