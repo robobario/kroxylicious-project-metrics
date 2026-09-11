@@ -1,0 +1,14 @@
+{
+  "number": 4891,
+  "title": "feat: accept bootstrapServerSelection on clusterDefinitions #4840",
+  "author": "AzazelSensei",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-11T13:23:44Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4840
+  ]
+}

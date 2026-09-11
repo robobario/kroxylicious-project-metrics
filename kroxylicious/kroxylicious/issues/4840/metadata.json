@@ -1,0 +1,9 @@
+{
+  "number": 4840,
+  "title": "bootstrapServerSelection cannot be configured on a clusterDefinition",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "config/api"
+  ]
+}
