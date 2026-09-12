@@ -1,0 +1,14 @@
+{
+  "number": 4900,
+  "title": "chore(deps): update dependency cert-manager/cert-manager to v1.21.2",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-12T07:42:24Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
