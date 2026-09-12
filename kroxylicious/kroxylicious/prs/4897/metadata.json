@@ -1,0 +1,15 @@
+{
+  "number": 4897,
+  "title": "build(deps-dev): bump org.sonarsource.scanner.maven:sonar-maven-plugin from 5.7.0.6970 to 5.8.0.7211",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-12T03:33:15Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
