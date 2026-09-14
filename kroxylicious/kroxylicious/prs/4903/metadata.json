@@ -1,0 +1,12 @@
+{
+  "number": 4903,
+  "title": "Deterministic port unbind order.",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-14T01:43:39Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}

@@ -1,13 +1,13 @@
 {
-  "number": 4892,
-  "title": "build(deps): bump renovatebot/github-action from 46.2.5 to 46.2.6",
+  "number": 689,
+  "title": "chore(deps-dev): Bump org.apache.maven.plugins:maven-failsafe-plugin from 3.5.6 to 3.6.0",
   "author": "dependabot[bot]",
   "labels": [
     "dependencies",
-    "dev/github_actions"
+    "java"
   ],
   "target_branch": "main",
-  "created_at": "2026-09-12T03:32:33Z",
+  "created_at": "2026-09-14T05:14:03Z",
   "state": "closed",
   "merged": true,
   "draft": false,
