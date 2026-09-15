@@ -1,0 +1,6 @@
+{
+  "number": 4907,
+  "title": "Support per-user Confluent MDS impersonation for mTLS clients",
+  "state": "open",
+  "labels": []
+}

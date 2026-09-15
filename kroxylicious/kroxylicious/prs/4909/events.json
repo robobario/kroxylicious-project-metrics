@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-09-15T13:48:39Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-09-15T13:48:40Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-15T16:28:03Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-09-15T16:28:09Z",
+    "actor": "github-advanced-security[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-15T16:30:11Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-09-15T16:30:15Z",
+    "actor": "github-advanced-security[bot]"
+  }
+]

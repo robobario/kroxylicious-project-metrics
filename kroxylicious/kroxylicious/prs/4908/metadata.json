@@ -1,0 +1,14 @@
+{
+  "number": 4908,
+  "title": "feat(filters): add experimental Confluent MDS impersonation",
+  "author": "hkwi",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-15T13:09:10Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4907
+  ]
+}
