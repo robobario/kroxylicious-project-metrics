@@ -1,0 +1,10 @@
+{
+  "number": 4910,
+  "title": "Config hot reload needlessly restarts virtual clusters that set bootstrapServerSelection",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "runtime",
+    "hot-reload"
+  ]
+}
