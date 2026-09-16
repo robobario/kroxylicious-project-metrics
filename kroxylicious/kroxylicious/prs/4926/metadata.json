@@ -1,0 +1,12 @@
+{
+  "number": 4926,
+  "title": "fix(runtime): add tags for virtual cluster and node ID in metrics assertions",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-16T21:09:53Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
