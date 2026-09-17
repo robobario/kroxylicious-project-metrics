@@ -1,0 +1,16 @@
+{
+  "number": 4937,
+  "title": "refactor(operator,webhook): use ClusterDefinitions instead of deprecated VirtualCluster constructor",
+  "author": "k-wall",
+  "labels": [
+    "kube/operator"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-17T11:14:26Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4925
+  ]
+}

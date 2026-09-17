@@ -1,0 +1,9 @@
+{
+  "number": 3660,
+  "title": "Renovate does not update python-kafka-test-client package",
+  "state": "open",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ]
+}

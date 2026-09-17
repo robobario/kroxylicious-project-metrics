@@ -1,0 +1,14 @@
+{
+  "number": 4938,
+  "title": "Edit renovate.json to fix python-kafka-test-client update",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-17T11:35:52Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    3660
+  ]
+}

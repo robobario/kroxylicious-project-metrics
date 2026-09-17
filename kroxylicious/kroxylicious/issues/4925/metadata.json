@@ -1,0 +1,9 @@
+{
+  "number": 4925,
+  "title": "Refactor the Kubernetes Operator and Webhook to use ClusterDefinitions,",
+  "state": "open",
+  "labels": [
+    "lifecycle/deprecation",
+    "kube/operator"
+  ]
+}
