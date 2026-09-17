@@ -3,6 +3,7 @@
   "title": "refactor(operator,webhook): use ClusterDefinitions instead of deprecated VirtualCluster constructor",
   "author": "k-wall",
   "labels": [
+    "kind/refactoring",
     "kube/operator"
   ],
   "target_branch": "main",

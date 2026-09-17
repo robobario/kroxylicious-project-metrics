@@ -8,5 +8,30 @@
     "type": "review_requested",
     "timestamp": "2026-09-17T11:35:53Z",
     "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-17T13:05:21Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-17T13:14:45Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-17T13:41:24Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-17T14:16:14Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-17T14:18:19Z",
+    "actor": "sonarqubecloud[bot]"
   }
 ]
