@@ -1,0 +1,14 @@
+{
+  "number": 4943,
+  "title": "test(systemtests): deploy AuthorizationST proxy in the per-test namespace",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-18T21:07:49Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4905
+  ]
+}

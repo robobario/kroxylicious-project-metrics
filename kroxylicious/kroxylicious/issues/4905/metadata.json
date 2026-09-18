@@ -1,0 +1,10 @@
+{
+  "number": 4905,
+  "title": "bug: Non-Deterministic Test AuthorizationST.testScramSha512AuthenticationAllowProduceAndConsume",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "triaged",
+    "test/system-test"
+  ]
+}
