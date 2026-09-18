@@ -1,0 +1,9 @@
+{
+  "number": 4921,
+  "title": "Separate the configuration model for BootstrapSelectionStrategy from its runtime state.",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "kind/refactoring"
+  ]
+}

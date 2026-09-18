@@ -4,6 +4,7 @@
   "author": "k-wall",
   "labels": [
     "kind/refactoring",
+    "lifecycle/deprecation",
     "kube/operator"
   ],
   "target_branch": "main",

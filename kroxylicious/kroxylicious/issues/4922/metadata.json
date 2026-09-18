@@ -1,0 +1,11 @@
+{
+  "number": 4922,
+  "title": "Runtime makes multi-threaded use of a bootstrap selection strategy marked as @NotThreadSafe",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "help wanted",
+    "runtime",
+    "network"
+  ]
+}

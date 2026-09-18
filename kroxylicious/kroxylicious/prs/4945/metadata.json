@@ -1,0 +1,15 @@
+{
+  "number": 4945,
+  "title": "fix(runtime): make bootstrap server selection thread-safe by separating the selection strategy configuration from its runtime state",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-18T22:33:58Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    4921,
+    4922
+  ]
+}
