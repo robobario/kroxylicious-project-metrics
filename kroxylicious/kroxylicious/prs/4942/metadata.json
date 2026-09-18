@@ -1,0 +1,14 @@
+{
+  "number": 4942,
+  "title": "feat(migrations): add OpenRewrite recipe to migrate proxy config (yaml)",
+  "author": "k-wall",
+  "labels": [
+    "config/api"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-18T18:09:25Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
