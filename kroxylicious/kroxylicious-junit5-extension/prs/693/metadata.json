@@ -1,0 +1,15 @@
+{
+  "number": 693,
+  "title": "chore(deps): Bump org.bouncycastle:bcutil-jdk18on from 1.85 to 1.86",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-21T05:03:19Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

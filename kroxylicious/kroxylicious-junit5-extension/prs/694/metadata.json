@@ -1,0 +1,15 @@
+{
+  "number": 694,
+  "title": "chore(deps-dev): Bump org.codehaus.mojo:build-helper-maven-plugin from 3.6.1 to 3.6.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-21T05:03:25Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
