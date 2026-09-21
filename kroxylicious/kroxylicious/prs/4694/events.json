@@ -43,5 +43,25 @@
     "type": "reviewed",
     "timestamp": "2026-09-11T12:42:29Z",
     "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-21T15:11:46Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-21T15:46:03Z",
+    "actor": "matheusandre1"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-21T16:23:48Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-21T16:26:03Z",
+    "actor": "sonarqubecloud[bot]"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "number": 4694,
-  "title": "refactor: remove unnecessary logging statements from integration and system tests",
+  "title": "refactor: remove unnecessary logging statements from integration tests",
   "author": "matheusandre1",
   "labels": [],
   "target_branch": "main",
