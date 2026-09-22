@@ -1,0 +1,15 @@
+{
+  "number": 4968,
+  "title": "fix(authzn-filter): prevent NPE when upstream sends a KIP-511 style apiversions response.",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "filter/authorization"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-22T17:21:35Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
