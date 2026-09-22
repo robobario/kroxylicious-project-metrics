@@ -2,7 +2,10 @@
   "number": 4962,
   "title": "add documentation for Strimzi integration with KafkaService",
   "author": "matheusandre1",
-  "labels": [],
+  "labels": [
+    "documentation",
+    "kube/operator"
+  ],
   "target_branch": "main",
   "created_at": "2026-09-21T17:20:59Z",
   "state": "open",
