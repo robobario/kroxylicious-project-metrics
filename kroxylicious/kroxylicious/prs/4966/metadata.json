@@ -1,0 +1,14 @@
+{
+  "number": 4966,
+  "title": "feat(operator): create one LoadBalancer Service per KafkaProxyIngress",
+  "author": "AdityaThakur1998",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-22T11:41:13Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4934
+  ]
+}
