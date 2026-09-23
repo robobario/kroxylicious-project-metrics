@@ -1,0 +1,12 @@
+{
+  "number": 4971,
+  "title": "ci: run apt-get update before installing xmllint",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-23T01:45:43Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

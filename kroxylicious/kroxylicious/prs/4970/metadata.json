@@ -1,0 +1,17 @@
+{
+  "number": 4970,
+  "title": "test(runtime): match exact meter tags in ClientConnectionStateMachineTest",
+  "author": "robobario",
+  "labels": [
+    "kind/bug",
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-23T00:23:28Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4964
+  ]
+}

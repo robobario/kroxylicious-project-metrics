@@ -1,0 +1,10 @@
+{
+  "number": 4964,
+  "title": "bug: Non-Deterministic Test ClientConnectionStateMachineTest",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}
