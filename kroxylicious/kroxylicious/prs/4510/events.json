@@ -18,5 +18,10 @@
     "type": "reviewed",
     "timestamp": "2026-08-04T08:34:57Z",
     "actor": "hrishabhg"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-09-23T03:59:13Z",
+    "actor": null
   }
 ]
