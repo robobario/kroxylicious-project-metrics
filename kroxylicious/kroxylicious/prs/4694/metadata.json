@@ -2,11 +2,14 @@
   "number": 4694,
   "title": "refactor: remove unnecessary logging statements from integration tests",
   "author": "matheusandre1",
-  "labels": [],
+  "labels": [
+    "test",
+    "kind/refactoring"
+  ],
   "target_branch": "main",
   "created_at": "2026-08-18T00:36:18Z",
-  "state": "open",
-  "merged": false,
+  "state": "closed",
+  "merged": true,
   "draft": false,
   "linked_issues": []
 }
