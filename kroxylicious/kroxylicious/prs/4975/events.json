@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-09-24T10:24:58Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-09-24T10:24:59Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-24T10:56:46Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-09-24T10:58:49Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

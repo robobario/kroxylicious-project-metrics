@@ -1,0 +1,9 @@
+{
+  "number": 4838,
+  "title": "Annotations are not propagated to service",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "kube/operator"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "number": 4979,
+  "title": "Push infrastructure annotations to the LoadBalancer Service",
+  "author": "AdityaThakur1998",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-24T11:47:25Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    4838
+  ]
+}
