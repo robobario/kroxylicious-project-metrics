@@ -2,7 +2,9 @@
   "number": 4959,
   "title": "docs: document operator JSON logging #3631",
   "author": "AzazelSensei",
-  "labels": [],
+  "labels": [
+    "documentation"
+  ],
   "target_branch": "main",
   "created_at": "2026-09-19T23:26:54Z",
   "state": "open",
