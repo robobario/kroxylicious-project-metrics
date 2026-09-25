@@ -1,0 +1,12 @@
+{
+  "number": 4982,
+  "title": "docs: section on state sharing between filter instances in the custom filter documentation",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-25T20:39:15Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

@@ -5,8 +5,7 @@
   "labels": [
     "dependencies",
     "java",
-    "DO-NOT-MERGE",
-    "changelog/skip"
+    "DO-NOT-MERGE"
   ],
   "target_branch": "main",
   "created_at": "2026-09-05T03:35:31Z",
