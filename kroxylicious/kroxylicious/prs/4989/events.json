@@ -1,0 +1,12 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-09-26T03:33:35Z",
+    "actor": "dependabot[bot]"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-09-26T03:33:36Z",
+    "actor": "dependabot[bot]"
+  }
+]
