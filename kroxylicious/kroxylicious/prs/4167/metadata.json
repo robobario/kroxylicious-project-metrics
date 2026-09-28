@@ -1,6 +1,6 @@
 {
   "number": 4167,
-  "title": "feat: publish all-in-one install manifests for GitOps deployments",
+  "title": "feat: publish all-in-one install manifests to aid GitOps deployments",
   "author": "k-wall",
   "labels": [
     "kube/operator"
@@ -9,6 +9,6 @@
   "created_at": "2026-06-19T19:04:21Z",
   "state": "open",
   "merged": false,
-  "draft": true,
+  "draft": false,
   "linked_issues": []
 }
