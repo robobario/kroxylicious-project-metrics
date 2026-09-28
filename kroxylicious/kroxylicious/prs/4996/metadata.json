@@ -1,0 +1,14 @@
+{
+  "number": 4996,
+  "title": "fix(routing): resolve authenticated subject per-request, not at connection setup",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-09-28T02:46:48Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4995
+  ]
+}

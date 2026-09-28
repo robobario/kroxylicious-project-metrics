@@ -1,0 +1,15 @@
+{
+  "number": 699,
+  "title": "chore(deps): Bump net.bytebuddy:byte-buddy-agent from 1.18.13 to 1.18.14",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-28T05:03:38Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
