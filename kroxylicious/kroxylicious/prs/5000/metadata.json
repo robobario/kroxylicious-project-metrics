@@ -1,0 +1,14 @@
+{
+  "number": 5000,
+  "title": "fix(tests): Fix flaky MetricsTest by querying the test scoped registry",
+  "author": "k-wall",
+  "labels": [
+    "test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-09-30T14:55:09Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

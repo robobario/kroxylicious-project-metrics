@@ -1,0 +1,13 @@
+{
+  "number": 4161,
+  "title": "Support advanced LoadBalancer Service options for KafkaProxyIngress on on premise deployments",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "help wanted",
+    "triaged",
+    "network",
+    "kube/operator",
+    "design-proposal-needed"
+  ]
+}
