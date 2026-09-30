@@ -1,13 +1,13 @@
 {
   "number": 4999,
-  "title": "feat(operator): Add loadBalancer.service settings to KafkaProxyIngress",
+  "title": "feat(operator): Expose externalTrafficPolicy and allocateLoadBalancerNodePorts on the LoadBalancer Service",
   "author": "AdityaThakur1998",
   "labels": [],
   "target_branch": "main",
   "created_at": "2026-09-30T14:33:09Z",
   "state": "open",
   "merged": false,
-  "draft": true,
+  "draft": false,
   "linked_issues": [
     4161
   ]
