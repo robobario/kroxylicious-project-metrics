@@ -2,7 +2,9 @@
   "number": 5003,
   "title": "Cache maven dependencies harder",
   "author": "robobario",
-  "labels": [],
+  "labels": [
+    "dev/github_actions"
+  ],
   "target_branch": "main",
   "created_at": "2026-10-02T01:17:15Z",
   "state": "open",
