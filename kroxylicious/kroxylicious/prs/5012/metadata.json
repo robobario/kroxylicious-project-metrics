@@ -1,0 +1,15 @@
+{
+  "number": 5012,
+  "title": "build(deps): bump lowkey.version from 7.3.98 to 7.3.112",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-03T03:33:18Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

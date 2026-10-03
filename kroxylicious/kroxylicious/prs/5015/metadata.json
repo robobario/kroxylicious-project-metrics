@@ -1,0 +1,15 @@
+{
+  "number": 5015,
+  "title": "build(deps): bump com.github.siom79.japicmp:japicmp-maven-plugin from 0.26.1 to 0.26.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-03T03:33:41Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

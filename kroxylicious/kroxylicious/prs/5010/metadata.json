@@ -1,0 +1,15 @@
+{
+  "number": 5010,
+  "title": "build(deps): bump com.github.luben:zstd-jni from 1.5.7-15 to 1.5.7-20",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-03T03:33:02Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
