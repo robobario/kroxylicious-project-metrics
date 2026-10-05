@@ -1,0 +1,12 @@
+{
+  "number": 5032,
+  "title": "feat(kms-vault): add support for Vault Kubernetes authentication",
+  "author": "livespotty",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-05T13:46:26Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

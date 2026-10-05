@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-10-05T13:01:42Z",
+    "actor": "AdityaThakur1998"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-10-05T13:03:01Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-05T13:44:00Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-05T13:46:07Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]
