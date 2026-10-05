@@ -78,5 +78,15 @@
     "type": "comment",
     "timestamp": "2026-10-04T20:43:16Z",
     "actor": "livespotty"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-10-05T21:28:01Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-05T21:28:01Z",
+    "actor": "robobario"
   }
 ]
