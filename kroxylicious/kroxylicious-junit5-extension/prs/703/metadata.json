@@ -1,0 +1,15 @@
+{
+  "number": 703,
+  "title": "chore(deps): Bump dawidd6/action-download-artifact from 25 to 27",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-05T05:06:12Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
