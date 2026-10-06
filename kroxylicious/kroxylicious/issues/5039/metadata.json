@@ -1,0 +1,10 @@
+{
+  "number": 5039,
+  "title": "Operator README is incorrectly describes what the Operator does",
+  "state": "open",
+  "labels": [
+    "documentation",
+    "help wanted",
+    "kube/operator"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "number": 5041,
+  "title": "docs: correct deployment resources created in operator README (#5039)",
+  "author": "Divyanshkumar62",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-06T19:58:23Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5039
+  ]
+}
