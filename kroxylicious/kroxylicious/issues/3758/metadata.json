@@ -1,0 +1,12 @@
+{
+  "number": 3758,
+  "title": "Operator: Proxy pods should permit the use of dedicated service account instead of default",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "security",
+    "kube/operator",
+    "kind/investigation",
+    "design-proposal-needed"
+  ]
+}
