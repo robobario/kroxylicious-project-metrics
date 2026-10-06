@@ -1,0 +1,9 @@
+{
+  "number": 4693,
+  "title": "chore(ci): unify image build paths between integration tests and system tests",
+  "state": "open",
+  "labels": [
+    "kind/tech-debt",
+    "release-process"
+  ]
+}

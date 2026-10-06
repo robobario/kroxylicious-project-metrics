@@ -2,7 +2,9 @@
   "number": 4994,
   "title": "feat(router-subject): add Subject Router prototype",
   "author": "robobario",
-  "labels": [],
+  "labels": [
+    "router/subject"
+  ],
   "target_branch": "main",
   "created_at": "2026-09-28T02:06:37Z",
   "state": "open",

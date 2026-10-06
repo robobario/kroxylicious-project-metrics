@@ -2,7 +2,9 @@
   "number": 4975,
   "title": "ci(workflow): Adding Merge queue for the corresponding jobs",
   "author": "franvila",
-  "labels": [],
+  "labels": [
+    "dev/github_actions"
+  ],
   "target_branch": "main",
   "created_at": "2026-09-24T10:24:58Z",
   "state": "open",
