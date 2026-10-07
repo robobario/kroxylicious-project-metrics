@@ -1,0 +1,9 @@
+{
+  "number": 4327,
+  "title": "Make upstream connect timeout configurable",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "network"
+  ]
+}
