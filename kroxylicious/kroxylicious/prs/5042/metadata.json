@@ -1,0 +1,12 @@
+{
+  "number": 5042,
+  "title": "docs(api): document Subject and Principal immutability contract",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-06T21:46:14Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
