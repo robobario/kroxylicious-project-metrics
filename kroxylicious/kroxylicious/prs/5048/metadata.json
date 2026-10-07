@@ -1,0 +1,14 @@
+{
+  "number": 5048,
+  "title": "remove StringCaseLocalUsage errorprone warnings",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-07T11:49:30Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5024
+  ]
+}

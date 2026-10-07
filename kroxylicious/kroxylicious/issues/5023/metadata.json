@@ -1,0 +1,9 @@
+{
+  "number": 5023,
+  "title": "Fix ErrorProne `JdkObsolete` warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "number": 5021,
+  "title": "Fix ErrorProne `BooleanLiteral` warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}

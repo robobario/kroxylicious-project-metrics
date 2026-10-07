@@ -1,0 +1,9 @@
+{
+  "number": 5024,
+  "title": "Fix ErrorProne `StringCaseLocaleUsage` warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}

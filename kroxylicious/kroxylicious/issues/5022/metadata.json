@@ -1,0 +1,9 @@
+{
+  "number": 5022,
+  "title": "Fix ErrorProne `CanonicalDuration` warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}
