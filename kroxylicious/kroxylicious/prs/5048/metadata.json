@@ -1,6 +1,6 @@
 {
   "number": 5048,
-  "title": "remove StringCaseLocalUsage errorprone warnings",
+  "title": "remove `StringCaseLocaleUsage` errorprone warnings",
   "author": "franvila",
   "labels": [],
   "target_branch": "main",

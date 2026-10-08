@@ -1,0 +1,9 @@
+{
+  "number": 5025,
+  "title": "Fix ErrorProne `StringSplitter` warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}

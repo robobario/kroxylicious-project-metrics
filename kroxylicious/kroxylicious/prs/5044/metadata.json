@@ -1,6 +1,6 @@
 {
   "number": 5044,
-  "title": "fix errorprone boolean literal warning",
+  "title": "fix errorprone `booleanLiteral` warnings",
   "author": "franvila",
   "labels": [],
   "target_branch": "main",

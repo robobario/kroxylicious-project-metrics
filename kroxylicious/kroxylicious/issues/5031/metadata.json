@@ -1,0 +1,11 @@
+{
+  "number": 5031,
+  "title": "bug: Non-Deterministic Test JsonSchemaRecordValidationIT.initializationError",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "help wanted",
+    "test",
+    "triaged"
+  ]
+}

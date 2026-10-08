@@ -1,6 +1,6 @@
 {
   "number": 5046,
-  "title": "remove JdkObsolete errorprone warnings",
+  "title": "remove `JdkObsolete` errorprone warnings",
   "author": "franvila",
   "labels": [],
   "target_branch": "main",
