@@ -1,0 +1,15 @@
+{
+  "number": 5063,
+  "title": "ci(release): configure git identity in promote-release workflow",
+  "author": "k-wall",
+  "labels": [
+    "dev/github_actions",
+    "release-process"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-08T15:17:04Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
