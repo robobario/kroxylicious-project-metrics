@@ -23,5 +23,25 @@
     "type": "reviewed",
     "timestamp": "2026-10-07T13:15:29Z",
     "actor": "tomncooper"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-10-07T22:00:05Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-07T22:04:52Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-07T22:07:07Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-10-07T22:07:41Z",
+    "actor": null
   }
 ]
