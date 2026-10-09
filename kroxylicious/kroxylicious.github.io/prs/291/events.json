@@ -8,5 +8,15 @@
     "type": "review_requested",
     "timestamp": "2026-10-08T15:23:41Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-10-09T01:23:37Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-10-09T01:23:45Z",
+    "actor": null
   }
 ]
