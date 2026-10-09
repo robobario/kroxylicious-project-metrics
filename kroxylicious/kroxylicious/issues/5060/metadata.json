@@ -1,0 +1,10 @@
+{
+  "number": 5060,
+  "title": "ci: set if-no-files-found: error on upload-artifact steps whose output is consumed by name",
+  "state": "closed",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "dev/github_actions"
+  ]
+}

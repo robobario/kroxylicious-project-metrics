@@ -2,7 +2,9 @@
   "number": 4939,
   "title": "feat(cert-rotation): virtual cluster gateway certificate monitoring",
   "author": "MarkNSweep",
-  "labels": [],
+  "labels": [
+    "runtime"
+  ],
   "target_branch": "main",
   "created_at": "2026-09-17T17:11:34Z",
   "state": "open",

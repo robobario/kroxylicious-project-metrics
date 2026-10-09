@@ -2,11 +2,14 @@
   "number": 5046,
   "title": "remove `JdkObsolete` errorprone warnings",
   "author": "franvila",
-  "labels": [],
+  "labels": [
+    "filter/multitenancy",
+    "kind/refactoring"
+  ],
   "target_branch": "main",
   "created_at": "2026-10-07T11:01:50Z",
-  "state": "open",
-  "merged": false,
+  "state": "closed",
+  "merged": true,
   "draft": false,
   "linked_issues": [
     5023
