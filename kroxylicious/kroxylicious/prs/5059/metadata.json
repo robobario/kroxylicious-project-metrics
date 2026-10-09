@@ -1,6 +1,6 @@
 {
   "number": 5059,
-  "title": "Fix `stringsplitter` errorprone warnings",
+  "title": "Fix `StringSplitter` errorprone warnings",
   "author": "franvila",
   "labels": [],
   "target_branch": "main",
