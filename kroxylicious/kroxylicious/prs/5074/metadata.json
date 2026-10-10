@@ -1,0 +1,15 @@
+{
+  "number": 5074,
+  "title": "build(deps): bump actions/setup-node from 7.0.0 to 7.1.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-10T03:33:35Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

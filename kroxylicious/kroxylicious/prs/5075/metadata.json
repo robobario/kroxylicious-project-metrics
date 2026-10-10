@@ -1,0 +1,15 @@
+{
+  "number": 5075,
+  "title": "build(deps): bump actions/download-artifact from 8.0.1 to 8.0.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-10T03:33:39Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
