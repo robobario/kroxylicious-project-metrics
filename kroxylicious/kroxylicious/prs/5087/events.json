@@ -8,5 +8,25 @@
     "type": "review_requested",
     "timestamp": "2026-10-12T08:32:25Z",
     "actor": "MarkNSweep"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-10-12T09:43:28Z",
+    "actor": "SamBarker"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-12T10:19:27Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-12T10:21:18Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-10-12T17:22:13Z",
+    "actor": "SamBarker"
   }
 ]

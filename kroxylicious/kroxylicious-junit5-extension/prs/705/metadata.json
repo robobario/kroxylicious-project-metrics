@@ -1,0 +1,15 @@
+{
+  "number": 705,
+  "title": "chore(deps): Bump actions/upload-artifact from 7.0.1 to 7.0.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-12T14:54:05Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
