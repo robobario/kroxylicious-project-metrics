@@ -1,0 +1,14 @@
+{
+  "number": 5085,
+  "title": "fix(ci): make required status checks report for merge queue items",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-12T01:46:24Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5084
+  ]
+}
