@@ -23,5 +23,10 @@
     "type": "reviewed",
     "timestamp": "2026-10-13T04:43:16Z",
     "actor": "franvila"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-10-13T14:35:03Z",
+    "actor": null
   }
 ]

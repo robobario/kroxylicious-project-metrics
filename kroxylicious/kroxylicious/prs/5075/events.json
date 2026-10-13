@@ -23,5 +23,10 @@
     "type": "reviewed",
     "timestamp": "2026-10-11T22:00:42Z",
     "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-10-13T10:41:17Z",
+    "actor": null
   }
 ]
