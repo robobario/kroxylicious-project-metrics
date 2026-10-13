@@ -3,7 +3,8 @@
   "title": "chore(deps): update dependency kubernetes/kubernetes to v1.37.1",
   "author": "kroxylicious-robot",
   "labels": [
-    "dependencies"
+    "dependencies",
+    "DO-NOT-MERGE"
   ],
   "target_branch": "main",
   "created_at": "2026-10-10T09:26:21Z",
