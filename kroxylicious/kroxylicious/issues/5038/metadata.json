@@ -1,0 +1,10 @@
+{
+  "number": 5038,
+  "title": "bug: Non-Deterministic Test TopicTracingIT.shouldEnforceAccessToTopics",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}
