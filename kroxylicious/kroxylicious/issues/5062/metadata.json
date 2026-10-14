@@ -1,0 +1,10 @@
+{
+  "number": 5062,
+  "title": "Add system tests for Vault Kubernetes authentication",
+  "state": "open",
+  "labels": [
+    "filter/record-encryption",
+    "test/system-test",
+    "kms/hashicorp"
+  ]
+}
