@@ -1,0 +1,12 @@
+{
+  "number": 5109,
+  "title": "feat(systemtests): add systemtest-api module with core framework interfaces",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-14T11:34:10Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
