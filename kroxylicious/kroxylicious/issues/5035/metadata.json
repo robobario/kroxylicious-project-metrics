@@ -1,0 +1,9 @@
+{
+  "number": 5035,
+  "title": "Resolve Java Operator SDK deprecations in kubernetes operator",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "lifecycle/deprecation"
+  ]
+}
