@@ -73,5 +73,15 @@
     "type": "reviewed",
     "timestamp": "2025-08-14T15:32:47Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-10-15T19:00:01Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-15T19:00:01Z",
+    "actor": "SamBarker"
   }
 ]
