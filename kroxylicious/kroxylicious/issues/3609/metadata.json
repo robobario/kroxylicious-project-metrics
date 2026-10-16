@@ -1,0 +1,9 @@
+{
+  "number": 3609,
+  "title": "Incrementally fix Error Prone warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}

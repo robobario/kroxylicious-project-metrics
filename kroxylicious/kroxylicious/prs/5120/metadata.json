@@ -1,0 +1,14 @@
+{
+  "number": 5120,
+  "title": "build: resolve ErrorProne LoopOverCharArray warnings",
+  "author": "Divyanshkumar62",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-16T18:38:14Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    3609
+  ]
+}
