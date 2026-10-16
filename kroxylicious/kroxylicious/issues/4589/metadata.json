@@ -1,0 +1,9 @@
+{
+  "number": 4589,
+  "title": "chore(pom): replace directory-maven-plugin / rootdir with ${maven.multiModuleProjectDirectory}",
+  "state": "open",
+  "labels": [
+    "dev/maven",
+    "triaged"
+  ]
+}
