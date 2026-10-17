@@ -1,0 +1,15 @@
+{
+  "number": 5121,
+  "title": "build(deps): bump actions/setup-java from 6.0.1 to 6.1.0 in /.github/actions/common/setup-java",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-17T03:32:26Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
