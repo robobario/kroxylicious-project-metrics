@@ -1,0 +1,14 @@
+{
+  "number": 706,
+  "title": "move junit-jupiter-api to provided scope",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-17T19:04:24Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    669
+  ]
+}

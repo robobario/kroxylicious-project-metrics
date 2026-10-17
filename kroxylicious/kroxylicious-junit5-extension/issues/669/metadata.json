@@ -1,0 +1,9 @@
+{
+  "number": 669,
+  "title": "Consider moving junit-jupiter-api to provided scope",
+  "state": "open",
+  "labels": [
+    "enhancement",
+    "investigation"
+  ]
+}
