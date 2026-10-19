@@ -1,0 +1,6 @@
+{
+  "number": 5119,
+  "title": "ci(publish): rename Maven server ID to avoid Maven 3.10 credential conflict",
+  "state": "closed",
+  "labels": []
+}
