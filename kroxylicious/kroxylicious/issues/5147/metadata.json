@@ -1,0 +1,9 @@
+{
+  "number": 5147,
+  "title": "Fix ErrorProne `LoopOverCharArray` warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}
