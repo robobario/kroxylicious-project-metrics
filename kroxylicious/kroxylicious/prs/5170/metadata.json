@@ -1,0 +1,12 @@
+{
+  "number": 5170,
+  "title": "ci(docs): speed up CI by reusing shared build artifacts for documentation tests",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-20T14:53:29Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
