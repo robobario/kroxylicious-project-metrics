@@ -1,0 +1,9 @@
+{
+  "number": 5155,
+  "title": "Fix ErrorProne `DistinctVarargsChecker` warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}

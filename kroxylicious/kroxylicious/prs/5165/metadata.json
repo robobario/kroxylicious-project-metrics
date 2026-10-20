@@ -1,0 +1,14 @@
+{
+  "number": 5165,
+  "title": "fix: resolve ErrorProne `DistinctVarargsChecker` warnings by replacing Set.of() by List.of()",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-20T12:59:28Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5155
+  ]
+}

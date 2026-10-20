@@ -1,0 +1,11 @@
+{
+  "number": 5166,
+  "title": "[GHSA-5j25-p663-ww5r] Record Encryption allows the exfiltration of bearer token use to authenticate to an Azure KMS",
+  "state": "closed",
+  "labels": [
+    "kind/bug",
+    "filter/record-encryption",
+    "security",
+    "kms/azure"
+  ]
+}

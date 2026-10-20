@@ -1,0 +1,14 @@
+{
+  "number": 5169,
+  "title": "test: resolve TimeInStaticInitializer warnings",
+  "author": "coder6955",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-20T13:46:11Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5160
+  ]
+}

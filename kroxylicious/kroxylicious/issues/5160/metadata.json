@@ -1,0 +1,9 @@
+{
+  "number": 5160,
+  "title": "Fix ErrorProne `TimeInStaticInitializer` warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}
