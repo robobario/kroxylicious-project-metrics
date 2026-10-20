@@ -1,0 +1,12 @@
+{
+  "number": 5175,
+  "title": "build: Move ErrorProne options to a separate file",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-20T21:10:54Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
