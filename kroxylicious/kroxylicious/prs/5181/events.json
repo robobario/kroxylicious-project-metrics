@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-10-21T03:45:27Z",
+    "actor": "henryZrncik"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-10-21T03:45:28Z",
+    "actor": "henryZrncik"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-21T04:20:45Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-21T04:22:33Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

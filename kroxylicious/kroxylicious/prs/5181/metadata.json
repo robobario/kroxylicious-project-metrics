@@ -1,0 +1,12 @@
+{
+  "number": 5181,
+  "title": "systemtests: add real Azure Key Vault cloud facade for RecordEncryptionST",
+  "author": "henryZrncik",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-21T03:45:27Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

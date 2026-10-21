@@ -1,0 +1,12 @@
+{
+  "number": 5180,
+  "title": "build: Supress \"removal\" warnings about project-internal APIs",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-21T03:35:16Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
