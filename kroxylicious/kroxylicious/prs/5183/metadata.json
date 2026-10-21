@@ -1,0 +1,14 @@
+{
+  "number": 5183,
+  "title": "ci(merge queue): skip ITs and build artifacts from Merge queues",
+  "author": "franvila",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-21T08:06:08Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
