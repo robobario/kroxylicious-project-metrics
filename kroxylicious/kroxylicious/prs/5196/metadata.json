@@ -1,0 +1,14 @@
+{
+  "number": 5196,
+  "title": "feat(api): expose client address and PROXY protocol context to filters",
+  "author": "mapan1984",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-22T03:55:26Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    3782
+  ]
+}

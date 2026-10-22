@@ -33,5 +33,15 @@
     "type": "comment",
     "timestamp": "2026-10-21T21:03:35Z",
     "actor": "tombentley"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-10-22T03:25:28Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-10-22T03:25:28Z",
+    "actor": "tombentley"
   }
 ]

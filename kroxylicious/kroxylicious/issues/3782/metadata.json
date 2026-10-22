@@ -1,0 +1,11 @@
+{
+  "number": 3782,
+  "title": "feat(api): expose HAProxy PROXY protocol information to filters",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "authn/api",
+    "filter/api",
+    "design-proposal-needed"
+  ]
+}

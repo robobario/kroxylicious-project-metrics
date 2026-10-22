@@ -1,0 +1,12 @@
+{
+  "number": 5195,
+  "title": "refactor(operator): Add, and use, EventSourceBuilder",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-22T03:22:11Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
