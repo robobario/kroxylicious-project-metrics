@@ -1,0 +1,9 @@
+{
+  "number": 5184,
+  "title": "Use ubi-micro for Kroxylicious base images to improve security posture",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "container"
+  ]
+}
