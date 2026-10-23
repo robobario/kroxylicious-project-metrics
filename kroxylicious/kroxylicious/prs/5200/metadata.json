@@ -3,6 +3,7 @@
   "title": "Use Ubi9-micro images on dockerfiles",
   "author": "franvila",
   "labels": [
+    "security",
     "container"
   ],
   "target_branch": "main",

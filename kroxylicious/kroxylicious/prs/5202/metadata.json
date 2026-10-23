@@ -1,6 +1,6 @@
 {
   "number": 5202,
-  "title": "deps(kafka): Bump kafka from 4.3.1 to 4.3.2 (+ re-vendor kafka classes)",
+  "title": "deps(kafka): Bump kafka from 4.3.1 to 4.3.2 (+ re-vendor kafka classes & generator)",
   "author": "k-wall",
   "labels": [
     "dependencies"
