@@ -1,0 +1,9 @@
+{
+  "number": 5156,
+  "title": "Fix ErrorProne `EqualsIncompatibleType` warnings",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "dev/maven"
+  ]
+}

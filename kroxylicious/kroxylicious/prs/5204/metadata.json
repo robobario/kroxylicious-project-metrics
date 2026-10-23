@@ -1,0 +1,16 @@
+{
+  "number": 5204,
+  "title": "fix ErrorProne `EqualsIncompatibleType` warnings",
+  "author": "franvila",
+  "labels": [
+    "dev/maven"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-23T11:14:49Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5156
+  ]
+}
