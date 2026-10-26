@@ -1,0 +1,12 @@
+{
+  "number": 5225,
+  "title": "fix: resolve ErrorProne UnusedMethod warnings",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-26T21:07:48Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}

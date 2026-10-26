@@ -18,5 +18,15 @@
     "type": "review_requested",
     "timestamp": "2026-10-26T02:21:55Z",
     "actor": "matheusandre1"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-10-26T17:54:41Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-10-26T18:30:26Z",
+    "actor": null
   }
 ]
