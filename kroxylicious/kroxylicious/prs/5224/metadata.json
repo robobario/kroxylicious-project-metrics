@@ -1,0 +1,12 @@
+{
+  "number": 5224,
+  "title": "ci: cache strimzi test-clients base image to avoid transient registry 503s",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-26T12:17:05Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
