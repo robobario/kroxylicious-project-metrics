@@ -18,5 +18,15 @@
     "type": "review_requested",
     "timestamp": "2026-10-26T23:20:38Z",
     "actor": "matheusandre1"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-10-27T12:35:27Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-10-27T12:39:54Z",
+    "actor": "franvila"
   }
 ]
