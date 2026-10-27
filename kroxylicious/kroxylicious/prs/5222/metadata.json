@@ -2,7 +2,9 @@
   "number": 5222,
   "title": "ci: remove labeled trigger from Run Pull-Requests Tests workflow",
   "author": "k-wall",
-  "labels": [],
+  "labels": [
+    "DO-NOT-MERGE"
+  ],
   "target_branch": "main",
   "created_at": "2026-10-26T11:37:50Z",
   "state": "open",

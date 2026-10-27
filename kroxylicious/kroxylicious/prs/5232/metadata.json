@@ -1,0 +1,14 @@
+{
+  "number": 5232,
+  "title": "docs: updated dev guide with merge queue info",
+  "author": "franvila",
+  "labels": [
+    "documentation"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-27T14:32:25Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
