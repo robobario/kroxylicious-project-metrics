@@ -23,5 +23,10 @@
     "type": "reviewed",
     "timestamp": "2026-10-26T17:51:19Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-10-26T23:04:42Z",
+    "actor": null
   }
 ]
