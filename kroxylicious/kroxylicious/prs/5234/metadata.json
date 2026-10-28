@@ -1,0 +1,12 @@
+{
+  "number": 5234,
+  "title": "ci(UT): speed up unit tests by launching modules in parallel threads",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-28T09:16:17Z",
+  "state": "closed",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}

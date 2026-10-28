@@ -1,0 +1,12 @@
+{
+  "number": 5240,
+  "title": "fix(it): sync consumer group in TxnOffsetCommit authorization tests",
+  "author": "Divyanshkumar62",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-28T14:53:42Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
