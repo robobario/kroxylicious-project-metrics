@@ -1,0 +1,12 @@
+{
+  "number": 3032,
+  "title": "Allow subject builders to be configured via the Kubernetes CRs",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "help wanted",
+    "triaged",
+    "kube/operator",
+    "design-proposal-needed"
+  ]
+}

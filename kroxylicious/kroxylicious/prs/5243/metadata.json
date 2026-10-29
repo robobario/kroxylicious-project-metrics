@@ -1,0 +1,16 @@
+{
+  "number": 5243,
+  "title": "Kubernetes names",
+  "author": "tombentley",
+  "labels": [
+    "design-proposal-needed"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-29T04:07:08Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    5241
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "number": 5241,
+  "title": "Supporting long derived `metadata.name` in Kubernetes",
+  "state": "open",
+  "labels": [
+    "kube/api",
+    "design-proposal-needed"
+  ]
+}

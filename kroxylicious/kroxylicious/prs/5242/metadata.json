@@ -1,0 +1,14 @@
+{
+  "number": 5242,
+  "title": "feat(operator): let users configure the TLS subject builder via Kube CR",
+  "author": "AdityaThakur1998",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-10-29T01:05:32Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    3032
+  ]
+}
