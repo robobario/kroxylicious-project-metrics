@@ -1,6 +1,6 @@
 {
   "number": 5247,
-  "title": "fix `AlmostJavadoc`, `BoxingComparator`, `ClassCanBeStatic`, `CollectionUndefinedEquality`, `DirectInvocationOnMock`, `DuplicateAssertion` and `GetClassOnEnum`  errorprone warning",
+  "title": "fix `AlmostJavadoc`, `BoxingComparator`, `ClassCanBeStatic`, `CollectionUndefinedEquality`, `DirectInvocationOnMock`, `DuplicateAssertion` and `GetClassOnEnum`  errorprone warnings",
   "author": "franvila",
   "labels": [
     "dev/maven"
