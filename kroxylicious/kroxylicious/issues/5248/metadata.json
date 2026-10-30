@@ -1,0 +1,9 @@
+{
+  "number": 5248,
+  "title": "Operations on ResourceType enum constants with at least one anonymous bodies are silently denied",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "filter/authorization"
+  ]
+}

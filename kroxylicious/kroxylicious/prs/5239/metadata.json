@@ -2,7 +2,10 @@
   "number": 5239,
   "title": "PQC support : add named groups configuration for downstream client TLS",
   "author": "MarkNSweep",
-  "labels": [],
+  "labels": [
+    "network",
+    "pqc"
+  ],
   "target_branch": "main",
   "created_at": "2026-10-28T14:47:27Z",
   "state": "open",

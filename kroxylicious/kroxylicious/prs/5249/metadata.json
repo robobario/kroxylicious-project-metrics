@@ -1,0 +1,17 @@
+{
+  "number": 5249,
+  "title": "fix(acl): use getDeclaringClass() instead of getClass() when building/considering ACL rules",
+  "author": "k-wall",
+  "labels": [
+    "kind/bug",
+    "filter/authorization"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-30T12:11:42Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5248
+  ]
+}
