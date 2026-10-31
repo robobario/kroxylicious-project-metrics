@@ -1,0 +1,10 @@
+{
+  "number": 5199,
+  "title": "bug: Non-Deterministic Test ProtobufRecordValidationIT.clientSideProtobufSerdePassesValidation",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}
