@@ -1,0 +1,15 @@
+{
+  "number": 5257,
+  "title": "build(deps): bump io.micrometer:micrometer-bom from 1.17.1 to 1.17.2",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-31T03:33:24Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

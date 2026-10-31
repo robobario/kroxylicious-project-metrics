@@ -1,0 +1,15 @@
+{
+  "number": 5259,
+  "title": "build(deps): bump org.apache.maven.plugins:maven-enforcer-plugin from 3.6.3 to 3.7.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-10-31T03:34:25Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
