@@ -3,5 +3,10 @@
     "type": "created",
     "timestamp": "2026-11-01T05:31:45Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-02T09:09:34Z",
+    "actor": "k-wall"
   }
 ]
