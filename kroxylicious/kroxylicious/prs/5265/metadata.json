@@ -1,0 +1,12 @@
+{
+  "number": 5265,
+  "title": "ci(workflows): temporarily pin MicroShift workflow to ubuntu-24.04 to avoid ubuntu transitional package issue",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-02T14:23:37Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}

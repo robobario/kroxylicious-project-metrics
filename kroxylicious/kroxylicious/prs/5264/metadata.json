@@ -1,0 +1,12 @@
+{
+  "number": 5264,
+  "title": "feat(operator): add proxy pod scheduling to KafkaProxy infrastructure",
+  "author": "hesamfatemipour",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-02T13:16:49Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
