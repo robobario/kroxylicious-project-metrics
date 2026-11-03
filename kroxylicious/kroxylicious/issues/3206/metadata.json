@@ -1,0 +1,13 @@
+{
+  "number": 3206,
+  "title": "`haProxyMessage` is ReferencedCounted by Netty and not released",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "good first issue",
+    "help wanted",
+    "triaged",
+    "runtime",
+    "network"
+  ]
+}

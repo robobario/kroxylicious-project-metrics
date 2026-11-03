@@ -2,11 +2,16 @@
   "number": 5263,
   "title": "feat(runtime): per-gateway PROXY protocol configuration (design#147 prototype)",
   "author": "k-wall",
-  "labels": [],
+  "labels": [
+    "kind/enhancement",
+    "network"
+  ],
   "target_branch": "main",
   "created_at": "2026-11-01T17:46:41Z",
   "state": "open",
   "merged": false,
-  "draft": true,
-  "linked_issues": []
+  "draft": false,
+  "linked_issues": [
+    3206
+  ]
 }
