@@ -2,7 +2,10 @@
   "number": 5268,
   "title": "fix(runtime): close plain connection when binding resolution fails",
   "author": "juliendcna",
-  "labels": [],
+  "labels": [
+    "kind/bug",
+    "network"
+  ],
   "target_branch": "main",
   "created_at": "2026-11-02T22:52:59Z",
   "state": "open",

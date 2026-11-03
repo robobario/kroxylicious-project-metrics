@@ -2,7 +2,9 @@
   "number": 5262,
   "title": "test: add retry resilience and idle timeout for protobuf schema validation tests (#5199)",
   "author": "Divyanshkumar62",
-  "labels": [],
+  "labels": [
+    "DO-NOT-MERGE"
+  ],
   "target_branch": "main",
   "created_at": "2026-10-31T19:39:47Z",
   "state": "open",
