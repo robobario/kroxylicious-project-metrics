@@ -1,0 +1,6 @@
+{
+  "number": 5267,
+  "title": "Plain connection left open and never served when the virtual cluster binding cannot be resolved",
+  "state": "open",
+  "labels": []
+}
