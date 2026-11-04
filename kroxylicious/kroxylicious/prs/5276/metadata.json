@@ -1,0 +1,12 @@
+{
+  "number": 5276,
+  "title": "fix(runtime): release buffers of decoded frames discarded by a filter",
+  "author": "mapan1984",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-04T12:41:27Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
