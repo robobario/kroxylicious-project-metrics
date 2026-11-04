@@ -8,5 +8,15 @@
     "type": "review_requested",
     "timestamp": "2026-11-03T17:56:35Z",
     "actor": "SamBarker"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-04T03:43:21Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-11-04T06:11:14Z",
+    "actor": null
   }
 ]
