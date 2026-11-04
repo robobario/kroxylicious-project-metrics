@@ -1,0 +1,12 @@
+{
+  "number": 5280,
+  "title": "fix: resolve ErrorProne warning:",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-04T23:27:15Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
