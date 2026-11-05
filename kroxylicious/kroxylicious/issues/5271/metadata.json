@@ -1,0 +1,9 @@
+{
+  "number": 5271,
+  "title": "Add system test for Authorization with TLS client certificate identities",
+  "state": "open",
+  "labels": [
+    "test/system-test",
+    "filter/authorization"
+  ]
+}
