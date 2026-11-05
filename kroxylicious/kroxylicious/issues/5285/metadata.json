@@ -1,0 +1,8 @@
+{
+  "number": 5285,
+  "title": "Add actionLint to CI",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}

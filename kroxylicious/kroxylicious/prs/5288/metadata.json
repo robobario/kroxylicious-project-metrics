@@ -1,0 +1,12 @@
+{
+  "number": 5288,
+  "title": "docs(proxy): document per-gateway PROXY protocol configuration",
+  "author": "matheusandre1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-05T14:10:08Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
