@@ -1,0 +1,14 @@
+{
+  "number": 5290,
+  "title": "[do not merge] run new IT repeatedly to try and provoke failure",
+  "author": "robobario",
+  "labels": [
+    "DO-NOT-MERGE"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-06T03:33:13Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

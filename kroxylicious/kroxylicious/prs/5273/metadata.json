@@ -2,7 +2,9 @@
   "number": 5273,
   "title": "feat(systemtests): implement FilterSpec for each first-party filter",
   "author": "franvila",
-  "labels": [],
+  "labels": [
+    "test/system-test"
+  ],
   "target_branch": "main",
   "created_at": "2026-11-03T13:06:33Z",
   "state": "open",
