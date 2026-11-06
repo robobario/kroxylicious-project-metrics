@@ -1,0 +1,22 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-11-06T09:16:24Z",
+    "actor": "carlesarnal"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-11-06T09:16:25Z",
+    "actor": "carlesarnal"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-06T11:10:03Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-06T11:12:18Z",
+    "actor": "sonarqubecloud[bot]"
+  }
+]

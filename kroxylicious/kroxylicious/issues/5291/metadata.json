@@ -1,0 +1,6 @@
+{
+  "number": 5291,
+  "title": "ACL authorizer: expose the resource name selectors that apply to a subject and operation",
+  "state": "open",
+  "labels": []
+}

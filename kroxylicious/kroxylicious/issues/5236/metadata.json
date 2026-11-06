@@ -1,0 +1,6 @@
+{
+  "number": 5236,
+  "title": "ACL rules file: regex escapes are stripped, and block comments don't parse",
+  "state": "open",
+  "labels": []
+}

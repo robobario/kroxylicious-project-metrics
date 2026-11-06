@@ -1,0 +1,14 @@
+{
+  "number": 5295,
+  "title": "feat(authorizer-acl): support rules for anonymous subjects",
+  "author": "carlesarnal",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-06T09:16:24Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5237
+  ]
+}
