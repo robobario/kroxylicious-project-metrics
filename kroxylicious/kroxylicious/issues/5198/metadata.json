@@ -1,0 +1,8 @@
+{
+  "number": 5198,
+  "title": "MultiTenantFilter: DescribeConfigs is not translated, so kafka-topics --describe fails with UnknownTopicOrPartition",
+  "state": "open",
+  "labels": [
+    "kind/bug"
+  ]
+}
