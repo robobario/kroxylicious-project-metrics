@@ -1,0 +1,14 @@
+{
+  "number": 5311,
+  "title": "fix: add granular timer metrics for SASL termination (#4592)",
+  "author": "Divyanshkumar62",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-07T18:22:36Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4592
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "number": 4592,
+  "title": "Timer metrics for `SaslTermination`",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "triaged",
+    "observability",
+    "design-proposal-needed",
+    "filter/sasl-termination"
+  ]
+}
