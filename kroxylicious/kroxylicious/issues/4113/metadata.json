@@ -1,0 +1,8 @@
+{
+  "number": 4113,
+  "title": "Sonar workflow fails for PRs targeting release branches with different module structure",
+  "state": "closed",
+  "labels": [
+    "dev/github_actions"
+  ]
+}
