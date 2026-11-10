@@ -1,0 +1,17 @@
+{
+  "number": 5315,
+  "title": "fix(authorizer-acl): accept block comments in ACL rules files",
+  "author": "carlesarnal",
+  "labels": [
+    "kind/bug",
+    "filter/authorization"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-10T13:50:35Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5314
+  ]
+}

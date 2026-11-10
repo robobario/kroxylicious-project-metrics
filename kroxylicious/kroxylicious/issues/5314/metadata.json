@@ -1,0 +1,9 @@
+{
+  "number": 5314,
+  "title": "ACL rules file: block comments don't parse",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "filter/authorization"
+  ]
+}
