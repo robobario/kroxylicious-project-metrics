@@ -1,0 +1,11 @@
+{
+  "number": 3626,
+  "title": "Fix ErrorProne `BadImport` warnings",
+  "state": "closed",
+  "labels": [
+    "good first issue",
+    "help wanted",
+    "easy-starter",
+    "kind/refactoring"
+  ]
+}
