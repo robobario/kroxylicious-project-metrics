@@ -1,0 +1,11 @@
+{
+  "number": 5316,
+  "title": "refactor(runtime): add tls flag to BindingContext to allow a single KafkaProxyInitializer and ServerBootstrap",
+  "state": "open",
+  "labels": [
+    "kind/enhancement",
+    "help wanted",
+    "runtime",
+    "kind/refactoring"
+  ]
+}
