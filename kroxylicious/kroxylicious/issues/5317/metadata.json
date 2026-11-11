@@ -1,0 +1,10 @@
+{
+  "number": 5317,
+  "title": "refactor(runtime): extract PlainResolverHandler (and possibly TlsResolverHandler) from KafkaProxyInitializer",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "runtime",
+    "kind/refactoring"
+  ]
+}
