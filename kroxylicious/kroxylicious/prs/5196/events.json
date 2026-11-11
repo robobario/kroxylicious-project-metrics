@@ -93,5 +93,15 @@
     "type": "reviewed",
     "timestamp": "2026-11-11T09:30:42Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-11T20:06:55Z",
+    "actor": "robobario"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-11-11T21:01:57Z",
+    "actor": null
   }
 ]

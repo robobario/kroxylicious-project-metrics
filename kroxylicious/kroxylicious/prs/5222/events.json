@@ -38,5 +38,15 @@
     "type": "comment",
     "timestamp": "2026-10-28T05:42:47Z",
     "actor": "franvila"
+  },
+  {
+    "type": "closed_unmerged",
+    "timestamp": "2026-11-11T17:09:11Z",
+    "actor": null
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-11T17:09:11Z",
+    "actor": "k-wall"
   }
 ]
