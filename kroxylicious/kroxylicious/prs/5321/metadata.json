@@ -1,8 +1,11 @@
 {
   "number": 5321,
-  "title": "refactor(runtime): add tls flag to BindingContext",
+  "title": "refactor(runtime): add tls flag to BindingContext reducing the complexity of KafkaProxyInitializer.",
   "author": "amalsaidov",
-  "labels": [],
+  "labels": [
+    "kind/refactoring",
+    "network"
+  ],
   "target_branch": "main",
   "created_at": "2026-11-11T11:54:49Z",
   "state": "open",

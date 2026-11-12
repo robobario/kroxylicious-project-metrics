@@ -1,0 +1,12 @@
+{
+  "number": 5323,
+  "title": "fix(ci): restore $/ self-repo action refs in snapshot docs workflow",
+  "author": "AdityaThakur1998",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-12T15:06:02Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}
