@@ -1,0 +1,8 @@
+{
+  "number": 4913,
+  "title": "bug: dynamically-routed responses can be dropped when a router completes off the event loop",
+  "state": "open",
+  "labels": [
+    "kind/bug"
+  ]
+}
