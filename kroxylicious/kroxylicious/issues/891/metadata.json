@@ -1,0 +1,10 @@
+{
+  "number": 891,
+  "title": "Absence of PKCS12 keystore password goes undetected until connection time",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "help wanted",
+    "triaged"
+  ]
+}
