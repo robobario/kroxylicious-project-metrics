@@ -1,0 +1,15 @@
+{
+  "number": 5335,
+  "title": "build(deps): bump com.github.luben:zstd-jni from 1.5.7-25 to 1.5.7-26",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-14T03:33:07Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

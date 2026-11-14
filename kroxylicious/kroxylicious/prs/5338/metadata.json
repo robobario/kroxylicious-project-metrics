@@ -1,0 +1,15 @@
+{
+  "number": 5338,
+  "title": "build(deps-dev): bump com.azure:azure-identity from 1.16.2 to 1.19.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-14T03:34:29Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
