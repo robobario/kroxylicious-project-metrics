@@ -1,0 +1,14 @@
+{
+  "number": 5342,
+  "title": "test(proxy-protocol): add end-to-end IT using real Envoy proxy container",
+  "author": "k-wall",
+  "labels": [
+    "network"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-15T17:23:27Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
