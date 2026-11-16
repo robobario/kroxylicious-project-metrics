@@ -1,0 +1,12 @@
+{
+  "number": 5343,
+  "title": "docs: document the container image tagging and publishing contract",
+  "author": "SamBarker",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-16T00:07:12Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}
