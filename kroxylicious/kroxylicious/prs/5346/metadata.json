@@ -1,0 +1,12 @@
+{
+  "number": 5346,
+  "title": "feat(filters): add client and peer addresses to protocol logger",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-17T13:32:40Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
