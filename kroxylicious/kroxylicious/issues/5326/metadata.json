@@ -1,0 +1,8 @@
+{
+  "number": 5326,
+  "title": "Document that certificate reload does not detect host-side writes on VM-backed bind mounts",
+  "state": "open",
+  "labels": [
+    "documentation"
+  ]
+}
