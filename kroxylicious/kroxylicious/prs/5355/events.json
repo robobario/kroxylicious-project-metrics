@@ -3,5 +3,20 @@
     "type": "created",
     "timestamp": "2026-11-18T16:28:52Z",
     "actor": "ValentinLaine1"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-11-18T16:32:40Z",
+    "actor": "ValentinLaine1"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-18T22:30:36Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-18T22:32:55Z",
+    "actor": "sonarqubecloud[bot]"
   }
 ]
