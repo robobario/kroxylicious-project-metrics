@@ -1,0 +1,9 @@
+{
+  "number": 5104,
+  "title": "Task 15 \u2014 Define new intent-based `KafkaClient` interface",
+  "state": "open",
+  "labels": [
+    "triaged",
+    "test/system-test"
+  ]
+}

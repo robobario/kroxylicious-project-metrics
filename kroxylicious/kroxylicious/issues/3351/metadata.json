@@ -1,0 +1,10 @@
+{
+  "number": 3351,
+  "title": "chore(ci): add GitHub Actions linting to CI",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "triaged",
+    "dev/github_actions"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "number": 5354,
+  "title": "refactor(runtime): extract TLS resolver into TlsResolverHandler",
+  "author": "ig-suyas",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-18T14:29:37Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

@@ -1,0 +1,12 @@
+{
+  "number": 5355,
+  "title": "feat(multitenant): support DeleteRecords",
+  "author": "ValentinLaine1",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-18T16:28:52Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}

@@ -1,0 +1,15 @@
+{
+  "number": 5352,
+  "title": "chore(ci): Added Zizmor Github Action",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-18T11:38:45Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    3351,
+    5287
+  ]
+}

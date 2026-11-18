@@ -1,0 +1,10 @@
+{
+  "number": 5287,
+  "title": "Investigate adding zizmor to CI",
+  "state": "open",
+  "labels": [
+    "triaged",
+    "dev/github_actions",
+    "kind/investigation"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "number": 5351,
+  "title": "feat(systemtests): add KafkaClient abstraction with adapters",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-18T10:18:29Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": [
+    5104
+  ]
+}
