@@ -1,0 +1,12 @@
+{
+  "number": 5357,
+  "title": "build(microbenchmarks): exclude JMH benchmark false positives from spotbugs",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-19T00:23:34Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}
