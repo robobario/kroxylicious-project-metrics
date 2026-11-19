@@ -1,0 +1,14 @@
+{
+  "number": 5367,
+  "title": "refactor: make in-flight request count decrement symmetric with increment",
+  "author": "Divyanshkumar62",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-19T17:55:34Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4366
+  ]
+}

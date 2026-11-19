@@ -1,0 +1,10 @@
+{
+  "number": 5362,
+  "title": "docs: replace realistic example Vault token in record-encryption guide with obvious placeholder",
+  "state": "open",
+  "labels": [
+    "documentation",
+    "good first issue",
+    "filter/record-encryption"
+  ]
+}

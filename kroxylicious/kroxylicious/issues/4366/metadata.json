@@ -1,0 +1,12 @@
+{
+  "number": 4366,
+  "title": "ClientConnectionStateMachine: make in flight request count decrement symmetric with increment",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "triaged",
+    "runtime",
+    "kind/refactoring",
+    "observability"
+  ]
+}
