@@ -68,5 +68,15 @@
     "type": "comment",
     "timestamp": "2026-11-18T11:22:01Z",
     "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-19T22:11:17Z",
+    "actor": "RafaelReia"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-11-19T22:12:02Z",
+    "actor": "RafaelReia"
   }
 ]
