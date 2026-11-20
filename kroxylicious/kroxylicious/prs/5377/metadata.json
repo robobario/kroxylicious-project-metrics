@@ -1,0 +1,14 @@
+{
+  "number": 5377,
+  "title": "chore(deps): update dependency jbangdev/jbang to v0.143.0",
+  "author": "kroxylicious-robot",
+  "labels": [
+    "dependencies"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-20T13:43:58Z",
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "linked_issues": []
+}
