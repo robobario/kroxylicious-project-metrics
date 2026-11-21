@@ -1,0 +1,12 @@
+{
+  "number": 5361,
+  "title": "promote-release workflow fails to merge release PR: merge-queue + squash-only ruleset incompatible with required merge-commit strategy",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "dev/release",
+    "dev/github_actions",
+    "prio/blocker",
+    "release-process"
+  ]
+}
