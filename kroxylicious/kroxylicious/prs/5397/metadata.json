@@ -1,0 +1,12 @@
+{
+  "number": 5397,
+  "title": "feat(operator): add KafkaProxyNetworkPolicy API and feature flag",
+  "author": "tombentley",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-22T21:46:46Z",
+  "state": "open",
+  "merged": false,
+  "draft": true,
+  "linked_issues": []
+}
