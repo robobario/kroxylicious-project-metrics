@@ -1,0 +1,12 @@
+{
+  "number": 5407,
+  "title": "ci: fix Maven Central 429 rate-limit errors with offline-releases policy",
+  "author": "k-wall",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-23T17:13:27Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

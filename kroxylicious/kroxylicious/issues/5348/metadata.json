@@ -1,0 +1,10 @@
+{
+  "number": 5348,
+  "title": "bug: Non-Deterministic Test ProxyProtocolIT.requiredMode_plainChannel_withProxyHeader_succeeds",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "test",
+    "triaged"
+  ]
+}

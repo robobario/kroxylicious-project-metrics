@@ -1,0 +1,6 @@
+{
+  "number": 5402,
+  "title": "Expose nodeSelector/tolerations/affinity on the KafkaProxy CRD's generated pod",
+  "state": "open",
+  "labels": []
+}
