@@ -1,0 +1,12 @@
+{
+  "number": 5398,
+  "title": "feat(router-subject): add client.id-based routing",
+  "author": "robobario",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-23T00:38:54Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
