@@ -1,6 +1,6 @@
 {
   "number": 5264,
-  "title": "feat(operator): add proxy pod scheduling to KafkaProxy infrastructure",
+  "title": "feat(operator): add KafkaProxy infrastructure.podSpec for proxy pod scheduling and service account",
   "author": "hesamfatemipour",
   "labels": [],
   "target_branch": "main",

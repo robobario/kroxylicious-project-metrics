@@ -1,6 +1,6 @@
 {
   "number": 5398,
-  "title": "feat(router-subject): add client.id-based routing",
+  "title": "feat(router-client): add client.id-based routing",
   "author": "robobario",
   "labels": [],
   "target_branch": "main",

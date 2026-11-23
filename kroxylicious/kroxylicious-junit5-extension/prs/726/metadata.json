@@ -1,0 +1,15 @@
+{
+  "number": 726,
+  "title": "chore(deps): Bump actions/setup-java from 6.2.0 to 6.3.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-23T05:06:03Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

@@ -1,0 +1,15 @@
+{
+  "number": 725,
+  "title": "chore(deps): Bump io.netty:netty-pkitesting from 4.2.20.Final to 4.2.21.Final",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-23T05:03:34Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
