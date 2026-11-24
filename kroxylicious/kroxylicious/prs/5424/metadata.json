@@ -1,0 +1,12 @@
+{
+  "number": 5424,
+  "title": "ci: add zizmor GitHub Actions security linting",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-24T14:55:13Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}

@@ -1,6 +1,6 @@
 {
   "number": 5410,
-  "title": "fix(runtime): drop zero-acks produce rejected via errorResponse",
+  "title": "fix(runtime): make errorResponse drop a zero-acks Produce",
   "author": "mapan1984",
   "labels": [],
   "target_branch": "main",

@@ -2,7 +2,9 @@
   "number": 5295,
   "title": "feat(authorizer-acl): support rules for anonymous subjects",
   "author": "carlesarnal",
-  "labels": [],
+  "labels": [
+    "filter/authorization"
+  ],
   "target_branch": "main",
   "created_at": "2026-11-06T09:16:24Z",
   "state": "open",

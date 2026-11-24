@@ -43,5 +43,10 @@
     "type": "comment",
     "timestamp": "2026-11-24T09:42:30Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-11-24T10:34:12Z",
+    "actor": null
   }
 ]
