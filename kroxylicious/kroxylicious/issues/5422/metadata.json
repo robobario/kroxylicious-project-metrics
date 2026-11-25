@@ -1,0 +1,8 @@
+{
+  "number": 5422,
+  "title": "Fix Zizmor `ref-version-mismatch` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}

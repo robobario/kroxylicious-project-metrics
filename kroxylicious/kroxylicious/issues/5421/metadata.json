@@ -1,0 +1,8 @@
+{
+  "number": 5421,
+  "title": "Fix Zizmor `cache-poisoning` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}

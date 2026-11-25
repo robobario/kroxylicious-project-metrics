@@ -1,0 +1,8 @@
+{
+  "number": 5423,
+  "title": "Fix Zizmor `secrets-inherit` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}

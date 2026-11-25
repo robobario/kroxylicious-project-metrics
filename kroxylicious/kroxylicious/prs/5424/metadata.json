@@ -5,8 +5,10 @@
   "labels": [],
   "target_branch": "main",
   "created_at": "2026-11-24T14:55:13Z",
-  "state": "open",
-  "merged": false,
+  "state": "closed",
+  "merged": true,
   "draft": false,
-  "linked_issues": []
+  "linked_issues": [
+    5426
+  ]
 }

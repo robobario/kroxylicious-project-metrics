@@ -1,0 +1,8 @@
+{
+  "number": 5414,
+  "title": "Fix Zizmor `template injection` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "number": 5428,
+  "title": "ci(zizmor): - use `self-repository` syntax and drop `secrets: inherit`",
+  "author": "franvila",
+  "labels": [],
+  "target_branch": "main",
+  "created_at": "2026-11-25T09:02:15Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5415,
+    5423
+  ]
+}

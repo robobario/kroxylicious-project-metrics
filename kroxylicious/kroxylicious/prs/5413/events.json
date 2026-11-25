@@ -8,5 +8,15 @@
     "type": "review_requested",
     "timestamp": "2026-11-24T14:03:14Z",
     "actor": "lyn1dev"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-25T11:10:42Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-25T11:18:48Z",
+    "actor": "k-wall"
   }
 ]

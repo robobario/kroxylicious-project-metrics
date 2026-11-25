@@ -1,0 +1,8 @@
+{
+  "number": 5415,
+  "title": "Fix Zizmor `self-repository` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}

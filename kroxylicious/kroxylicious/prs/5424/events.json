@@ -18,5 +18,15 @@
     "type": "comment",
     "timestamp": "2026-11-24T15:32:09Z",
     "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-25T09:16:52Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-11-25T10:01:37Z",
+    "actor": null
   }
 ]

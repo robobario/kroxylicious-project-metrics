@@ -1,0 +1,8 @@
+{
+  "number": 5416,
+  "title": "Fix Zizmor `excesive persmissions` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}
