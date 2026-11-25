@@ -1,0 +1,16 @@
+{
+  "number": 5433,
+  "title": "ci(zizmor): fix zizmor `artipacked` findings",
+  "author": "franvila",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-25T14:08:58Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5417
+  ]
+}

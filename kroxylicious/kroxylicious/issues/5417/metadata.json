@@ -1,0 +1,8 @@
+{
+  "number": 5417,
+  "title": "Fix Zizmor `artipacked` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}
