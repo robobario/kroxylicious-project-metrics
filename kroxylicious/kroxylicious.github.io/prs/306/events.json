@@ -8,5 +8,15 @@
     "type": "review_requested",
     "timestamp": "2026-11-23T13:48:35Z",
     "actor": "MarkNSweep"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-26T14:58:03Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-11-26T15:00:16Z",
+    "actor": null
   }
 ]
