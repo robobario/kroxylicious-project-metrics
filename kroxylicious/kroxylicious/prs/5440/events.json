@@ -1,0 +1,32 @@
+[
+  {
+    "type": "created",
+    "timestamp": "2026-11-26T12:17:54Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "review_requested",
+    "timestamp": "2026-11-26T12:17:55Z",
+    "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-26T12:44:53Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-26T12:46:31Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-26T14:16:01Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-26T14:18:34Z",
+    "actor": "franvila"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "number": 5419,
+  "title": "Fix Zizmor `dependabot cooldown` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}

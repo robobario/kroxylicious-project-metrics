@@ -1,0 +1,11 @@
+{
+  "number": 4881,
+  "title": "DEV_GUIDE instructions for running the system tests broken by #4697",
+  "state": "open",
+  "labels": [
+    "kind/bug",
+    "documentation",
+    "triaged",
+    "test/system-test"
+  ]
+}

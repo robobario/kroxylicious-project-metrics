@@ -1,0 +1,8 @@
+{
+  "number": 5420,
+  "title": "Fix Zizmor `dangerous triggers` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}

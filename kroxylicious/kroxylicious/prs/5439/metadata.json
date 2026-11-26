@@ -1,0 +1,16 @@
+{
+  "number": 5439,
+  "title": "chore(ci): pin ubuntu version to 26.04 version and set renovate to update them when needed",
+  "author": "franvila",
+  "labels": [
+    "dev/github_actions"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-26T08:49:21Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    5349
+  ]
+}

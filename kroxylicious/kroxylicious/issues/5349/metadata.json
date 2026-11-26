@@ -1,0 +1,9 @@
+{
+  "number": 5349,
+  "title": "pin GitHub Actions runners in workflows to a specific Ubuntu version",
+  "state": "open",
+  "labels": [
+    "help wanted",
+    "triaged"
+  ]
+}

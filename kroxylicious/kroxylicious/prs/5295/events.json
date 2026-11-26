@@ -68,5 +68,35 @@
     "type": "comment",
     "timestamp": "2026-11-24T13:43:12Z",
     "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-26T09:38:11Z",
+    "actor": "carlesarnal"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-26T10:09:21Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-26T10:11:42Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-26T11:29:44Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-26T11:30:58Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-26T12:41:33Z",
+    "actor": "AratiAjit"
   }
 ]

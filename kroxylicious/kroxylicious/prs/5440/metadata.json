@@ -1,0 +1,16 @@
+{
+  "number": 5440,
+  "title": "fix(systemtests): mount jose4j via ConfigMap, drop kroxylicious-test-images",
+  "author": "franvila",
+  "labels": [
+    "test/system-test"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-26T12:17:54Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": [
+    4881
+  ]
+}

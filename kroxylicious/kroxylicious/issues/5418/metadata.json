@@ -1,0 +1,8 @@
+{
+  "number": 5418,
+  "title": "Fix Zizmor `github-env` finding",
+  "state": "open",
+  "labels": [
+    "dev/github_actions"
+  ]
+}
