@@ -28,5 +28,50 @@
     "type": "comment",
     "timestamp": "2026-11-26T14:18:34Z",
     "actor": "franvila"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-27T10:27:27Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-27T10:30:21Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-27T10:33:59Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-27T10:41:51Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-27T11:55:16Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-27T11:56:40Z",
+    "actor": "sonarqubecloud[bot]"
+  },
+  {
+    "type": "comment",
+    "timestamp": "2026-11-27T13:08:29Z",
+    "actor": "AdityaThakur1998"
+  },
+  {
+    "type": "reviewed",
+    "timestamp": "2026-11-27T14:07:10Z",
+    "actor": "k-wall"
+  },
+  {
+    "type": "closed_merged",
+    "timestamp": "2026-11-27T14:34:57Z",
+    "actor": null
   }
 ]

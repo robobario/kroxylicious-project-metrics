@@ -1,6 +1,6 @@
 {
   "number": 5428,
-  "title": "ci(zizmor): - use `self-repository` syntax and drop `secrets: inherit`",
+  "title": "ci(zizmor): use `self-repository` syntax and drop `secrets: inherit`",
   "author": "franvila",
   "labels": [],
   "target_branch": "main",

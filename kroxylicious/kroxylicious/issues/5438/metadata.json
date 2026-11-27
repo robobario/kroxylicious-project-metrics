@@ -1,0 +1,8 @@
+{
+  "number": 5438,
+  "title": "bug: Non deterministic error on pipelines when building the images",
+  "state": "closed",
+  "labels": [
+    "dev/github_actions"
+  ]
+}
