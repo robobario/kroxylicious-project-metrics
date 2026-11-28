@@ -1,0 +1,15 @@
+{
+  "number": 5454,
+  "title": "build(deps-dev): bump org.apache.maven.plugins:maven-help-plugin from 3.5.2 to 3.6.0",
+  "author": "dependabot[bot]",
+  "labels": [
+    "dependencies",
+    "java"
+  ],
+  "target_branch": "main",
+  "created_at": "2026-11-28T03:34:10Z",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "linked_issues": []
+}
